@@ -2025,21 +2025,22 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_ExpCandies,
     },
 
-    [ITEM_DYNAMAX_CANDY] =
+    [ITEM_INF_CANDY] =
     {
-        .name = _("Dynamax Candy"),
-        .pluralName = _("Dynamax Candies"),
-        .price = 0,
+        .name = _("Inf. Candy"),
+        .pluralName = _("Inf. Candies"),
+        .price = 1,
         .description = COMPOUND_STRING(
-            "Raises the Dynamax\n"
-            "Level of a single\n"
-            "Pokémon by one."),
-        .pocket = POCKET_ITEMS,
+            "Raises the level\n"
+            "of a Pokémon by\n"
+            "one."),
+        .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_PARTY_MENU,
-        .fieldUseFunc = ItemUseOutOfBattle_DynamaxCandy,
+        .fieldUseFunc = ItemUseOutOfBattle_RareCandy,
+        .effect = gItemEffect_RareCandy,
         .flingPower = 30,
-        .iconPic = gItemIcon_DynamaxCandy,
-        .iconPalette = gItemIconPalette_DynamaxCandy,
+        .iconPic = gItemIcon_RareCandy,
+        .iconPalette = gItemIconPalette_RareCandy,
     },
 
 // Medicinal Flutes
