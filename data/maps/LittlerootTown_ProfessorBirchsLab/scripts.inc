@@ -550,6 +550,10 @@ LittlerootTown_ProfessorBirchsLab_EventScript_ReceivePokedex::
 	playfanfare MUS_OBTAIN_ITEM
 	message LittlerootTown_ProfessorBirchsLab_Text_ReceivedPokedex
 	waitfanfare
+	playfanfare MUS_OBTAIN_ITEM
+	message LittlerootTown_ProfessorBirchsLab_Text_ReceivedInfCandy
+	giveitem ITEM_RARE_CANDY, 999
+	waitfanfare
 	setflag FLAG_SYS_POKEDEX_GET
 	special SetUnlockedPokedexFlags
 	setflag FLAG_RECEIVED_POKEDEX_FROM_BIRCH
@@ -759,6 +763,9 @@ LittlerootTown_ProfessorBirchsLab_Text_ExplainPokedex:
 	.string "and records its data in the POKéDEX,\l"
 	.string "why, {RIVAL} looks for me while I'm out\l"
 	.string "doing fieldwork, and shows me.$"
+
+LittlerootTown_ProfessorBirchsLab_Text_ReceivedInfCandy:
+	.string "{PLAYER} received the inf candy!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_CountlessPokemonAwait:
 	.string "PROF. BIRCH: Countless POKéMON\n"
