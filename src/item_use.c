@@ -71,8 +71,12 @@ static void Task_ShowTMHMContainedMessage(u8);
 static void UseTMHMYesNo(u8);
 static void UseTMHM(u8);
 static void Task_StartUseRepel(u8);
+static void Task_StartUseInfRepel(u8);
+static void Task_StopUseInfRepel(u8);
 static void Task_StartUseLure(u8 taskId);
 static void Task_UseRepel(u8);
+static void Task_UseInfRepel(u8);
+static void Task_StopInfRepel(u8);
 static void Task_UseLure(u8 taskId);
 static void Task_CloseCantUseKeyItemMessage(u8);
 static void SetDistanceOfClosestHiddenItem(u8, s16, s16);
@@ -944,14 +948,10 @@ void ItemUseOutOfBattle_Repel(u8 taskId)
 
 void ItemUseOutOfBattle_InfRepel(u8 taskId)
 {
-    if (VAR_INF_REPEL_ON)
+    if (!VAR_INF_REPEL_ON)
         gTasks[taskId].func = Task_StartUseInfRepel;
-    else if (!VAR_INF_REPEL_ON)
+    else if (VAR_INF_REPEL_ON)
         gTasks[taskId].func = Task_StopUseInfRepel;
-    else if (!InBattlePyramid())
-        DisplayItemMessage(taskId, FONT_NORMAL, gText_RepelEffectsLingered, CloseItemMessage);
-    else
-        DisplayItemMessageInBattlePyramid(taskId, gText_RepelEffectsLingered, Task_CloseBattlePyramidBagMessage);
 }
 
 static void Task_StartUseRepel(u8 taskId)
@@ -986,7 +986,7 @@ static void Task_StopUseInfRepel(u8 taskId)
     {
         data[8] = 0;
         PlaySE(SE_REPEL);
-        gTasks[taskId].func = Task_StopUseInfRepel;
+        gTasks[taskId].func = Task_StopInfRepel;
     }
 }
 
@@ -1021,7 +1021,7 @@ static void Task_UseInfRepel(u8 taskId)
     }
 }
 
-static void Task_StopUseInfRepel(u8 taskId)
+static void Task_StopInfRepel(u8 taskId)
 {
     if (!IsSEPlaying())
     {
