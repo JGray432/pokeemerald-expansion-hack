@@ -133,7 +133,13 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GoSeeRival::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_MightBeGoodIdeaToGoSeeRival, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, LittlerootTown_ProfessorBirchsLab_EventScript_AgreeToSeeRival
 	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_DeclineSeeingRival
-	message LittlerootTown_ProfessorBirchsLab_Text_
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_AgreeToSeeRival::
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_GetRivalToTeachYou, MSGBOX_DEFAULT
+	clearflag FLAG_HIDE_ROUTE_101_BOY
+	setvar VAR_BIRCH_LAB_STATE, 3
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_GiveKeyItems MSGBOX_DEFAULT
 	waitmessage
 	playfanfare MUS_OBTAIN_ITEM
 	message LittlerootTown_ProfessorBirchsLab_Text_ReceivedInfCandy
@@ -143,12 +149,6 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GoSeeRival::
 	message LittlerootTown_ProfessorBirchsLab_Text_ReceivedInfRepel
 	giveitem ITEM_INF_REPEL
 	waitfanfare
-	end
-
-LittlerootTown_ProfessorBirchsLab_EventScript_AgreeToSeeRival::
-	msgbox LittlerootTown_ProfessorBirchsLab_Text_GetRivalToTeachYou, MSGBOX_DEFAULT
-	clearflag FLAG_HIDE_ROUTE_101_BOY
-	setvar VAR_BIRCH_LAB_STATE, 3
 	releaseall
 	end
 
