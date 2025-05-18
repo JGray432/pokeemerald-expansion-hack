@@ -3841,7 +3841,7 @@ bool8 PokemonUseItemEffects(struct Pokemon *mon, u16 item, u8 partyIndex, u8 mov
                 u8 param = ItemId_GetHoldEffectParam(item);
                 dataUnsigned = 0;
 
-                if (param == 0) // Rare Candy
+                if (param == 0 || param == 1) // Rare Candy & Inf Candy
                 {
                     dataUnsigned = gExperienceTables[gSpeciesInfo[GetMonData(mon, MON_DATA_SPECIES, NULL)].growthRate][GetMonData(mon, MON_DATA_LEVEL, NULL) + 1];
                 }
