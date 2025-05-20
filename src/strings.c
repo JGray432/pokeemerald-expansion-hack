@@ -1297,3 +1297,4 @@ const u8 gText_Rename[] = _("RENAME");
 const u8 gText_CannotSendMonToBoxHM[] = _("Cannot send that mon to the box,\nbecause it knows a HM move.{PAUSE_UNTIL_PRESS}");
 const u8 gText_InfRepelEnabled[] = _("Infinite Repel enabled.");
 const u8 gText_InfRepelDisabled[] = _("Infinite Repel disabled.");
+const u8 gText_YourPartyWasHealed[] = _("Your party was fully healed!");
