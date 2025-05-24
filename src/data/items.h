@@ -2059,8 +2059,8 @@ const struct Item gItemsInfo[] =
         .fieldUseFunc = ItemUseOutOfBattle_RareCandy,
         .effect = gItemEffect_RareCandy,
         .flingPower = 30,
-        .iconPic = gItemIcon_RareCandy,
-        .iconPalette = gItemIconPalette_RareCandy,
+        .iconPic = gItemIcon_CapCandy,
+        .iconPalette = gItemIconPalette_CapCandy,
     },
 
 // Medicinal Flutes

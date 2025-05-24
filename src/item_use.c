@@ -1649,9 +1649,8 @@ void ItemUseOutOfBattle_NectarReserves(u8 taskId)
                     SetMonData(mon, MON_DATA_PP1 + j, &pp);
                 }
             }
-            //u32 status = 0;
-
-            SetMonData(mon, MON_DATA_STATUS, STATUS1_NONE); // Clear status
+            u32 status = 0;
+            SetMonData(mon, MON_DATA_STATUS, &status); // Clear status
             healed = TRUE;
         }
     }
