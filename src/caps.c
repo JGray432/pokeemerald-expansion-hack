@@ -9,15 +9,30 @@ u32 GetCurrentLevelCap(void)
 {
     static const u32 sLevelCapFlagMap[][2] =
     {
-        {FLAG_BADGE01_GET, 15},
-        {FLAG_BADGE02_GET, 19},
-        {FLAG_BADGE03_GET, 24},
-        {FLAG_BADGE04_GET, 29},
-        {FLAG_BADGE05_GET, 31},
-        {FLAG_BADGE06_GET, 33},
-        {FLAG_BADGE07_GET, 42},
-        {FLAG_BADGE08_GET, 46},
-        {FLAG_IS_CHAMPION, 58},
+        {FLAG_RIVAL01, 10},
+        {FLAG_MONSTER01, 14},
+        {FLAG_BADGE01_GET, 18},
+        {FLAG_EVIL_TEAM01, 23},
+        {FLAG_BADGE02_GET, 27},
+        {FLAG_RIVAL02, 32},
+        {FLAG_BADGE03_GET, 36},
+        {FLAG_BADGE04_GET, 40},
+        {FLAG_EVIL_TEAM02, 45},
+        {FLAG_MONSTER02, 48},
+        {FLAG_BADGE05_GET, 51},
+        {FLAG_EVIL_TEAM03, 54},
+        {FLAG_MONSTER03, 56},
+        {FLAG_BADGE06_GET, 60},
+        {FLAG_RIVAL03, 65},
+        {FLAG_EVIL_TEAM04, 65},
+        {FLAG_BADGE07_GET, 69},
+        {FLAG_EVIL_TEAM05, 78},
+        {FLAG_BADGE08_GET, 83},
+        {FLAG_MONSTER04, 89},
+        {FLAG_EVIL_TEAM06, 89},
+        {FLAG_RIVAL04, 95},
+        {FLAG_ELITE_FOUR, 99},
+        {FLAG_IS_CHAMPION, 100},
     };
 
     u32 i;
@@ -61,7 +76,7 @@ u32 GetSoftLevelCapExpValue(u32 level, u32 expValue)
         }
         else
         {
-            return expValue;
+            return expValue; 
         }
     }
     else if (B_EXP_CAP_TYPE == EXP_CAP_HARD)
