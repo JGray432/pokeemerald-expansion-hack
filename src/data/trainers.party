@@ -9666,8 +9666,8 @@ Marshtomp
 Level: 31
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
-=== TRAINER_MAY_ROUTE_103_MUDKIP ===
-Name: MAY
+=== TRAINER_ATHENA_ATHENAS_HOUSE_PAWNIARD ===
+Name: ATHENA
 Class: Rival
 Pic: May
 Gender: Female
@@ -9675,7 +9675,7 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Treecko
+Jangmo_o
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9721,8 +9721,8 @@ Grovyle
 Level: 31
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
-=== TRAINER_MAY_ROUTE_103_TREECKO ===
-Name: MAY
+=== TRAINER_ATHENA_ATHENAS_HOUSE_ABRA ===
+Name: ATHENA
 Class: Rival
 Pic: May
 Gender: Female
@@ -9730,7 +9730,7 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Torchic
+Pawniard
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
@@ -9776,6 +9776,34 @@ Combusken
 Level: 31
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
+=== TRAINER_ATHENA_ATHENAS_HOUSE_JANGMOO ===
+Name: ATHENA
+Class: Rival
+Pic: May
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+Abra
+Level: 5
+IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+- teleport
+- MOVE_HIDDEN_POWER
+
+=== TRAINER_MAY_ROUTE_103_TREECKO ===
+Name: MAY
+Class: Rival
+Pic: May
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+Torchic
+Level: 10
+IVs: 0 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
 === TRAINER_MAY_ROUTE_103_TORCHIC ===
 Name: MAY
 Class: Rival
@@ -9785,9 +9813,23 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Mudkip
-Level: 5
-IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
+Torchic
+Level: 10
+IVs: 0 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+=== TRAINER_MAY_ROUTE_103_MUDKIP ===
+Name: MAY
+Class: Rival
+Pic: May
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Basic Trainer
+
+Torchic
+Level: 10
+IVs: 0 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
 
 === TRAINER_MAY_ROUTE_110_TORCHIC ===
 Name: MAY

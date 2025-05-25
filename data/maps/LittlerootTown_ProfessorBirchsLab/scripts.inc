@@ -139,7 +139,6 @@ LittlerootTown_ProfessorBirchsLab_EventScript_AgreeToSeeRival::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_GetRivalToTeachYou, MSGBOX_DEFAULT
 	clearflag FLAG_HIDE_ROUTE_101_BOY
 	setvar VAR_BIRCH_LAB_STATE, 3
-	goto LittleRootTown_ProfessorBirchsLab_EventScript_GiveKeyItems	
 	end
 
 LittlerootTown_ProfessorBirchsLab_EventScript_DeclineSeeingRival::
@@ -148,26 +147,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_DeclineSeeingRival::
 	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_DeclineSeeingRival
 	end
 
-LittleRootTown_ProfessorBirchsLab_EventScript_GiveKeyItems::
-	msgbox LittlerootTown_ProfessorBirchsLab_Text_GiveKeyItems MSGBOX_DEFAULT
-	playfanfare MUS_OBTAIN_ITEM
-	message LittlerootTown_ProfessorBirchsLab_Text_ReceivedInfCandy
-	giveitem ITEM_INF_CANDY
-	waitfanfare
-	playfanfare MUS_OBTAIN_ITEM
-	message LittlerootTown_ProfessorBirchsLab_Text_ReceivedInfRepel
-	giveitem ITEM_INF_REPEL
-	waitfanfare
-	playfanfare MUS_OBTAIN_ITEM
-	message LittlerootTown_ProfessorBirchsLab_Text_ReceivedNectarReserves
-	giveitem ITEM_NECTAR_RESERVES
-	waitfanfare
-	playfanfare MUS_OBTAIN_ITEM
-	message LittlerootTown_ProfessorBirchsLab_Text_ReceivedCapCandy
-	giveitem ITEM_CAP_CANDY
-	waitfanfare
-	releaseall
-	end
+
 
 LittlerootTown_ProfessorBirchsLab_EventScript_GivePokedexEvent::
 	lockall
@@ -782,21 +762,6 @@ LittlerootTown_ProfessorBirchsLab_Text_ExplainPokedex:
 	.string "doing fieldwork, and shows me.\p"
 	.string "Here, take these useful items too!$"
 
-LittlerootTown_ProfessorBirchsLab_Text_GiveKeyItems:
-	.string "PROF. BIRCH: Here are some useful\n"
-	.string "items to help start your journey\l"
-
-LittlerootTown_ProfessorBirchsLab_Text_ReceivedInfCandy:
-	.string "{PLAYER} received the Inf Candy!$"
-
-LittlerootTown_ProfessorBirchsLab_Text_ReceivedInfRepel:
-	.string "{PLAYER} received the Inf Repel!$"
-
-LittlerootTown_ProfessorBirchsLab_Text_ReceivedNectarReserves:
-	.string "{PLAYER} received the Nectar Reserves!$"
-
-	LittlerootTown_ProfessorBirchsLab_Text_ReceivedCapCandy:
-	.string "{PLAYER} received the Level Cap Candy!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_CountlessPokemonAwait:
 	.string "PROF. BIRCH: Countless POKéMON\n"
