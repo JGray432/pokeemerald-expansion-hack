@@ -1,7 +1,7 @@
 {
-  "id": "MAP_LITTLEROOT_TOWN_ATHENAS_HOUSE_1F",
-  "name": "LittlerootTown_AthenasHouse_1F",
-  "layout": "LAYOUT_LITTLEROOT_TOWN_ATHENAS_HOUSE_1F",
+  "id": "MAP_LITTLEROOT_TOWN_ATHENAS_HOUSE",
+  "name": "LittlerootTown_AthenasHouse",
+  "layout": "LAYOUT_LITTLEROOT_TOWN_ATHENAS_HOUSE",
   "music": "MUS_LITTLEROOT",
   "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
   "requires_flash": false,
@@ -25,20 +25,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_MOM"
-    },
-    {
-      "graphics_id": "OBJ_EVENT_GFX_RIVAL_BRENDAN_NORMAL",
-      "x": 8,
-      "y": 8,
-      "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_UP",
-      "movement_range_x": 1,
-      "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "0x0",
-      "flag": "FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_BRENDAN"
+      "flag": "FLAG_HIDE_LITTLEROOT_TOWN_ATHENAS_HOUSE_ATHENA"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BIRCHS_BAG",
@@ -50,7 +37,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "LittlerootTown_AthenasHouse_1F_EventScript_Bag",
+      "script": "LittlerootTown_AthenasHouse_EventScript_Bag",
       "flag": "FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG"
     }
   ],
@@ -78,16 +65,7 @@
       "elevation": 0,
       "var": "VAR_LITTLEROOT_INTRO_STATE",
       "var_value": "4",
-      "script": "LittlerootTown_AthenasHouse_1F_EventScript_GoSeeBag"
-    },
-    {
-      "type": "trigger",
-      "x": 8,
-      "y": 8,
-      "elevation": 0,
-      "var": "VAR_LITTLEROOT_INTRO_STATE",
-      "var_value": "5",
-      "script": "LittlerootTown_AthenasHouse_1F_EventScript_AthenaFiredUp"
+      "script": "AthenasHouse_EventScript_GoSeeBag"
     }
   ],
   "bg_events": [
