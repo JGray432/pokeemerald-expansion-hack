@@ -54,13 +54,22 @@
       "y": 8,
       "elevation": 0,
       "dest_map": "MAP_LITTLEROOT_TOWN",
-      "dest_warp_id": "1"
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
     {
       "type": "trigger",
       "x": 8,
+      "y": 8,
+      "elevation": 0,
+      "var": "VAR_LITTLEROOT_INTRO_STATE",
+      "var_value": "4",
+      "script": "AthenasHouse_EventScript_GoSeeBag"
+    },
+    {
+      "type": "trigger",
+      "x": 9,
       "y": 8,
       "elevation": 0,
       "var": "VAR_LITTLEROOT_INTRO_STATE",
