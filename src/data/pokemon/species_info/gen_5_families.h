@@ -10882,6 +10882,7 @@ const struct SpeciesInfo gSpeciesInfoGen5[] =
             gOverworldPalette_Pawniard,
             gShinyOverworldPalette_Pawniard
         )
+        .perfectIVCount = 3,
         .levelUpLearnset = sPawniardLevelUpLearnset,
         .teachableLearnset = sPawniardTeachableLearnset,
         .eggMoveLearnset = sPawniardEggMoveLearnset,

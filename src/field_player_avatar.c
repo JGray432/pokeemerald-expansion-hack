@@ -1751,9 +1751,9 @@ static void Task_WaitStopSurfing(u8 taskId)
 #define FISHING_STICKY_BOOST    36
 
 #if I_FISHING_BITE_ODDS >= GEN_4
-    #define FISHING_OLD_ROD_ODDS 100
-    #define FISHING_GOOD_ROD_ODDS 100
-    #define FISHING_SUPER_ROD_ODDS 100
+    #define FISHING_OLD_ROD_ODDS 0
+    #define FISHING_GOOD_ROD_ODDS 0
+    #define FISHING_SUPER_ROD_ODDS 0
 #elif I_FISHING_BITE_ODDS >= GEN_3
     #define FISHING_OLD_ROD_ODDS 50
     #define FISHING_GOOD_ROD_ODDS 50
@@ -1989,9 +1989,8 @@ static bool32 Fishing_WaitForA(struct Task *task)
 
     AlignFishingAnimationFrames();
     task->tFrameCounter++;
-    if (task->tFrameCounter >= reelTimeouts[task->tFishingRod])
-        task->tStep = FISHING_GOT_AWAY;
-    else if (JOY_NEW(A_BUTTON))
+
+    if(JOY_NEW(A_BUTTON))
         task->tStep = FISHING_CHECK_MORE_DOTS;
     return FALSE;
 }
@@ -2011,23 +2010,13 @@ static bool32 Fishing_CheckMoreDots(struct Task *task)
     {
         [OLD_ROD]   = {0, 0},
         [GOOD_ROD]  = {40, 10},
-        [SUPER_ROD] = {70, 30}
+        [SUPER_ROD] = {100, 100}
     };
 
     AlignFishingAnimationFrames();
     task->tStep = FISHING_MON_ON_HOOK;
-    if (task->tRoundsPlayed < task->tMinRoundsRequired)
-    {
-        task->tStep = FISHING_INIT_DOTS;
-    }
-    else if (task->tRoundsPlayed < 2)
-    {
-        // probability of having to play another round
-        s16 probability = Random() % 100;
 
-        if (moreDotsChance[task->tFishingRod][task->tRoundsPlayed] > probability)
-            task->tStep = FISHING_INIT_DOTS;
-    }
+    // probability of having to play another round
     return FALSE;
 }
 
