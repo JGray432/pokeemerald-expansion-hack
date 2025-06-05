@@ -435,7 +435,7 @@
 #define MUS_RG_POKE_MANSION         501 // MUS_RG_POKEYASHI
 #define MUS_RG_CREDITS              502 // MUS_RG_ENDING
 #define MUS_RG_ROUTE1               503 // MUS_RG_LOAD01
-#define MUS_RG_ROUTE24              504 // MUS_RG_OPENING
+#define MUS_RG_ROUTE2              504 // MUS_RG_OPENING
 #define MUS_RG_ROUTE3               505 // MUS_RG_LOAD02
 #define MUS_RG_ROUTE11              506 // MUS_RG_LOAD03
 #define MUS_RG_VICTORY_ROAD         507 // MUS_RG_CHAMP_R

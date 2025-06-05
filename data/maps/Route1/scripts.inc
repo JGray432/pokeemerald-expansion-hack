@@ -20,19 +20,11 @@ Route1_EventScript_HideMapNamePopup::
 	end
 
 Route1_EventScript_Youngster::
-	trainerbattle_single TRAINER_CALVIN_1, Route102_Text_CalvinIntro, Route102_Text_CalvinDefeated, Route102_EventScript_CalvinRegisterMatchCallAfterBattle
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route102_EventScript_CalvinRematch
-	setvar VAR_0x8004, TRAINER_CALVIN_1
-	specialvar VAR_RESULT, IsTrainerRegistered
-	goto_if_eq VAR_RESULT, FALSE, Route102_EventScript_CalvinTryRegister
-	msgbox Route102_Text_CalvinPostBattle, MSGBOX_DEFAULT
+	trainerbattle_single TRAINER_CALVIN_1, ROUTE2_Text_CalvinIntro, ROUTE2_Text_CalvinDefeated, ROUTE2_EventScript_CalvinRegisterMatchCallAfterBattle
+	msgbox ROUTE2_Text_CalvinPostBattle, MSGBOX_DEFAULT
 	release
 	end
 
-Route1_EventScript_Boy::
-	msgbox Route1_Text_WildPokemonInTallGrass, MSGBOX_NPC
-	end
 
 Route1_EventScript_RouteSign::
 	msgbox Route1_Text_RouteSign, MSGBOX_SIGN
@@ -41,5 +33,5 @@ Route1_EventScript_RouteSign::
 
 Route1_Text_RouteSign:
 	.string "ROUTE 1\n"
-	.string "{UP_ARROW} OLDALE TOWN$"
+	.string "{RIGHT_ARROW} WOODS$"
 

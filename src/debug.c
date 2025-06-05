@@ -3962,7 +3962,7 @@ static void DebugAction_Sound_MUS_SelectId(u8 taskId)
     X(MUS_RG_POKE_MANSION) \
     X(MUS_RG_CREDITS) \
     X(MUS_RG_ROUTE1) \
-    X(MUS_RG_ROUTE24) \
+    X(MUS_RG_ROUTE2) \
     X(MUS_RG_ROUTE3) \
     X(MUS_RG_ROUTE11) \
     X(MUS_RG_VICTORY_ROAD) \
