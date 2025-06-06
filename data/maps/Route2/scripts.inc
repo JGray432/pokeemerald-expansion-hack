@@ -1,4 +1,4 @@
-ROUTE2_MapScripts::
+Route2_MapScripts::
 	.byte 0
 
 ROUTE2_EventScript_LittleBoy::
@@ -72,6 +72,13 @@ ROUTE2_EventScript_Allen::
 	trainerbattle_single TRAINER_ALLEN, ROUTE2_Text_AllenIntro, ROUTE2_Text_AllenDefeated
 	msgbox ROUTE2_Text_AllenPostBattle, MSGBOX_AUTOCLOSE
 	end
+
+Route2_EventScript_WarpFacingDown:
+    applymovement OBJ_EVENT_ID_PLAYER, Route2_EventScript_MovePlayerDown
+    end
+
+Route2_EventScript_MovePlayerDown::
+	walk_down
 
 ROUTE2_Text_WatchMeCatchPokemon:
 	.string "WALLY: {PLAYER}…\n"

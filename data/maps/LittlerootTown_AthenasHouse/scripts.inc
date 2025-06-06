@@ -6,20 +6,8 @@ LittlerootTown_AthenasHouse_MapScripts::
 	.byte 0
 
 LittlerootTown_AthenasHouse_OnTransition:
-	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 3, LittlerootTown_AthenasHouse_EventScript_MoveMomToDoor
-	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 5, LittlerootTown_AthenasHouse_EventScript_MoveMomToStairs
-	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 6, LittlerootTown_AthenasHouse_EventScript_MoveMomToTV
+	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 2, LittlerootTown_AthenasHouse_EventScript_MoveMomToDoor
 	end
-
-LittlerootTown_AthenasHouse_EventScript_MoveMomToStairs::
-	setobjectxyperm LOCALID_ATHENA, 8, 4
-	setobjectmovementtype LOCALID_ATHENA, MOVEMENT_TYPE_FACE_UP
-	return
-
-LittlerootTown_AthenasHouse_EventScript_MoveMomToTV::
-	setobjectxyperm LOCALID_ATHENA, 4, 5
-	setobjectmovementtype LOCALID_ATHENA, MOVEMENT_TYPE_FACE_UP
-	return
 
 LittlerootTown_AthenasHouse_EventScript_MoveMomToDoor::
 	setobjectxyperm LOCALID_ATHENA, 9, 8
@@ -29,7 +17,7 @@ LittlerootTown_AthenasHouse_EventScript_MoveMomToDoor::
 @ Many of the below scripts have no gender check because they assume youre in the correct house
 @ The below SS Ticket script uses Mays house state by accident(?), but theyre both set identically after the intro
 LittlerootTown_AthenasHouse_OnFrame:
-	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 3, LittlerootTown_AthenasHouse_EventScript_EnterHouseMovingIn
+	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 2, LittlerootTown_AthenasHouse_EventScript_EnterHouseMovingIn
 	.2byte 0
 
 LittlerootTown_AthenasHouse_EventScript_EnterHouseMovingIn::
@@ -46,7 +34,7 @@ AthenasHouse_EventScript_EnterHouseMovingIn::
 	msgbox AthenasHouse_Text_IsntItNiceInHere, MSGBOX_DEFAULT
 	msgbox AthenasHouse_Text_OfferStarters, MSGBOX_DEFAULT
 	closemessage
-	setvar VAR_LITTLEROOT_INTRO_STATE, 4
+	setvar VAR_LITTLEROOT_INTRO_STATE, 3
 	releaseall
 	end
 
@@ -74,7 +62,7 @@ AthenasHouse_EventScript_GoSeeBag::
 	lockall
 	setvar VAR_0x8004, LOCALID_ATHENA
 	setvar VAR_0x8005, MALE
-	applymovement VAR_0x8004, Common_Movement_WalkInPlaceFasterRight
+	applymovement VAR_0x8004, Common_Movement_FacePlayer
 	waitmovement 0
 	msgbox AthenasHouse_Text_ArentYouInterestedInBag, MSGBOX_DEFAULT
 	closemessage
@@ -90,8 +78,9 @@ AthenasHouse_Movement_MovePlayerAwayFromDoor:
 
 LittlerootTown_AthenasHouse_EventScript_Bag::
 	lock
-	faceplayer
-	COMPARE VAR_LITTLEROOT_INTRO_STATE, 7
+	setvar VAR_0x8004, LOCALID_ATHENA
+	applymovement VAR_0x8004, Common_Movement_FacePlayer
+	COMPARE VAR_LITTLEROOT_INTRO_STATE, 4
 	call_if_eq LittlerootTown_AthenasHouse_EventScript_AlreadyChosenStarter
 	setflag FLAG_SYS_POKEMON_GET
 	setflag FLAG_RESCUED_BIRCH
@@ -102,7 +91,7 @@ LittlerootTown_AthenasHouse_EventScript_Bag::
 	setflag FLAG_HIDE_ROUTE_1_BIRCH_STARTERS_BAG
 	setvar VAR_BIRCH_LAB_STATE, 2
 	setvar VAR_ROUTE1_STATE, 3
-	setvar VAR_LITTLEROOT_INTRO_STATE, 5
+	setvar VAR_LITTLEROOT_INTRO_STATE, 4
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
 	goto AthenasHouse_EventScript_AthenaFiredUp
 	end
@@ -112,6 +101,14 @@ LittlerootTown_AthenasHouse_EventScript_AlreadyChosenStarter::
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
+	releaseall
+	end
+
+LittlerootTown_AthenasHouse_EventScript_AthenaWaiting::
+	lock
+	faceplayer
+	msgbox AthenasHouse_Text_ArentYouInterestedInBag, MSGBOX_DEFAULT
+	closemessage
 	releaseall
 	end
 
@@ -126,7 +123,6 @@ AthenasHouse_EventScript_AthenaFiredUp::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	msgbox AthenasHouse_Text_AthenaTasteOfBattle, MSGBOX_DEFAULT
 	closemessage
-	setvar VAR_LITTLEROOT_INTRO_STATE, 7
 	switch VAR_STARTER_MON
 	case 0, AthenasHouse_EventScript_StartAthenaBattleAbra
 	case 1, AthenasHouse_EventScript_StartAthenaBattleJangmoo
@@ -166,16 +162,11 @@ LittleRootTown_AthenasHouse_EventScript_GiveKeyItems::
 	giveitem ITEM_INF_CANDY
 	waitfanfare
 	playfanfare MUS_OBTAIN_ITEM
-	giveitem ITEM_INF_REPEL
-	waitfanfare
-	playfanfare MUS_OBTAIN_ITEM
 	giveitem ITEM_NECTAR_RESERVES
 	waitfanfare
 	playfanfare MUS_OBTAIN_ITEM
 	giveitem ITEM_CAP_CANDY
 	waitfanfare
-	giveitem ITEM_SUPER_ROD
-	setflag FLAG_RECEIVED_SUPER_ROD
 	goto AthenasHouse_EventScript_AthenaExitHouse
 	end
 

@@ -505,7 +505,6 @@ gSongTable::
 	song mus_rg_poke_mansion, 0, 0
 	song mus_rg_credits, 0, 0
 	song mus_rg_route1, 0, 0
-	song mus_rg_ROUTE2, 0, 0
 	song mus_rg_route3, 0, 0
 	song mus_rg_route11, 0, 0
 	song mus_rg_victory_road, 0, 0

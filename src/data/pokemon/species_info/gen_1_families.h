@@ -8193,6 +8193,7 @@ const struct SpeciesInfo gSpeciesInfoGen1[] =
             gOverworldPalette_Abra,
             gShinyOverworldPalette_Abra
         )
+        .perfectIVCount = 3,
         .levelUpLearnset = sAbraLevelUpLearnset,
         .teachableLearnset = sAbraTeachableLearnset,
         .eggMoveLearnset = sAbraEggMoveLearnset,

@@ -5386,6 +5386,7 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
             gOverworldPalette_KommoO,
             gShinyOverworldPalette_KommoO
         )
+        .perfectIVCount = 3,
         .levelUpLearnset = sKommoOLevelUpLearnset,
         .teachableLearnset = sKommoOTeachableLearnset,
         .formSpeciesIdTable = sKommoOFormSpeciesIdTable,
