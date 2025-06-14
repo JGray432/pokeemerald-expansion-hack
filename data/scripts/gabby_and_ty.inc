@@ -21,13 +21,13 @@ GabbyAndTy_EventScript_MoveForBattle1::
 	return
 
 GabbyAndTy_EventScript_MoveForBattle2::
-	call GabbyAndTy_EventScript_ShowAtRoute118_1
+	call GabbyAndTy_EventScript_ShowAtATHENSOUTSKIRTS_1
 	call GabbyAndTy_EventScript_HideAtRoute111_1
 	return
 
 GabbyAndTy_EventScript_MoveForBattle3::
 	call GabbyAndTy_EventScript_ShowAtRoute120_1
-	call GabbyAndTy_EventScript_HideAtRoute118_1
+	call GabbyAndTy_EventScript_HideAtATHENSOUTSKIRTS_1
 	return
 
 GabbyAndTy_EventScript_MoveForBattle4::
@@ -36,13 +36,13 @@ GabbyAndTy_EventScript_MoveForBattle4::
 	return
 
 GabbyAndTy_EventScript_MoveForBattle5::
-	call GabbyAndTy_EventScript_ShowAtRoute118_2
+	call GabbyAndTy_EventScript_ShowAtATHENSOUTSKIRTS_2
 	call GabbyAndTy_EventScript_HideAtRoute111_3
 	return
 
 GabbyAndTy_EventScript_MoveForBattle6::
 	call GabbyAndTy_EventScript_ShowAtRoute120_2
-	call GabbyAndTy_EventScript_HideAtRoute118_2
+	call GabbyAndTy_EventScript_HideAtATHENSOUTSKIRTS_2
 	return
 
 GabbyAndTy_EventScript_MoveForBattle7::
@@ -51,13 +51,13 @@ GabbyAndTy_EventScript_MoveForBattle7::
 	return
 
 GabbyAndTy_EventScript_MoveForBattle8::
-	call GabbyAndTy_EventScript_ShowAtRoute118_3
+	call GabbyAndTy_EventScript_ShowAtATHENSOUTSKIRTS_3
 	call GabbyAndTy_EventScript_HideAtRoute111_2
 	return
 
 GabbyAndTy_EventScript_MoveForBattle9::
 	call GabbyAndTy_EventScript_ShowAtRoute120_2
-	call GabbyAndTy_EventScript_HideAtRoute118_3
+	call GabbyAndTy_EventScript_HideAtATHENSOUTSKIRTS_3
 	return
 
 GabbyAndTy_EventScript_HideAtRoute111_1::
@@ -68,12 +68,12 @@ GabbyAndTy_EventScript_ShowAtRoute111_1::
 	clearflag FLAG_HIDE_ROUTE_111_GABBY_AND_TY_1
 	return
 
-GabbyAndTy_EventScript_HideAtRoute118_1::
-	setflag FLAG_HIDE_ROUTE_118_GABBY_AND_TY_1
+GabbyAndTy_EventScript_HideAtATHENSOUTSKIRTS_1::
+	setflag FLAG_HIDE_ATHENS_OUTSKIRTS_GABBY_AND_TY_1
 	return
 
-GabbyAndTy_EventScript_ShowAtRoute118_1::
-	clearflag FLAG_HIDE_ROUTE_118_GABBY_AND_TY_1
+GabbyAndTy_EventScript_ShowAtATHENSOUTSKIRTS_1::
+	clearflag FLAG_HIDE_ATHENS_OUTSKIRTS_GABBY_AND_TY_1
 	return
 
 GabbyAndTy_EventScript_HideAtRoute120_1::
@@ -92,12 +92,12 @@ GabbyAndTy_EventScript_ShowAtRoute111_3::
 	clearflag FLAG_HIDE_ROUTE_111_GABBY_AND_TY_3
 	return
 
-GabbyAndTy_EventScript_HideAtRoute118_2::
-	setflag FLAG_HIDE_ROUTE_118_GABBY_AND_TY_2
+GabbyAndTy_EventScript_HideAtATHENSOUTSKIRTS_2::
+	setflag FLAG_HIDE_ATHENS_OUTSKIRTS_GABBY_AND_TY_2
 	return
 
-GabbyAndTy_EventScript_ShowAtRoute118_2::
-	clearflag FLAG_HIDE_ROUTE_118_GABBY_AND_TY_2
+GabbyAndTy_EventScript_ShowAtATHENSOUTSKIRTS_2::
+	clearflag FLAG_HIDE_ATHENS_OUTSKIRTS_GABBY_AND_TY_2
 	return
 
 GabbyAndTy_EventScript_HideAtRoute120_2::
@@ -116,12 +116,12 @@ GabbyAndTy_EventScript_ShowAtRoute111_2::
 	clearflag FLAG_HIDE_ROUTE_111_GABBY_AND_TY_2
 	return
 
-GabbyAndTy_EventScript_HideAtRoute118_3::
-	setflag FLAG_HIDE_ROUTE_118_GABBY_AND_TY_3
+GabbyAndTy_EventScript_HideAtATHENSOUTSKIRTS_3::
+	setflag FLAG_HIDE_ATHENS_OUTSKIRTS_GABBY_AND_TY_3
 	return
 
-GabbyAndTy_EventScript_ShowAtRoute118_3::
-	clearflag FLAG_HIDE_ROUTE_118_GABBY_AND_TY_3
+GabbyAndTy_EventScript_ShowAtATHENSOUTSKIRTS_3::
+	clearflag FLAG_HIDE_ATHENS_OUTSKIRTS_GABBY_AND_TY_3
 	return
 
 GabbyAndTy_EventScript_GabbyBattle1::

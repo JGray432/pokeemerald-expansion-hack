@@ -1176,7 +1176,7 @@ u16 GetCurrLocationDefaultMusic(void)
         return MUS_DESERT;
 
     music = GetLocationMusic(&gSaveBlock1Ptr->location);
-    if (music != MUS_ROUTE118)
+    if (music != MUS_ATHENSOUTSKIRTS)
     {
         return music;
     }
@@ -1192,7 +1192,7 @@ u16 GetCurrLocationDefaultMusic(void)
 u16 GetWarpDestinationMusic(void)
 {
     u16 music = GetLocationMusic(&sWarpDestination);
-    if (music != MUS_ROUTE118)
+    if (music != MUS_ATHENSOUTSKIRTS)
     {
         return music;
     }

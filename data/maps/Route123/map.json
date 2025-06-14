@@ -17,14 +17,9 @@
       "map": "MAP_ROUTE122",
       "offset": 100,
       "direction": "up"
-    },
-    {
-      "map": "MAP_ROUTE118",
-      "offset": 0,
-      "direction": "left"
     }
   ],
-  "object_events": [
+  "object_events":[
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 11,

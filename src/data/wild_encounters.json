@@ -1115,8 +1115,8 @@
           }
         },
         {
-          "map": "MAP_ROUTE118",
-          "base_label": "gRoute118",
+          "map": "MAP_ATHENSOUTSKIRTS",
+          "base_label": "gATHENSOUTSKIRTS",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [

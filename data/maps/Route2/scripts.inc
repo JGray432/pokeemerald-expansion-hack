@@ -1,5 +1,12 @@
 Route2_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Route2_OnTransition
 	.byte 0
+
+Route2_OnTransition::
+	setvar VAR_ATHENS_CITY_STATE, 1
+	clearflag FLAG_HIDE_ROUTE_109_MR_BRINEY
+	clearflag FLAG_HIDE_ROUTE_109_MR_BRINEY_BOAT
+	end
 
 ROUTE2_EventScript_LittleBoy::
 	msgbox ROUTE2_Text_ImNotVeryTall, MSGBOX_NPC
