@@ -182,22 +182,22 @@
       "blockdata_filepath": "data/layouts/Route2/map.bin"
     },
     {
-      "id": "LAYOUT_ATHENSOUTSKIRTS",
-      "name": "AthensOutskirts_Layout",
+      "id": "LAYOUT_ATHENS_OUTSKIRTS",
+      "name": "Athens_Outskirts_Layout",
       "width": 20,
       "height": 20,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Mauville",
-      "border_filepath": "data/layouts/AthensOutskirts/border.bin",
-      "blockdata_filepath": "data/layouts/AthensOutskirts/map.bin"
+      "border_filepath": "data/layouts/Athens_Outskirts/border.bin",
+      "blockdata_filepath": "data/layouts/Athens_Outskirts/map.bin"
     },
     {
       "id": "LAYOUT_ROUTE103",
       "name": "Route103_Layout",
-      "width": 80,
+      "width": 30,
       "height": 22,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Petalburg",
+      "secondary_tileset": "gTileset_SecretBaseTree",
       "border_filepath": "data/layouts/Route103/border.bin",
       "blockdata_filepath": "data/layouts/Route103/map.bin"
     },
@@ -252,14 +252,14 @@
       "blockdata_filepath": "data/layouts/Route108/map.bin"
     },
     {
-      "id": "LAYOUT_ROUTE109",
-      "name": "Route109_Layout",
+      "id": "LAYOUT_ROUTE3",
+      "name": "Route3_Layout",
       "width": 40,
       "height": 63,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Mauville",
-      "border_filepath": "data/layouts/Route109/border.bin",
-      "blockdata_filepath": "data/layouts/Route109/map.bin"
+      "border_filepath": "data/layouts/Route3/border.bin",
+      "blockdata_filepath": "data/layouts/Route3/map.bin"
     },
     {
       "id": "LAYOUT_ROUTE110",
@@ -2392,14 +2392,14 @@
       "blockdata_filepath": "data/layouts/UnusedOutdoorArea/map.bin"
     },
     {
-      "id": "LAYOUT_ROUTE109_SEASHORE_HOUSE",
-      "name": "Route109_SeashoreHouse_Layout",
+      "id": "LAYOUT_ROUTE3_SEASHORE_HOUSE",
+      "name": "Route3_SeashoreHouse_Layout",
       "width": 15,
       "height": 10,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_SeashoreHouse",
-      "border_filepath": "data/layouts/Route109_SeashoreHouse/border.bin",
-      "blockdata_filepath": "data/layouts/Route109_SeashoreHouse/map.bin"
+      "border_filepath": "data/layouts/Route3_SeashoreHouse/border.bin",
+      "blockdata_filepath": "data/layouts/Route3_SeashoreHouse/map.bin"
     },
     {
       "id": "LAYOUT_ROUTE110_TRICK_HOUSE_ENTRANCE",

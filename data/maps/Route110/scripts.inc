@@ -411,17 +411,17 @@ Route110_EventScript_MayBattle::
 	end
 
 Route110_EventScript_MayBattleTreecko::
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_110_TREECKO, Route110_Text_MayDefeated
+	trainerbattle_no_intro TRAINER_ATHENA_ROUTE_3_ABRA, Route110_Text_MayDefeated
 	goto Route110_EventScript_MayDefeated
 	end
 
 Route110_EventScript_MayBattleTorchic::
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_110_TORCHIC, Route110_Text_MayDefeated
+	trainerbattle_no_intro TRAINER_ATHENA_ROUTE_3_JANGMOO, Route110_Text_MayDefeated
 	goto Route110_EventScript_MayDefeated
 	end
 
 Route110_EventScript_MayBattleMudkip::
-	trainerbattle_no_intro TRAINER_MAY_ROUTE_110_MUDKIP, Route110_Text_MayDefeated
+	trainerbattle_no_intro TRAINER_ATHENA_ROUTE_3_PAWNIARD, Route110_Text_MayDefeated
 	goto Route110_EventScript_MayDefeated
 	end
 
