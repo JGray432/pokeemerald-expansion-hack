@@ -198,8 +198,8 @@
       "height": 22,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_SecretBaseTree",
-      "border_filepath": "data/layouts/Route103/border.bin",
-      "blockdata_filepath": "data/layouts/Route103/map.bin"
+      "border_filepath": "data/layouts/DionysusVineyard/border.bin",
+      "blockdata_filepath": "data/layouts/DionysusVineyard/map.bin"
     },
     {
       "id": "LAYOUT_ROUTE104",
