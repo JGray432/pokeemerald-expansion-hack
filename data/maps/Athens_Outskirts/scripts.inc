@@ -86,8 +86,8 @@ Route118_EventScript_Girl::
 	end
 
 Athens_Outskirts_Text_DionysusThreadRequestStart:
-	.string "Dionysus: Heyy, so you must be the new \p"
-	.string "God I've been hearing so much about.\n"
+	.string "Dionysus: Heyy, so you must be the new \n"
+	.string "God I've been hearing so much about.\p"
 	.string "I'm Dionysus, god of wine and draama!\p"
 	.string "I guess I'm the first temple leader\n"
 	.string "you've encountered?\p"
@@ -96,12 +96,12 @@ Athens_Outskirts_Text_DionysusThreadRequestStart:
 	.string "divine blessing.\p"
 	.string "Butt I've got bigger concerns \n"
 	.string "right now.\p"
-	.string "We have a huge performance for the \l"
-	.string "whole of Athens tonight and Janice\n"
+	.string "We have a huge performance for the \n"
+	.string "whole of Athens tonight and Janice\l"
 	.string "has ripped her costume.\p"
-	.string "I would usually get a nymph to fix it\l"
+	.string "I would usually get a nymph to fix it\n"
 	.string "but I lent the thread to Hephaestus.\p"
-	.string "He needed it for some business in Crete, \l"
+	.string "He needed it for some business in Crete, \n"
 	.string "Lord knows what for I wasn't listening$"
 
 Athens_Outskirts_Text_DionysusShudders:

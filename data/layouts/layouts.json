@@ -192,8 +192,8 @@
       "blockdata_filepath": "data/layouts/Athens_Outskirts/map.bin"
     },
     {
-      "id": "LAYOUT_ROUTE103",
-      "name": "Route103_Layout",
+      "id": "LAYOUT_DIONYSUS_VINEYARD",
+      "name": "DionysusVineyard_Layout",
       "width": 30,
       "height": 22,
       "primary_tileset": "gTileset_General",

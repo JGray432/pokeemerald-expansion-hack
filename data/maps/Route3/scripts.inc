@@ -39,6 +39,7 @@ Route3_Movement_AthenaBattle::
 	walk_down
 	walk_down
 	walk_down
+	walk_down
 	step_end
 
 Route3_EventScript_AthenaBattle::
@@ -72,7 +73,7 @@ Route3_EventScript_AfterAthenaBattle:
 	waitmovement 0
 	removeobject LOCALID_ATHENA
 	setvar VAR_ATHENS_CITY_STATE, 3
-	setflag FLAG_MONSTER01
+	clearflag FLAG_RIVAL01
 	releaseall
 	end
 
@@ -182,18 +183,10 @@ Route3_Movement_SailToDewford:
 	walk_faster_down
 	walk_faster_down
 	walk_faster_down
-	walk_faster_down
-	walk_faster_down
-	walk_faster_down
 	walk_fast_down
 	walk_fast_down
 	walk_fast_left
 	walk_fast_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
-	walk_faster_left
 	walk_faster_left
 	walk_faster_left
 	walk_faster_left

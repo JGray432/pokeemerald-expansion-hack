@@ -9501,7 +9501,7 @@ IVs: 30 HP / 30 Atk / 30 Def / 30 SpA / 30 SpD / 30 Spe
 - Psychic
 - Future Sight
 
-=== TRAINER_BRENDAN_ROUTE_103_MUDKIP ===
+=== TRAINER_BRENDAN_DIONYSUS_VINEYARD_MUDKIP ===
 Name: BRENDAN
 Class: Rival
 Pic: Brendan
@@ -9556,7 +9556,7 @@ Grovyle
 Level: 31
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
-=== TRAINER_BRENDAN_ROUTE_103_TREECKO ===
+=== TRAINER_BRENDAN_DIONYSUS_VINEYARD_TREECKO ===
 Name: BRENDAN
 Class: Rival
 Pic: Brendan
@@ -9611,7 +9611,7 @@ Combusken
 Level: 31
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
-=== TRAINER_BRENDAN_ROUTE_103_TORCHIC ===
+=== TRAINER_BRENDAN_DIONYSUS_VINEYARD_TORCHIC ===
 Name: BRENDAN
 Class: Rival
 Pic: Brendan
@@ -9775,7 +9775,7 @@ IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 - teleport
 - MOVE_HIDDEN_POWER
 
-=== TRAINER_MAY_ROUTE_103_TREECKO ===
+=== TRAINER_MAY_DIONYSUS_VINEYARD_TREECKO ===
 Name: MAY
 Class: Rival
 Pic: May
@@ -9788,7 +9788,7 @@ Torchic
 Level: 10
 IVs: 0 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-=== TRAINER_MAY_ROUTE_103_TORCHIC ===
+=== TRAINER_MAY_DIONYSUS_VINEYARD_TORCHIC ===
 Name: MAY
 Class: Rival
 Pic: May
@@ -9801,7 +9801,7 @@ Torchic
 Level: 10
 IVs: 0 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-=== TRAINER_MAY_ROUTE_103_MUDKIP ===
+=== TRAINER_MAY_DIONYSUS_VINEYARD_MUDKIP ===
 Name: MAY
 Class: Rival
 Pic: May

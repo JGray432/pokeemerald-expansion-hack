@@ -523,10 +523,10 @@
 #define TRAINER_EDWIN_4                     517
 #define TRAINER_EDWIN_5                     518
 #define TRAINER_WALLY_VR_1                  519
-#define TRAINER_BRENDAN_ROUTE_103_MUDKIP    520
+#define TRAINER_BRENDAN_DIONYSUS_VINEYARD_MUDKIP    520
 #define TRAINER_BRENDAN_ROUTE_110_MUDKIP    521
 #define TRAINER_BRENDAN_ROUTE_119_MUDKIP    522
-#define TRAINER_BRENDAN_ROUTE_103_TREECKO   523
+#define TRAINER_BRENDAN_DIONYSUS_VINEYARD_TREECKO   523
 #define TRAINER_BRENDAN_ROUTE_110_TREECKO   524
 #define TRAINER_BRENDAN_ROUTE_119_TREECKO   525
 #define TRAINER_ATHENA_ATHENAS_HOUSE_ABRA   526
@@ -535,7 +535,7 @@
 #define TRAINER_ATHENA_ATHENAS_HOUSE_JANGMOO       529
 #define TRAINER_ATHENA_ROUTE_3_PAWNIARD        530
 #define TRAINER_MAY_ROUTE_119_MUDKIP        531
-#define TRAINER_BRENDAN_ROUTE_103_TORCHIC       532
+#define TRAINER_BRENDAN_DIONYSUS_VINEYARD_TORCHIC       532
 #define TRAINER_ATHENA_ROUTE_3_ABRA       533
 #define TRAINER_MAY_ROUTE_119_TREECKO       534
 #define TRAINER_ATHENA_ATHENAS_HOUSE_PAWNIARD       535
@@ -860,9 +860,9 @@
 #define TRAINER_MAY_PLACEHOLDER             854
 
 // very temporary
-#define TRAINER_MAY_ROUTE_103_MUDKIP       855
-#define TRAINER_MAY_ROUTE_103_TORCHIC       856
-#define TRAINER_MAY_ROUTE_103_TREECKO       857
+#define TRAINER_MAY_DIONYSUS_VINEYARD_MUDKIP       855
+#define TRAINER_MAY_DIONYSUS_VINEYARD_TORCHIC       856
+#define TRAINER_MAY_DIONYSUS_VINEYARD_TREECKO       857
 
 // NOTE: Because each Trainer uses a flag to determine when they are defeated, there is only space for 9 additional trainers before trainer flag space overflows
 //       More space can be made by shifting flags around in constants/flags.h or changing how trainer flags are handled
