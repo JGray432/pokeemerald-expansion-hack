@@ -1,6 +1,6 @@
 #ifndef GUARD_TRAINERS_H
 #define GUARD_TRAINERS_H
-
+ 
 #include "constants/opponents.h"
 #include "constants/battle_frontier_trainers.h"
 

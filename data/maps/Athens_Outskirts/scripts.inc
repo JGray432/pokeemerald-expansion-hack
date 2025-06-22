@@ -1,32 +1,21 @@
 .set LOCALID_DIONYSUS, 3
 
 Athens_Outskirts_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, Athens_Outskirts_OnTransition
 	.byte 0
 
-Athens_Outskirts_OnTransition:
-	call_if_eq VAR_ATHENS_CITY_STATE, 1, Athens_Outskirts_Dionysus_EventScript_SetLocation
-	call_if_eq VAR_ATHENS_CITY_STATE, 2, Athens_Outskirts_Dionysus_EventScript_SetLocation
-	removeobject LOCALID_DIONYSUS
-	end
-
-
-Athens_Outskirts_Dionysus_EventScript_SetLocation:
-	setobjectxyperm LOCALID_DIONYSUS, 18, 10
-	return
-
 Athens_Outskirts_EventScript_Dionysus::
+	goto_if_set FLAG_DELIVERED_STEVEN_LETTER, Athens_Outskirts_EventScript_DionysusPerformance
 	goto_if_set FLAG_DELIVERED_DEVON_GOODS, Athens_Outskirts_EventScript_DionysusFinished
 	lockall
 	msgbox Athens_Outskirts_Text_DionysusThreadRequestStart, MSGBOX_DEFAULT
-	applymovement LOCALID_DIONYSUS, Athens_Outskirts_Movement_DionysusTurnDownFromPlayer
+	applymovement LOCALID_DIONYSUS, Common_Movement_FaceRight
 	waitmovement 0
 	msgbox Athens_Outskirts_Text_DionysusShudders, MSGBOX_DEFAULT
-	applymovement LOCALID_DIONYSUS, Athens_Outskirts_Movement_DionysusTurnLeftFromPlayer
+	applymovement LOCALID_DIONYSUS, Common_Movement_FaceDown
 	waitmovement 0
 	msgbox Athens_Outskirts_Text_DionysusThreadRequestEnd, MSGBOX_DEFAULT
 	closemessage
-	applymovement OBJ_EVENT_ID_PLAYER, PlayerWalkLeft
+	applymovement OBJ_EVENT_ID_PLAYER, PlayerWalkDown
 	waitmovement 0
 	setflag FLAG_DELIVERED_DEVON_GOODS
 	setvar VAR_ATHENS_CITY_STATE, 2
@@ -34,19 +23,21 @@ Athens_Outskirts_EventScript_Dionysus::
 	end
 
 Athens_Outskirts_EventScript_DionysusTrigger::
-	goto_if_set FLAG_DELIVERED_DEVON_GOODS, Athens_Outskirts_EventScript_DionysusFinished
 	lockall
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceUp
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+	applymovement LOCALID_DIONYSUS, Common_Movement_FaceRight
 	waitmovement 0
+	goto_if_set FLAG_DELIVERED_STEVEN_LETTER, Athens_Outskirts_EventScript_DionysusPerformance
+	goto_if_set FLAG_DELIVERED_DEVON_GOODS, Athens_Outskirts_EventScript_DionysusFinished	
 	msgbox Athens_Outskirts_Text_DionysusThreadRequestStart, MSGBOX_DEFAULT
-	applymovement LOCALID_DIONYSUS, Athens_Outskirts_Movement_DionysusTurnLeftFromPlayer
+	applymovement LOCALID_DIONYSUS, Common_Movement_FaceDown
 	waitmovement 0
 	msgbox Athens_Outskirts_Text_DionysusShudders, MSGBOX_DEFAULT
-	applymovement LOCALID_DIONYSUS, Athens_Outskirts_Movement_DionysusTurnDownFromPlayer
+	applymovement LOCALID_DIONYSUS, Common_Movement_FaceRight
 	waitmovement 0
 	msgbox Athens_Outskirts_Text_DionysusThreadRequestEnd, MSGBOX_DEFAULT
 	closemessage
-	applymovement OBJ_EVENT_ID_PLAYER, PlayerWalkLeft
+	applymovement OBJ_EVENT_ID_PLAYER, PlayerWalkDown
 	waitmovement 0
 	setflag FLAG_DELIVERED_DEVON_GOODS
  	setvar VAR_ATHENS_CITY_STATE, 2
@@ -55,13 +46,24 @@ Athens_Outskirts_EventScript_DionysusTrigger::
 
 Athens_Outskirts_EventScript_DionysusFinished::
 	lockall
+	applymovement LOCALID_DIONYSUS, Common_Movement_FaceDown
 	msgbox Athens_Outskirts_Text_DionysusThreadRequestEnd, MSGBOX_DEFAULT
 	closemessage
-	applymovement OBJ_EVENT_ID_PLAYER, PlayerWalkLeft
+	applymovement OBJ_EVENT_ID_PLAYER, PlayerWalkDown
 	waitmovement 0
 	releaseall
 	end
 
+Athens_Outskirts_EventScript_DionysusPerformance::
+ lockall
+ msgbox Athens_Outskirts_Text_DionysusPerformance, MSGBOX_DEFAULT
+ closemessage
+ setflag FLAG_DELIVERED_THREAD
+ setvar VAR_ATHENS_CITY_STATE, 5
+ fadescreenspeed FADE_TO_BLACK, 24
+ fadescreenspeed FADE_FROM_BLACK, 24
+ releaseall
+ end
 
 Athens_Outskirts_Movement_DionysusTurnLeftFromPlayer::
 	walk_in_place_faster_left
@@ -71,8 +73,8 @@ Athens_Outskirts_Movement_DionysusTurnDownFromPlayer::
 	walk_in_place_faster_down
 	step_end
 
-PlayerWalkLeft::
-	walk_left
+PlayerWalkDown::
+	walk_down
 	step_end
 
 Athens_Outskirts_EventScript_Rose::
@@ -81,8 +83,10 @@ Athens_Outskirts_EventScript_Rose::
 	release
 	end
 
-Route118_EventScript_Girl::
-	msgbox Route118_Text_CanCrossRiversWithSurf, MSGBOX_NPC
+Athens_Outskirts_EventScript_Amani::
+	trainerbattle_single TRAINER_AMANI, Athens_Outskirts_Text_RoseIntro, Athens_Outskirts_Text_RoseDefeat
+	msgbox Athens_Outskirts_Text_RosePostBattle, MSGBOX_DEFAULT
+	release
 	end
 
 Athens_Outskirts_Text_DionysusThreadRequestStart:
@@ -98,11 +102,11 @@ Athens_Outskirts_Text_DionysusThreadRequestStart:
 	.string "right now.\p"
 	.string "We have a huge performance for the \n"
 	.string "whole of Athens tonight and Janice\l"
-	.string "has ripped her costume.\p"
+	.string "has ripped her costume...\p"
 	.string "I would usually get a nymph to fix it\n"
 	.string "but I lent the thread to Hephaestus.\p"
 	.string "He needed it for some business in Crete, \n"
-	.string "Lord knows what for I wasn't listening$"
+	.string "Lord knows what for I wasn't listening.$"
 
 Athens_Outskirts_Text_DionysusShudders:
 	.string "(That grimy little man...) \p"
@@ -113,8 +117,16 @@ Athens_Outskirts_Text_DionysusThreadRequestEnd:
 	.string "could you go to Crete and get the \l"
 	.string "thread back for me?\p"
 	.string "South of the city on Route 3 there's \n"
-	.string "a sailor, I'm sure he'd take you there \l"
-	.string "if you ask nicely!$"
+	.string "a sailor, tell him I'll pay him back \l"
+	.string "later if he takes you now!$"
+
+Athens_Outskirts_Text_DionysusPerformance:
+ .string "Dionysus: You got the thread!\n"
+ .string "You're a lifesaver babes, we were\l"
+ .string "moments away from total meltdown here.\p"
+ .string "To pay you back you can have front row \n"
+ .string "seats to our fabulous production.\p"
+ .string "Hm, oh sure we can battle afterwards too.$"
 
 Route118_Text_CanCrossRiversWithSurf:
 	.string "sup.$"

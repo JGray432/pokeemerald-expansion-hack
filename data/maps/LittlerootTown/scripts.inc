@@ -295,7 +295,7 @@ LittlerootTown_Text_OurNewHomeLetsGoInside:
 LittlerootTown_Text_GiveSuperRod:
 	.string "Boy, have I got a deal for you!\n"
 	.string "Quite possibly the greatest deal \l"
-	.string "in the history of the world \p"
+	.string "in the history of the world. \p"
 	.string "I hold in my hands a one-of-a-kind\n"
 	.string "magic stick, yours for the measly \l"
 	.string "price of ¥500 $"
@@ -315,14 +315,14 @@ LittlerootTown_Text_NotEnoughMoney:
 LittlerootTown_Text_GiveInfRepelStart:
 	.string "HA! I knew I wasn't crazy for starting\n"
 	.string "a perfume franchise in the middle \l"
-	.string "of the woods \n"
+	.string "of the woods. \n"
 
 LittlerootTown_Text_TakeThatBusinessSchool:
 	.string "Take that, business college!$"
 
 LittlerootTown_Text_GiveInfRepelEnd:
 	.string "Ahem. In light of my great success \n"
-	.string "you can take this firstsample for free \p"
+	.string "you can take this first sample for free \p"
 	.string "Even if it's not your style I'm sure \n"
 	.string "it'll be good for something.$"
 

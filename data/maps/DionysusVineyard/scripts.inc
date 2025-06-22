@@ -271,6 +271,7 @@ DionysusVineyard_EventScript_MiguelRematch::
 DionysusVineyard_EventScript_Marcos::
 	trainerbattle_single TRAINER_MARCOS, DionysusVineyard_Text_MarcosIntro, DionysusVineyard_Text_MarcosDefeated
 	msgbox DionysusVineyard_Text_MarcosPostBattle, MSGBOX_AUTOCLOSE
+	setflag FLAG_BADGE01_GET
 	end
 
 DionysusVineyard_EventScript_Rhett::

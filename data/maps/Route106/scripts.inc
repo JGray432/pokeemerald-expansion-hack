@@ -1,3 +1,4 @@
+.set LOCALID_KYLA, 5
 Route106_MapScripts::
 	.byte 0
 
@@ -10,17 +11,29 @@ Route106_EventScript_Douglas::
 	msgbox Route106_Text_DouglasPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Route106_EventScript_Kyla::
-	trainerbattle_single TRAINER_KYLA, Route106_Text_KylaIntro, Route106_Text_KylaDefeated
-	msgbox Route106_Text_KylaPostBattle, MSGBOX_AUTOCLOSE
+Route106_EventScript_Kyla_BackToBack::
+	goto_if_set FLAG_ROUTE_106_BACKTOBACK, Route106_EventScript_KylaDefeated
+	applymovement LOCALID_KYLA, Common_Movement_ExclamationMark
+	waitmovement 0
+	applymovement LOCALID_KYLA, Route106_Movement_KylaApproachPlayer
+	waitmovement 0
+	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
+ 	waitmovement 0
+	goto Route106_EventScript_Kyla
 	end
 
+Route106_EventScript_Kyla::
+	trainerbattle_single TRAINER_KYLA, Route106_Text_KylaIntro, Route106_Text_KylaDefeated, Route106_EventScript_KylaDefeated
+	
+
 Route106_EventScript_Elliot::
-	trainerbattle_single TRAINER_ELLIOT_1, Route106_Text_ElliotIntro, Route106_Text_ElliotDefeated, Route106_EventScript_ElliotRegisterMatchCallAfterBattle
-	specialvar VAR_RESULT, ShouldTryRematchBattle
-	goto_if_eq VAR_RESULT, TRUE, Route106_EventScript_ElliotRematch
-	msgbox Route106_Text_ElliotPostBattle, MSGBOX_DEFAULT
+	trainerbattle_single TRAINER_ELLIOT_1, Route106_Text_ElliotIntro, Route106_Text_ElliotDefeated, Route106_EventScript_Kyla_BackToBack
 	release
+	end
+
+Route106_EventScript_KylaDefeated::
+	setflag FLAG_ROUTE_106_BACKTOBACK
+	msgbox Route106_Text_KylaPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Route106_EventScript_ElliotRegisterMatchCallAfterBattle::
@@ -46,3 +59,9 @@ Route106_Text_TrainerTips:
 	.string "Advice on catching POKéMON with a ROD:\n"
 	.string "Press the A Button if you get a bite.$"
 
+Route106_Movement_KylaApproachPlayer::
+	walk_right
+	walk_right
+	walk_right
+	walk_right
+	step_end

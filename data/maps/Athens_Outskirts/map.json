@@ -25,22 +25,22 @@
     },
     {
       "map": "MAP_MAUVILLE_CITY",
-      "offset": -1,
+      "offset": 0,
       "direction": "left"
     }
   ],
   "object_events": [
     {
       "graphics_id": "OBJ_EVENT_GFX_GIRL_2",
-      "x": 17,
+      "x": 14,
       "y": 14,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
       "movement_range_x": 1,
       "movement_range_y": 1,
-      "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "0",
-      "script": "Route118_EventScript_Girl",
+      "trainer_type": "TRAINER_TYPE_NORMAL",
+      "trainer_sight_or_berry_tree_id": "4",
+      "script": "Athens_Outskirts_EventScript_Amani",
       "flag": "0"
     },
     {
@@ -58,16 +58,16 @@
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WALLACE",
-      "x": 18,
-      "y": 10,
+      "x": 16,
+      "y": 2,
       "elevation": 3,
-      "movement_type": "MOVEMENT_TYPE_FACE_LEFT",
+      "movement_type": "MOVEMENT_TYPE_FACE_DOWN",
       "movement_range_x": 1,
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
       "script": "Athens_Outskirts_EventScript_Dionysus",
-      "flag": "0"
+      "flag": "FLAG_DELIVERED_THREAD"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -85,25 +85,25 @@
   ],
   "warp_events": [
     {
-      "x": 19,
-      "y": 10,
+      "x": 16,
+      "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_DYNAMIC",
+      "dest_map": "MAP_DIONYSUS_VINEYARD",
       "dest_warp_id": "0"
     },
     {
-      "x": 19,
-      "y": 11,
+      "x": 17,
+      "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_DYNAMIC",
+      "dest_map": "MAP_DIONYSUS_VINEYARD",
       "dest_warp_id": "1"
     }
   ],
   "coord_events": [
     {
       "type": "trigger",
-      "x": 18,
-      "y": 11,
+      "x": 17,
+      "y": 2,
       "elevation": 0,
       "var": "VAR_ATHENS_CITY_STATE",
       "var_value": "1",

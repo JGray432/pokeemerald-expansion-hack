@@ -108,15 +108,15 @@
   ],
   "warp_events": [
     {
-      "x": 2,
-      "y": 17,
+      "x": 1,
+      "y": 19,
       "elevation": 0,
       "dest_map": "MAP_ATHENS_OUTSKIRTS",
       "dest_warp_id": "0"
     },
     {
       "x": 2,
-      "y": 18,
+      "y": 19,
       "elevation": 0,
       "dest_map": "MAP_ATHENS_OUTSKIRTS",
       "dest_warp_id": "1"
