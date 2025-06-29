@@ -1,9 +1,9 @@
 {
-  "id": "MAP_GRANITE_CAVE_1F",
-  "name": "GraniteCave_1F",
-  "layout": "LAYOUT_GRANITE_CAVE_1F",
+  "id": "MAP_LABYRINTH_1F",
+  "name": "Labyrinth_1F",
+  "layout": "LAYOUT_LABYRINTH_1F",
   "music": "MUS_PETALBURG_WOODS",
-  "region_map_section": "MAPSEC_GRANITE_CAVE",
+  "region_map_section": "MAPSEC_LABYRINTH",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNDERGROUND",
@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "GraniteCave_1F_EventScript_David",
+      "script": "Labyrinth_1F_EventScript_David",
       "flag": "0"
     },
     {
@@ -38,7 +38,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "ITEM_ESCAPE_ROPE",
       "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_ITEM_GRANITE_CAVE_1F_ESCAPE_ROPE"
+      "flag": "FLAG_ITEM_LABYRINTH_1F_ESCAPE_ROPE"
     }
   ],
   "warp_events": [
@@ -53,21 +53,21 @@
       "x": 35,
       "y": 3,
       "elevation": 3,
-      "dest_map": "MAP_GRANITE_CAVE_B1F",
+      "dest_map": "MAP_LABYRINTH_B1F",
       "dest_warp_id": "0"
     },
     {
       "x": 17,
       "y": 11,
       "elevation": 3,
-      "dest_map": "MAP_GRANITE_CAVE_B1F",
+      "dest_map": "MAP_LABYRINTH_B1F",
       "dest_warp_id": "1"
     },
     {
       "x": 5,
       "y": 10,
       "elevation": 3,
-      "dest_map": "MAP_GRANITE_CAVE_STEVENS_ROOM",
+      "dest_map": "MAP_LABYRINTH_STEVENS_ROOM",
       "dest_warp_id": "0"
     }
   ],

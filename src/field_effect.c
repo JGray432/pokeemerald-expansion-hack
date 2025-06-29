@@ -579,8 +579,8 @@ static const struct SpriteTemplate sSpriteTemplate_HofMonitorSmall =
 static void (*const sPokecenterHealEffectFuncs[])(struct Task *) =
 {
     PokecenterHealEffect_Init,
-    PokecenterHealEffect_WaitForBallPlacement,
-    PokecenterHealEffect_WaitForBallFlashing,
+    //PokecenterHealEffect_WaitForBallPlacement,
+    //PokecenterHealEffect_WaitForBallFlashing,
     PokecenterHealEffect_WaitForSoundAndEnd
 };
 
@@ -1055,8 +1055,8 @@ static void Task_PokecenterHeal(u8 taskId)
 static void PokecenterHealEffect_Init(struct Task *task)
 {
     task->tState++;
-    task->tBallSpriteId = CreateGlowingPokeballsEffect(task->tNumMons, task->tFirstBallX, task->tFirstBallY, TRUE);
-    task->tMonitorSpriteId = CreatePokecenterMonitorSprite(task->tMonitorX, task->tMonitorY);
+    //task->tBallSpriteId = CreateGlowingPokeballsEffect(task->tNumMons, task->tFirstBallX, task->tFirstBallY, TRUE);
+    //task->tMonitorSpriteId = CreatePokecenterMonitorSprite(task->tMonitorX, task->tMonitorY);
 }
 
 static void PokecenterHealEffect_WaitForBallPlacement(struct Task *task)
