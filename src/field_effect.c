@@ -1078,12 +1078,12 @@ static void PokecenterHealEffect_WaitForBallFlashing(struct Task *task)
 
 static void PokecenterHealEffect_WaitForSoundAndEnd(struct Task *task)
 {
-    if (gSprites[task->tBallSpriteId].sState > 6)
-    {
-        DestroySprite(&gSprites[task->tBallSpriteId]);
+    //if (gSprites[task->tBallSpriteId].sState > 6)
+    //{
+        //DestroySprite(&gSprites[task->tBallSpriteId]);
         FieldEffectActiveListRemove(FLDEFF_POKECENTER_HEAL);
         DestroyTask(FindTaskIdByFunc(Task_PokecenterHeal));
-    }
+    //}
 }
 
 bool8 FldEff_HallOfFameRecord(void)

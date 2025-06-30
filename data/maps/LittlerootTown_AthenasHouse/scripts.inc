@@ -167,6 +167,9 @@ LittleRootTown_AthenasHouse_EventScript_GiveKeyItems::
 	playfanfare MUS_OBTAIN_ITEM
 	giveitem ITEM_CAP_CANDY
 	waitfanfare
+	playfanfare MUS_OBTAIN_ITEM
+	giveitem ITEM_THE_SACK
+	waitfanfare
 	goto AthenasHouse_EventScript_AthenaExitHouse
 	end
 

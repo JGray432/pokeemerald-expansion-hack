@@ -118,9 +118,9 @@
 #define VAR_DIONYSUS_VINEYARD_STATE                               0x4062 // Unused Var
 #define VAR_ROUTE104_STATE                               0x4063
 #define VAR_ROUTE105_STATE                               0x4064 // Unused Var
-#define VAR_ROUTE106_STATE                               0x4065 // Unused Var
-#define VAR_ROUTE107_STATE                               0x4066 // Unused Var
-#define VAR_ROUTE108_STATE                               0x4067 // Unused Var
+#define VAR_ROUTE6_STATE                               0x4065 // Unused Var
+#define VAR_ROUTE5_STATE                               0x4066 // Unused Var
+#define VAR_ROUTE4_STATE                               0x4067 // Unused Var
 #define VAR_ROUTE3_STATE                               0x4068 // Unused Var
 #define VAR_ROUTE110_STATE                               0x4069
 #define VAR_ROUTE111_STATE                               0x406A // Unused Var
