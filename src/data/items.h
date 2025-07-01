@@ -14163,7 +14163,7 @@ const struct Item gItemsInfo[] =
     .name = _("The Sack"),
     .price = 0,
     .description = COMPOUND_STRING(
-        "A safe place to store \n"
+        "A safe place to put \n"
         "non party members."),
     .importance = TRUE,
     .pocket = POCKET_KEY_ITEMS,
