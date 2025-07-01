@@ -1,24 +1,24 @@
-MauvilleCity_House1_MapScripts::
+Athens_House1_MapScripts::
 	.byte 0
 
-MauvilleCity_House1_EventScript_RockSmashDude::
+Athens_House1_EventScript_RockSmashDude::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_HM_ROCK_SMASH, MauvilleCity_House1_EventScript_ReceivedRockSmash
-	msgbox MauvilleCity_House1_Text_ImRockSmashDudeTakeThis, MSGBOX_DEFAULT
+	goto_if_set FLAG_RECEIVED_HM_ROCK_SMASH, Athens_House1_EventScript_ReceivedRockSmash
+	msgbox Athens_House1_Text_ImRockSmashDudeTakeThis, MSGBOX_DEFAULT
 	giveitem ITEM_TM10
 	setflag FLAG_RECEIVED_HM_ROCK_SMASH
 	setflag FLAG_HIDE_ROUTE_111_ROCK_SMASH_TIP_GUY
-	msgbox MauvilleCity_House1_Text_ExplainRockSmash, MSGBOX_DEFAULT
+	msgbox Athens_House1_Text_ExplainRockSmash, MSGBOX_DEFAULT
 	release
 	end
 
-MauvilleCity_House1_EventScript_ReceivedRockSmash::
-	msgbox MauvilleCity_House1_Text_MonCanFlyOutOfSmashedRock, MSGBOX_DEFAULT
+Athens_House1_EventScript_ReceivedRockSmash::
+	msgbox Athens_House1_Text_MonCanFlyOutOfSmashedRock, MSGBOX_DEFAULT
 	release
 	end
 
-MauvilleCity_House1_Text_ImRockSmashDudeTakeThis:
+Athens_House1_Text_ImRockSmashDudeTakeThis:
 	.string "Woohoo!\p"
 	.string "I hear people call me the ROCK SMASH\n"
 	.string "GUY, but I find that sort of degrading.\p"
@@ -30,7 +30,7 @@ MauvilleCity_House1_Text_ImRockSmashDudeTakeThis:
 	.string "I like that!\n"
 	.string "Here, take this HIDDEN MACHINE!$"
 
-MauvilleCity_House1_Text_ExplainRockSmash:
+Athens_House1_Text_ExplainRockSmash:
 	.string "That HM contains ROCK SMASH.\p"
 	.string "If you come across large boulders\n"
 	.string "that block your path…\p"
@@ -39,7 +39,7 @@ MauvilleCity_House1_Text_ExplainRockSmash:
 	.string "Yes, sir! Smash rocks aside, I say!\n"
 	.string "Woohoo!$"
 
-MauvilleCity_House1_Text_MonCanFlyOutOfSmashedRock:
+Athens_House1_Text_MonCanFlyOutOfSmashedRock:
 	.string "Oh, yes, if you smash a rock, a POKéMON\n"
 	.string "could come flying out of hiding.\p"
 	.string "Woohoo!$"

@@ -73,8 +73,8 @@
       "height": 2
     },
     {
-      "map_section": "MAPSEC_MAUVILLE_CITY",
-      "name": "MAUVILLE CITY",
+      "map_section": "MAPSEC_ATHENS",
+      "name": "ATHENS",
       "x": 8,
       "y": 6,
       "width": 2,
@@ -497,8 +497,8 @@
       "height": 1
     },
     {
-      "map_section": "MAPSEC_NEW_MAUVILLE",
-      "name": "NEW MAUVILLE",
+      "map_section": "MAPSEC_NEW_ATHENS",
+      "name": "NEW ATHENS",
       "x": 8,
       "y": 7,
       "width": 1,

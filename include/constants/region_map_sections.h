@@ -10,7 +10,7 @@
 #define MAPSEC_PACIFIDLOG_TOWN              0x06
 #define MAPSEC_PETALBURG_CITY               0x07
 #define MAPSEC_SLATEPORT_CITY               0x08
-#define MAPSEC_MAUVILLE_CITY                0x09
+#define MAPSEC_ATHENS                0x09
 #define MAPSEC_RUSTBORO_CITY                0x0A
 #define MAPSEC_FORTREE_CITY                 0x0B
 #define MAPSEC_LILYCOVE_CITY                0x0C
@@ -63,7 +63,7 @@
 #define MAPSEC_PETALBURG_WOODS              0x3B
 #define MAPSEC_RUSTURF_TUNNEL               0x3C
 #define MAPSEC_ABANDONED_SHIP               0x3D
-#define MAPSEC_NEW_MAUVILLE                 0x3E
+#define MAPSEC_NEW_ATHENS                 0x3E
 #define MAPSEC_METEOR_FALLS                 0x3F
 #define MAPSEC_METEOR_FALLS2                0x40
 #define MAPSEC_MT_PYRE                      0x41

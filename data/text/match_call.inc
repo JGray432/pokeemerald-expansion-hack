@@ -2123,7 +2123,7 @@ MatchCall_Text_Wattson2::
 MatchCall_Text_Wattson3::
 	.string "WATTSON: Oh, it's you!\n"
 	.string "My GYM's ready!\p"
-	.string "Visit MAUVILLE anytime!\n"
+	.string "Visit ATHENS anytime!\n"
 	.string "Wahahahaha!$"
 
 MatchCall_Text_Wattson4::
@@ -2357,7 +2357,7 @@ MatchCall_Text_May3::
 	.string "the CUTTER in RUSTBORO?\l"
 	.string "He had a house there, remember?\p"
 	.string "Well, I found out his younger\n"
-	.string "brother lives in MAUVILLE.\p"
+	.string "brother lives in ATHENS.\p"
 	.string "Can you guess his name?\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
@@ -2483,7 +2483,7 @@ MatchCall_Text_Brendan3::
 	.string "the CUTTER in RUSTBORO?\l"
 	.string "He had a house there, right?\p"
 	.string "Well, it turns out his little\n"
-	.string "brother lives in MAUVILLE.\p"
+	.string "brother lives in ATHENS.\p"
 	.string "Can you guess his name?\p"
 	.string "… … … … … …\n"
 	.string "… … … … … …\p"
@@ -2775,7 +2775,7 @@ MatchCall_Text_Norman9::
 
 MatchCall_Text_Steven1::
 	.string "STEVEN: Hi, {PLAYER}{KUN}!\p"
-	.string "Have you been to MAUVILLE\n"
+	.string "Have you been to ATHENS\n"
 	.string "already?\p"
 	.string "You should visit the BIKE SHOP\n"
 	.string "and get a MACH BIKE.\p"

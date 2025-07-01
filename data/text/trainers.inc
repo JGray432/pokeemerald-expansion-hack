@@ -1492,7 +1492,7 @@ Route111_Text_HaydenPostBattle:
 	.string "Maybe I can grill some BERRIES…$"
 
 Route111_Text_BiancaIntro:
-	.string "Did you come from MAUVILLE?\n"
+	.string "Did you come from ATHENS?\n"
 	.string "Then you should be full of energy!$"
 
 Route111_Text_BiancaDefeat:

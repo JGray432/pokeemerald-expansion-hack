@@ -14169,7 +14169,7 @@ const struct Item gItemsInfo[] =
     .pocket = POCKET_KEY_ITEMS,
     .type = ITEM_USE_FIELD,
     .fieldUseFunc = ItemUseOutOfBattle_TheSack,
-    .iconPic = gItemIcon_Honey,
-    .iconPalette = gItemIconPalette_Honey,
+    .iconPic = gItemIcon_SootSack,
+    .iconPalette = gItemIconPalette_SootSack,
 },
 };

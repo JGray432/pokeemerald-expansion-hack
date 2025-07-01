@@ -2450,7 +2450,7 @@
           }
         },
         {
-          "map": "MAP_NEW_MAUVILLE_INSIDE",
+          "map": "MAP_NEW_ATHENS_INSIDE",
           "base_label": "gNewMauville_Inside",
           "land_mons": {
             "encounter_rate": 10,
@@ -4906,7 +4906,7 @@
           }
         },
         {
-          "map": "MAP_NEW_MAUVILLE_ENTRANCE",
+          "map": "MAP_NEW_ATHENS_ENTRANCE",
           "base_label": "gNewMauville_Entrance",
           "land_mons": {
             "encounter_rate": 10,
@@ -8441,8 +8441,8 @@
           }
         },
         {
-          "map": "MAP_MAUVILLE_CITY",
-          "base_label": "gMauvilleCity0",
+          "map": "MAP_ATHENS",
+          "base_label": "gAthens0",
           "land_mons": {
             "encounter_rate": 10,
             "mons": [

@@ -36,7 +36,7 @@ void TraderSetup(void)
     u8 i;
     struct MauvilleOldManTrader *trader = &gSaveBlock1Ptr->oldMan.trader;
 
-    trader->id = MAUVILLE_MAN_TRADER;
+    trader->id = ATHENS_MAN_TRADER;
     trader->alreadyTraded = FALSE;
 
     for (i = 0; i < NUM_TRADER_ITEMS; i++)

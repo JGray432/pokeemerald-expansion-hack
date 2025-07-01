@@ -1,9 +1,9 @@
 {
-  "id": "MAP_NEW_MAUVILLE_INSIDE",
+  "id": "MAP_NEW_ATHENS_INSIDE",
   "name": "NewMauville_Inside",
-  "layout": "LAYOUT_NEW_MAUVILLE_INSIDE",
+  "layout": "LAYOUT_NEW_ATHENS_INSIDE",
   "music": "MUS_MT_PYRE",
-  "region_map_section": "MAPSEC_NEW_MAUVILLE",
+  "region_map_section": "MAPSEC_NEW_ATHENS",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNDERGROUND",
@@ -25,7 +25,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "ITEM_ULTRA_BALL",
       "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_ITEM_NEW_MAUVILLE_ULTRA_BALL"
+      "flag": "FLAG_ITEM_NEW_ATHENS_ULTRA_BALL"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -38,7 +38,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "ITEM_ESCAPE_ROPE",
       "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_ITEM_NEW_MAUVILLE_ESCAPE_ROPE"
+      "flag": "FLAG_ITEM_NEW_ATHENS_ESCAPE_ROPE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -51,7 +51,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "ITEM_THUNDER_STONE",
       "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_ITEM_NEW_MAUVILLE_THUNDER_STONE"
+      "flag": "FLAG_ITEM_NEW_ATHENS_THUNDER_STONE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -64,7 +64,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "ITEM_FULL_HEAL",
       "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_ITEM_NEW_MAUVILLE_FULL_HEAL"
+      "flag": "FLAG_ITEM_NEW_ATHENS_FULL_HEAL"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -77,7 +77,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "ITEM_PARALYZE_HEAL",
       "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_ITEM_NEW_MAUVILLE_PARALYZE_HEAL"
+      "flag": "FLAG_ITEM_NEW_ATHENS_PARALYZE_HEAL"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -90,7 +90,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NewMauville_Inside_EventScript_Voltorb1",
-      "flag": "FLAG_HIDE_NEW_MAUVILLE_VOLTORB_1"
+      "flag": "FLAG_HIDE_NEW_ATHENS_VOLTORB_1"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -103,7 +103,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NewMauville_Inside_EventScript_Voltorb2",
-      "flag": "FLAG_HIDE_NEW_MAUVILLE_VOLTORB_2"
+      "flag": "FLAG_HIDE_NEW_ATHENS_VOLTORB_2"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -116,7 +116,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NewMauville_Inside_EventScript_Voltorb3",
-      "flag": "FLAG_HIDE_NEW_MAUVILLE_VOLTORB_3"
+      "flag": "FLAG_HIDE_NEW_ATHENS_VOLTORB_3"
     }
   ],
   "warp_events": [
@@ -124,7 +124,7 @@
       "x": 32,
       "y": 33,
       "elevation": 3,
-      "dest_map": "MAP_NEW_MAUVILLE_ENTRANCE",
+      "dest_map": "MAP_NEW_ATHENS_ENTRANCE",
       "dest_warp_id": "1"
     }
   ],
@@ -215,7 +215,7 @@
       "x": 33,
       "y": 6,
       "elevation": 3,
-      "var": "VAR_NEW_MAUVILLE_STATE",
+      "var": "VAR_NEW_ATHENS_STATE",
       "var_value": "1",
       "script": "NewMauville_Inside_EventScript_RedButton"
     }
