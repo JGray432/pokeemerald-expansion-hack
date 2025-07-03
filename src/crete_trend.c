@@ -1,5 +1,5 @@
 #include "global.h"
-#include "dewford_trend.h"
+#include "crete_trend.h"
 #include "easy_chat.h"
 #include "event_data.h"
 #include "link.h"
@@ -11,16 +11,16 @@
 
 /*
     ## Overview ##
-    This file handles the "Dewford Trend", a pair of Easy Chat words
-    repeated by NPCs around Dewford Hall.
+    This file handles the "Crete Trend", a pair of Easy Chat words
+    repeated by NPCs around Crete Hall.
 
-    The NPC outside Dewford Hall will ask what the player thinks of the
+    The NPC outside Crete Hall will ask what the player thinks of the
     current trendy phrase, and the player may submit a new pair of words.
     If the NPC thinks the submitted phrase is "trendier" than the
     current one (see TrySetTrendyPhrase), it becomes the new phrase.
 
-    ## struct DewfordTrend ##
-    Information about a Dewford trend is stored in a struct DewfordTrend.
+    ## struct CreteTrend ##
+    Information about a Crete trend is stored in a struct CreteTrend.
     In addition to the two easy chat words that make up the trend's phrase,
     each trend has a few randomly generated values associated with it.
     - rand:
@@ -35,18 +35,18 @@
         reaches maxTrendiness (then it becomes boring again and the cycle repeats).
     - gainingTrendiness:
         This is a flag that determines whether a phrase should be gaining or losing
-        trendiness. An NPC in Dewford Hall will comment on whether the current phrase
+        trendiness. An NPC in Crete Hall will comment on whether the current phrase
         is "boring" or not, and if it is gaining trendiness (or if it is still trendier
         than the last phrase) it is not boring. This field will always be TRUE for any
         new phrase submitted after the 1st submission.
 
     ## Saving trends ##
-    Each time a potential trendy phrase is submitted, it is saved in gSaveBlock1Ptr->dewfordTrends[].
+    Each time a potential trendy phrase is submitted, it is saved in gSaveBlock1Ptr->creteTrends[].
     Up to SAVED_TRENDS_COUNT (5) trends may be saved at one time. The trends in this array are kept
     in sorted order from most trendy to least trendy. The current trendy phrase is always at
-    gSaveBlock1Ptr->dewfordTrends[0]. If the player mixes records with another player, their own
+    gSaveBlock1Ptr->creteTrends[0]. If the player mixes records with another player, their own
     trends are replaced with their mixing partner's, unless the phrase is the same, in which case
-    the version with a higher trendiness value is used (see ReceiveDewfordTrendData).
+    the version with a higher trendiness value is used (see ReceiveCreteTrendData).
 
     ## TV Show ##
     If a submitted phrase is only trendier than 1 or none of the saved trends, it may trigger a
@@ -61,33 +61,33 @@ enum {
     SORT_MODE_FULL,
 };
 
-static void SortTrends(struct DewfordTrend *, u16, u8);
-static bool8 CompareTrends(struct DewfordTrend *, struct DewfordTrend *, u8);
-static void SeedTrendRng(struct DewfordTrend *);
+static void SortTrends(struct CreteTrend *, u16, u8);
+static bool8 CompareTrends(struct CreteTrend *, struct CreteTrend *, u8);
+static void SeedTrendRng(struct CreteTrend *);
 static bool8 IsPhraseInSavedTrends(u16 *);
 static bool8 IsEasyChatPairEqual(u16 *, u16 *);
-static s16 GetSavedTrendIndex(struct DewfordTrend *, struct DewfordTrend *, u16);
+static s16 GetSavedTrendIndex(struct CreteTrend *, struct CreteTrend *, u16);
 
-void InitDewfordTrend(void)
+void InitCreteTrend(void)
 {
     u16 i;
 
     for (i = 0; i < SAVED_TRENDS_COUNT; i++)
     {
-        gSaveBlock1Ptr->dewfordTrends[i].words[0] = GetRandomEasyChatWordFromGroup(EC_GROUP_CONDITIONS);
+        gSaveBlock1Ptr->creteTrends[i].words[0] = GetRandomEasyChatWordFromGroup(EC_GROUP_CONDITIONS);
 
         if (Random() & 1)
-            gSaveBlock1Ptr->dewfordTrends[i].words[1] = GetRandomEasyChatWordFromGroup(EC_GROUP_LIFESTYLE);
+            gSaveBlock1Ptr->creteTrends[i].words[1] = GetRandomEasyChatWordFromGroup(EC_GROUP_LIFESTYLE);
         else
-            gSaveBlock1Ptr->dewfordTrends[i].words[1] = GetRandomEasyChatWordFromGroup(EC_GROUP_HOBBIES);
+            gSaveBlock1Ptr->creteTrends[i].words[1] = GetRandomEasyChatWordFromGroup(EC_GROUP_HOBBIES);
 
-        gSaveBlock1Ptr->dewfordTrends[i].gainingTrendiness = Random() & 1;
-        SeedTrendRng(&(gSaveBlock1Ptr->dewfordTrends[i]));
+        gSaveBlock1Ptr->creteTrends[i].gainingTrendiness = Random() & 1;
+        SeedTrendRng(&(gSaveBlock1Ptr->creteTrends[i]));
     }
-    SortTrends(gSaveBlock1Ptr->dewfordTrends, SAVED_TRENDS_COUNT, SORT_MODE_NORMAL);
+    SortTrends(gSaveBlock1Ptr->creteTrends, SAVED_TRENDS_COUNT, SORT_MODE_NORMAL);
 }
 
-void UpdateDewfordTrendPerDay(u16 days)
+void UpdateCreteTrendPerDay(u16 days)
 {
     u16 i;
 
@@ -99,7 +99,7 @@ void UpdateDewfordTrendPerDay(u16 days)
         {
             u32 trendiness;
             u32 rand = clockRand;
-            struct DewfordTrend *trend = &gSaveBlock1Ptr->dewfordTrends[i];
+            struct CreteTrend *trend = &gSaveBlock1Ptr->creteTrends[i];
 
             if (!trend->gainingTrendiness)
             {
@@ -140,37 +140,37 @@ void UpdateDewfordTrendPerDay(u16 days)
                     trend->gainingTrendiness = FALSE;
             }
         }
-        SortTrends(gSaveBlock1Ptr->dewfordTrends, SAVED_TRENDS_COUNT, SORT_MODE_NORMAL);
+        SortTrends(gSaveBlock1Ptr->creteTrends, SAVED_TRENDS_COUNT, SORT_MODE_NORMAL);
     }
 }
 
 // Returns TRUE if the current trendy phrase was successfully changed to the given phrase
 // Returns FALSE otherwise
 // Regardless of whether or not the current trendy phrase was changed, the submitted
-// phrase is always saved in gSaveBlock1Ptr->dewfordTrends
+// phrase is always saved in gSaveBlock1Ptr->creteTrends
 bool8 TrySetTrendyPhrase(u16 *phrase)
 {
-    struct DewfordTrend trend = {0};
+    struct CreteTrend trend = {0};
     u16 i;
 
     if (!IsPhraseInSavedTrends(phrase))
     {
-        if (!FlagGet(FLAG_SYS_CHANGED_DEWFORD_TREND))
+        if (!FlagGet(FLAG_SYS_CHANGED_CRETE_TREND))
         {
-            FlagSet(FLAG_SYS_CHANGED_DEWFORD_TREND);
+            FlagSet(FLAG_SYS_CHANGED_CRETE_TREND);
 
             // Make sure player couldn't have received this phrase by mixing records
             if (!FlagGet(FLAG_SYS_MIX_RECORD))
             {
                 // This is the first time submitting a phrase
                 // No need to check saved phrases or reset rng, just set the new words
-                gSaveBlock1Ptr->dewfordTrends[0].words[0] = phrase[0];
-                gSaveBlock1Ptr->dewfordTrends[0].words[1] = phrase[1];
+                gSaveBlock1Ptr->creteTrends[0].words[0] = phrase[0];
+                gSaveBlock1Ptr->creteTrends[0].words[1] = phrase[1];
                 return TRUE;
             }
         }
 
-        // Initialize DewfordTrend using given phrase
+        // Initialize CreteTrend using given phrase
         trend.words[0] = phrase[0];
         trend.words[1] = phrase[1];
         trend.gainingTrendiness = TRUE;
@@ -178,17 +178,17 @@ bool8 TrySetTrendyPhrase(u16 *phrase)
 
         for (i = 0; i < SAVED_TRENDS_COUNT; i++)
         {
-            if (CompareTrends(&trend, &(gSaveBlock1Ptr->dewfordTrends[i]), SORT_MODE_NORMAL))
+            if (CompareTrends(&trend, &(gSaveBlock1Ptr->creteTrends[i]), SORT_MODE_NORMAL))
             {
-                // New trend is "trendier" than dewfordTrend[i]
+                // New trend is "trendier" than creteTrend[i]
                 // Shift other trends back to insert new trend
                 u16 j = SAVED_TRENDS_COUNT - 1;
                 while (j > i)
                 {
-                    gSaveBlock1Ptr->dewfordTrends[j] = gSaveBlock1Ptr->dewfordTrends[j - 1];
+                    gSaveBlock1Ptr->creteTrends[j] = gSaveBlock1Ptr->creteTrends[j - 1];
                     j--;
                 }
-                gSaveBlock1Ptr->dewfordTrends[i] = trend;
+                gSaveBlock1Ptr->creteTrends[i] = trend;
 
                 if (i == SAVED_TRENDS_COUNT - 1)
                     TryPutTrendWatcherOnAir(phrase);
@@ -199,14 +199,14 @@ bool8 TrySetTrendyPhrase(u16 *phrase)
         }
 
         // New trend is less "trendy" than all other saved trends, put it in last
-        gSaveBlock1Ptr->dewfordTrends[SAVED_TRENDS_COUNT - 1] = trend;
+        gSaveBlock1Ptr->creteTrends[SAVED_TRENDS_COUNT - 1] = trend;
         TryPutTrendWatcherOnAir(phrase);
     }
     return FALSE;
 }
 
 
-static void SortTrends(struct DewfordTrend *trends, u16 numTrends, u8 mode)
+static void SortTrends(struct CreteTrend *trends, u16 numTrends, u8 mode)
 {
     u16 i;
     for (i = 0; i < numTrends; i++)
@@ -216,20 +216,20 @@ static void SortTrends(struct DewfordTrend *trends, u16 numTrends, u8 mode)
         {
             if (CompareTrends(&trends[j], &trends[i], mode))
             {
-                struct DewfordTrend temp;
+                struct CreteTrend temp;
                 SWAP(trends[j], trends[i], temp);
             }
         }
     }
 }
 
-#define SAVED_TRENDS_SIZE (sizeof(struct DewfordTrend) * SAVED_TRENDS_COUNT)
+#define SAVED_TRENDS_SIZE (sizeof(struct CreteTrend) * SAVED_TRENDS_COUNT)
 #define BUFFER_SIZE max(SAVED_TRENDS_SIZE * MAX_LINK_PLAYERS, 0x100) // More space was allocated than needed
 
-void ReceiveDewfordTrendData(struct DewfordTrend *linkedTrends, size_t size, u8 unused)
+void ReceiveCreteTrendData(struct CreteTrend *linkedTrends, size_t size, u8 unused)
 {
     u16 i, j, numTrends, players;
-    struct DewfordTrend *linkedTrendsBuffer, *savedTrendsBuffer, *src, *dst, *temp;
+    struct CreteTrend *linkedTrendsBuffer, *savedTrendsBuffer, *src, *dst, *temp;
 
     // Exit if alloc fails
     if (!(linkedTrendsBuffer = Alloc(BUFFER_SIZE)))
@@ -279,7 +279,7 @@ void ReceiveDewfordTrendData(struct DewfordTrend *linkedTrends, size_t size, u8 
 
     // Overwrite current saved trends with new saved trends
     src = savedTrendsBuffer;
-    dst = gSaveBlock1Ptr->dewfordTrends;
+    dst = gSaveBlock1Ptr->creteTrends;
     for (i = 0; i < SAVED_TRENDS_COUNT; i++)
         *(dst++) = *(src++);
 
@@ -289,23 +289,23 @@ void ReceiveDewfordTrendData(struct DewfordTrend *linkedTrends, size_t size, u8 
 
 void BufferTrendyPhraseString(void)
 {
-    struct DewfordTrend *trend = &gSaveBlock1Ptr->dewfordTrends[gSpecialVar_0x8004];
+    struct CreteTrend *trend = &gSaveBlock1Ptr->creteTrends[gSpecialVar_0x8004];
     ConvertEasyChatWordsToString(gStringVar1, trend->words, 2, 1);
 }
 
 // Returns TRUE if the current trendy phrase is "boring", FALSE otherwise
-// This only influences the comment of an NPC inside the Dewford Town Hall
+// This only influences the comment of an NPC inside the Crete Town Hall
 void IsTrendyPhraseBoring(void)
 {
     bool16 result = FALSE;
 
     do
     {
-        if (gSaveBlock1Ptr->dewfordTrends[0].trendiness - gSaveBlock1Ptr->dewfordTrends[1].trendiness > 1)
+        if (gSaveBlock1Ptr->creteTrends[0].trendiness - gSaveBlock1Ptr->creteTrends[1].trendiness > 1)
             break;
-        if (gSaveBlock1Ptr->dewfordTrends[0].gainingTrendiness)
+        if (gSaveBlock1Ptr->creteTrends[0].gainingTrendiness)
             break;
-        if (!gSaveBlock1Ptr->dewfordTrends[1].gainingTrendiness)
+        if (!gSaveBlock1Ptr->creteTrends[1].gainingTrendiness)
             break;
         result = TRUE;
     } while (0);
@@ -313,19 +313,19 @@ void IsTrendyPhraseBoring(void)
     gSpecialVar_Result = result;
 }
 
-// A painting hangs on the wall of the Dewford Hall
+// A painting hangs on the wall of the Crete Hall
 // When interacted with it says "{trendy phrase}'S {name} is the title"
 // {name} is one of 8 pre-set words, depending on the current phrase
-// See DewfordTown_Hall_EventScript_Painting
-void GetDewfordHallPaintingNameIndex(void)
+// See Crete_Hall_EventScript_Painting
+void GetCreteHallPaintingNameIndex(void)
 {
-    gSpecialVar_Result = (gSaveBlock1Ptr->dewfordTrends[0].words[0] + gSaveBlock1Ptr->dewfordTrends[0].words[1]) & 7;
+    gSpecialVar_Result = (gSaveBlock1Ptr->creteTrends[0].words[0] + gSaveBlock1Ptr->creteTrends[0].words[1]) & 7;
 }
 
 // Returns TRUE if a > b (a is "trendier" than b), FALSE if a < b (b is "trendier" than a)
 // How one trend is compared to the other depends on the mode
 // In SORT_MODE_FULL if the trends are equal then TRUE is always returned, otherwise TRUE or FALSE is returned randomly
-static bool8 CompareTrends(struct DewfordTrend *a, struct DewfordTrend *b, u8 mode)
+static bool8 CompareTrends(struct CreteTrend *a, struct CreteTrend *b, u8 mode)
 {
     switch (mode)
     {
@@ -366,7 +366,7 @@ static bool8 CompareTrends(struct DewfordTrend *a, struct DewfordTrend *b, u8 mo
     return Random() & 1;
 }
 
-static void SeedTrendRng(struct DewfordTrend *trend)
+static void SeedTrendRng(struct CreteTrend *trend)
 {
     u16 rand;
 
@@ -388,7 +388,7 @@ static bool8 IsPhraseInSavedTrends(u16 *phrase)
 
     for (i = 0; i < SAVED_TRENDS_COUNT; i++)
     {
-        if (IsEasyChatPairEqual(phrase, gSaveBlock1Ptr->dewfordTrends[i].words))
+        if (IsEasyChatPairEqual(phrase, gSaveBlock1Ptr->creteTrends[i].words))
             return TRUE;
     }
     return FALSE;
@@ -406,7 +406,7 @@ static bool8 IsEasyChatPairEqual(u16 *words1, u16 *words2)
     return TRUE;
 }
 
-static s16 GetSavedTrendIndex(struct DewfordTrend *savedTrends, struct DewfordTrend *trend, u16 numSaved)
+static s16 GetSavedTrendIndex(struct CreteTrend *savedTrends, struct CreteTrend *trend, u16 numSaved)
 {
     s16 i;
     for (i = 0; i < numSaved; i++)

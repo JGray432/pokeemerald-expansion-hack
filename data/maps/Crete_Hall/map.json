@@ -1,9 +1,9 @@
 {
-  "id": "MAP_DEWFORD_TOWN_HALL",
-  "name": "DewfordTown_Hall",
-  "layout": "LAYOUT_DEWFORD_TOWN_HALL",
-  "music": "MUS_DEWFORD",
-  "region_map_section": "MAPSEC_DEWFORD_TOWN",
+  "id": "MAP_CRETE_HALL",
+  "name": "Crete_Hall",
+  "layout": "LAYOUT_CRETE_HALL",
+  "music": "MUS_CRETE",
+  "region_map_section": "MAPSEC_CRETE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "DewfordTown_Hall_EventScript_Girl",
+      "script": "Crete_Hall_EventScript_Girl",
       "flag": "0"
     },
     {
@@ -37,7 +37,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "DewfordTown_Hall_EventScript_Woman",
+      "script": "Crete_Hall_EventScript_Woman",
       "flag": "0"
     },
     {
@@ -50,7 +50,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "DewfordTown_Hall_EventScript_Man",
+      "script": "Crete_Hall_EventScript_Man",
       "flag": "0"
     },
     {
@@ -63,7 +63,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "DewfordTown_Hall_EventScript_ExpertM",
+      "script": "Crete_Hall_EventScript_ExpertM",
       "flag": "0"
     },
     {
@@ -76,7 +76,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "DewfordTown_Hall_EventScript_Twin",
+      "script": "Crete_Hall_EventScript_Twin",
       "flag": "0"
     },
     {
@@ -89,7 +89,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "DewfordTown_Hall_EventScript_LittleBoy",
+      "script": "Crete_Hall_EventScript_LittleBoy",
       "flag": "0"
     },
     {
@@ -102,7 +102,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "DewfordTown_Hall_EventScript_SchoolKidM",
+      "script": "Crete_Hall_EventScript_SchoolKidM",
       "flag": "0"
     },
     {
@@ -115,7 +115,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "DewfordTown_Hall_EventScript_PsychicM",
+      "script": "Crete_Hall_EventScript_PsychicM",
       "flag": "0"
     },
     {
@@ -128,8 +128,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "DewfordTown_Hall_EventScript_SludgeBombMan",
-      "flag": "FLAG_HIDE_DEWFORD_HALL_SLUDGE_BOMB_MAN"
+      "script": "Crete_Hall_EventScript_SludgeBombMan",
+      "flag": "FLAG_HIDE_CRETE_HALL_SLUDGE_BOMB_MAN"
     }
   ],
   "warp_events": [
@@ -137,14 +137,14 @@
       "x": 5,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_DEWFORD_TOWN",
+      "dest_map": "MAP_CRETE",
       "dest_warp_id": "0"
     },
     {
       "x": 6,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_DEWFORD_TOWN",
+      "dest_map": "MAP_CRETE",
       "dest_warp_id": "0"
     }
   ],
@@ -156,7 +156,7 @@
       "y": 1,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "DewfordTown_Hall_EventScript_Bookshelf"
+      "script": "Crete_Hall_EventScript_Bookshelf"
     },
     {
       "type": "sign",
@@ -164,7 +164,7 @@
       "y": 1,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "DewfordTown_Hall_EventScript_Painting"
+      "script": "Crete_Hall_EventScript_Painting"
     }
   ]
 }

@@ -42,26 +42,26 @@ const u16 gTilesetPalettes_Rustboro[][16] =
     INCBIN_U16("data/tilesets/secondary/rustboro/palettes/15.gbapal"),
 };
 
-const u32 gTilesetTiles_Dewford[] = INCBIN_U32("data/tilesets/secondary/dewford/tiles.4bpp.lz");
+const u32 gTilesetTiles_Crete[] = INCBIN_U32("data/tilesets/secondary/crete/tiles.4bpp.lz");
 
-const u16 gTilesetPalettes_Dewford[][16] =
+const u16 gTilesetPalettes_Crete[][16] =
 {
-    INCBIN_U16("data/tilesets/secondary/dewford/palettes/00.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/dewford/palettes/01.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/dewford/palettes/02.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/dewford/palettes/03.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/dewford/palettes/04.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/dewford/palettes/05.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/dewford/palettes/06.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/dewford/palettes/07.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/dewford/palettes/08.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/dewford/palettes/09.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/dewford/palettes/10.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/dewford/palettes/11.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/dewford/palettes/12.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/dewford/palettes/13.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/dewford/palettes/14.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/dewford/palettes/15.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crete/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crete/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crete/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crete/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crete/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crete/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crete/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crete/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crete/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crete/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crete/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crete/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crete/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crete/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crete/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crete/palettes/15.gbapal"),
 };
 
 const u32 gTilesetTiles_Slateport[] = INCBIN_U32("data/tilesets/secondary/slateport/tiles.4bpp.lz");
@@ -1040,26 +1040,26 @@ const u16 gTilesetPalettes_RustboroGym[][16] =
     INCBIN_U16("data/tilesets/secondary/rustboro_gym/palettes/15.gbapal"),
 };
 
-const u32 gTilesetTiles_DewfordGym[] = INCBIN_U32("data/tilesets/secondary/dewford_gym/tiles.4bpp.lz");
+const u32 gTilesetTiles_CreteGym[] = INCBIN_U32("data/tilesets/secondary/crete_gym/tiles.4bpp.lz");
 
-const u16 gTilesetPalettes_DewfordGym[][16] =
+const u16 gTilesetPalettes_CreteGym[][16] =
 {
-    INCBIN_U16("data/tilesets/secondary/dewford_gym/palettes/00.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/dewford_gym/palettes/01.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/dewford_gym/palettes/02.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/dewford_gym/palettes/03.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/dewford_gym/palettes/04.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/dewford_gym/palettes/05.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/dewford_gym/palettes/06.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/dewford_gym/palettes/07.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/dewford_gym/palettes/08.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/dewford_gym/palettes/09.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/dewford_gym/palettes/10.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/dewford_gym/palettes/11.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/dewford_gym/palettes/12.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/dewford_gym/palettes/13.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/dewford_gym/palettes/14.gbapal"),
-    INCBIN_U16("data/tilesets/secondary/dewford_gym/palettes/15.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crete_gym/palettes/00.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crete_gym/palettes/01.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crete_gym/palettes/02.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crete_gym/palettes/03.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crete_gym/palettes/04.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crete_gym/palettes/05.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crete_gym/palettes/06.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crete_gym/palettes/07.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crete_gym/palettes/08.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crete_gym/palettes/09.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crete_gym/palettes/10.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crete_gym/palettes/11.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crete_gym/palettes/12.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crete_gym/palettes/13.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crete_gym/palettes/14.gbapal"),
+    INCBIN_U16("data/tilesets/secondary/crete_gym/palettes/15.gbapal"),
 };
 
 const u32 gTilesetTiles_MauvilleGym[] = INCBIN_U32("data/tilesets/secondary/mauville_gym/tiles.4bpp.lz");

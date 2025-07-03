@@ -26,7 +26,7 @@ static void _InitSecondaryTilesetAnimation(void);
 static void TilesetAnim_General(u16);
 static void TilesetAnim_Building(u16);
 static void TilesetAnim_Rustboro(u16);
-static void TilesetAnim_Dewford(u16);
+static void TilesetAnim_Crete(u16);
 static void TilesetAnim_Slateport(u16);
 static void TilesetAnim_Mauville(u16);
 static void TilesetAnim_Lavaridge(u16);
@@ -51,7 +51,7 @@ static void QueueAnimTiles_General_LandWaterEdge(u16);
 static void QueueAnimTiles_Building_TVTurnedOn(u16);
 static void QueueAnimTiles_Rustboro_WindyWater(u16, u8);
 static void QueueAnimTiles_Rustboro_Fountain(u16);
-static void QueueAnimTiles_Dewford_Flag(u16);
+static void QueueAnimTiles_Crete_Flag(u16);
 static void QueueAnimTiles_Slateport_Balloons(u16);
 static void QueueAnimTiles_Mauville_Flowers(u16, u8);
 static void QueueAnimTiles_BikeShop_BlinkingLights(u16);
@@ -371,16 +371,16 @@ const u16 *const gTilesetAnims_EverGrande_Flowers[] = {
     gTilesetAnims_EverGrande_Flowers_Frame7
 };
 
-const u16 gTilesetAnims_Dewford_Flag_Frame0[] = INCBIN_U16("data/tilesets/secondary/dewford/anim/flag/0.4bpp");
-const u16 gTilesetAnims_Dewford_Flag_Frame1[] = INCBIN_U16("data/tilesets/secondary/dewford/anim/flag/1.4bpp");
-const u16 gTilesetAnims_Dewford_Flag_Frame2[] = INCBIN_U16("data/tilesets/secondary/dewford/anim/flag/2.4bpp");
-const u16 gTilesetAnims_Dewford_Flag_Frame3[] = INCBIN_U16("data/tilesets/secondary/dewford/anim/flag/3.4bpp");
+const u16 gTilesetAnims_Crete_Flag_Frame0[] = INCBIN_U16("data/tilesets/secondary/crete/anim/flag/0.4bpp");
+const u16 gTilesetAnims_Crete_Flag_Frame1[] = INCBIN_U16("data/tilesets/secondary/crete/anim/flag/1.4bpp");
+const u16 gTilesetAnims_Crete_Flag_Frame2[] = INCBIN_U16("data/tilesets/secondary/crete/anim/flag/2.4bpp");
+const u16 gTilesetAnims_Crete_Flag_Frame3[] = INCBIN_U16("data/tilesets/secondary/crete/anim/flag/3.4bpp");
 
-const u16 *const gTilesetAnims_Dewford_Flag[] = {
-    gTilesetAnims_Dewford_Flag_Frame0,
-    gTilesetAnims_Dewford_Flag_Frame1,
-    gTilesetAnims_Dewford_Flag_Frame2,
-    gTilesetAnims_Dewford_Flag_Frame3
+const u16 *const gTilesetAnims_Crete_Flag[] = {
+    gTilesetAnims_Crete_Flag_Frame0,
+    gTilesetAnims_Crete_Flag_Frame1,
+    gTilesetAnims_Crete_Flag_Frame2,
+    gTilesetAnims_Crete_Flag_Frame3
 };
 
 const u16 gTilesetAnims_BattleFrontierOutsideWest_Flag_Frame0[] = INCBIN_U16("data/tilesets/secondary/battle_frontier_outside_west/anim/flag/0.4bpp");
@@ -687,11 +687,11 @@ void InitTilesetAnim_Rustboro(void)
     sSecondaryTilesetAnimCallback = TilesetAnim_Rustboro;
 }
 
-void InitTilesetAnim_Dewford(void)
+void InitTilesetAnim_Crete(void)
 {
     sSecondaryTilesetAnimCounter = 0;
     sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;
-    sSecondaryTilesetAnimCallback = TilesetAnim_Dewford;
+    sSecondaryTilesetAnimCallback = TilesetAnim_Crete;
 }
 
 void InitTilesetAnim_Slateport(void)
@@ -857,10 +857,10 @@ static void TilesetAnim_Rustboro(u16 timer)
         QueueAnimTiles_Rustboro_WindyWater(timer / 8, 7);
 }
 
-static void TilesetAnim_Dewford(u16 timer)
+static void TilesetAnim_Crete(u16 timer)
 {
     if (timer % 8 == 0)
-        QueueAnimTiles_Dewford_Flag(timer / 8);
+        QueueAnimTiles_Crete_Flag(timer / 8);
 }
 
 static void TilesetAnim_Slateport(u16 timer)
@@ -1039,10 +1039,10 @@ static void QueueAnimTiles_Cave_Lava(u16 timer)
     AppendTilesetAnimToBuffer(gTilesetAnims_Lavaridge_Cave_Lava[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 416)), 4 * TILE_SIZE_4BPP);
 }
 
-static void QueueAnimTiles_Dewford_Flag(u16 timer)
+static void QueueAnimTiles_Crete_Flag(u16 timer)
 {
-    u16 i = timer % ARRAY_COUNT(gTilesetAnims_Dewford_Flag);
-    AppendTilesetAnimToBuffer(gTilesetAnims_Dewford_Flag[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 170)), 6 * TILE_SIZE_4BPP);
+    u16 i = timer % ARRAY_COUNT(gTilesetAnims_Crete_Flag);
+    AppendTilesetAnimToBuffer(gTilesetAnims_Crete_Flag[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(NUM_TILES_IN_PRIMARY + 170)), 6 * TILE_SIZE_4BPP);
 }
 
 static void QueueAnimTiles_BattleFrontierOutsideWest_Flag(u16 timer)

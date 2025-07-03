@@ -34,7 +34,7 @@ $(TILESETGFXDIR)/secondary/petalburg/tiles.4bpp: %.4bpp: %.png
 $(TILESETGFXDIR)/secondary/rustboro/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 498 -Wnum_tiles
 
-$(TILESETGFXDIR)/secondary/dewford/tiles.4bpp: %.4bpp: %.png
+$(TILESETGFXDIR)/secondary/crete/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 503 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/slateport/tiles.4bpp: %.4bpp: %.png
@@ -163,7 +163,7 @@ $(TILESETGFXDIR)/secondary/unused_2/tiles.4bpp: %.4bpp: %.png
 $(TILESETGFXDIR)/secondary/rustboro_gym/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 60 -Wnum_tiles
 
-$(TILESETGFXDIR)/secondary/dewford_gym/tiles.4bpp: %.4bpp: %.png
+$(TILESETGFXDIR)/secondary/crete_gym/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 61 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/lavaridge_gym/tiles.4bpp: %.4bpp: %.png

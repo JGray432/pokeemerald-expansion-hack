@@ -144,7 +144,7 @@ static bool8 CheckFeebas(void)
         if (Random() % 100 > 49)
             return FALSE;
 
-        FeebasSeedRng(gSaveBlock1Ptr->dewfordTrends[0].rand);
+        FeebasSeedRng(gSaveBlock1Ptr->creteTrends[0].rand);
 
         // Assign each Feebas spot to a random fishing spot.
         // Randomness is fixed depending on the seed above.

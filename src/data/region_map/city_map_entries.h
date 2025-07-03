@@ -11,9 +11,9 @@ static const struct CityMapEntry sPokenavCityMaps[NUM_CITY_MAPS] =
         .tilemap = gPokenavCityMap_Oldale_0,
     },
     {
-        .mapSecId = MAPSEC_DEWFORD_TOWN,
+        .mapSecId = MAPSEC_CRETE,
         .index = 0,
-        .tilemap = gPokenavCityMap_Dewford_0,
+        .tilemap = gPokenavCityMap_Crete_0,
     },
     {
         .mapSecId = MAPSEC_LAVARIDGE_TOWN,

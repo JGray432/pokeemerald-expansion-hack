@@ -34,31 +34,31 @@ Route104_MrBrineysHouse_EventScript_Briney::
 Route104_MrBrineysHouse_EventScript_SailingIntro::
 	setflag FLAG_MR_BRINEY_SAILING_INTRO
 	msgbox Route104_MrBrineysHouse_Text_WaitUpPeeko, MSGBOX_DEFAULT
-	msgbox Route104_MrBrineysHouse_Text_ItsYouLetsSailToDewford, MSGBOX_YESNO
+	msgbox Route104_MrBrineysHouse_Text_ItsYouLetsSailToCrete, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, Route104_MrBrineysHouse_EventScript_DeclineDeliverySailing
-	goto Route104_MrBrineysHouse_EventScript_SailToDewford
+	goto Route104_MrBrineysHouse_EventScript_SailToCrete
 	end
 
 Route104_MrBrineysHouse_EventScript_WhereAreWeBound::
 	message Route104_MrBrineysHouse_Text_WhereAreWeBound
 	waitmessage
-	multichoicedefault 20, 8, MULTI_BRINEY_OFF_DEWFORD, 1, FALSE
+	multichoicedefault 20, 8, MULTI_BRINEY_OFF_CRETE, 1, FALSE
 	switch VAR_RESULT
-	case 0, Route104_MrBrineysHouse_EventScript_SailToDewford
+	case 0, Route104_MrBrineysHouse_EventScript_SailToCrete
 	case 1, Route104_MrBrineysHouse_EventScript_DeclineSailing
 	case MULTI_B_PRESSED, Route104_MrBrineysHouse_EventScript_DeclineSailing
 	end
 
 Route104_MrBrineysHouse_EventScript_SailBothDeliveries::
-	msgbox Route104_MrBrineysHouse_Text_NeedToMakeDeliveriesSailToDewford, MSGBOX_YESNO
+	msgbox Route104_MrBrineysHouse_Text_NeedToMakeDeliveriesSailToCrete, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, Route104_MrBrineysHouse_EventScript_DeclineDeliverySailing
-	goto Route104_MrBrineysHouse_EventScript_SailToDewford
+	goto Route104_MrBrineysHouse_EventScript_SailToCrete
 	end
 
 Route104_MrBrineysHouse_EventScript_SailDeliverPackage::
-	msgbox Route104_MrBrineysHouse_Text_NeedToDeliverPackageSailToDewford, MSGBOX_YESNO
+	msgbox Route104_MrBrineysHouse_Text_NeedToDeliverPackageSailToCrete, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, Route104_MrBrineysHouse_EventScript_DeclineDeliverySailing
-	goto Route104_MrBrineysHouse_EventScript_SailToDewford
+	goto Route104_MrBrineysHouse_EventScript_SailToCrete
 	end
 
 Route104_MrBrineysHouse_EventScript_DeclineDeliverySailing::
@@ -71,8 +71,8 @@ Route104_MrBrineysHouse_EventScript_DeclineSailing::
 	release
 	end
 
-Route104_MrBrineysHouse_EventScript_SailToDewford::
-	msgbox Route104_MrBrineysHouse_Text_SetSailForDewford, MSGBOX_DEFAULT
+Route104_MrBrineysHouse_EventScript_SailToCrete::
+	msgbox Route104_MrBrineysHouse_Text_SetSailForCrete, MSGBOX_DEFAULT
 	call EventScript_BackupMrBrineyLocation
 	setvar VAR_BOARD_BRINEY_BOAT_STATE, 1
 	clearflag FLAG_HIDE_ROUTE_104_MR_BRINEY
@@ -101,23 +101,23 @@ Route104_MrBrineysHouse_Text_WaitUpPeeko:
 	.string "MR. BRINEY: Hold on, lass!\n"
 	.string "Wait up, PEEKO!$"
 
-Route104_MrBrineysHouse_Text_ItsYouLetsSailToDewford:
+Route104_MrBrineysHouse_Text_ItsYouLetsSailToCrete:
 	.string "Hm? You're {PLAYER}{KUN}!\n"
 	.string "You saved my darling PEEKO!\l"
 	.string "We owe so much to you!\p"
 	.string "What's that?\n"
 	.string "You want to sail with me?\p"
 	.string "Hmhm…\p"
-	.string "You have a LETTER bound for DEWFORD\n"
+	.string "You have a LETTER bound for CRETE\n"
 	.string "and a package for SLATEPORT, then?\p"
 	.string "Quite the busy life you must lead!\p"
 	.string "But, certainly, what you're asking is\n"
 	.string "no problem at all.\p"
 	.string "You've come to the right man!\n"
-	.string "We'll set sail for DEWFORD.$"
+	.string "We'll set sail for CRETE.$"
 
-Route104_MrBrineysHouse_Text_SetSailForDewford:
-	.string "MR. BRINEY: DEWFORD it is, then!\p"
+Route104_MrBrineysHouse_Text_SetSailForCrete:
+	.string "MR. BRINEY: CRETE it is, then!\p"
 	.string "Anchors aweigh!\n"
 	.string "PEEKO, we're setting sail, my darling!$"
 
@@ -127,23 +127,23 @@ Route104_MrBrineysHouse_Text_DeclineDeliverySail:
 	.string "You just go on and tell me whenever\n"
 	.string "you want to set sail!$"
 
-Route104_MrBrineysHouse_Text_NeedToMakeDeliveriesSailToDewford:
+Route104_MrBrineysHouse_Text_NeedToMakeDeliveriesSailToCrete:
 	.string "MR. BRINEY: Ahoy!\n"
 	.string "I know exactly what you want to say!\p"
-	.string "You're to deliver a LETTER to DEWFORD\n"
+	.string "You're to deliver a LETTER to CRETE\n"
 	.string "and a package to SLATEPORT.\p"
 	.string "What you need me to do is no problem\n"
 	.string "at all--I'm the man for the job!\p"
-	.string "First, we'll set sail for DEWFORD.$"
+	.string "First, we'll set sail for CRETE.$"
 
-Route104_MrBrineysHouse_Text_NeedToDeliverPackageSailToDewford:
+Route104_MrBrineysHouse_Text_NeedToDeliverPackageSailToCrete:
 	.string "MR. BRINEY: Ahoy!\n"
 	.string "I know exactly what you want to say!\p"
 	.string "You're to deliver a package to\n"
 	.string "CAPT. STERN in SLATEPORT.\p"
 	.string "What you need me to do is no problem\n"
 	.string "at all--I'm the man for the job!\p"
-	.string "First, we'll set sail for DEWFORD.$"
+	.string "First, we'll set sail for CRETE.$"
 
 Route104_MrBrineysHouse_Text_WhereAreWeBound:
 	.string "MR. BRINEY: Ahoy!\n"

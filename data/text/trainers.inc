@@ -640,14 +640,14 @@ Route5_Text_TonyRematchPostBattle:
 
 Route5_Text_DeniseIntro:
 	.string "Do you know a little town called\n"
-	.string "DEWFORD?$"
+	.string "CRETE?$"
 
 Route5_Text_DeniseDefeated:
 	.string "I hate this!$"
 
 Route5_Text_DenisePostBattle:
 	.string "A weird saying is getting really\n"
-	.string "trendy at DEWFORD HALL.$"
+	.string "trendy at CRETE HALL.$"
 
 Route5_Text_BethIntro:
 	.string "Did you want to battle me?\n"

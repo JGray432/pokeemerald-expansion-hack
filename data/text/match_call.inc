@@ -1300,7 +1300,7 @@ MatchCall_PersonalizedText58::
 
 MatchCall_PersonalizedText59::
 	.string "This is {STR_VAR_1}!\p"
-	.string "I went to DEWFORD's GYM again\n"
+	.string "I went to CRETE's GYM again\n"
 	.string "for training.\p"
 	.string "BRAWLY, the GYM LEADER, seems\n"
 	.string "to be tougher now.\p"
@@ -2093,7 +2093,7 @@ MatchCall_Text_Brawly2::
 MatchCall_Text_Brawly3::
 	.string "BRAWLY: Hey, {PLAYER}{KUN}!\n"
 	.string "My GYM's ready for action!\p"
-	.string "Come back to DEWFORD anytime\n"
+	.string "Come back to CRETE anytime\n"
 	.string "for another challenge!$"
 
 MatchCall_Text_Brawly4::
@@ -2345,7 +2345,7 @@ MatchCall_Text_May1::
 MatchCall_Text_May2::
 	.string "MAY: Hi, {PLAYER}{KUN}!\p"
 	.string "You know how little towns like\n"
-	.string "PETALBURG and DEWFORD have GYMS?\p"
+	.string "PETALBURG and CRETE have GYMS?\p"
 	.string "For some reason, the big port of\n"
 	.string "SLATEPORT doesn't have a GYM.\p"
 	.string "When they finally build a GYM there,\n"
@@ -2471,7 +2471,7 @@ MatchCall_Text_Brendan1::
 MatchCall_Text_Brendan2::
 	.string "BRENDAN: Hey, {PLAYER}!\p"
 	.string "I don't get how little towns like\n"
-	.string "PETALBURG and DEWFORD have GYMS.\p"
+	.string "PETALBURG and CRETE have GYMS.\p"
 	.string "I mean, not when the big port of\n"
 	.string "SLATEPORT doesn't have a GYM.\p"
 	.string "When they finally build a GYM there,\n"
@@ -2871,7 +2871,7 @@ MatchCall_Text_MrStone2::
 	.string "What's wrong? Have you forgotten\n"
 	.string "about that little errand of mine?\p"
 	.string "I need you to deliver my letter\n"
-	.string "to STEVEN in DEWFORD.\p"
+	.string "to STEVEN in CRETE.\p"
 	.string "After that, deliver our parcel to\n"
 	.string "CAPT. STERN in SLATEPORT.\p"
 	.string "You remember, don't you?\p"

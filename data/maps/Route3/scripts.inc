@@ -1,5 +1,5 @@
-@ NOTE: Route 109's sail to Dewford script references local IDs from Dewford's map.
-@  These are labeled in DewfordTown/scripts.inc
+@ NOTE: Route 109's sail to Crete script references local IDs from Crete's map.
+@  These are labeled in Crete/scripts.inc
 
 .set LOCALID_ATHENA, 3
 
@@ -91,7 +91,7 @@ Route3_Movement_AthenaExit::
 	walk_up
 	step_end
 
-Route3_EventScript_StartDepartForDewford::
+Route3_EventScript_StartDepartForCrete::
 	call EventScript_BackupMrBrineyLocation
 	setobjectsubpriority LOCALID_BRINEY_R109, MAP_ROUTE3, 0
 	setobjectsubpriority OBJ_EVENT_ID_PLAYER, MAP_ROUTE3, 0
@@ -107,52 +107,52 @@ Route3_EventScript_StartDepartForDewford::
 Route3_EventScript_EnterBoatSouth::
 	applymovement OBJ_EVENT_ID_PLAYER, Route3_Movement_PlayerEnterBoatSouth
 	waitmovement 0
-	goto Route3_EventScript_DoSailToDewford
+	goto Route3_EventScript_DoSailToCrete
 	end
 
 Route3_EventScript_EnterBoatEast::
 	applymovement OBJ_EVENT_ID_PLAYER, Route3_Movement_PlayerEnterBoatEast
 	waitmovement 0
-	goto Route3_EventScript_DoSailToDewford
+	goto Route3_EventScript_DoSailToCrete
 	end
 
 Route3_EventScript_EnterBoatWest::
 	applymovement OBJ_EVENT_ID_PLAYER, Route3_Movement_PlayerEnterBoatWest
 	waitmovement 0
-	goto Route3_EventScript_DoSailToDewford
+	goto Route3_EventScript_DoSailToCrete
 	end
 
-Route3_EventScript_DoSailToDewford::
+Route3_EventScript_DoSailToCrete::
 	hideobjectat OBJ_EVENT_ID_PLAYER, MAP_ROUTE3
 	call Common_EventScript_PlayBrineysBoatMusic
-	applymovement LOCALID_BOAT_R109, Route3_Movement_SailToDewford
-	applymovement OBJ_EVENT_ID_PLAYER, Route3_Movement_SailToDewford
+	applymovement LOCALID_BOAT_R109, Route3_Movement_SailToCrete
+	applymovement OBJ_EVENT_ID_PLAYER, Route3_Movement_SailToCrete
 	waitmovement 0
 	delay 50
 	call Common_EventScript_StopBrineysBoatMusic
-	showobjectat OBJ_EVENT_ID_PLAYER, MAP_DEWFORD_TOWN
+	showobjectat OBJ_EVENT_ID_PLAYER, MAP_CRETE
 	applymovement OBJ_EVENT_ID_PLAYER, Route3_Movement_PlayerExitBoat
 	waitmovement 0
-	addobject LOCALID_BOAT_DEWFORD
-	clearflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
-	setobjectxyperm LOCALID_BRINEY_DEWFORD, 12, 8
-	addobject LOCALID_BRINEY_DEWFORD
-	setobjectsubpriority LOCALID_BRINEY_DEWFORD, MAP_DEWFORD_TOWN, 0
-	applymovement LOCALID_BRINEY_DEWFORD, Route3_Movement_BrineyExitBoat
+	addobject LOCALID_BOAT_CRETE
+	clearflag FLAG_HIDE_MR_BRINEY_BOAT_CRETE
+	setobjectxyperm LOCALID_BRINEY_CRETE, 12, 8
+	addobject LOCALID_BRINEY_CRETE
+	setobjectsubpriority LOCALID_BRINEY_CRETE, MAP_CRETE, 0
+	applymovement LOCALID_BRINEY_CRETE, Route3_Movement_BrineyExitBoat
 	waitmovement 0
-	clearflag FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN
+	clearflag FLAG_HIDE_MR_BRINEY_CRETE
 	setflag FLAG_HIDE_ROUTE_3_MR_BRINEY_BOAT
 	hideobjectat LOCALID_BOAT_R109, MAP_ROUTE3
-	msgbox DewfordTown_Text_BrineyLandedInDewford, MSGBOX_DEFAULT
+	msgbox Crete_Text_BrineyLandedInCrete, MSGBOX_DEFAULT
 	closemessage
 	copyvar VAR_BRINEY_LOCATION, VAR_0x8008
 	resetobjectsubpriority OBJ_EVENT_ID_PLAYER, MAP_ROUTE3
-	resetobjectsubpriority LOCALID_BRINEY_DEWFORD, MAP_DEWFORD_TOWN
-	copyobjectxytoperm LOCALID_BRINEY_DEWFORD
+	resetobjectsubpriority LOCALID_BRINEY_CRETE, MAP_CRETE
+	copyobjectxytoperm LOCALID_BRINEY_CRETE
 	release
 	end
 
-Route3_Movement_SailToDewford:
+Route3_Movement_SailToCrete:
 	walk_in_place_faster_down
 	walk_down
 	walk_down
@@ -387,13 +387,13 @@ Route3_EventScript_DeliveredDevonGoods::
 	waitmessage
 	msgbox Route3_Text_BrineySailToCreteQuestion, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, NO, Route3_EventScript_StayHere
-	goto Route3_EventScript_SailToDewford
+	goto Route3_EventScript_SailToCrete
 	end
 
-Route3_EventScript_SailToDewford::
-	msgbox Route3_Text_BrineyDewfordItIs, MSGBOX_DEFAULT
+Route3_EventScript_SailToCrete::
+	msgbox Route3_Text_BrineyCreteItIs, MSGBOX_DEFAULT
 	closemessage
-	goto Route3_EventScript_StartDepartForDewford
+	goto Route3_EventScript_StartDepartForCrete
 	end
 
 Route3_EventScript_StayHere::
@@ -567,7 +567,7 @@ Route3_EventScript_Elijah::
 	msgbox Route3_Text_ElijahPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-DewfordTown_Text_BrineyLandedInSlateportDeliverGoods:
+Crete_Text_BrineyLandedInSlateportDeliverGoods:
 	.string "MR. BRINEY: Ahoy!\n"
 	.string "We've made land in SLATEPORT!\p"
 	.string "I suppose you're going to visit CAPT.\n"
@@ -579,7 +579,7 @@ Route3_Text_BrineyNoSailYet:
 	.string "the effort of a trip unless I got\n"
 	.string "good reason to, ya hear?$"
 
-Route3_Text_BrineyDewfordItIs:
+Route3_Text_BrineyCreteItIs:
 	.string "CPT. MORGAN: Crete it is, then!\n"
 	.string "Anchors aweigh!$"
 
@@ -601,7 +601,7 @@ Route3_Text_BrineyDeliverDevonGoods:
 	.string "MR. BRINEY: Then you go on and deliver\n"
 	.string "the DEVON GOODS. I'll be waiting.$"
 
-DewfordTown_Text_BrineyLandedInSlateport:
+Crete_Text_BrineyLandedInSlateport:
 	.string "MR. BRINEY: Ahoy! We've made land in\n"
 	.string "SLATEPORT!\p"
 	.string "You just go on and tell me whenever\n"
