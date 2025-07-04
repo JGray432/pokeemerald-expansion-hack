@@ -8,11 +8,11 @@ Athens_PokemonCenter_1F_MapScripts::
 Athens_PokemonCenter_1F_OnTransition:
 	setrespawn HEAL_LOCATION_ATHENS
 	call Common_EventScript_UpdateBrineyLocation
-	goto Athens_PokemonCenter_1F_EventScript_SetMauvilleOldManGfx
+	goto Athens_PokemonCenter_1F_EventScript_SetAthensOldManGfx
 	end
 
-Athens_PokemonCenter_1F_EventScript_SetMauvilleOldManGfx::
-	special SetMauvilleOldManObjEventGfx
+Athens_PokemonCenter_1F_EventScript_SetAthensOldManGfx::
+	special SetAthensOldManObjEventGfx
 	end
 
 Athens_PokemonCenter_1F_EventScript_Nurse::

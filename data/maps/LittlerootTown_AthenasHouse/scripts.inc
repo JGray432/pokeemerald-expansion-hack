@@ -104,7 +104,6 @@ LittlerootTown_AthenasHouse_EventScript_Bag::
 SetStarterMetLocationToSpecial::
 	specialvar VAR_GIFT_PICHU_SLOT, CalculatePlayerPartyCount
 	setmodernfatefulencounter VAR_GIFT_PICHU_SLOT
-	setmonmetlocation VAR_GIFT_PICHU_SLOT, METLOC_FATEFUL_ENCOUNTER
 	return
 
 LittlerootTown_AthenasHouse_EventScript_AlreadyChosenStarter::

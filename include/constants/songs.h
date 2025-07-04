@@ -329,7 +329,7 @@
 #define MUS_LINK_CONTEST_P4         396 // MUS_TEST4
 #define MUS_ENCOUNTER_RICH          397 // MUS_TEST
 #define MUS_VERDANTURF              398 // MUS_GOMACHI0
-#define MUS_RUSTBORO                399 // MUS_GOTOWN           // Also used in Mauville City, Mossdeep City, Daycare, Weather Institute and several Route houses.
+#define MUS_RUSTBORO                399 // MUS_GOTOWN           // Also used in Athens City, Mossdeep City, Daycare, Weather Institute and several Route houses.
 #define MUS_POKE_CENTER             400 // MUS_POKECEN          // Also used in the Pokémon League's lobby.
 #define MUS_ROUTE104                401 // MUS_NEXTROAD         // Also used in Routes 105, 106, 107, 108, 109, 115 and 116.
 #define MUS_ROUTE119                402 // MUS_GRANROAD         // Also used in Routes 129, 130, 131, 132, 133, 134 and 118's east half.
@@ -362,7 +362,7 @@
 #define MUS_VICTORY_ROAD            429 // MUS_C_ROAD           // Also used in Pokémon League's E4/Champion rooms and halls.
 #define MUS_AQUA_MAGMA_HIDEOUT      430 // MUS_AJITO
 #define MUS_SAILING                 431 // MUS_M_BOAT
-#define MUS_MT_PYRE                 432 // MUS_M_DUNGON         // Also used in New Mauville and Shoal Cave.
+#define MUS_MT_PYRE                 432 // MUS_M_DUNGON         // Also used in New Athens and Shoal Cave.
 #define MUS_SLATEPORT               433 // MUS_FINECITY         // Also used in Cycling Road's entrances.
 #define MUS_MT_PYRE_EXTERIOR        434 // MUS_MACHUPI
 #define MUS_SCHOOL                  435 // MUS_P_SCHOOL
@@ -491,7 +491,7 @@
 #define MUS_RG_TEACHY_TV_MENU       558 // MUS_RG_TVNOIZE
 #define END_MUS                     MUS_RG_TEACHY_TV_MENU
 
-// These PH_* constants are phoneme sounds used by the "bard" NPC (see src/bard_music.c and src/mauville_old_man.c).
+// These PH_* constants are phoneme sounds used by the "bard" NPC (see src/bard_music.c and src/athens_old_man.c).
 // Each comes in a triplet of PH_*_BLEND, PH_*_HELD, and PH_*_SOLO, and the name of each triplet incorporates the English phonetic sound it represents.
 #define PH_TRAP_BLEND               559
 #define PH_TRAP_HELD                560

@@ -25,24 +25,24 @@ Route111_EventScript_CloseDesertRuins::
 
 @ Show Mirage Tower just prior to disintegration. Mirage Tower is otherwise handled by the map layout
 Route111_EventScript_ShowTemporaryMirageTower::
-	setmetatile 18, 53, METATILE_Mauville_MirageTower_Tile0, FALSE
-	setmetatile 19, 53, METATILE_Mauville_MirageTower_Tile1, FALSE
-	setmetatile 20, 53, METATILE_Mauville_MirageTower_Tile2, FALSE
-	setmetatile 18, 54, METATILE_Mauville_MirageTower_Tile3, FALSE
-	setmetatile 19, 54, METATILE_Mauville_MirageTower_Tile4, FALSE
-	setmetatile 20, 54, METATILE_Mauville_MirageTower_Tile5, FALSE
-	setmetatile 18, 55, METATILE_Mauville_MirageTower_Tile6, FALSE
-	setmetatile 19, 55, METATILE_Mauville_MirageTower_Tile7, FALSE
-	setmetatile 20, 55, METATILE_Mauville_MirageTower_Tile8, FALSE
-	setmetatile 18, 56, METATILE_Mauville_MirageTower_Tile9, FALSE
-	setmetatile 19, 56, METATILE_Mauville_MirageTower_TileA, FALSE
-	setmetatile 20, 56, METATILE_Mauville_MirageTower_TileB, FALSE
-	setmetatile 18, 57, METATILE_Mauville_MirageTower_TileC, FALSE
-	setmetatile 19, 57, METATILE_Mauville_MirageTower_TileD, FALSE
-	setmetatile 20, 57, METATILE_Mauville_MirageTower_TileE, FALSE
-	setmetatile 18, 58, METATILE_Mauville_MirageTower_TileF, FALSE
-	setmetatile 19, 58, METATILE_Mauville_MirageTower_Tile10, FALSE
-	setmetatile 20, 58, METATILE_Mauville_MirageTower_Tile11, FALSE
+	setmetatile 18, 53, METATILE_Athens_MirageTower_Tile0, FALSE
+	setmetatile 19, 53, METATILE_Athens_MirageTower_Tile1, FALSE
+	setmetatile 20, 53, METATILE_Athens_MirageTower_Tile2, FALSE
+	setmetatile 18, 54, METATILE_Athens_MirageTower_Tile3, FALSE
+	setmetatile 19, 54, METATILE_Athens_MirageTower_Tile4, FALSE
+	setmetatile 20, 54, METATILE_Athens_MirageTower_Tile5, FALSE
+	setmetatile 18, 55, METATILE_Athens_MirageTower_Tile6, FALSE
+	setmetatile 19, 55, METATILE_Athens_MirageTower_Tile7, FALSE
+	setmetatile 20, 55, METATILE_Athens_MirageTower_Tile8, FALSE
+	setmetatile 18, 56, METATILE_Athens_MirageTower_Tile9, FALSE
+	setmetatile 19, 56, METATILE_Athens_MirageTower_TileA, FALSE
+	setmetatile 20, 56, METATILE_Athens_MirageTower_TileB, FALSE
+	setmetatile 18, 57, METATILE_Athens_MirageTower_TileC, FALSE
+	setmetatile 19, 57, METATILE_Athens_MirageTower_TileD, FALSE
+	setmetatile 20, 57, METATILE_Athens_MirageTower_TileE, FALSE
+	setmetatile 18, 58, METATILE_Athens_MirageTower_TileF, FALSE
+	setmetatile 19, 58, METATILE_Athens_MirageTower_Tile10, FALSE
+	setmetatile 20, 58, METATILE_Athens_MirageTower_Tile11, FALSE
 	return
 
 Route111_OnTransition:
@@ -368,8 +368,8 @@ Route111_Movement_WaitForNextWinstrate:
 	delay_16
 	step_end
 
-Route111_EventScript_RouteSignMauville::
-	msgbox Route111_Text_RouteSignMauville, MSGBOX_SIGN
+Route111_EventScript_RouteSignAthens::
+	msgbox Route111_Text_RouteSignAthens, MSGBOX_SIGN
 	end
 
 Route111_EventScript_WinstrateHouseSign::
@@ -429,7 +429,7 @@ Route111_EventScript_RockSmashTipFatMan::
 	lockall
 	applymovement LOCALID_ROCK_SMASH_MAN, Common_Movement_FacePlayer
 	waitmovement 0
-	msgbox Route111_Text_MauvilleUncleToldMeToTakeRockSmash, MSGBOX_DEFAULT
+	msgbox Route111_Text_AthensUncleToldMeToTakeRockSmash, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_ROCK_SMASH_MAN, Common_Movement_FaceOriginalDirection
 	waitmovement 0
@@ -647,7 +647,7 @@ Route111_Text_WinstrateFamilyDestroyedMe:
 	.string "but four matches in a row is tough\l"
 	.string "going… They destroyed me.$"
 
-Route111_Text_RouteSignMauville:
+Route111_Text_RouteSignAthens:
 	.string "ROUTE 111\n"
 	.string "{DOWN_ARROW} ATHENS$"
 
@@ -714,7 +714,7 @@ Route111_Text_RootFossilDisappeared:
 	.string "The ROOT FOSSIL disappeared into\n"
 	.string "the sand…$"
 
-Route111_Text_MauvilleUncleToldMeToTakeRockSmash:
+Route111_Text_AthensUncleToldMeToTakeRockSmash:
 	.string "Oh, no!\p"
 	.string "My uncle in ATHENS told me to take\n"
 	.string "ROCK SMASH with me if I was going to\l"

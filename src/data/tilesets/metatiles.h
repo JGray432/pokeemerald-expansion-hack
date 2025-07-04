@@ -13,8 +13,8 @@ const u16 gMetatileAttributes_Crete[] = INCBIN_U16("data/tilesets/secondary/cret
 const u16 gMetatiles_Slateport[] = INCBIN_U16("data/tilesets/secondary/slateport/metatiles.bin");
 const u16 gMetatileAttributes_Slateport[] = INCBIN_U16("data/tilesets/secondary/slateport/metatile_attributes.bin");
 
-const u16 gMetatiles_Mauville[] = INCBIN_U16("data/tilesets/secondary/mauville/metatiles.bin");
-const u16 gMetatileAttributes_Mauville[] = INCBIN_U16("data/tilesets/secondary/mauville/metatile_attributes.bin");
+const u16 gMetatiles_Athens[] = INCBIN_U16("data/tilesets/secondary/athens/metatiles.bin");
+const u16 gMetatileAttributes_Athens[] = INCBIN_U16("data/tilesets/secondary/athens/metatile_attributes.bin");
 
 const u16 gMetatiles_Lavaridge[] = INCBIN_U16("data/tilesets/secondary/lavaridge/metatiles.bin");
 const u16 gMetatileAttributes_Lavaridge[] = INCBIN_U16("data/tilesets/secondary/lavaridge/metatile_attributes.bin");
@@ -118,8 +118,8 @@ const u16 gMetatileAttributes_Underwater[] = INCBIN_U16("data/tilesets/secondary
 const u16 gMetatiles_GenericBuilding[] = INCBIN_U16("data/tilesets/secondary/generic_building/metatiles.bin");
 const u16 gMetatileAttributes_GenericBuilding[] = INCBIN_U16("data/tilesets/secondary/generic_building/metatile_attributes.bin");
 
-const u16 gMetatiles_MauvilleGameCorner[] = INCBIN_U16("data/tilesets/secondary/mauville_game_corner/metatiles.bin");
-const u16 gMetatileAttributes_MauvilleGameCorner[] = INCBIN_U16("data/tilesets/secondary/mauville_game_corner/metatile_attributes.bin");
+const u16 gMetatiles_AthensGameCorner[] = INCBIN_U16("data/tilesets/secondary/athens_game_corner/metatiles.bin");
+const u16 gMetatileAttributes_AthensGameCorner[] = INCBIN_U16("data/tilesets/secondary/athens_game_corner/metatile_attributes.bin");
 
 const u16 gMetatiles_Unused2[] = INCBIN_U16("data/tilesets/secondary/unused_2/metatiles.bin");
 const u16 gMetatileAttributes_Unused2[] = INCBIN_U16("data/tilesets/secondary/unused_2/metatile_attributes.bin");
@@ -130,8 +130,8 @@ const u16 gMetatileAttributes_RustboroGym[] = INCBIN_U16("data/tilesets/secondar
 const u16 gMetatiles_CreteGym[] = INCBIN_U16("data/tilesets/secondary/crete_gym/metatiles.bin");
 const u16 gMetatileAttributes_CreteGym[] = INCBIN_U16("data/tilesets/secondary/crete_gym/metatile_attributes.bin");
 
-const u16 gMetatiles_MauvilleGym[] = INCBIN_U16("data/tilesets/secondary/mauville_gym/metatiles.bin");
-const u16 gMetatileAttributes_MauvilleGym[] = INCBIN_U16("data/tilesets/secondary/mauville_gym/metatile_attributes.bin");
+const u16 gMetatiles_AthensGym[] = INCBIN_U16("data/tilesets/secondary/athens_gym/metatiles.bin");
+const u16 gMetatileAttributes_AthensGym[] = INCBIN_U16("data/tilesets/secondary/athens_gym/metatile_attributes.bin");
 
 const u16 gMetatiles_LavaridgeGym[] = INCBIN_U16("data/tilesets/secondary/lavaridge_gym/metatiles.bin");
 const u16 gMetatileAttributes_LavaridgeGym[] = INCBIN_U16("data/tilesets/secondary/lavaridge_gym/metatile_attributes.bin");

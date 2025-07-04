@@ -10,7 +10,7 @@
     "gMapGroup_IndoorPacifidlog",
     "gMapGroup_IndoorPetalburg",
     "gMapGroup_IndoorSlateport",
-    "gMapGroup_IndoorMauville",
+    "gMapGroup_IndoorAthens",
     "gMapGroup_IndoorRustboro",
     "gMapGroup_IndoorFortree",
     "gMapGroup_IndoorLilycove",
@@ -177,7 +177,7 @@
     "SlateportCity_PokemonCenter_2F",
     "SlateportCity_Mart"
   ],
-  "gMapGroup_IndoorMauville": [
+  "gMapGroup_IndoorAthens": [
     "Athens_Gym",
     "Athens_BikeShop",
     "Athens_House1",
@@ -371,8 +371,8 @@
     "ShoalCave_LowTideLowerRoom",
     "ShoalCave_HighTideEntranceRoom",
     "ShoalCave_HighTideInnerRoom",
-    "NewMauville_Entrance",
-    "NewMauville_Inside",
+    "NewAthens_Entrance",
+    "NewAthens_Inside",
     "AbandonedShip_Deck",
     "AbandonedShip_Corridors_1F",
     "AbandonedShip_Rooms_1F",

@@ -27,7 +27,7 @@
       "width": 40,
       "height": 30,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Mauville",
+      "secondary_tileset": "gTileset_Athens",
       "border_filepath": "data/layouts/Athens/border.bin",
       "blockdata_filepath": "data/layouts/Athens/map.bin"
     },
@@ -147,7 +147,7 @@
       "width": 20,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Mauville",
+      "secondary_tileset": "gTileset_Athens",
       "border_filepath": "data/layouts/VerdanturfTown/border.bin",
       "blockdata_filepath": "data/layouts/VerdanturfTown/map.bin"
     },
@@ -177,7 +177,7 @@
       "width": 20,
       "height": 30,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Mauville",
+      "secondary_tileset": "gTileset_Athens",
       "border_filepath": "data/layouts/Route2/border.bin",
       "blockdata_filepath": "data/layouts/Route2/map.bin"
     },
@@ -187,7 +187,7 @@
       "width": 20,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Mauville",
+      "secondary_tileset": "gTileset_Athens",
       "border_filepath": "data/layouts/Athens_Outskirts/border.bin",
       "blockdata_filepath": "data/layouts/Athens_Outskirts/map.bin"
     },
@@ -257,7 +257,7 @@
       "width": 40,
       "height": 63,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Mauville",
+      "secondary_tileset": "gTileset_Athens",
       "border_filepath": "data/layouts/Route3/border.bin",
       "blockdata_filepath": "data/layouts/Route3/map.bin"
     },
@@ -267,7 +267,7 @@
       "width": 40,
       "height": 100,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Mauville",
+      "secondary_tileset": "gTileset_Athens",
       "border_filepath": "data/layouts/Route110/border.bin",
       "blockdata_filepath": "data/layouts/Route110/map.bin"
     },
@@ -277,7 +277,7 @@
       "width": 40,
       "height": 140,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Mauville",
+      "secondary_tileset": "gTileset_Athens",
       "border_filepath": "data/layouts/Route111/border.bin",
       "blockdata_filepath": "data/layouts/Route111/map.bin"
     },
@@ -337,7 +337,7 @@
       "width": 60,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Mauville",
+      "secondary_tileset": "gTileset_Athens",
       "border_filepath": "data/layouts/Route117/border.bin",
       "blockdata_filepath": "data/layouts/Route117/map.bin"
     },
@@ -857,7 +857,7 @@
       "width": 10,
       "height": 21,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_MauvilleGym",
+      "secondary_tileset": "gTileset_AthensGym",
       "border_filepath": "data/layouts/Athens_Gym/border.bin",
       "blockdata_filepath": "data/layouts/Athens_Gym/map.bin"
     },
@@ -877,7 +877,7 @@
       "width": 22,
       "height": 11,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_MauvilleGameCorner",
+      "secondary_tileset": "gTileset_AthensGameCorner",
       "border_filepath": "data/layouts/Athens_GameCorner/border.bin",
       "blockdata_filepath": "data/layouts/Athens_GameCorner/map.bin"
     },
@@ -1803,23 +1803,23 @@
     },
     {
       "id": "LAYOUT_NEW_ATHENS_ENTRANCE",
-      "name": "NewMauville_Entrance_Layout",
+      "name": "NewAthens_Entrance_Layout",
       "width": 9,
       "height": 9,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Facility",
-      "border_filepath": "data/layouts/NewMauville_Entrance/border.bin",
-      "blockdata_filepath": "data/layouts/NewMauville_Entrance/map.bin"
+      "border_filepath": "data/layouts/NewAthens_Entrance/border.bin",
+      "blockdata_filepath": "data/layouts/NewAthens_Entrance/map.bin"
     },
     {
       "id": "LAYOUT_NEW_ATHENS_INSIDE",
-      "name": "NewMauville_Inside_Layout",
+      "name": "NewAthens_Inside_Layout",
       "width": 41,
       "height": 41,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_BikeShop",
-      "border_filepath": "data/layouts/NewMauville_Inside/border.bin",
-      "blockdata_filepath": "data/layouts/NewMauville_Inside/map.bin"
+      "border_filepath": "data/layouts/NewAthens_Inside/border.bin",
+      "blockdata_filepath": "data/layouts/NewAthens_Inside/map.bin"
     },
     {
       "id": "LAYOUT_ABANDONED_SHIP_DECK",
@@ -3887,7 +3887,7 @@
       "width": 40,
       "height": 140,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Mauville",
+      "secondary_tileset": "gTileset_Athens",
       "border_filepath": "data/layouts/Route111_NoMirageTower/border.bin",
       "blockdata_filepath": "data/layouts/Route111_NoMirageTower/map.bin"
     },

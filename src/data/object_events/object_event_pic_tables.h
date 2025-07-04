@@ -302,12 +302,12 @@ static const struct SpriteFrameImage sPicTable_ReporterF[] = {
     overworld_ascending_frames(gObjectEventPic_ReporterF, 2, 4),
 };
 
-static const struct SpriteFrameImage sPicTable_MauvilleOldMan1[] = {
-    overworld_ascending_frames(gObjectEventPic_MauvilleOldMan1, 2, 4),
+static const struct SpriteFrameImage sPicTable_AthensOldMan1[] = {
+    overworld_ascending_frames(gObjectEventPic_AthensOldMan1, 2, 4),
 };
 
-static const struct SpriteFrameImage sPicTable_MauvilleOldMan2[] = {
-    overworld_ascending_frames(gObjectEventPic_MauvilleOldMan2, 2, 4),
+static const struct SpriteFrameImage sPicTable_AthensOldMan2[] = {
+    overworld_ascending_frames(gObjectEventPic_AthensOldMan2, 2, 4),
 };
 
 static const struct SpriteFrameImage sPicTable_UnusedNatuDoll[] = {

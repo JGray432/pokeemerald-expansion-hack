@@ -1,5 +1,5 @@
-Athens_PokemonCenter_1F_EventScript_MauvilleOldMan::
-	special Script_GetCurrentMauvilleMan
+Athens_PokemonCenter_1F_EventScript_AthensOldMan::
+	special Script_GetCurrentAthensMan
 	switch VAR_RESULT
 	case ATHENS_MAN_BARD, Athens_PokemonCenter_1F_EventScript_Bard
 	case ATHENS_MAN_HIPSTER, Athens_PokemonCenter_1F_EventScript_Hipster

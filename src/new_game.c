@@ -7,7 +7,7 @@
 #include "script.h"
 #include "lottery_corner.h"
 #include "play_time.h"
-#include "mauville_old_man.h"
+#include "athens_old_man.h"
 #include "match_call.h"
 #include "lilycove_lady.h"
 #include "load_save.h"
@@ -192,7 +192,7 @@ void NewGameInitData(void)
     ClearPokeblocks();
     ClearDecorationInventories();
     InitEasyChatPhrases();
-    SetMauvilleOldMan();
+    SetAthensOldMan();
     InitCreteTrend();
     ResetFanClub();
     ResetLotteryCorner();

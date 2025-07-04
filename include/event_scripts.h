@@ -410,7 +410,7 @@ extern const u8 EventScript_UseCutGrass[];
 
 //player pc
 
-// Mauville Old Man (Giddy)
+// Athens Old Man (Giddy)
 extern const u8 GiddyText_Is[];
 extern const u8 GiddyText_DontYouAgree[];
 extern const u8 GiddyText_SoPretty[];
@@ -430,7 +430,7 @@ extern const u8 GiddyText_WhenYouSeeTheSettingSunDoesIt[];
 extern const u8 GiddyText_LyingBackInTheGreenGrass[];
 extern const u8 GiddyText_SecretBasesAreSoWonderful[];
 
-// Mauville Old Man (storyteller)
+// Athens Old Man (storyteller)
 extern const u8 Athens_PokemonCenter_1F_Text_SavedGameTitle[];
 extern const u8 Athens_PokemonCenter_1F_Text_SavedGameAction[];
 extern const u8 Athens_PokemonCenter_1F_Text_SavedGameStory[];

@@ -66,8 +66,8 @@ Route117_EventScript_RouteSignVerdanturf::
 	msgbox Route117_Text_RouteSignVerdanturf, MSGBOX_SIGN
 	end
 
-Route117_EventScript_RouteSignMauville::
-	msgbox Route117_Text_RouteSignMauville, MSGBOX_SIGN
+Route117_EventScript_RouteSignAthens::
+	msgbox Route117_Text_RouteSignAthens, MSGBOX_SIGN
 	end
 
 Route117_EventScript_DayCareSign::
@@ -234,7 +234,7 @@ Route117_Text_RouteSignVerdanturf:
 	.string "ROUTE 117\n"
 	.string "{LEFT_ARROW} VERDANTURF TOWN$"
 
-Route117_Text_RouteSignMauville:
+Route117_Text_RouteSignAthens:
 	.string "ROUTE 117\n"
 	.string "{RIGHT_ARROW} ATHENS$"
 

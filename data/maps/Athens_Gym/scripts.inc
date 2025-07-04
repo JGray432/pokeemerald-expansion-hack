@@ -17,60 +17,60 @@ Athens_Gym_EventScript_UpdateBarriers::
 	end
 
 Athens_Gym_EventScript_SetAltBarriers::
-	setmetatile 3, 11, METATILE_MauvilleGym_RedBeamV1_On, TRUE
-	setmetatile 3, 12, METATILE_MauvilleGym_RedBeamV2_On, TRUE
-	setmetatile 3, 13, METATILE_MauvilleGym_PoleTop_On, TRUE
-	setmetatile 4, 10, METATILE_MauvilleGym_RedBeamH1_On, FALSE
-	setmetatile 5, 10, METATILE_MauvilleGym_RedBeamH2_On, FALSE
-	setmetatile 4, 11, METATILE_MauvilleGym_RedBeamH3_On, TRUE
-	setmetatile 5, 11, METATILE_MauvilleGym_RedBeamH4_On, TRUE
-	setmetatile 7, 10, METATILE_MauvilleGym_RedBeamH1_On, FALSE
-	setmetatile 8, 10, METATILE_MauvilleGym_RedBeamH2_On, FALSE
-	setmetatile 7, 11, METATILE_MauvilleGym_RedBeamH3_On, TRUE
-	setmetatile 8, 11, METATILE_MauvilleGym_RedBeamH4_On, TRUE
-	setmetatile 4, 13, METATILE_MauvilleGym_GreenBeamH1_Off, FALSE
-	setmetatile 5, 13, METATILE_MauvilleGym_GreenBeamH2_Off, FALSE
-	setmetatile 4, 14, METATILE_MauvilleGym_GreenBeamH3_Off, FALSE
-	setmetatile 5, 14, METATILE_MauvilleGym_GreenBeamH4_Off, FALSE
-	setmetatile 1, 10, METATILE_MauvilleGym_GreenBeamH1_Off, FALSE
-	setmetatile 2, 10, METATILE_MauvilleGym_GreenBeamH2_Off, FALSE
-	setmetatile 1, 11, METATILE_MauvilleGym_GreenBeamH3_Off, FALSE
-	setmetatile 2, 11, METATILE_MauvilleGym_GreenBeamH4_Off, FALSE
-	setmetatile 6, 8, METATILE_MauvilleGym_PoleBottom_On, TRUE
-	setmetatile 6, 9, METATILE_MauvilleGym_FloorTile, FALSE
-	setmetatile 6, 10, METATILE_MauvilleGym_PoleTop_Off, FALSE
-	setmetatile 4, 6, METATILE_MauvilleGym_GreenBeamH1_Off, FALSE
-	setmetatile 5, 6, METATILE_MauvilleGym_GreenBeamH2_Off, FALSE
-	setmetatile 4, 7, METATILE_MauvilleGym_GreenBeamH3_Off, FALSE
-	setmetatile 5, 7, METATILE_MauvilleGym_GreenBeamH4_Off, FALSE
+	setmetatile 3, 11, METATILE_AthensGym_RedBeamV1_On, TRUE
+	setmetatile 3, 12, METATILE_AthensGym_RedBeamV2_On, TRUE
+	setmetatile 3, 13, METATILE_AthensGym_PoleTop_On, TRUE
+	setmetatile 4, 10, METATILE_AthensGym_RedBeamH1_On, FALSE
+	setmetatile 5, 10, METATILE_AthensGym_RedBeamH2_On, FALSE
+	setmetatile 4, 11, METATILE_AthensGym_RedBeamH3_On, TRUE
+	setmetatile 5, 11, METATILE_AthensGym_RedBeamH4_On, TRUE
+	setmetatile 7, 10, METATILE_AthensGym_RedBeamH1_On, FALSE
+	setmetatile 8, 10, METATILE_AthensGym_RedBeamH2_On, FALSE
+	setmetatile 7, 11, METATILE_AthensGym_RedBeamH3_On, TRUE
+	setmetatile 8, 11, METATILE_AthensGym_RedBeamH4_On, TRUE
+	setmetatile 4, 13, METATILE_AthensGym_GreenBeamH1_Off, FALSE
+	setmetatile 5, 13, METATILE_AthensGym_GreenBeamH2_Off, FALSE
+	setmetatile 4, 14, METATILE_AthensGym_GreenBeamH3_Off, FALSE
+	setmetatile 5, 14, METATILE_AthensGym_GreenBeamH4_Off, FALSE
+	setmetatile 1, 10, METATILE_AthensGym_GreenBeamH1_Off, FALSE
+	setmetatile 2, 10, METATILE_AthensGym_GreenBeamH2_Off, FALSE
+	setmetatile 1, 11, METATILE_AthensGym_GreenBeamH3_Off, FALSE
+	setmetatile 2, 11, METATILE_AthensGym_GreenBeamH4_Off, FALSE
+	setmetatile 6, 8, METATILE_AthensGym_PoleBottom_On, TRUE
+	setmetatile 6, 9, METATILE_AthensGym_FloorTile, FALSE
+	setmetatile 6, 10, METATILE_AthensGym_PoleTop_Off, FALSE
+	setmetatile 4, 6, METATILE_AthensGym_GreenBeamH1_Off, FALSE
+	setmetatile 5, 6, METATILE_AthensGym_GreenBeamH2_Off, FALSE
+	setmetatile 4, 7, METATILE_AthensGym_GreenBeamH3_Off, FALSE
+	setmetatile 5, 7, METATILE_AthensGym_GreenBeamH4_Off, FALSE
 	end
 
 Athens_Gym_EventScript_Switch1Pressed::
 	setvar VAR_0x8004, 0
-	special MauvilleGymPressSwitch
+	special AthensGymPressSwitch
 	goto Athens_Gym_EventScript_UpdateBarriers
 	end
 
 Athens_Gym_EventScript_Switch2Pressed::
 	setvar VAR_0x8004, 1
-	special MauvilleGymPressSwitch
+	special AthensGymPressSwitch
 	goto Athens_Gym_EventScript_UpdateBarriers
 	end
 
 Athens_Gym_EventScript_Switch3Pressed::
 	setvar VAR_0x8004, 2
-	special MauvilleGymPressSwitch
+	special AthensGymPressSwitch
 	goto Athens_Gym_EventScript_UpdateBarriers
 	end
 
 Athens_Gym_EventScript_Switch4Pressed::
 	setvar VAR_0x8004, 3
-	special MauvilleGymPressSwitch
+	special AthensGymPressSwitch
 	goto Athens_Gym_EventScript_UpdateBarriers
 	end
 
 Athens_Gym_EventScript_DeactivatePuzzle::
-	special MauvilleGymDeactivatePuzzle
+	special AthensGymDeactivatePuzzle
 	end
 
 Athens_Gym_EventScript_Wattson::
@@ -78,7 +78,7 @@ Athens_Gym_EventScript_Wattson::
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Athens_Gym_EventScript_WattsonRematch
 	goto_if_unset FLAG_RECEIVED_TM_SHOCK_WAVE, Athens_Gym_EventScript_GiveShockWave2
-	goto_if_eq VAR_NEW_ATHENS_STATE, 2, Athens_Gym_EventScript_CompletedNewMauville
+	goto_if_eq VAR_NEW_ATHENS_STATE, 2, Athens_Gym_EventScript_CompletedNewAthens
 	msgbox Athens_Gym_Text_WattsonPostBattle, MSGBOX_DEFAULT
 	release
 	end
@@ -96,7 +96,7 @@ Athens_Gym_EventScript_WattsonDefeated::
 	call_if_eq VAR_PETALBURG_GYM_STATE, 6, Common_EventScript_ReadyPetalburgGymForBattle
 	setvar VAR_0x8008, 3
 	call Common_EventScript_SetGymTrainers
-	special MauvilleGymDeactivatePuzzle
+	special AthensGymDeactivatePuzzle
 	special DrawWholeMapView
 	playse SE_UNLOCK
 	call Athens_Gym_EventScript_GiveShockWave
@@ -126,7 +126,7 @@ Athens_Gym_EventScript_GiveShockWave::
 	setflag FLAG_RECEIVED_TM_SHOCK_WAVE
 	return
 
-Athens_Gym_EventScript_CompletedNewMauville::
+Athens_Gym_EventScript_CompletedNewAthens::
 	msgbox Athens_Gym_Text_WattsonGoForthAndEndeavor, MSGBOX_DEFAULT
 	release
 	end
@@ -173,8 +173,8 @@ Athens_Gym_EventScript_Switch4::
 	end
 
 Athens_Gym_EventScript_PressFloorSwitch::
-	special MauvilleGymSetDefaultBarriers
-	special MauvilleGymPressSwitch
+	special AthensGymSetDefaultBarriers
+	special AthensGymPressSwitch
 	special DrawWholeMapView
 	playse SE_UNLOCK
 	goto_if_set FLAG_ATHENS_GYM_BARRIERS_STATE, Athens_Gym_EventScript_ClearBarriersAltState

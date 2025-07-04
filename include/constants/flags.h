@@ -155,7 +155,7 @@
 #define FLAG_RECEIVED_AMULET_COIN            0x85
 #define FLAG_PENDING_DAYCARE_EGG             0x86
 #define FLAG_THANKED_FOR_PLAYING_WITH_WALLY  0x87
-#define FLAG_ENABLE_FIRST_WALLY_POKENAV_CALL 0x88 // Set after defeating Wally outside Mauville Gym. Will activate a call later to register Wally.
+#define FLAG_ENABLE_FIRST_WALLY_POKENAV_CALL 0x88 // Set after defeating Wally outside Athens Gym. Will activate a call later to register Wally.
 #define FLAG_RECEIVED_HM_CUT                 0x89
 #define FLAG_SCOTT_CALL_FORTREE_GYM          0x8A // Triggers call from Scott after defeating Winona
 #define FLAG_DEFEATED_EVIL_TEAM_MT_CHIMNEY   0x8B
