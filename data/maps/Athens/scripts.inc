@@ -1,8 +1,9 @@
 .set LOCALID_WALLY, 6
 .set LOCALID_WALLYS_UNCLE, 7
-.set LOCALID_SCOTT, 11
+.set LOCALID_SCOTT, 9
 .set LOCALID_NURSE, 4
 .set LOCALID_MART_CLERK, 5
+.set LOCALID_SCIENTIST, 10
 
 Athens_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Athens_OnTransition
@@ -50,6 +51,14 @@ Athens_Mart:
 	.2byte ITEM_PARALYZE_HEAL
 	.2byte ITEM_AWAKENING
 	pokemartlistend
+
+Athens_EventScript_UtilityScientist::
+	setvar VAR_0x800A, LOCALID_SCIENTIST
+	call Common_EventScript_PkmnCenterNurse
+	waitmessage
+	waitbuttonpress
+	release
+	end
 
 Athens_EventScript_Boy::
 	msgbox Athens_Text_NurseHurtMonBackToHealth, MSGBOX_NPC

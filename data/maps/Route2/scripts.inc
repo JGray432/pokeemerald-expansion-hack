@@ -86,6 +86,17 @@ Route2_EventScript_WarpFacingDown:
 Route2_EventScript_MovePlayerDown::
 	walk_down
 
+EventScript_GiveFiveBerryJuices::
+    call StdPokeballAnimation
+    additem ITEM_BERRY_JUICE, 5
+    msgbox Route2_Text_FoundFiveBerryJuice, MSGBOX_SIGN
+    setflag FLAG_HIDE_ITEM_BERRY_JUICE // Replace with your actual flag
+    removeobject LAST_TALKED
+    end
+
+Route2_Text_FoundFiveBerryJuice:
+	.string "You found 5 BERRY JUICE!$"
+
 ROUTE2_Text_WatchMeCatchPokemon:
 	.string "WALLY: {PLAYER}…\n"
 	.string "POKéMON hide in tall grass like this,\l"

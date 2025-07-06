@@ -1634,7 +1634,7 @@ void ItemUseOutOfBattle_NectarReserves(u8 taskId)
     {
         struct Pokemon *mon = &gPlayerParty[i];
         if (GetMonData(mon, MON_DATA_SPECIES) != SPECIES_NONE
-            && GetMonData(mon, MON_DATA_HP) > 0)
+            )
         {
             u32 maxHp = GetMonData(mon, MON_DATA_MAX_HP);
             SetMonData(mon, MON_DATA_HP, &maxHp);

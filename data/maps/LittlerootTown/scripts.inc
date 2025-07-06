@@ -301,7 +301,7 @@ LittlerootTown_Text_GiveSuperRod:
 	.string "price of ¥500 $"
 
 LittlerootTown_Text_Sucker:
-	.string "Hehe sucker, it's just a stick!$"
+	.string "Fish-ing? What the heck is that?$"
 
 LittlerootTown_Text_DeclineSuperRod:
 	.string "Pff this deal is too good for \n"

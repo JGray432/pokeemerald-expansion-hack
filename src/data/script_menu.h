@@ -778,6 +778,34 @@ static const struct MenuAction MultichoiceList_BerryPlot[] =
     {gText_Exit},
 };
 
+static const struct MenuAction MultichoiceList_UtilitiesList[] =
+{
+    {COMPOUND_STRING("Change Nickname")},
+    {COMPOUND_STRING("Apply Status")},
+    {COMPOUND_STRING("Max IV")},
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_Statuses[] =
+{
+    {COMPOUND_STRING("Poison")},
+    {COMPOUND_STRING("Paralyze")},
+    {COMPOUND_STRING("Burn")},
+    {COMPOUND_STRING("Frostbite")},
+    {COMPOUND_STRING("Sleep")}, 
+    {gText_Exit},
+};
+
+static const struct MenuAction MultichoiceList_Stats[] =
+{
+    {COMPOUND_STRING("HP")},
+    {COMPOUND_STRING("Attack")},
+    {COMPOUND_STRING("Special Attack")},
+    {COMPOUND_STRING("Speed")},
+    {COMPOUND_STRING("Defense")},
+    {COMPOUND_STRING("Special Defense")},
+    {gText_Exit},
+};
 static const struct MenuAction MultichoiceList_Exit[] =
 {
     {gText_Exit},
@@ -906,6 +934,9 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_FALLARBOR_TENT_RULES]       = MULTICHOICE(MultichoiceList_FallarborTentRules),
     [MULTI_TAG_MATCH_TYPE]             = MULTICHOICE(MultichoiceList_TagMatchType),
     [MULTI_BERRY_PLOT]                 = MULTICHOICE(MultichoiceList_BerryPlot),
+    [MULTI_UTILITIES_LIST]                 = MULTICHOICE(MultichoiceList_UtilitiesList),
+    [MULTI_STATUSES]                 = MULTICHOICE(MultichoiceList_Statuses),
+    [MULTI_STATS]                 = MULTICHOICE(MultichoiceList_Stats),
 };
 
 const u8 *const gStdStrings[] =
@@ -969,7 +1000,7 @@ static const u8 *const sLilycoveSSTidalDestinations[SSTIDAL_SELECTION_COUNT] =
     [SSTIDAL_SELECTION_BIRTH_ISLAND]    = gText_BirthIsland,
     [SSTIDAL_SELECTION_FARAWAY_ISLAND]  = gText_FarawayIsland,
     [SSTIDAL_SELECTION_EXIT]            = gText_Exit,
-};
+}; 
 
 static const u8 *const sCableClubOptions_WithRecordMix[] =
 {
