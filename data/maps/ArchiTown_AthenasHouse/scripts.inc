@@ -1,29 +1,29 @@
 .set LOCALID_ATHENA, 1
 
-LittlerootTown_AthenasHouse_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, LittlerootTown_AthenasHouse_OnTransition
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, LittlerootTown_AthenasHouse_OnFrame
-	map_script MAP_SCRIPT_ON_RESUME, LittlerootTown_AthenasHouse_OnResume
+ArchiTown_AthenasHouse_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, ArchiTown_AthenasHouse_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, ArchiTown_AthenasHouse_OnFrame
+	map_script MAP_SCRIPT_ON_RESUME, ArchiTown_AthenasHouse_OnResume
 	.byte 0
 
-LittlerootTown_AthenasHouse_OnTransition:
-	call_if_eq VAR_LITTLEROOT_INTRO_STATE, 2, LittlerootTown_AthenasHouse_EventScript_MoveMomToDoor
+ArchiTown_AthenasHouse_OnTransition:
+	call_if_eq VAR_ARCHI_INTRO_STATE, 2, ArchiTown_AthenasHouse_EventScript_MoveMomToDoor
 	end
 
-LittlerootTown_AthenasHouse_EventScript_MoveMomToDoor::
+ArchiTown_AthenasHouse_EventScript_MoveMomToDoor::
 	setobjectxyperm LOCALID_ATHENA, 9, 8
 	setobjectmovementtype LOCALID_ATHENA, MOVEMENT_TYPE_FACE_UP
 	return
 
-LittlerootTown_AthenasHouse_OnFrame:
-	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 2, LittlerootTown_AthenasHouse_EventScript_EnterHouseMovingIn
-	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 4, AthenasHouse_EventScript_ClearFlagAfterAthenaBattle
+ArchiTown_AthenasHouse_OnFrame:
+	map_script_2 VAR_ARCHI_INTRO_STATE, 2, ArchiTown_AthenasHouse_EventScript_EnterHouseMovingIn
+	map_script_2 VAR_ARCHI_INTRO_STATE, 4, AthenasHouse_EventScript_ClearFlagAfterAthenaBattle
 	.2byte 0
 
-LittlerootTown_AthenasHouse_OnResume::
+ArchiTown_AthenasHouse_OnResume::
 	end
 
-LittlerootTown_AthenasHouse_EventScript_EnterHouseMovingIn::
+ArchiTown_AthenasHouse_EventScript_EnterHouseMovingIn::
 	lockall
 	setvar VAR_0x8004, LOCALID_ATHENA
 	setvar VAR_0x8005, MALE
@@ -37,7 +37,7 @@ AthenasHouse_EventScript_EnterHouseMovingIn::
 	msgbox AthenasHouse_Text_IsntItNiceInHere, MSGBOX_DEFAULT
 	msgbox AthenasHouse_Text_OfferStarters, MSGBOX_DEFAULT
 	closemessage
-	setvar VAR_LITTLEROOT_INTRO_STATE, 3
+	setvar VAR_ARCHI_INTRO_STATE, 3
 	releaseall
 	end
 
@@ -79,12 +79,12 @@ AthenasHouse_Movement_MovePlayerAwayFromDoor:
 	walk_up
 	step_end
 
-LittlerootTown_AthenasHouse_EventScript_Bag::
+ArchiTown_AthenasHouse_EventScript_Bag::
 	lock
 	setvar VAR_0x8004, LOCALID_ATHENA
 	applymovement VAR_0x8004, Common_Movement_FacePlayer
-	COMPARE VAR_LITTLEROOT_INTRO_STATE, 5
-	call_if_eq LittlerootTown_AthenasHouse_EventScript_AlreadyChosenStarter
+	COMPARE VAR_ARCHI_INTRO_STATE, 5
+	call_if_eq ArchiTown_AthenasHouse_EventScript_AlreadyChosenStarter
 	setflag FLAG_SYS_POKEMON_GET
 	setflag FLAG_RESCUED_BIRCH
 	fadescreen FADE_TO_BLACK
@@ -92,11 +92,11 @@ LittlerootTown_AthenasHouse_EventScript_Bag::
 	call SetStarterMetLocationToSpecial
 	
 	setflag FLAG_HIDE_ROUTE_1_BIRCH_ZIGZAGOON_BATTLE
-	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH
+	clearflag FLAG_HIDE_ARCHI_TOWN_BIRCHS_LAB_BIRCH
 	setflag FLAG_HIDE_ROUTE_1_BIRCH_STARTERS_BAG
 	setvar VAR_BIRCH_LAB_STATE, 2
 	setvar VAR_ROUTE1_STATE, 3
-	setvar VAR_LITTLEROOT_INTRO_STATE, 4
+	setvar VAR_ARCHI_INTRO_STATE, 4
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
 	goto AthenasHouse_EventScript_AthenaFiredUp
 	end
@@ -106,7 +106,7 @@ SetStarterMetLocationToSpecial::
 	setmodernfatefulencounter VAR_GIFT_PICHU_SLOT
 	return
 
-LittlerootTown_AthenasHouse_EventScript_AlreadyChosenStarter::
+ArchiTown_AthenasHouse_EventScript_AlreadyChosenStarter::
 	msgbox AthenasHouse_Text_AlreadyChosenStarters, MSGBOX_DEFAULT
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
@@ -114,7 +114,7 @@ LittlerootTown_AthenasHouse_EventScript_AlreadyChosenStarter::
 	releaseall
 	end
 
-LittlerootTown_AthenasHouse_EventScript_AthenaWaiting::
+ArchiTown_AthenasHouse_EventScript_AthenaWaiting::
 	lock
 	faceplayer
 	msgbox AthenasHouse_Text_ArentYouInterestedInBag, MSGBOX_DEFAULT
@@ -162,7 +162,7 @@ AthenasHouse_EventScript_StartAthenaBattlePawniard::
 
 AthenasHouse_EventScript_ClearFlagAfterAthenaBattle::
 	clearflag FLAG_TEMP_ATHENA_INTRO_BATTLE_IN_PROGRESS
-	setvar VAR_LITTLEROOT_INTRO_STATE, 5
+	setvar VAR_ARCHI_INTRO_STATE, 5
 	call AthenasHouse_EventScript_AfterAthenaBattle
 
 AthenasHouse_EventScript_AfterAthenaBattle::
@@ -173,7 +173,7 @@ AthenasHouse_EventScript_AfterAthenaBattle::
 	end
 
 LittleRootTown_AthenasHouse_EventScript_GiveKeyItems::
-	msgbox LittlerootTown_AthenasHouse_Text_GiveKeyItems MSGBOX_DEFAULT
+	msgbox ArchiTown_AthenasHouse_Text_GiveKeyItems MSGBOX_DEFAULT
 	closemessage
 	playfanfare MUS_OBTAIN_ITEM
 	giveitem ITEM_POKE_BALL, 10
@@ -201,12 +201,12 @@ LittleRootTown_AthenasHouse_EventScript_GiveKeyItems::
 
 AthenasHouse_EventScript_AthenaExitHouse:: 
 	setvar VAR_0x8004, LOCALID_ATHENA
-	msgbox LittlerootTown_AthenasHouse_Text_AthenaLeaving MSGBOX_DEFAULT
+	msgbox ArchiTown_AthenasHouse_Text_AthenaLeaving MSGBOX_DEFAULT
 	closemessage
 	applymovement VAR_0x8004, AthenasHouse_Movement_AthenaLeave
 	waitmovement 0
 	removeobject VAR_0x8004
-	setflag FLAG_HIDE_LITTLEROOT_TOWN_ATHENAS_HOUSE_ATHENA
+	setflag FLAG_HIDE_ARCHI_TOWN_ATHENAS_HOUSE_ATHENA
 	releaseall
 	end
 
@@ -259,11 +259,11 @@ Athenas_House_Text_ATHENADefeated:
 AthenasHouse_Text_AthenaSendOff:
 	.string "Athena: Wow, that was fun!$"
 
-LittlerootTown_AthenasHouse_Text_GiveKeyItems:
+ArchiTown_AthenasHouse_Text_GiveKeyItems:
 	.string "Here are some useful\n"
 	.string "items to help start your journey$"
 
-LittlerootTown_AthenasHouse_Text_AthenaLeaving:
+ArchiTown_AthenasHouse_Text_AthenaLeaving:
 	.string "ATHENA: Ok, I'll be off now, I have \n"
 	.string "business to attend to in Athens.\p"
 	.string "You should head over there too {PLAYER}!\n"

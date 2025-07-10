@@ -1136,7 +1136,7 @@ static void DebugAction_DestroyExtraWindow(u8 taskId)
 
 static const u16 sLocationFlags[] =
 {
-    FLAG_VISITED_LITTLEROOT_TOWN,
+    FLAG_VISITED_ARCHI_TOWN,
     FLAG_VISITED_OLDALE_TOWN,
     FLAG_VISITED_CRETE,
     FLAG_VISITED_LAVARIDGE_TOWN,
@@ -3808,7 +3808,7 @@ static void DebugAction_Sound_MUS_SelectId(u8 taskId)
 #undef tDigit
 
 #define SOUND_LIST_BGM \
-    X(MUS_LITTLEROOT_TEST) \
+    X(MUS_ARCHI_TEST) \
     X(MUS_GSC_ROUTE38) \
     X(MUS_CAUGHT) \
     X(MUS_VICTORY_WILD) \
@@ -3863,7 +3863,7 @@ static void DebugAction_Sound_MUS_SelectId(u8 taskId)
     X(MUS_ROUTE119) \
     X(MUS_CYCLING) \
     X(MUS_POKE_MART) \
-    X(MUS_LITTLEROOT) \
+    X(MUS_ARCHI) \
     X(MUS_MT_CHIMNEY) \
     X(MUS_ENCOUNTER_FEMALE) \
     X(MUS_LILYCOVE) \

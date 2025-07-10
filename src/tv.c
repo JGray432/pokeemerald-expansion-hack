@@ -3326,13 +3326,13 @@ u32 GetPlayerIDAsU32(void)
 
 u8 CheckForPlayersHouseNews(void)
 {
-    // Check if not in Littleroot house map group
-    if (gSaveBlock1Ptr->location.mapGroup != MAP_GROUP(LITTLEROOT_TOWN))
+    // Check if not in Archi house map group
+    if (gSaveBlock1Ptr->location.mapGroup != MAP_GROUP(ARCHI_TOWN))
         return PLAYERS_HOUSE_TV_NONE;
 
     // Check if not in player's house
 
-     if (gSaveBlock1Ptr->location.mapNum != MAP_NUM(LITTLEROOT_TOWN))
+     if (gSaveBlock1Ptr->location.mapNum != MAP_NUM(ARCHI_TOWN))
         return PLAYERS_HOUSE_TV_NONE;
     
     if (FlagGet(FLAG_SYS_TV_LATIAS_LATIOS) == TRUE)
@@ -3347,9 +3347,9 @@ u8 CheckForPlayersHouseNews(void)
 void GetMomOrDadStringForTVMessage(void)
 {
     // If the player is checking the TV in their house it will only refer to their Mom.
-    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(LITTLEROOT_TOWN))
+    if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ARCHI_TOWN))
     {
-        if (gSaveBlock1Ptr->location.mapNum == MAP_NUM(LITTLEROOT_TOWN))
+        if (gSaveBlock1Ptr->location.mapNum == MAP_NUM(ARCHI_TOWN))
         {
              StringCopy(gStringVar1, gText_Mom);
              VarSet(VAR_TEMP_3, 1);

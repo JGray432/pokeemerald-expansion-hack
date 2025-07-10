@@ -1,7 +1,7 @@
 {
   "group_order": [
     "gMapGroup_TownsAndRoutes",
-    "gMapGroup_IndoorLittleroot",
+    "gMapGroup_IndoorArchi",
     "gMapGroup_IndoorOldale",
     "gMapGroup_IndoorCrete",
     "gMapGroup_IndoorLavaridge",
@@ -45,7 +45,7 @@
     "MossdeepCity",
     "SootopolisCity",
     "EverGrandeCity",
-    "LittlerootTown",
+    "ArchiTown",
     "OldaleTown",
     "Crete",
     "LavaridgeTown",
@@ -94,9 +94,9 @@
     "Underwater_Route105",
     "Underwater_Route125"
   ],
-  "gMapGroup_IndoorLittleroot": [
-    "LittlerootTown_AthenasHouse",
-    "LittlerootTown_ProfessorBirchsLab"
+  "gMapGroup_IndoorArchi": [
+    "ArchiTown_AthenasHouse",
+    "ArchiTown_ProfessorBirchsLab"
   ],
   "gMapGroup_IndoorOldale": [
     "OldaleTown_House1",

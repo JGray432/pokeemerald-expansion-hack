@@ -51,7 +51,7 @@ EverGrandeCity_HallOfFame_EventScript_EnterHallOfFame::
 	end
 
 EverGrandeCity_HallOfFame_EventScript_GameClearMale::
-	setrespawn HEAL_LOCATION_LITTLEROOT_TOWN_ATHENAS_HOUSE
+	setrespawn HEAL_LOCATION_ARCHI_TOWN_ATHENAS_HOUSE
 	fadescreenspeed FADE_TO_BLACK, 24
 	special GameClear
 	waitstate
@@ -59,7 +59,7 @@ EverGrandeCity_HallOfFame_EventScript_GameClearMale::
 	end
 
 EverGrandeCity_HallOfFame_EventScript_GameClearFemale::
-	setrespawn HEAL_LOCATION_LITTLEROOT_TOWN_ATHENAS_HOUSE
+	setrespawn HEAL_LOCATION_ARCHI_TOWN_ATHENAS_HOUSE
 	fadescreenspeed FADE_TO_BLACK, 24
 	special GameClear
 	waitstate

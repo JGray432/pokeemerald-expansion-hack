@@ -1,9 +1,9 @@
 {
-  "id": "MAP_LITTLEROOT_TOWN",
-  "name": "LittlerootTown",
-  "layout": "LAYOUT_LITTLEROOT_TOWN",
-  "music": "MUS_LITTLEROOT",
-  "region_map_section": "MAPSEC_LITTLEROOT_TOWN",
+  "id": "MAP_ARCHI_TOWN",
+  "name": "ArchiTown",
+  "layout": "LAYOUT_ARCHI_TOWN",
+  "music": "MUS_ARCHI",
+  "region_map_section": "MAPSEC_ARCHI_TOWN",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
   "map_type": "MAP_TYPE_TOWN",
@@ -30,7 +30,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "LittlerootTown_EventScript_FisherMan",
+      "script": "ArchiTown_EventScript_FisherMan",
       "flag": "0"
     },
     {
@@ -43,7 +43,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "LittlerootTown_Mart_EventScript_Clerk",
+      "script": "ArchiTown_Mart_EventScript_Clerk",
       "flag": "0"
     },
     {
@@ -57,7 +57,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_HIDE_LITTLEROOT_TOWN_MOM_OUTSIDE"
+      "flag": "FLAG_HIDE_ARCHI_TOWN_MOM_OUTSIDE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_TRUCK",
@@ -70,7 +70,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_HIDE_LITTLEROOT_TOWN_BRENDANS_HOUSE_TRUCK"
+      "flag": "FLAG_HIDE_ARCHI_TOWN_BRENDANS_HOUSE_TRUCK"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BEAUTY",
@@ -82,7 +82,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "LittlerootTown_EventScript_Beauty",
+      "script": "ArchiTown_EventScript_Beauty",
       "flag": "0"
     }
   ],
@@ -91,7 +91,7 @@
       "x": 5,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_LITTLEROOT_TOWN_ATHENAS_HOUSE",
+      "dest_map": "MAP_ARCHI_TOWN_ATHENAS_HOUSE",
       "dest_warp_id": "0"
     }
   ],
