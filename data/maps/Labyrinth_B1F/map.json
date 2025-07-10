@@ -2,7 +2,7 @@
   "id": "MAP_LABYRINTH_B1F",
   "name": "Labyrinth_B1F",
   "layout": "LAYOUT_LABYRINTH_B1F",
-  "music": "MUS_PETALBURG_WOODS",
+  "music": "MUS_ENTOMO_WOODS",
   "region_map_section": "MAPSEC_LABYRINTH",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -83,6 +83,21 @@
 
   ],
   "bg_events": [
-
+    {
+      "type": "hidden_item",
+      "x": 24,
+      "y": 19,
+      "elevation": 0,
+      "item": "ITEM_HARD_STONE",
+      "flag": "FLAG_TEMP_1"
+    },
+    {
+      "type": "hidden_item",
+      "x": 7,
+      "y": 13,
+      "elevation": 0,
+      "item": "ITEM_STAR_PIECE",
+      "flag": "FLAG_TEMP_1"
+    }
   ]
 }

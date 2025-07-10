@@ -1312,14 +1312,14 @@
       "blockdata_filepath": "data/layouts/Labyrinth_B2F/map.bin"
     },
     {
-      "id": "LAYOUT_PETALBURG_WOODS",
-      "name": "PetalburgWoods_Layout",
+      "id": "LAYOUT_ENTOMO_WOODS",
+      "name": "EntomoWoods_Layout",
       "width": 42,
       "height": 44,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Rustboro",
-      "border_filepath": "data/layouts/PetalburgWoods/border.bin",
-      "blockdata_filepath": "data/layouts/PetalburgWoods/map.bin"
+      "border_filepath": "data/layouts/EntomoWoods/border.bin",
+      "blockdata_filepath": "data/layouts/EntomoWoods/map.bin"
     },
     {
       "id": "LAYOUT_MT_CHIMNEY",

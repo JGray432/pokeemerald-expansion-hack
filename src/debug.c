@@ -3824,7 +3824,7 @@ static void DebugAction_Sound_MUS_SelectId(u8 taskId)
     X(MUS_OLDALE) \
     X(MUS_GYM) \
     X(MUS_SURF) \
-    X(MUS_PETALBURG_WOODS) \
+    X(MUS_ENTOMO_WOODS) \
     X(MUS_LEVEL_UP) \
     X(MUS_HEAL) \
     X(MUS_OBTAIN_BADGE) \
