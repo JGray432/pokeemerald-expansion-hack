@@ -179,13 +179,7 @@ LittleRootTown_AthenasHouse_EventScript_GiveKeyItems::
 	giveitem ITEM_POKE_BALL, 10
 	waitfanfare
 	playfanfare MUS_OBTAIN_ITEM
-	giveitem ITEM_INF_CANDY
-	waitfanfare
-	playfanfare MUS_OBTAIN_ITEM
 	giveitem ITEM_NECTAR_RESERVES
-	waitfanfare
-	playfanfare MUS_OBTAIN_ITEM
-	giveitem ITEM_CAP_CANDY
 	waitfanfare
 	playfanfare MUS_OBTAIN_ITEM
 	giveitem ITEM_THE_SACK

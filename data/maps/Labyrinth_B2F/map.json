@@ -344,10 +344,10 @@
     },
     {
       "type": "hidden_item",
-      "x": 15,
-      "y": 11,
+      "x": 2,
+      "y": 24,
       "elevation": 3,
-      "item": "ITEM_EVERSTONE",
+      "item": "ITEM_COMET_SHARD",
       "flag": "FLAG_HIDDEN_ITEM_LABYRINTH_B2F_EVERSTONE_2"
     }
   ]

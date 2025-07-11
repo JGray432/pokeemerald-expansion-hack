@@ -53,10 +53,10 @@ Athens_Mart:
 	pokemartlistend
 
 Athens_EventScript_UtilityScientist::
-	setvar VAR_0x800A, LOCALID_SCIENTIST
-	call Common_EventScript_PkmnCenterNurse
+	lock
+	faceplayer
+	call Common_EventScript_UtilitiesScientist
 	waitmessage
-	waitbuttonpress
 	release
 	end
 
