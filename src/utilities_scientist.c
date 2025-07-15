@@ -43,24 +43,44 @@
 #include "party_menu.h"
 #include "utilities_scientist.h"
 
-void ApplyStatusConditionToPartyMon(void)
+void ApplyPoisonStatusConditionToPartyMon(void)
 {
-    u16 chosenStatus = VarGet(VAR_RESULT);
     struct Pokemon *mon = &gPlayerParty[gSpecialVar_0x8004];
-    u32 status = 0;
-    switch (chosenStatus) {
-        case 1: status = STATUS1_POISON; break;
-        case 2: status = STATUS1_PARALYSIS; break;
-        case 3: status = STATUS1_BURN; break;
-        case 4: status = STATUS1_FREEZE; break;
-        case 5: status = STATUS1_SLEEP; break;
-    }
+    u32 status = STATUS1_POISON;
+    SetMonData(mon, MON_DATA_STATUS, &status);
+}
+
+void ApplyBurnStatusConditionToPartyMon(void)
+{
+    struct Pokemon *mon = &gPlayerParty[gSpecialVar_0x8004];
+    u32 status = STATUS1_BURN;
+    SetMonData(mon, MON_DATA_STATUS, &status);
+}
+
+void ApplyParalyzeStatusConditionToPartyMon(void)
+{
+    struct Pokemon *mon = &gPlayerParty[gSpecialVar_0x8004];
+    u32 status = STATUS1_PARALYSIS;
+    SetMonData(mon, MON_DATA_STATUS, &status);
+}
+
+void ApplyFrostbiteStatusConditionToPartyMon(void)
+{
+    struct Pokemon *mon = &gPlayerParty[gSpecialVar_0x8004];
+    u32 status = STATUS1_FROSTBITE;
+    SetMonData(mon, MON_DATA_STATUS, &status);
+}
+
+void ApplySleepStatusConditionToPartyMon(void)
+{
+    struct Pokemon *mon = &gPlayerParty[gSpecialVar_0x8004];
+    u32 status = STATUS1_SLEEP;
     SetMonData(mon, MON_DATA_STATUS, &status);
 }
 
 void MaximizeIVOfChosenMon(void)
 {
-    u8 statId = VarGet(VAR_RESULT); // 0 = HP, 1 = Atk, ...
+    u8 statId = VarGet(gSpecialVar_0x8004); // 0 = HP, 1 = Atk, ...
     u8 monId = GetCursorSelectionMonId();
     struct Pokemon *mon = &gPlayerParty[monId];
 

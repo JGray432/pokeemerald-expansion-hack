@@ -563,6 +563,11 @@ gSpecials::
 	def_special UseBlankMessageToCancelPokemonPic
 	def_special EnterCode
 	def_special GetCodeFeedback
-	def_special ApplyStatusConditionToPartyMon
 	def_special MaximizeIVOfChosenMon
+	def_special ApplyPoisonStatusConditionToPartyMon
+	def_special ApplyBurnStatusConditionToPartyMon
+	def_special ApplyParalyzeStatusConditionToPartyMon
+	def_special ApplyFrostbiteStatusConditionToPartyMon
+	def_special ApplySleepStatusConditionToPartyMon
+	def_special ChooseMonForIVMax
 	def_special ChooseMonForStatus
