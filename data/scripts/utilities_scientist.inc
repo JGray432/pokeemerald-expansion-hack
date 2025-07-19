@@ -15,6 +15,7 @@ UtilitiesScientist_ChangeNickname::
     waitstate
     special ChangePokemonNickname
     waitstate
+    msgbox gText_SuccessfulExperiment
     end
 
 UtilitiesScientist_ApplyStatus::
@@ -38,7 +39,8 @@ UtilitiesScientist_MaximizeIV_Yes::
     special MaximizeIVOfChosenMon
     waitstate
     removeitem ITEM_HEART_SCALE, 0
-    goto Common_EventScript_UtilitiesScientist
+    msgbox gText_SuccessfulExperiment
+    end
 
 ChooseStatusToApply::
     multichoice 0, 0, MULTI_STATUSES, FALSE
@@ -56,6 +58,7 @@ UtilitiesScientist_ChooseMonToApplyPoison::
     copyvar  VAR_0x8004, VAR_0x8008
     special ApplyPoisonStatusConditionToPartyMon
     waitstate
+    msgbox gText_SuccessfulExperiment
     release 
     end
 
@@ -64,6 +67,7 @@ UtilitiesScientist_ChooseMonToApplyBurn::
     waitstate
     special ApplyBurnStatusConditionToPartyMon
     waitstate
+    msgbox gText_SuccessfulExperiment
     release 
     end
 
@@ -72,6 +76,7 @@ UtilitiesScientist_ChooseMonToApplyParalyze::
     waitstate
     special ApplyParalyzeStatusConditionToPartyMon
     waitstate
+    msgbox gText_SuccessfulExperiment
     release 
     end
 
@@ -80,6 +85,7 @@ UtilitiesScientist_ChooseMonToApplyFrostbite::
     waitstate
     special ApplyFrostbiteStatusConditionToPartyMon
     waitstate
+    msgbox gText_SuccessfulExperiment
     release 
     end
 
@@ -88,6 +94,7 @@ UtilitiesScientist_ChooseMonToApplySleep::
     waitstate
     special ApplySleepStatusConditionToPartyMon
     waitstate
+    msgbox gText_SuccessfulExperiment
     release 
     end
 

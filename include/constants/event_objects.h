@@ -77,8 +77,8 @@
 #define OBJ_EVENT_GFX_SPENSER                     73
 #define OBJ_EVENT_GFX_NOLAND                      74
 #define OBJ_EVENT_GFX_LUCY                        75
-#define OBJ_EVENT_GFX_UNUSED_NATU_DOLL            76
-#define OBJ_EVENT_GFX_UNUSED_MAGNEMITE_DOLL       77
+#define OBJ_EVENT_GFX_ITEM_TM                     76
+#define OBJ_EVENT_GFX_ITEM_MEGA_STONE             77
 #define OBJ_EVENT_GFX_UNUSED_SQUIRTLE_DOLL        78
 #define OBJ_EVENT_GFX_UNUSED_WOOPER_DOLL          79
 #define OBJ_EVENT_GFX_UNUSED_PIKACHU_DOLL         80
@@ -96,8 +96,8 @@
 #define OBJ_EVENT_GFX_MAY_SURFING                 92
 #define OBJ_EVENT_GFX_MAY_FIELD_MOVE              93
 #define OBJ_EVENT_GFX_TRUCK                       94
-#define OBJ_EVENT_GFX_VIGOROTH_CARRYING_BOX       95
-#define OBJ_EVENT_GFX_VIGOROTH_FACING_AWAY        96
+#define OBJ_EVENT_GFX_HEPHAESTUS                  95
+#define OBJ_EVENT_GFX_ATHENA                      96
 #define OBJ_EVENT_GFX_BIRCHS_BAG                  97
 #define OBJ_EVENT_GFX_ZIGZAGOON_1                 98
 #define OBJ_EVENT_GFX_ARTIST                      99
@@ -242,16 +242,11 @@
 #define OBJ_EVENT_GFX_HOOH                       238
 #define OBJ_EVENT_GFX_POKE_BALL                  239
 #define OBJ_EVENT_GFX_OW_MON                     240
-#define OBJ_EVENT_GFX_ITEM_TM                  241
-#define OBJ_EVENT_GFX_ITEM_MEGA_STONE                  242
-#define OBJ_EVENT_GFX_DIONYSUS 243
-#define OBJ_EVENT_GFX_ATHENA                        244
-
 
 // NOTE: The maximum amount of object events has been expanded from 255 to 65535.
 // Since dynamic graphics ids still require at least 16 free values, the actual limit
 // is 65519, but even considering follower Pokémon, this should be more than enough :)
-#define NUM_OBJ_EVENT_GFX                        245
+#define NUM_OBJ_EVENT_GFX                        241
 
 
 // These are dynamic object gfx ids.
@@ -388,6 +383,11 @@
 #define OBJ_EVENT_PAL_TAG_RS_BRENDAN              0x1122
 #define OBJ_EVENT_PAL_TAG_RS_MAY                  0x1123
 #define OBJ_EVENT_PAL_TAG_DYNAMIC                 0x1124
+#define OBJ_EVENT_PAL_TAG_ATHENA                 0x1125
+#define OBJ_EVENT_PAL_TAG_DIONYSUS                 0x1126
+#define OBJ_EVENT_PAL_TAG_TM_BALL                 0x1127
+#define OBJ_EVENT_PAL_TAG_MEGA_STONE_BALL             0x1128
+
 
 #if OW_FOLLOWERS_POKEBALLS
 // Vanilla

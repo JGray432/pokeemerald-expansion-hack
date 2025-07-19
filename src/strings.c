@@ -1302,3 +1302,4 @@ const u8 gText_UtilitiesScientistIntro[] = _("Hehe which experiment do you requi
 const u8 gText_ChooseStatus[] = _("Which status condition?");
 const u8 gText_NoHeartScales[] = _("...You don’t have a Heart Scale.");
 const u8 gText_ChooseStatToMax[] = _("Pick a Pokémon to roid up.");
+const u8 gText_SuccessfulExperiment[] = _("Another great success!\nHehe, I’m a genius!");
