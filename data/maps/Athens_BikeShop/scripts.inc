@@ -195,7 +195,7 @@ Athens_BikeShop_Text_GuessYouDontNeedBike:
 Athens_BikeShop_Text_ExplainBikesChooseWhichOne:
 	.string "RYDEL: Hm, hm… … … … …\p"
 	.string "You're saying that you came all this\n"
-	.string "way from ARCHI?\p"
+	.string "way from ARCHI TOWN?\p"
 	.string "My goodness!\n"
 	.string "That's ridiculously far!\p"
 	.string "If you had one of my BIKES, you could\n"

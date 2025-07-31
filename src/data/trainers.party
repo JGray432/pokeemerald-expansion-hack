@@ -930,6 +930,148 @@ Nature: Impish
 - Rollout
 - Defense Curl
 
+=== TRAINER_DYLAN_1 ===
+Name: DYLAN
+Class: Triathlete
+Pic: Running Triathlete M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Tinkatink @ Oran Berry
+Level: 17
+Ability: Mold Breaker
+Nature: Adamant
+- Metal Claw
+- Skitter Smack
+- Play Rough
+- Rock Slide
+
+Foongus @ Big Root
+Level: 18
+Ability: Effect Spore
+Nature: Calm
+- Mega Drain
+- Venoshock
+- Spore
+- Ingrain
+
+Baltoy @ Binding Band
+Level: 19
+Ability: Levitate
+Nature: Modest
+- Sand Tomb
+- Ancient Power
+- Psybeam
+- Charge Beam
+
+=== TRAINER_MARIA_1 ===
+Name: MARIA
+Class: Fisherman
+Pic: Fisherman
+Gender: Female
+Music: Female
+Double Battle: No
+AI: Check Bad Move
+
+Dratini @ Oran Berry
+Level: 20
+Ability: Shed Skin
+Nature: Jolly
+- Dragon Rage
+- Thunder Wave
+
+Dewott
+Level: 19
+Ability: Torrent
+Nature: Jolly
+- Razor Shell
+- Fury Cutter 
+- Aerial Ace
+- Knock Off
+
+
+=== TRAINER_ISAAC_1 ===
+Name: ISAAC
+Class: Pkmn Breeder
+Pic: Pokemon Breeder M
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Check Bad Move
+
+Golett
+Level: 20
+Ability: No Guard
+Nature: Relaxed
+- Magnitude
+- Shadow Punch
+- Stealth Rock
+- Dynamic Punch
+
+
+Ferroseed @ Occa Berry
+Level: 20
+Ability: Iron Barbs
+Nature: Impish
+- Leech Seed
+- Gyro Ball
+- Bullet Seed
+- Curse
+
+Zigzagoon
+Level: 11
+
+
+Aron
+Level: 11
+
+=== TRAINER_AISHA ===
+Name: AISHA
+Class: Battle Girl
+Pic: Battle Girl
+Gender: Female
+Music: Intense
+Double Battle: No
+AI: Check Bad Move
+
+Shellder @ Eviolite
+Level: 21
+Ability: Skill Link
+Nature: Adamant
+- Icicle Spear
+- Clamp 
+- Razor Shell 
+- Ice Shard
+
+Salandit @ Eviolite
+Level: 21
+Ability: Corrosion
+Nature: Timid
+- Dragon Rage
+- Toxic
+- Venoshock
+- Incinerate
+
+Cubone @ Thick Club
+Level: 22
+Ability: Battle Armor
+Nature: Careful
+- Bone Rush
+- Brick Break
+- Rock Slide
+- Thunder Punch
+
+Honedge @ Eviolite
+Level: 22
+Ability: No Guard
+Nature: Jolly
+- Shadow Claw
+- Smart Strike
+- Shadow Sneak
+- Destiny Bond
+
 === TRAINER_GRUNT_AQUA_HIDEOUT_2 ===
 Name: GRUNT
 Class: Team Aqua
@@ -7357,19 +7499,6 @@ Magneton
 Level: 37
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 
-=== TRAINER_DYLAN_1 ===
-Name: DYLAN
-Class: Triathlete
-Pic: Running Triathlete M
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Check Bad Move
-
-Doduo
-Level: 17
-
-
 === TRAINER_DYLAN_2 ===
 Name: DYLAN
 Class: Triathlete
@@ -7421,18 +7550,6 @@ AI: Check Bad Move
 Dodrio
 Level: 37
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-=== TRAINER_MARIA_1 ===
-Name: MARIA
-Class: Triathlete
-Pic: Running Triathlete F
-Gender: Female
-Music: Female
-Double Battle: No
-AI: Check Bad Move
-
-Doduo
-Level: 17
 
 
 === TRAINER_MARIA_2 ===
@@ -10274,37 +10391,6 @@ Marshtomp
 Level: 31
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 
-=== TRAINER_ISAAC_1 ===
-Name: ISAAC
-Class: Pkmn Breeder
-Pic: Pokemon Breeder M
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Check Bad Move
-
-Whismur
-Level: 11
-
-
-Zigzagoon
-Level: 11
-
-
-Aron
-Level: 11
-
-
-Poochyena
-Level: 11
-
-
-Taillow
-Level: 11
-
-
-Makuhita
-Level: 11
 
 
 === TRAINER_DAVIS ===
@@ -14231,19 +14317,6 @@ Double Battle: No
 AI: Check Bad Move
 
 Ralts
-Level: 17
-
-
-=== TRAINER_AISHA ===
-Name: AISHA
-Class: Battle Girl
-Pic: Battle Girl
-Gender: Female
-Music: Intense
-Double Battle: No
-AI: Check Bad Move
-
-Meditite
 Level: 17
 
 

@@ -117,7 +117,7 @@ const struct FollowerMsgInfoExtended gFollowerConditionalMessages[COND_MSG_COUNT
         .emotion = FOLLOWER_EMOTION_NEUTRAL,
         .conditions =
         {
-            MATCH_MAP(ROUTE117_POKEMON_DAY_CARE)
+            MATCH_MAP(ROUTE7_POKEMON_DAY_CARE)
         },
     },
     [COND_MSG_MART] =
@@ -230,13 +230,13 @@ const struct FollowerMsgInfoExtended gFollowerConditionalMessages[COND_MSG_COUNT
             MATCH_MAP(SHOAL_CAVE_LOW_TIDE_ICE_ROOM),
         },
     },
-    [COND_MSG_ROUTE_117] =
+    [COND_MSG_ROUTE_7] =
     {
         .text = sCondMsg27,
         .emotion = FOLLOWER_EMOTION_SURPRISE,
         .conditions =
         {
-            MATCH_MAP(ROUTE117),
+            MATCH_MAP(ROUTE7),
         },
     },
     [COND_MSG_DRAGON_GROWL] =

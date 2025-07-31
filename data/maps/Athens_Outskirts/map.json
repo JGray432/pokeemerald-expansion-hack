@@ -108,6 +108,15 @@
       "var": "VAR_ATHENS_CITY_STATE",
       "var_value": "1",
       "script": "Athens_Outskirts_EventScript_DionysusTrigger"
+    },
+    {
+      "type": "trigger",
+      "x": 17,
+      "y": 2,
+      "elevation": 0,
+      "var": "VAR_ATHENS_CITY_STATE",
+      "var_value": "2",
+      "script": "Athens_Outskirts_EventScript_DionysusTrigger"
     }
   ],
   "bg_events": [

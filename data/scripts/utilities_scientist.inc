@@ -13,9 +13,11 @@ Common_EventScript_UtilitiesScientist::
 UtilitiesScientist_ChangeNickname::
     special ChoosePartyMon 
     waitstate
+    goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, UtilitiesScientist_Decline
     special ChangePokemonNickname
     waitstate
     msgbox gText_SuccessfulExperiment
+    release
     end
 
 UtilitiesScientist_ApplyStatus::
@@ -35,11 +37,13 @@ UtilitiesScientist_MaximizeIV_Yes::
     msgbox gText_ChooseStatToMax MSGBOX_DEFAULT
     special ChooseMonForIVMax
     waitstate
+    goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, UtilitiesScientist_Decline
     call EventScript_ChooseStatToMax
     special MaximizeIVOfChosenMon
     waitstate
     removeitem ITEM_HEART_SCALE, 0
     msgbox gText_SuccessfulExperiment
+    release
     end
 
 ChooseStatusToApply::
@@ -53,9 +57,9 @@ ChooseStatusToApply::
     end
 
 UtilitiesScientist_ChooseMonToApplyPoison::
-    specialvar VAR_RESULT, ChooseMonForStatus
+    special ChoosePartyMon
     waitstate
-    copyvar  VAR_0x8004, VAR_0x8008
+    goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, UtilitiesScientist_Decline
     special ApplyPoisonStatusConditionToPartyMon
     waitstate
     msgbox gText_SuccessfulExperiment
@@ -65,6 +69,7 @@ UtilitiesScientist_ChooseMonToApplyPoison::
 UtilitiesScientist_ChooseMonToApplyBurn::
     specialvar VAR_RESULT, ChooseMonForStatus
     waitstate
+    goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, UtilitiesScientist_Decline
     special ApplyBurnStatusConditionToPartyMon
     waitstate
     msgbox gText_SuccessfulExperiment
@@ -74,6 +79,7 @@ UtilitiesScientist_ChooseMonToApplyBurn::
 UtilitiesScientist_ChooseMonToApplyParalyze::
     specialvar VAR_RESULT, ChooseMonForStatus
     waitstate
+    goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, UtilitiesScientist_Decline
     special ApplyParalyzeStatusConditionToPartyMon
     waitstate
     msgbox gText_SuccessfulExperiment
@@ -83,6 +89,7 @@ UtilitiesScientist_ChooseMonToApplyParalyze::
 UtilitiesScientist_ChooseMonToApplyFrostbite::
     specialvar VAR_RESULT, ChooseMonForStatus
     waitstate
+    goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, UtilitiesScientist_Decline
     special ApplyFrostbiteStatusConditionToPartyMon
     waitstate
     msgbox gText_SuccessfulExperiment
@@ -92,6 +99,7 @@ UtilitiesScientist_ChooseMonToApplyFrostbite::
 UtilitiesScientist_ChooseMonToApplySleep::
     specialvar VAR_RESULT, ChooseMonForStatus
     waitstate
+    goto_if_eq VAR_0x8004, PARTY_NOTHING_CHOSEN, UtilitiesScientist_Decline
     special ApplySleepStatusConditionToPartyMon
     waitstate
     msgbox gText_SuccessfulExperiment
@@ -102,4 +110,8 @@ EventScript_ChooseStatToMax::
     multichoice 0, 0, MULTI_STATS, FALSE
     copyvar  VAR_0x8004, VAR_0x8008
     return
+
+UtilitiesScientist_Decline::
+    release
+    end
 

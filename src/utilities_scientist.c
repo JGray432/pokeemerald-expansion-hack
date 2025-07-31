@@ -19,6 +19,7 @@
 #include "link.h"
 #include "main.h"
 #include "m4a.h"
+#include "overworld.h"
 #include "palette.h"
 #include "pokeball.h"
 #include "pokemon.h"
@@ -45,9 +46,9 @@
 
 void ApplyPoisonStatusConditionToPartyMon(void)
 {
-    struct Pokemon *mon = &gPlayerParty[gSpecialVar_0x8004];
     u32 status = STATUS1_POISON;
-    SetMonData(mon, MON_DATA_STATUS, &status);
+    SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_STATUS, &status);
+    CB2_ReturnToFieldContinueScriptPlayMapMusic();
 }
 
 void ApplyBurnStatusConditionToPartyMon(void)
@@ -55,6 +56,7 @@ void ApplyBurnStatusConditionToPartyMon(void)
     struct Pokemon *mon = &gPlayerParty[gSpecialVar_0x8004];
     u32 status = STATUS1_BURN;
     SetMonData(mon, MON_DATA_STATUS, &status);
+    CB2_ReturnToFieldContinueScriptPlayMapMusic();
 }
 
 void ApplyParalyzeStatusConditionToPartyMon(void)
@@ -62,6 +64,7 @@ void ApplyParalyzeStatusConditionToPartyMon(void)
     struct Pokemon *mon = &gPlayerParty[gSpecialVar_0x8004];
     u32 status = STATUS1_PARALYSIS;
     SetMonData(mon, MON_DATA_STATUS, &status);
+    CB2_ReturnToFieldContinueScriptPlayMapMusic();
 }
 
 void ApplyFrostbiteStatusConditionToPartyMon(void)
@@ -69,6 +72,7 @@ void ApplyFrostbiteStatusConditionToPartyMon(void)
     struct Pokemon *mon = &gPlayerParty[gSpecialVar_0x8004];
     u32 status = STATUS1_FROSTBITE;
     SetMonData(mon, MON_DATA_STATUS, &status);
+    CB2_ReturnToFieldContinueScriptPlayMapMusic();
 }
 
 void ApplySleepStatusConditionToPartyMon(void)
@@ -76,6 +80,7 @@ void ApplySleepStatusConditionToPartyMon(void)
     struct Pokemon *mon = &gPlayerParty[gSpecialVar_0x8004];
     u32 status = STATUS1_SLEEP;
     SetMonData(mon, MON_DATA_STATUS, &status);
+    CB2_ReturnToFieldContinueScriptPlayMapMusic();
 }
 
 void MaximizeIVOfChosenMon(void)
@@ -86,4 +91,5 @@ void MaximizeIVOfChosenMon(void)
 
     u8 maxIV = 31;
     SetMonData(mon, MON_DATA_HP_IV + statId, &maxIV);
+    CB2_ReturnToFieldContinueScriptPlayMapMusic();
 }

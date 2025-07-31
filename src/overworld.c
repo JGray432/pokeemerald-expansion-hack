@@ -1770,9 +1770,9 @@ void CB2_ReturnToFieldContinueScriptPlayMapMusic(void)
 
 void CB2_ReturnFromChooseMonForStatus(void)
 {
-    gSpecialVar_Result = GetCursorSelectionMonId(); // Save chosen mon
-    gFieldCallback = FieldCB_ContinueScriptHandleMusic;                         // Resume script
-    CB2_ReturnToField();            // Return to overworld
+    gSpecialVar_0x8008 = GetCursorSelectionMonId(); 
+    gFieldCallback = FieldCB_ContinueScriptHandleMusic;                         
+    CB2_ReturnToField();            
 }
 
 void CB2_ReturnToFieldFadeFromBlack(void)
