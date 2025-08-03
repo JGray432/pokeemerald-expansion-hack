@@ -6,7 +6,7 @@ Crete_House2_EventScript_Man::
 	faceplayer
 	goto_if_set FLAG_RECEIVED_SILK_SCARF, Crete_House2_EventScript_ExplainSilkScarf
 	msgbox Crete_House2_Text_WantYouToHaveSilkScarf, MSGBOX_DEFAULT
-	giveitem ITEM_SILK_SCARF
+	giveitem ITEM_SERIOUS_MINT
 	goto_if_eq VAR_RESULT, FALSE, Crete_House2_EventScript_NoRoomForScarf
 	setflag FLAG_RECEIVED_SILK_SCARF
 	release
@@ -27,13 +27,8 @@ Crete_House2_EventScript_Boy::
 	end
 
 Crete_House2_Text_WantYouToHaveSilkScarf:
-	.string "Gorge your eyes on this!\p"
-	.string "It's a SILK SCARF. It's right at the\n"
-	.string "cutting edge of fashion, yeah!\p"
-	.string "Oh, I can see your eyes twinkling!\n"
-	.string "You appreciate my dazzling style!\p"
-	.string "Oh, you're a delight!\n"
-	.string "Here you go. I want you to have it!$"
+	.string "Hey kiddo, thanks for stopping by!\p"
+	.string "Take one of these for your troubles.$"
 
 Crete_House2_Text_NoRoom:
 	.string "Oh, you don't have room?\p"
@@ -42,10 +37,9 @@ Crete_House2_Text_NoRoom:
 	.string "in order to get it!$"
 
 Crete_House2_Text_ExplainSilkScarf:
-	.string "The SILK SCARF raises the power of\n"
-	.string "NORMAL-type moves.\p"
-	.string "It's a marvelous SCARF that will go\n"
-	.string "with almost all POKéMON!$"
+	.string "A Serious nature is nothing glamorous\n"
+	.string "but sometimes it's just what your \l"
+	.string "pokemon needs!$"
 
 Crete_House2_Text_BrawlySoCool:
 	.string "Wow, you bothered to cross the sea\n"

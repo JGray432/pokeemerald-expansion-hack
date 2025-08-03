@@ -82,6 +82,66 @@ VerdanturfTown_WandasHouse_EventScript_WallysAuntEverGrande::
 	release
 	end
 
+VerdanturfTown_WandasHouse_EventScript_ReceiveEevee::
+	msgbox VerdanturfTown_WandasHouse_Text_ThanksPleaseTakePokemon, MSGBOX_DEFAULT
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_EEVEE
+	givemon SPECIES_EEVEE, 15
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PARTY, VerdanturfTown_WandasHouse_EventScript_ReceiveEeveeParty
+	goto_if_eq VAR_RESULT, MON_GIVEN_TO_PC, VerdanturfTown_WandasHouse_EventScript_ReceiveEeveePC
+	goto Common_EventScript_NoMoreRoomForPokemon
+	end
+
+VerdanturfTown_WandasHouse_EventScript_ReceiveEeveeParty::
+	call VerdanturfTown_WandasHouse_EventScript_ReceivedEeveeFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, VerdanturfTown_WandasHouse_EventScript_ExplainEevee
+	call Common_EventScript_GetGiftMonPartySlot
+	call Common_EventScript_NameReceivedPartyMon
+	goto VerdanturfTown_WandasHouse_EventScript_ExplainEevee
+	end
+
+VerdanturfTown_WandasHouse_EventScript_ReceiveEeveePC::
+	call VerdanturfTown_WandasHouse_EventScript_ReceivedEeveeFanfare
+	msgbox gText_NicknameThisPokemon, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, VerdanturfTown_WandasHouse_EventScript_SendEeveeToPC
+	call Common_EventScript_NameReceivedBoxMon
+	goto VerdanturfTown_WandasHouse_EventScript_SendEeveeToPC
+	end
+
+VerdanturfTown_WandasHouse_EventScript_SendEeveeToPC::
+	call Common_EventScript_TransferredToPC
+	goto VerdanturfTown_WandasHouse_EventScript_ExplainEevee
+	end
+
+VerdanturfTown_WandasHouse_EventScript_ReceivedEeveeFanfare::
+	playfanfare MUS_OBTAIN_ITEM
+	message VerdanturfTown_WandasHouse_Text_PlayerReceivedEevee
+	waitmessage
+	waitfanfare
+	bufferspeciesname STR_VAR_1, SPECIES_EEVEE
+	return
+
+VerdanturfTown_WandasHouse_EventScript_ExplainEevee::
+	msgbox VerdanturfTown_WandasHouse_Text_PokemonHasManyEvolutions, MSGBOX_DEFAULT
+	setflag FLAG_RECEIVED_EEVEE
+	release
+	end
+
+VerdanturfTown_WandasHouse_Text_ThanksPleaseTakePokemon:
+	.string "...\n"
+	.string "I sense a lot of potential in you\l"
+	.string "young one. Please take this Eevee.\p"
+	.string "I think you'll be able to bring out \n"
+	.string "it's true potential.$"
+
+VerdanturfTown_WandasHouse_Text_PlayerReceivedEevee:
+	.string "{PLAYER} received EEVEE!$"
+
+VerdanturfTown_WandasHouse_Text_PokemonHasManyEvolutions:
+	.string "This POKéMON has many evolutions.\n"
+	.string "I hope you will find the one that\l"
+	.string "suits you best.$"
+
 VerdanturfTown_WandasHouse_Text_StrongerSpeech:
 	.string "WALLY: I lost to you, {PLAYER}, but I'm\n"
 	.string "not feeling down anymore.\p"

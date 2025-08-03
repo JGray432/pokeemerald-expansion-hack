@@ -127,7 +127,7 @@ Route119_WeatherInstitute_2F_EventScript_ReceivedCastformFanfare::
 
 Route119_WeatherInstitute_2F_EventScript_ExplainCastform::
 	msgbox Route119_WeatherInstitute_2F_Text_PokemonChangesWithWeather, MSGBOX_DEFAULT
-	setflag FLAG_RECEIVED_CASTFORM
+	setflag FLAG_RECEIVED_EEVEE
 	release
 	end
 
@@ -206,9 +206,12 @@ Route119_WeatherInstitute_2F_Movement_ScientistApproachPlayer:
 Route119_WeatherInstitute_2F_EventScript_WeatherScientist::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_CASTFORM, Route119_WeatherInstitute_2F_EventScript_ScientistMentionWeather
+	goto_if_set FLAG_RECEIVED_EEVEE, Route119_WeatherInstitute_2F_EventScript_ScientistMentionWeather
 	goto Route119_WeatherInstitute_2F_EventScript_ReceiveCastform
 	end
+
+Route119_WeatherInstitute_2F_Text_PlayerReceivedCastform:
+	.string "{PLAYER} received CASTFORM!$"
 
 Route119_WeatherInstitute_2F_Text_Grunt2Intro:
 	.string "The INSTITUTE created a type of\n"
@@ -295,8 +298,7 @@ Route119_WeatherInstitute_2F_Text_NoRoomForPokemon:
 	.string "Hm? You don't seem to have any room\n"
 	.string "for this POKéMON.$"
 
-Route119_WeatherInstitute_2F_Text_PlayerReceivedCastform:
-	.string "{PLAYER} received CASTFORM!$"
+
 
 Route119_WeatherInstitute_2F_Text_PokemonChangesWithWeather:
 	.string "That POKéMON changes shape according\n"

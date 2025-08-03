@@ -505,19 +505,22 @@ static u32 ChooseMoveOrAction_Singles(u32 battlerAi)
     u32 flags = AI_THINKING_STRUCT->aiFlags[battlerAi];
 
     AI_DATA->partnerMove = 0;   // no ally
+    // loops through each ai flag set, updates move scores accordingly
     while (flags != 0)
     {
         if (flags & 1)
         {
+            // TODO: Understand AI switching logic and almost certainly change it
             if (IsBattlerPredictedToSwitch(gBattlerTarget) && (AI_THINKING_STRUCT->aiFlags[battlerAi] & AI_FLAG_PREDICT_INCOMING_MON))
                 BattleAI_DoAIProcessing_PredictedSwitchin(AI_THINKING_STRUCT, AI_DATA, battlerAi, gBattlerTarget);
             else
+                // Processing score moves for current ai flag
                 BattleAI_DoAIProcessing(AI_THINKING_STRUCT, battlerAi, gBattlerTarget);
         }
         flags >>= 1;
         AI_THINKING_STRUCT->aiLogicId++;
     }
-
+    // Save final scores for each move
     for (i = 0; i < MAX_MON_MOVES; i++)
     {
         gBattleStruct->aiFinalScore[battlerAi][gBattlerTarget][i] = AI_THINKING_STRUCT->score[i];
@@ -533,6 +536,7 @@ static u32 ChooseMoveOrAction_Singles(u32 battlerAi)
     currentMoveArray[0] = AI_THINKING_STRUCT->score[0];
     consideredMoveArray[0] = 0;
 
+    // Start by assuming first move is best, then loop through the rest, adding move to consideredMoveArray if same score or resetting if a higher score
     for (i = 1; i < MAX_MON_MOVES; i++)
     {
         if (gBattleMons[battlerAi].moves[i] != MOVE_NONE)
@@ -551,6 +555,8 @@ static u32 ChooseMoveOrAction_Singles(u32 battlerAi)
             }
         }
     }
+
+    // Choose random move from the considered moves
     return consideredMoveArray[Random() % numOfBestMoves];
 }
 
@@ -691,6 +697,7 @@ static inline void BattleAI_DoAIProcessing(struct AI_ThinkingStruct *aiThink, u3
 {
     do
     {
+        // Check PP > 0
         if (gBattleMons[battlerAi].pp[aiThink->movesetIndex] == 0)
             aiThink->moveConsidered = MOVE_NONE;
         else
@@ -704,7 +711,7 @@ static inline void BattleAI_DoAIProcessing(struct AI_ThinkingStruct *aiThink, u3
             if (aiThink->aiLogicId < ARRAY_COUNT(sBattleAiFuncTable)
               && sBattleAiFuncTable[aiThink->aiLogicId] != NULL)
             {
-                // Call AI function
+                // Call AI function to update move score
                 aiThink->score[aiThink->movesetIndex] =
                     sBattleAiFuncTable[aiThink->aiLogicId](battlerAi,
                       battlerDef,
@@ -712,13 +719,15 @@ static inline void BattleAI_DoAIProcessing(struct AI_ThinkingStruct *aiThink, u3
                       aiThink->score[aiThink->movesetIndex]);
             }
         }
-        else
+        else // Set score to 0 if move is not usable or not worth evaluating
         {
             aiThink->score[aiThink->movesetIndex] = 0;
         }
+        // Go to next move in moveset
         aiThink->movesetIndex++;
     } while (aiThink->movesetIndex < MAX_MON_MOVES && !(aiThink->aiAction & AI_ACTION_DO_NOT_ATTACK));
 
+    // reset move index for next flag
     aiThink->movesetIndex = 0;
 }
 

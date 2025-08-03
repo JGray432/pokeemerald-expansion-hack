@@ -9,22 +9,26 @@ Route6_EventScript_TrainerTipsSign::
 Route6_EventScript_Douglas::
 	trainerbattle_single TRAINER_DOUGLAS, Route6_Text_DouglasIntro, Route6_Text_DouglasDefeated
 	msgbox Route6_Text_DouglasPostBattle, MSGBOX_AUTOCLOSE
+	goto Route6_EventScript_Kyla
 	end
 
 Route6_EventScript_Kyla_BackToBack::
 	goto_if_set FLAG_ROUTE_6_BACKTOBACK, Route6_EventScript_KylaDefeated
+	
+	goto Route6_EventScript_Kyla
+	end
+
+Route6_EventScript_Kyla::
 	applymovement LOCALID_KYLA, Common_Movement_ExclamationMark
 	waitmovement 0
 	applymovement LOCALID_KYLA, Route6_Movement_KylaApproachPlayer
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_FaceLeft
  	waitmovement 0
-	goto Route6_EventScript_Kyla
-	end
-
-Route6_EventScript_Kyla::
-	trainerbattle_single TRAINER_KYLA, Route6_Text_KylaIntro, Route6_Text_KylaDefeated, Route6_EventScript_KylaDefeated
-	
+	trainerbattle_single TRAINER_KYLA, Route6_Text_KylaIntro, Route6_Text_KylaDefeated
+	msgbox Route6_Text_KylaPostBattle, MSGBOX_AUTOCLOSE
+	release
+	end	
 
 Route6_EventScript_Elliot::
 	trainerbattle_single TRAINER_ELLIOT_1, Route6_Text_ElliotIntro, Route6_Text_ElliotDefeated, Route6_EventScript_Kyla_BackToBack

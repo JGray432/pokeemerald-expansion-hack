@@ -27,6 +27,11 @@
       "map": "MAP_ROUTE6",
       "offset": 0,
       "direction": "down"
+    },
+    {
+      "map": "MAP_ROUTE105",
+      "offset": 0,
+      "direction": "up"
     }
   ],
   "object_events": [
@@ -40,7 +45,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Crete_EventScript_Woman",
+      "script": "Crete_EventScript_Clerk",
       "flag": "0"
     },
     {
@@ -66,7 +71,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Crete_EventScript_OldRodFisherman",
+      "script": "Crete_EventScript_Nurse",
       "flag": "0"
     },
     {
@@ -92,25 +97,11 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Crete_EventScript_TrendyPhraseBoy",
+      "script": "Crete_EventScript_UtilityScientist",
       "flag": "0"
     }
   ],
   "warp_events": [
-    {
-      "x": 3,
-      "y": 3,
-      "elevation": 0,
-      "dest_map": "MAP_CRETE_HALL",
-      "dest_warp_id": "0"
-    },
-    {
-      "x": 8,
-      "y": 17,
-      "elevation": 0,
-      "dest_map": "MAP_CRETE_GYM",
-      "dest_warp_id": "0"
-    },
     {
       "x": 17,
       "y": 14,
@@ -137,22 +128,6 @@
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
       "script": "Crete_EventScript_TownSign"
-    },
-    {
-      "type": "sign",
-      "x": 11,
-      "y": 16,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Crete_EventScript_GymSign"
-    },
-    {
-      "type": "sign",
-      "x": 2,
-      "y": 4,
-      "elevation": 0,
-      "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Crete_EventScript_HallSign"
     }
   ]
 }

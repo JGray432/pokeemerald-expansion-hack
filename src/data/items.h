@@ -11209,8 +11209,7 @@ const struct Item gItemsInfo[] =
         .name = _("TM51"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "Leaves that don't miss\n"
-            "and are magic or something."),
+            "Never Misses"),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -11223,7 +11222,7 @@ const struct Item gItemsInfo[] =
         .name = _("TM52"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "Ooh spooky shit"),
+            "Ooh spooky"),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -11236,8 +11235,7 @@ const struct Item gItemsInfo[] =
         .name = _("TM53"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "Magnets neve miss for some \n"
-            "bullshit sciencey reason"),
+            "Magnets"),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
@@ -11250,12 +11248,12 @@ const struct Item gItemsInfo[] =
         .name = _("TM54"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "Brr"),
+            "Slows the foe"),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_ICY_WIND, // Todo
+        .secondaryId = MOVE_ICY_WIND,
     },
 
     [ITEM_TM55] =
