@@ -19,7 +19,7 @@
 #define TRAINER_ED                           13
 #define TRAINER_GRUNT_SEAFLOOR_CAVERN_4      14
 #define TRAINER_DECLAN                       15
-#define TRAINER_GRUNT_RUSTURF_TUNNEL         16
+#define TRAINER_APOLLO_AND_ARTEMIS         16
 #define TRAINER_GRUNT_WEATHER_INST_1         17
 #define TRAINER_GRUNT_WEATHER_INST_2         18
 #define TRAINER_GRUNT_WEATHER_INST_3         19
@@ -109,9 +109,9 @@
 #define TRAINER_BROOKE_4                    103
 #define TRAINER_BROOKE_5                    104
 #define TRAINER_PATRICIA                    105
-#define TRAINER_KINDRA                      106
-#define TRAINER_TAMMY                       107
-#define TRAINER_VALERIE_1                   108
+#define TRAINER_MARGOT                      106
+#define TRAINER_HOLLY                       107
+#define TRAINER_ARTEMIS                   108
 #define TRAINER_TASHA                       109
 #define TRAINER_VALERIE_2                   110
 #define TRAINER_VALERIE_3                   111
@@ -478,7 +478,7 @@
 #define TRAINER_NANCY                       472
 #define TRAINER_MARTHA                      473
 #define TRAINER_DIANA_1                     474
-#define TRAINER_CEDRIC                      475
+#define TRAINER_HERCULES                      475
 #define TRAINER_IRENE                       476
 #define TRAINER_DIANA_2                     477
 #define TRAINER_DIANA_3                     478
@@ -705,7 +705,7 @@
 #define TRAINER_KALEB                       699
 #define TRAINER_JOSEPH                      700
 #define TRAINER_ALYSSA                      701
-#define TRAINER_MARCOS                      702
+#define TRAINER_DIONYSUS                      702
 #define TRAINER_RHETT                       703
 #define TRAINER_TYRON                       704
 #define TRAINER_CELINA                      705

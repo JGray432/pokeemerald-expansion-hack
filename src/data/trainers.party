@@ -879,8 +879,8 @@ Ability: Serene Grace
 Nature: Bold
 - Metronome
 
-=== TRAINER_MARCOS ===
-Name: MARCOS
+=== TRAINER_DIONYSUS ===
+Name: DIONYSUS
 Class: Leader
 Pic: Champion Wallace
 Gender: Male
@@ -1092,14 +1092,11 @@ Nature: Adamant
 - Drain Punch
 - Shadow Sneak
 
-Loudred @ Wise Glasses
+Loudred @ Silk Scarf
 Level: 21
 Ability: Scrappy
 Nature: Modest
-- Uproar
-- Extrasensory
-- Shadow Ball
-- Water Pulse
+- Echoed Voice
 
 Mawile @ Berry Juice
 Level: 21
@@ -1154,6 +1151,496 @@ Nature: Timid
 - Dazzling Gleam
 - Shadow Ball
 - Charge Beam
+
+=== TRAINER_MARK ===
+Name: MARK
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+Herdier @ Life Orb
+Level: 20
+Ability: Intimidate
+Nature: Adamant
+- Take Down
+- Play Rough
+- Reversal
+- Thunder Fang
+
+Woobat @ Eviolite
+Level: 21
+Ability: Simple
+Nature: Timid
+- Calm Mind
+- Air Slash
+- Expanding Force
+- Giga Drain
+
+Sliggoo @ Leftovers
+Level: 21
+Ability: Gooey
+Nature: Timid
+- Dragon Pulse
+- Acid Spray
+- Thunderbolt
+- Surf
+
+=== TRAINER_ZANDER ===
+Name: ZANDER
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+Mantyke @ Rocky Helmet
+Level: 21
+Ability: Water Absorb
+Nature: Bold
+- Scald
+- Air Slash
+- Confuse Ray
+- Mirror Coat
+
+Trapinch @ Life Orb
+Level: 22
+Ability: Arena Trap
+Nature: Adamant
+- First Impression
+- Stomping Tantrum
+- Superpower
+- Crunch
+
+Voltorb @ Air Balloon
+Level: 21
+Ability: Aftermath
+Nature: Timid
+- Electro Ball
+- Selfdestruct
+- Discharge
+- Mirror Coat
+
+
+=== TRAINER_WILLIAM ===
+Name: WILLIAM
+Class: Team Aqua
+Pic: Aqua Grunt M
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+Golbat @ Sitrus Berry
+Level: 21
+Ability: Inner Focus
+Nature: Careful
+- Confuse Ray
+- Leech Life
+- Acrobatics
+- Poison Fang
+
+Krokorok @ Dark Gem
+Level: 21
+Ability: Intimidate
+Nature: Jolly
+- Pursuit
+- Swagger
+- Stomping Tantrum
+- Fire Fang
+
+Lampent @ Bright Powder
+Level: 22
+Ability: Flame Body
+Nature: Timid
+- Ominous Wind
+- Will O Wisp
+- Minimize
+- Incinerate
+
+=== TRAINER_LEAH ===
+Name: LEAH
+Class: Team Aqua
+Pic: Aqua Grunt F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+Haunter @ Focus Band
+Level: 22
+Ability: Levitate
+Nature: Timid
+- Shadow Ball
+- Hypnosis
+- Dream Eater
+- Sludge Bomb
+
+Raticate-Alola @ Chople Berry
+Level: 21
+Ability: Hustle
+Nature: Adamant
+- Crunch
+- Take Down
+- Dig
+- Swords Dance
+
+Togetic @ Leftovers
+Level: 21
+Ability: Serene Grace
+Nature: Bold
+- Dazzling Gleam
+- Ancient Power
+- Flamethrower
+- Water Pulse
+
+Togedemaru @ Sitrus Berry
+Level: 22
+Ability: Iron Barbs
+Nature: Impish
+- Zing Zap
+- Iron Head
+- Nuzzle
+- Super Fang
+
+=== TRAINER_HERCULES ===
+Name: HERCULES
+Class: Aqua Leader
+Pic: Aqua Leader Archie
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+Skarmory @ Lum Berry
+Level: 21
+Ability: Weak Armor
+Nature: Careful
+- Steel Wing
+- Drill Peck
+- Stealth Rock
+- Roost
+
+Litleo @ Custap Berry
+Level: 23
+Ability: Rivalry
+Nature: Modest
+- Hyper Voice
+- Incinerate
+- Endure
+- Endeavor
+
+Zebstrika @ Magnet
+Level: 22
+Ability: Lightning Rod
+Nature: Adamant
+- Spark
+- Trailblaze
+- High Horsepower
+- Low kick
+
+Piloswine @ Sitrus Berry
+Level: 22
+Ability: Thick Fat
+Nature: Impish
+- Stomping Tantrum
+- Ice Shard
+- Ice Fang
+- Rock Tomb
+
+Bouffalant @ Muscle Band
+Level: 21
+Ability: Reckless
+Nature: Jolly
+- Take Down
+- Lash Out
+- Reversal
+- Zen Headbutt
+
+Houndoom @ Sitrus Berry
+Level: 23
+Ability: Unnerve
+Nature: Timid
+- Burning Jealousy
+- Dark Pulse
+- Will O Wisp
+- Substitute
+
+=== TRAINER_LAURA ===
+Name: LAURA
+Class: Picnicker
+Pic: Picnicker
+Gender: Female
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+Croconaw @ Life Orb
+Level: 24
+Ability: Sheer Force
+Nature: Jolly
+- Dragon Dance
+- Waterfall
+- Ice Fang
+- Rock Slide
+
+Dunsparce @ Kings Rock
+Level: 25
+Ability: Serene Grace
+Nature: Adamant
+- Glare
+- Rock Slide
+- Headbutt
+- Scale Shot
+
+=== TRAINER_TAKAO ===
+Name: TAKAO
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+Archen @ Choice Scarf
+Level: 24
+Ability: Defeatist
+Nature: Adamant
+- Rock Slide
+
+Granbull @ Sitrus Berry
+Level: 25
+Ability: Intimidate
+Nature: Jolly
+- Rock Slide
+- Play Rough
+- Focus Punch
+- Temper Flare
+
+=== TRAINER_BRENDEN ===
+Name: BRENDEN
+Class: Sailor
+Pic: Sailor
+Gender: Male
+Music: Male
+Double Battle: No
+AI: Basic Trainer
+
+Klawf @ Assault Vest
+Level: 25
+Ability: Anger Shell
+Nature: Adamant
+- Rock Blast
+- Crabhammer
+- Skitter Smack
+- Brick Break
+
+Basculin @ Mystic Water
+Level: 25
+Ability: Mold Breaker
+Nature: Jolly
+- Final Gambit
+- Waterfall
+
+=== TRAINER_LILITH ===
+Name: LILITH
+Class: Interviewer
+Pic: Interviewer
+Gender: Female
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+Murkrow @ Eviolite
+Level: 25
+Ability: Prankster
+Nature: Adamant
+- Tailwind
+- Foul Play
+- Dual Wingbeat
+- Feather Dance
+
+Fletchinder
+Level: 25
+Ability: Gale Wings
+Nature: Serious
+- Tailwind
+- Acrobatics
+- Heat Wave
+- Will O Wisp
+
+=== TRAINER_CRISTIAN ===
+Name: CRISTIAN
+Class: Hiker
+Pic: Hiker
+Gender: Male
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+Furret @ Eject Button
+Ability: Keen Eye
+Nature: Impish
+- Follow Me
+- Helping Hand
+- Body Slam
+- Sucker Punch
+
+Clodsire @ Weakness Policy
+Ability: Poison Point
+Nature: Adamant
+- Poison Jab
+- High Horsepower
+- Low Kick
+- Heavy Slam
+
+=== TRAINER_JOCELYN ===
+Name: JOCELYN
+Class: Hex Maniac
+Pic: Hex Maniac
+Gender: Female
+Music: Intense
+Double Battle: No
+AI: Basic Trainer
+
+Slowpoke-Galar @ Eviolite
+Ability: Gluttony
+Nature: Impish
+- Trick Room
+- Zen Headbutt
+- Surf
+- Yawn
+
+Shiinotic @ Big Root
+Ability: Effect Spore
+Nature: Modest
+- Spore
+- Giga Drain
+- Dazzling Gleam
+- Draining Kiss
+
+=== TRAINER_MARGOT ===
+Name: MARGOT
+Class: Lady
+Pic: Lady
+Gender: Female
+Music: Suspicious
+Double Battle: No
+AI: Basic Trainer
+
+Vulpix @ Heat Rock
+Level: 25
+Ability: Drought
+Nature: Bold
+- Heat Wave
+- Snarl
+- Hypnosis
+- Energy Ball
+
+=== TRAINER_HOLLY ===
+Name: HOLLY
+Class: Lady
+Pic: Lady
+Gender: Female
+Music: Suspicious
+Double Battle: No
+AI: Basic Trainer
+
+Ivysaur @ Occa Berry
+Ability: Chlorophyll
+Nature: Modest
+- Solarbeam
+- Sludge Bomb
+- Synthesis
+- Growth
+
+Tropius @ Sitrus Berry
+Ability: Harvest
+Nature: Modest
+- Solarbeam
+- Air Slash
+- Dragon Pulse
+- Growth
+
+=== TRAINER_APOLLO_AND_ARTEMIS ===
+Name: APOLLO
+Class: Leader
+Pic: Leader Tate And Liza
+Gender: Male
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+Whimsicott @ Focus Sash
+Level: 25
+Ability: Prankster
+Nature: Calm
+- Dazzling Gleam
+- Tailwind
+- Fake Tears
+- Helping Hand
+
+Musharna @ Light Clay
+Level: 25
+Ability: Synchronize
+Nature: Calm
+- Light Screen
+- Psychic
+- Dazzling Gleam
+- Reflect
+
+Espeon @ Wise Glasses
+Level: 27
+Ability: Magic Bounce
+Nature: Modest
+- Psyshock
+- Grass Knot
+- Morning Sun
+- Shadow Ball
+
+Umbreon @ Leftovers
+Level: 27
+Ability: Inner Focus
+Nature: Bold
+- Moonlight
+- Snarl
+- Foul Play
+- Yawn
+
+Solrock @ Heat Rock
+Level: 26
+Ability: Levitate
+Nature: Impish
+- Morning Sun
+- Rock Slide
+- Sunny Day
+- Flamethrower
+
+Lunatone @ Expert Belt
+Level: 26
+Ability: Levitate
+Nature: Timid
+- Moonlight
+- Ancient Power
+- Icy Wind
+- Earth Power
+
+=== TRAINER_TASHA ===
+Name: TASHA
+Class: Team Aqua
+Pic: Aqua Grunt F
+Gender: Female
+Music: Aqua
+Double Battle: No
+AI: Basic Trainer
+
+Shuppet
+Level: 32
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
 
 === TRAINER_GRUNT_AQUA_HIDEOUT_2 ===
 Name: GRUNT
@@ -1346,19 +1833,6 @@ AI: Basic Trainer
 
 Gyarados
 Level: 34
-
-
-=== TRAINER_GRUNT_RUSTURF_TUNNEL ===
-Name: GRUNT
-Class: Team Aqua
-Pic: Aqua Grunt M
-Gender: Male
-Music: Aqua
-Double Battle: No
-AI: Basic Trainer
-
-Poochyena
-Level: 11
 
 
 === TRAINER_GRUNT_WEATHER_INST_1 ===
@@ -1576,18 +2050,6 @@ Golbat
 Level: 34
 IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
-=== TRAINER_ZANDER ===
-Name: ZANDER
-Class: Black Belt
-Pic: Black Belt
-Gender: Male
-Music: Intense
-Double Battle: No
-AI: Basic Trainer
-
-Hariyama
-Level: 31
-
 
 === TRAINER_SHELLY_WEATHER_INSTITUTE ===
 Name: SHELLY
@@ -1644,18 +2106,6 @@ IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
 Sharpedo
 Level: 43
 IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-
-=== TRAINER_LEAH ===
-Name: LEAH
-Class: Hex Maniac
-Pic: Hex Maniac
-Gender: Female
-Music: Suspicious
-Double Battle: No
-AI: Basic Trainer
-
-Spoink
-Level: 31
 
 === TRAINER_FELIX ===
 Name: FELIX
@@ -2967,67 +3417,6 @@ Level: 41
 Lunatone
 Level: 41
 
-
-=== TRAINER_KINDRA ===
-Name: KINDRA
-Class: Hex Maniac
-Pic: Hex Maniac
-Gender: Female
-Music: Suspicious
-Double Battle: No
-AI: Basic Trainer
-
-Duskull
-Level: 30
-
-
-Shuppet
-Level: 30
-
-
-=== TRAINER_TAMMY ===
-Name: TAMMY
-Class: Hex Maniac
-Pic: Hex Maniac
-Gender: Female
-Music: Suspicious
-Double Battle: No
-AI: Basic Trainer
-
-Duskull
-Level: 29
-
-
-Shuppet
-Level: 29
-
-
-=== TRAINER_VALERIE_1 ===
-Name: VALERIE
-Class: Hex Maniac
-Pic: Hex Maniac
-Gender: Female
-Music: Suspicious
-Double Battle: No
-AI: Basic Trainer
-
-Sableye
-Level: 32
-
-
-=== TRAINER_TASHA ===
-Name: TASHA
-Class: Hex Maniac
-Pic: Hex Maniac
-Gender: Female
-Music: Suspicious
-Double Battle: No
-AI: Basic Trainer
-
-Shuppet
-Level: 32
-IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
-
 === TRAINER_VALERIE_2 ===
 Name: VALERIE
 Class: Hex Maniac
@@ -3635,19 +4024,6 @@ Horsea
 Level: 25
 
 
-=== TRAINER_MARK ===
-Name: MARK
-Class: Pokemaniac
-Pic: Pokemaniac
-Gender: Male
-Music: Suspicious
-Double Battle: No
-AI: Basic Trainer
-
-Rhyhorn
-Level: 31
-
-
 === TRAINER_GRUNT_MT_CHIMNEY_1 ===
 Name: GRUNT
 Class: Team Magma
@@ -4108,19 +4484,6 @@ IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 Sharpedo
 Level: 39
 IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
-
-=== TRAINER_TAKAO ===
-Name: TAKAO
-Class: Black Belt
-Pic: Black Belt
-Gender: Male
-Music: Intense
-Double Battle: No
-AI: Basic Trainer
-
-Machop
-Level: 13
-IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
 
 === TRAINER_HITOSHI ===
 Name: HITOSHI
@@ -5092,27 +5455,6 @@ AI: Basic Trainer
 Girafarig
 Level: 36
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-=== TRAINER_WILLIAM ===
-Name: WILLIAM
-Class: Psychic
-Pic: Psychic M
-Gender: Male
-Music: Intense
-Double Battle: No
-AI: Basic Trainer
-
-Ralts
-Level: 26
-
-
-Ralts
-Level: 26
-
-
-Kirlia
-Level: 26
-
 
 === TRAINER_JOSHUA ===
 Name: JOSHUA
@@ -8579,32 +8921,6 @@ IVs: 4 HP / 4 Atk / 4 Def / 4 SpA / 4 SpD / 4 Spe
 - Tackle
 - Sludge
 
-=== TRAINER_JOCELYN ===
-Name: JOCELYN
-Class: Battle Girl
-Pic: Battle Girl
-Gender: Female
-Music: Intense
-Double Battle: No
-AI: Basic Trainer
-
-Meditite
-Level: 13
-IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
-
-=== TRAINER_LAURA ===
-Name: LAURA
-Class: Battle Girl
-Pic: Battle Girl
-Gender: Female
-Music: Intense
-Double Battle: No
-AI: Basic Trainer
-
-Meditite
-Level: 13
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-
 === TRAINER_CYNDY_1 ===
 Name: CYNDY
 Class: Battle Girl
@@ -9372,23 +9688,6 @@ Level: 19
 
 Swablu
 Level: 19
-
-
-=== TRAINER_CEDRIC ===
-Name: CEDRIC
-Class: Psychic
-Pic: Psychic M
-Gender: Male
-Music: Intense
-Double Battle: No
-AI: Basic Trainer
-
-Wobbuffet
-Level: 32
-- Destiny Bond
-- Safeguard
-- Counter
-- Mirror Coat
 
 === TRAINER_IRENE ===
 Name: IRENE
@@ -11177,45 +11476,6 @@ IVs: 14 HP / 14 Atk / 14 Def / 14 SpA / 14 SpD / 14 Spe
 Geodude
 Level: 8
 IVs: 15 HP / 15 Atk / 15 Def / 15 SpA / 15 SpD / 15 Spe
-
-=== TRAINER_BRENDEN ===
-Name: BRENDEN
-Class: Sailor
-Pic: Sailor
-Gender: Male
-Music: Male
-Double Battle: No
-AI: Basic Trainer
-
-Machop
-Level: 13
-IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
-
-=== TRAINER_LILITH ===
-Name: LILITH
-Class: Battle Girl
-Pic: Battle Girl
-Gender: Female
-Music: Intense
-Double Battle: No
-AI: Basic Trainer
-
-Meditite
-Level: 13
-IVs: 18 HP / 18 Atk / 18 Def / 18 SpA / 18 SpD / 18 Spe
-
-=== TRAINER_CRISTIAN ===
-Name: CRISTIAN
-Class: Black Belt
-Pic: Black Belt
-Gender: Male
-Music: Intense
-Double Battle: No
-AI: Basic Trainer
-
-Makuhita
-Level: 13
-IVs: 24 HP / 24 Atk / 24 Def / 24 SpA / 24 SpD / 24 Spe
 
 === TRAINER_SYLVIA ===
 Name: SYLVIA
