@@ -7586,7 +7586,7 @@ static const struct LevelUpMove sGalladeLevelUpLearnset[] = {
 static const struct LevelUpMove sSurskitLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_WATER_GUN),
     LEVEL_UP_MOVE( 6, MOVE_QUICK_ATTACK),
-    LEVEL_UP_MOVE( 9, MOVE_SWEET_SCENT),
+    LEVEL_UP_MOVE( 9, MOVE_STRUGGLE_BUG),
     LEVEL_UP_MOVE(14, MOVE_SOAK),
     LEVEL_UP_MOVE(17, MOVE_BUBBLE_BEAM),
     LEVEL_UP_MOVE(22, MOVE_AGILITY),
@@ -17693,10 +17693,10 @@ static const struct LevelUpMove sJangmoOLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_LEER),
     LEVEL_UP_MOVE( 4, MOVE_PROTECT),
     LEVEL_UP_MOVE( 8, MOVE_DRAGON_TAIL),
-    LEVEL_UP_MOVE(12, MOVE_SCARY_FACE),
+    LEVEL_UP_MOVE(12, MOVE_ROCK_SMASH),
     LEVEL_UP_MOVE(16, MOVE_HEADBUTT),
-    LEVEL_UP_MOVE(20, MOVE_WORK_UP),
-    LEVEL_UP_MOVE(24, MOVE_SCREECH),
+    LEVEL_UP_MOVE(20, MOVE_SCARY_FACE),
+    LEVEL_UP_MOVE(23, MOVE_BREAKING_SWIPE),
     LEVEL_UP_MOVE(28, MOVE_IRON_DEFENSE),
     LEVEL_UP_MOVE(32, MOVE_DRAGON_CLAW),
     LEVEL_UP_MOVE(36, MOVE_NOBLE_ROAR),
@@ -18716,7 +18716,7 @@ static const struct LevelUpMove sBoltundLevelUpLearnset[] = {
 #if P_FAMILY_ROLYCOLY
 static const struct LevelUpMove sRolycolyLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
-    LEVEL_UP_MOVE( 1, MOVE_SMOKESCREEN),
+    LEVEL_UP_MOVE( 1, MOVE_EMBER),
     LEVEL_UP_MOVE( 5, MOVE_RAPID_SPIN),
     LEVEL_UP_MOVE(10, MOVE_SMACK_DOWN),
     LEVEL_UP_MOVE(15, MOVE_ROCK_POLISH),
@@ -18731,7 +18731,7 @@ static const struct LevelUpMove sRolycolyLevelUpLearnset[] = {
 static const struct LevelUpMove sCarkolLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 0, MOVE_FLAME_CHARGE),
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
-    LEVEL_UP_MOVE( 1, MOVE_SMOKESCREEN),
+    LEVEL_UP_MOVE( 1, MOVE_EMBER),
     LEVEL_UP_MOVE( 1, MOVE_RAPID_SPIN),
     LEVEL_UP_MOVE( 1, MOVE_SMACK_DOWN),
     LEVEL_UP_MOVE(15, MOVE_ROCK_POLISH),
@@ -18747,7 +18747,7 @@ static const struct LevelUpMove sCarkolLevelUpLearnset[] = {
 static const struct LevelUpMove sCoalossalLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 0, MOVE_TAR_SHOT),
     LEVEL_UP_MOVE( 1, MOVE_TACKLE),
-    LEVEL_UP_MOVE( 1, MOVE_SMOKESCREEN),
+    LEVEL_UP_MOVE( 1, MOVE_EMBER),
     LEVEL_UP_MOVE( 1, MOVE_RAPID_SPIN),
     LEVEL_UP_MOVE( 1, MOVE_SMACK_DOWN),
     LEVEL_UP_MOVE( 1, MOVE_FLAME_CHARGE),

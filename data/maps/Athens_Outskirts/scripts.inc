@@ -46,7 +46,7 @@ Athens_Outskirts_EventScript_DionysusTrigger::
 
 Athens_Outskirts_EventScript_DionysusFinished::
 	lockall
-	applymovement LOCALID_DIONYSUS, Common_Movement_FaceDown
+	applymovement LOCALID_DIONYSUS, Common_Movement_FacePlayer
 	msgbox Athens_Outskirts_Text_DionysusThreadRequestEnd, MSGBOX_DEFAULT
 	closemessage
 	applymovement OBJ_EVENT_ID_PLAYER, PlayerWalkDown

@@ -407,16 +407,16 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Shinx @ Oran Berry
-Level: 8
-Ability: Intimidate
+Rowlet @ Oran Berry
+Level: 9
+Ability: Overgrow
 Nature: Jolly
-- Spark
-- Bite
-- Thunder Wave
+- Razor Leaf
+- Peck
+- Shadow Sneak
 
 Rockruff @ Oran Berry
-Level: 9
+Level: 8
 Nature: Adamant
 - Accelerock
 - Thunder Fang
@@ -439,16 +439,16 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Shinx @ Oran Berry
-Level: 8 
-Ability: Intimidate
+Rowlet @ Oran Berry
+Level: 9
+Ability: Overgrow
 Nature: Jolly
-- Spark
-- Bite
-- Thunder Wave
+- Razor Leaf
+- Peck
+- Shadow Sneak
 
 Rockruff @ Oran Berry
-Level: 9
+Level: 8
 Nature: Adamant
 - Accelerock
 - Thunder Fang
@@ -459,6 +459,7 @@ Level: 10
 Nature: Modest
 Ability: Inner Focus
 - Confusion
+- Charge Beam
 
 === TRAINER_ATHENA_ROUTE_3_PAWNIARD ===
 Name: ATHENA
@@ -469,16 +470,16 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Shinx @ Oran Berry
-Level: 8
-Ability: Intimidate
+Rowlet @ Oran Berry
+Level: 9
+Ability: Overgrow
 Nature: Jolly
-- Spark
-- Bite
-- Thunder Wave
+- Razor Leaf
+- Peck
+- Shadow Sneak
 
 Rockruff @ Oran Berry
-Level: 9 
+Level: 8
 Nature: Adamant
 - Accelerock
 - Thunder Fang

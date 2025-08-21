@@ -368,7 +368,7 @@ ArchiTown_Text_GiveCapCandy:
 	.string "Hey, look whose back! You after\n"
 	.string "some more of my finest wares?\p"
 	.string "I got some wild new experimental \n"
-	.string "roids shipped in from Sparta.\p"
+	.string "candies shipped in from Sparta.\p"
 	.string "Put it this way the Olympic \n"
 	.string "committee ain't gonna be happy if \l"
 	.string "they find these wrappers in your bag!\p"
@@ -378,10 +378,12 @@ ArchiTown_Text_NoMoreCandy:
 	.string "Shit sorry bro I'm all out.$"
 
 ArchiTown_Text_OurNewHomeLetsGoInside:
-	.string "ATHENA: Hi!$"
+	.string "ATHENA: Hi there! I'm Athena. \n"
+	.string "Zeus told me to expect you. \p"
+	.string "Why don't you come inside with me?$"
 
 ArchiTown_Text_GiveSuperRod:
-	.string "(ah great here comes a sucker...)\p"
+	.string "(here we go, a sucker approaches...)\p"
 	.string "Boy, have I got a deal for you!\n"
 	.string "Quite possibly the greatest deal \l"
 	.string "in the history of the world. \p"
@@ -394,7 +396,7 @@ ArchiTown_Text_Sucker:
 
 ArchiTown_Text_DeclineSuperRod:
 	.string "Pff this deal is too good for \n"
-	.string "the likes of you anyway$"
+	.string "the likes of you anyway.$"
 
 ArchiTown_Text_NotEnoughMoney:
 	.string "Sorry pal, you're broke.\n"
@@ -417,7 +419,7 @@ ArchiTown_Text_GiveInfRepelEnd:
 
 ArchiTown_Text_AlreadyGaveInfRepel:
 	.string "What!? You say my perfume is so repulsive\n"
-	.string "that it acts as a repel for wild pokemon?\p"
+	.string "that it repels for wild pokemon?\p"
 	.string "Paha! Good joke, you are a funny one!$"
 
 ArchiTown_Text_TownSign:

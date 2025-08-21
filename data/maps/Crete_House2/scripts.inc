@@ -44,8 +44,9 @@ Crete_House2_Text_ExplainSilkScarf:
 Crete_House2_Text_BrawlySoCool:
 	.string "Wow, you bothered to cross the sea\n"
 	.string "to visit CRETE?\p"
-	.string "Did you maybe come here because you\n"
-	.string "heard about BRAWLY?\p"
-	.string "He's so cool…\n"
-	.string "Everyone idolizes him.$"
+	.string "Did you maybe come here to see the \n"
+	.string "labyrinth?\p"
+	.string "I've heard some scary sounds coming out\n"
+	.string "of that place recently.\p"
+	.string "If you're planning a visit then be careful!$"
 

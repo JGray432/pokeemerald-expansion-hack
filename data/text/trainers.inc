@@ -46,8 +46,8 @@ ROUTE2_Text_AllenPostBattle:
 	.string "I wish I would win soon…$"
 
 ROUTE2_Text_RickIntro:
-	.string "Hahah! Our eyes met!\n"
-	.string "I'll take you on with my BUG POKéMON!$"
+	.string "From out of nowhere, I strike,\n"
+	.string "Hyah!$"
 
 ROUTE2_Text_RickDefeated:
 	.string "Ow! Down and out!$"
@@ -292,7 +292,7 @@ Route104_Text_BillyIntro:
 	.string "Eyes off my berries!!\p"
 	.string "I toiled day and night to grow\n"
 	.string "these here bushes and I'll be \l"
-	.string "damned if you thief 'em $" 
+	.string "damned if you thief 'em. $" 
 
 Route104_Text_BillyDefeat:
 	.string "Ah shoot!$"
