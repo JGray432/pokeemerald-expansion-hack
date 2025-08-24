@@ -673,7 +673,7 @@ static void QueueAnimTiles_General_Waterfall(u16 timer)
     AppendTilesetAnimToBuffer(gTilesetAnims_General_Waterfall[i], (u16 *)(BG_VRAM + TILE_OFFSET_4BPP(496)), 6 * TILE_SIZE_4BPP);
 }
 
-void InitTilesetAnim_Petalburg(void)
+void InitTilesetAnim_Delphi(void)
 {
     sSecondaryTilesetAnimCounter = 0;
     sSecondaryTilesetAnimCounterMax = sPrimaryTilesetAnimCounterMax;

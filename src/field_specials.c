@@ -107,8 +107,8 @@ u16 GetNumFansOfPlayerInTrainerFanClub(void);
 
 static void RecordCyclingRoadResults(u32, u8);
 static void LoadLinkPartnerObjectEventSpritePalette(u16, u8, u8);
-static void Task_PetalburgGymSlideOpenRoomDoors(u8);
-static void PetalburgGymSetDoorMetatiles(u8, u16);
+static void Task_DelphiGymSlideOpenRoomDoors(u8);
+static void DelphiGymSetDoorMetatiles(u8, u16);
 static void Task_PCTurnOnEffect(u8);
 static void PCTurnOnEffect(struct Task *);
 static void PCTurnOnEffect_SetMetatile(s16, s8, s8);
@@ -803,29 +803,29 @@ void AthensGymDeactivatePuzzle(void)
 
 static const bool8 sSlidingDoorNextFrameDelay[] = {0, 1, 1, 1, 1};
 
-static const u16 sPetalburgGymSlidingDoorMetatiles[] = {
-    METATILE_PetalburgGym_SlidingDoor_Frame0,
-    METATILE_PetalburgGym_SlidingDoor_Frame1,
-    METATILE_PetalburgGym_SlidingDoor_Frame2,
-    METATILE_PetalburgGym_SlidingDoor_Frame3,
-    METATILE_PetalburgGym_SlidingDoor_Frame4,
+static const u16 sDelphiGymSlidingDoorMetatiles[] = {
+    METATILE_DelphiGym_SlidingDoor_Frame0,
+    METATILE_DelphiGym_SlidingDoor_Frame1,
+    METATILE_DelphiGym_SlidingDoor_Frame2,
+    METATILE_DelphiGym_SlidingDoor_Frame3,
+    METATILE_DelphiGym_SlidingDoor_Frame4,
 };
 
-void PetalburgGymSlideOpenRoomDoors(void)
+void DelphiGymSlideOpenRoomDoors(void)
 {
     sSlidingDoorNextFrameCounter = 0;
     sSlidingDoorFrame = 0;
     PlaySE(SE_UNLOCK);
-    CreateTask(Task_PetalburgGymSlideOpenRoomDoors, 8);
+    CreateTask(Task_DelphiGymSlideOpenRoomDoors, 8);
 }
 
-static void Task_PetalburgGymSlideOpenRoomDoors(u8 taskId)
+static void Task_DelphiGymSlideOpenRoomDoors(u8 taskId)
 {
     if (sSlidingDoorNextFrameDelay[sSlidingDoorFrame] == sSlidingDoorNextFrameCounter)
     {
-        PetalburgGymSetDoorMetatiles(gSpecialVar_0x8004, sPetalburgGymSlidingDoorMetatiles[sSlidingDoorFrame]);
+        DelphiGymSetDoorMetatiles(gSpecialVar_0x8004, sDelphiGymSlidingDoorMetatiles[sSlidingDoorFrame]);
         sSlidingDoorNextFrameCounter = 0;
-        if ((++sSlidingDoorFrame) == ARRAY_COUNT(sPetalburgGymSlidingDoorMetatiles))
+        if ((++sSlidingDoorFrame) == ARRAY_COUNT(sDelphiGymSlidingDoorMetatiles))
         {
             DestroyTask(taskId);
             ScriptContext_Enable();
@@ -837,7 +837,7 @@ static void Task_PetalburgGymSlideOpenRoomDoors(u8 taskId)
     }
 }
 
-static void PetalburgGymSetDoorMetatiles(u8 roomNumber, u16 metatileId)
+static void DelphiGymSetDoorMetatiles(u8 roomNumber, u16 metatileId)
 {
     u16 doorCoordsX[4];
     u16 doorCoordsY[4];
@@ -902,9 +902,9 @@ static void PetalburgGymSetDoorMetatiles(u8 roomNumber, u16 metatileId)
     DrawWholeMapView();
 }
 
-void PetalburgGymUnlockRoomDoors(void)
+void DelphiGymUnlockRoomDoors(void)
 {
-    PetalburgGymSetDoorMetatiles(gSpecialVar_0x8004, sPetalburgGymSlidingDoorMetatiles[4]);
+    DelphiGymSetDoorMetatiles(gSpecialVar_0x8004, sDelphiGymSlidingDoorMetatiles[4]);
 }
 
 void ShowFieldMessageStringVar4(void)
@@ -2049,7 +2049,7 @@ bool8 UsedPokemonCenterWarp(void)
         MAP_FALLARBOR_TOWN_POKEMON_CENTER_1F,
         MAP_VERDANTURF_TOWN_POKEMON_CENTER_1F,
         MAP_PACIFIDLOG_TOWN_POKEMON_CENTER_1F,
-        MAP_PETALBURG_CITY_POKEMON_CENTER_1F,
+        MAP_DELPHI_POKEMON_CENTER_1F,
         MAP_SLATEPORT_CITY_POKEMON_CENTER_1F,
         MAP_ATHENS_POKEMON_CENTER_1F,
         MAP_RUSTBORO_CITY_POKEMON_CENTER_1F,
@@ -3532,7 +3532,7 @@ u32 GetMartEmployeeObjectEventId(void)
         { MAP_GROUP(LAVARIDGE_TOWN_MART),  MAP_NUM(LAVARIDGE_TOWN_MART),  LOCALID_LAVARIDGE_MART_CLERK },
         { MAP_GROUP(FALLARBOR_TOWN_MART),  MAP_NUM(FALLARBOR_TOWN_MART),  LOCALID_FALLARBOR_MART_CLERK },
         { MAP_GROUP(VERDANTURF_TOWN_MART), MAP_NUM(VERDANTURF_TOWN_MART), LOCALID_VERDANTURF_MART_CLERK },
-        { MAP_GROUP(PETALBURG_CITY_MART),  MAP_NUM(PETALBURG_CITY_MART),  LOCALID_PETALBURG_MART_CLERK },
+        { MAP_GROUP(DELPHI_MART),  MAP_NUM(DELPHI_MART),  LOCALID_Delphi_MART_CLERK },
         { MAP_GROUP(SLATEPORT_CITY_MART),  MAP_NUM(SLATEPORT_CITY_MART),  LOCALID_SLATEPORT_MART_CLERK },
         { MAP_GROUP(ATHENS_MART),   MAP_NUM(ATHENS_MART),   LOCALID_ATHENS_MART_CLERK },
         { MAP_GROUP(RUSTBORO_CITY_MART),   MAP_NUM(RUSTBORO_CITY_MART),   LOCALID_RUSTBORO_MART_CLERK },
@@ -3820,7 +3820,7 @@ void GetBattlePyramidHint(void)
 void ResetHealLocationFromCrete(void)
 {
     if (gSaveBlock1Ptr->lastHealLocation.mapGroup == MAP_GROUP(CRETE) && gSaveBlock1Ptr->lastHealLocation.mapNum == MAP_NUM(CRETE))
-        SetLastHealLocationWarp(HEAL_LOCATION_PETALBURG_CITY);
+        SetLastHealLocationWarp(HEAL_LOCATION_DELPHI);
 }
 
 bool8 InPokemonCenter(void)
@@ -3833,7 +3833,7 @@ bool8 InPokemonCenter(void)
         MAP_FALLARBOR_TOWN_POKEMON_CENTER_1F,
         MAP_VERDANTURF_TOWN_POKEMON_CENTER_1F,
         MAP_PACIFIDLOG_TOWN_POKEMON_CENTER_1F,
-        MAP_PETALBURG_CITY_POKEMON_CENTER_1F,
+        MAP_DELPHI_POKEMON_CENTER_1F,
         MAP_SLATEPORT_CITY_POKEMON_CENTER_1F,
         MAP_ATHENS_POKEMON_CENTER_1F,
         MAP_RUSTBORO_CITY_POKEMON_CENTER_1F,

@@ -36,9 +36,9 @@ static const struct CityMapEntry sPokenavCityMaps[NUM_CITY_MAPS] =
         .tilemap = gPokenavCityMap_Pacifidlog_0,
     },
     {
-        .mapSecId = MAPSEC_PETALBURG_CITY,
+        .mapSecId = MAPSEC_DELPHI,
         .index = 0,
-        .tilemap = gPokenavCityMap_Petalburg_0,
+        .tilemap = gPokenavCityMap_Delphi_0,
     },
     {
         .mapSecId = MAPSEC_SLATEPORT_CITY,

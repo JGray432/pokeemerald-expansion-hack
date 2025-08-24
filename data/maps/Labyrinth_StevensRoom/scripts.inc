@@ -32,6 +32,7 @@ Labyrinth_StevensRoom_EventScript_HephaestusAfterBattle::
 	applymovement LOCALID_MINOTAUR, Labyrinth_FinalRoom_Movement_MinotaurFlee
 	waitmovement 0
 	removeobject LOCALID_MINOTAUR
+	applymovement OBJ_EVENT_ID_PLAYER Common_Movement_FaceDown
 	applymovement LOCALID_STEVEN, Labyrinth_FinalRoom_Movement_HephaestusMoveRight
 	waitmovement 0
 	msgbox Labyrinth_StevensRoom_Text_IveGotToHurryAlong, MSGBOX_DEFAULT

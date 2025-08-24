@@ -107,7 +107,7 @@ gStdScripts::
 	.4byte Std_MsgboxPokenav           @ MSGBOX_POKENAV
 gStdScripts_End::
 
-	.include "data/maps/PetalburgCity/scripts.inc"
+	.include "data/maps/Delphi/scripts.inc"
 	.include "data/maps/SlateportCity/scripts.inc"
 	.include "data/maps/Athens/scripts.inc"
 	.include "data/maps/RustboroCity/scripts.inc"
@@ -208,13 +208,13 @@ gStdScripts_End::
 	.include "data/maps/PacifidlogTown_House3/scripts.inc"
 	.include "data/maps/PacifidlogTown_House4/scripts.inc"
 	.include "data/maps/PacifidlogTown_House5/scripts.inc"
-	.include "data/maps/PetalburgCity_WallysHouse/scripts.inc"
-	.include "data/maps/PetalburgCity_Gym/scripts.inc"
-	.include "data/maps/PetalburgCity_House1/scripts.inc"
-	.include "data/maps/PetalburgCity_House2/scripts.inc"
-	.include "data/maps/PetalburgCity_PokemonCenter_1F/scripts.inc"
-	.include "data/maps/PetalburgCity_PokemonCenter_2F/scripts.inc"
-	.include "data/maps/PetalburgCity_Mart/scripts.inc"
+	.include "data/maps/Delphi_WallysHouse/scripts.inc"
+	.include "data/maps/Delphi_Gym/scripts.inc"
+	.include "data/maps/Delphi_House1/scripts.inc"
+	.include "data/maps/Delphi_House2/scripts.inc"
+	.include "data/maps/Delphi_PokemonCenter_1F/scripts.inc"
+	.include "data/maps/Delphi_PokemonCenter_2F/scripts.inc"
+	.include "data/maps/Delphi_Mart/scripts.inc"
 	.include "data/maps/SlateportCity_SternsShipyard_1F/scripts.inc"
 	.include "data/maps/SlateportCity_SternsShipyard_2F/scripts.inc"
 	.include "data/maps/SlateportCity_BattleTentLobby/scripts.inc"
@@ -666,7 +666,7 @@ EverGrandeCity_HallOfFame_EventScript_ResetEliteFour::
 
 Common_EventScript_UpdateBrineyLocation::
 	goto_if_unset FLAG_RECEIVED_POKENAV, Common_EventScript_NopReturn
-	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, Common_EventScript_NopReturn
+	goto_if_set FLAG_DEFEATED_Delphi_GYM, Common_EventScript_NopReturn
 	goto_if_unset FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT, EventScript_SetBrineyLocation_House
 	goto_if_unset FLAG_HIDE_MR_BRINEY_CRETE, EventScript_SetBrineyLocation_Crete
 	goto_if_unset FLAG_HIDE_ROUTE_3_MR_BRINEY, EventScript_SetBrineyLocation_Route3
@@ -704,9 +704,9 @@ Common_ShowEasyChatScreen::
 	fadescreen FADE_FROM_BLACK
 	return
 
-Common_EventScript_ReadyPetalburgGymForBattle::
-	clearflag FLAG_HIDE_PETALBURG_GYM_GREETER
-	setflag FLAG_PETALBURG_MART_EXPANDED_ITEMS
+Common_EventScript_ReadyDelphiGymForBattle::
+	clearflag FLAG_HIDE_Delphi_GYM_GREETER
+	setflag FLAG_Delphi_MART_EXPANDED_ITEMS
 	return
 
 Common_EventScript_BufferTrendyPhrase::

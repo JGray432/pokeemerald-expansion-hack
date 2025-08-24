@@ -7,7 +7,7 @@ void UpdateTilesetAnimations(void);
 void TransferTilesetAnimsBuffer(void);
 
 void InitTilesetAnim_General(void);
-void InitTilesetAnim_Petalburg(void);
+void InitTilesetAnim_Delphi(void);
 void InitTilesetAnim_Rustboro(void);
 void InitTilesetAnim_Crete(void);
 void InitTilesetAnim_Slateport(void);

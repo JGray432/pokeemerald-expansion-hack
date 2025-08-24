@@ -7,108 +7,108 @@
 .set LOCALID_ARGONAUT_4, 4
 
 
-PetalburgCity_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, PetalburgCity_OnTransition
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, PetalburgCity_OnFrame
+Delphi_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Delphi_OnTransition
+	map_script MAP_SCRIPT_ON_FRAME_TABLE, Delphi_OnFrame
 	.byte 0
 
-PetalburgCity_OnTransition:
-	setflag FLAG_VISITED_PETALBURG_CITY
-	call_if_eq VAR_PETALBURG_CITY_STATE, 0, PetalburgCity_EventScript_MoveGymBoyToWestEntrance
-	call_if_eq VAR_PETALBURG_CITY_STATE, 2, PetalburgCity_EventScript_DisableMapNameAndMusic
-	call_if_eq VAR_PETALBURG_CITY_STATE, 4, PetalburgCity_EventScript_DisableMapNameAndMusic
-	call_if_eq VAR_PETALBURG_GYM_STATE, 8, PetalburgCity_EventScript_SetGymDoorsUnlocked
+Delphi_OnTransition:
+	setflag FLAG_VISITED_DELPHI
+	call_if_eq VAR_DELPHI_STATE, 0, Delphi_EventScript_MoveGymBoyToWestEntrance
+	call_if_eq VAR_DELPHI_STATE, 2, Delphi_EventScript_DisableMapNameAndMusic
+	call_if_eq VAR_DELPHI_STATE, 4, Delphi_EventScript_DisableMapNameAndMusic
+	call_if_eq VAR_Delphi_GYM_STATE, 8, Delphi_EventScript_SetGymDoorsUnlocked
 	end
 
-PetalburgCity_EventScript_MoveGymBoyToWestEntrance::
+Delphi_EventScript_MoveGymBoyToWestEntrance::
 	setobjectxyperm LOCALID_GYM_BOY, 5, 11
 	return
 
-PetalburgCity_EventScript_DisableMapNameAndMusic::
+Delphi_EventScript_DisableMapNameAndMusic::
 	setflag FLAG_HIDE_MAP_NAME_POPUP
 	savebgm MUS_FOLLOW_ME
 	return
 
-PetalburgCity_EventScript_SetGymDoorsUnlocked::
-	setvar VAR_PETALBURG_GYM_STATE, 7
+Delphi_EventScript_SetGymDoorsUnlocked::
+	setvar VAR_Delphi_GYM_STATE, 7
 	return
 
-PetalburgCity_OnFrame:
-	map_script_2 VAR_PETALBURG_CITY_STATE, 2, PetalburgCity_EventScript_WallyTutorial
-	map_script_2 VAR_PETALBURG_CITY_STATE, 4, PetalburgCity_EventScript_WalkToWallyHouse
+Delphi_OnFrame:
+	map_script_2 VAR_DELPHI_STATE, 2, Delphi_EventScript_WallyTutorial
+	map_script_2 VAR_DELPHI_STATE, 4, Delphi_EventScript_WalkToWallyHouse
 	.2byte 0
 
-PetalburgCity_EventScript_WallyTutorial::
+Delphi_EventScript_WallyTutorial::
 	lockall
 	special SavePlayerParty
 	special LoadWallyZigzagoon
-	applymovement LOCALID_ARGONAUT_1, PetalburgCity_Movement_WallyTutorialWally
-	applymovement OBJ_EVENT_ID_PLAYER, PetalburgCity_Movement_WallyTutorialPlayer
+	applymovement LOCALID_ARGONAUT_1, Delphi_Movement_WallyTutorialWally
+	applymovement OBJ_EVENT_ID_PLAYER, Delphi_Movement_WallyTutorialPlayer
 	waitmovement 0
 	msgbox ROUTE2_Text_WatchMeCatchPokemon, MSGBOX_DEFAULT
 	special StartWallyTutorialBattle
 	waitstate
 	msgbox ROUTE2_Text_WallyIDidIt, MSGBOX_DEFAULT
-	applymovement LOCALID_ARGONAUT_1, Common_Movement_WalkInPlaceFasterLeft, MAP_PETALBURG_CITY
-	waitmovement LOCALID_ARGONAUT_1, MAP_PETALBURG_CITY
+	applymovement LOCALID_ARGONAUT_1, Common_Movement_WalkInPlaceFasterLeft, MAP_DELPHI
+	waitmovement LOCALID_ARGONAUT_1, MAP_DELPHI
 	msgbox ROUTE2_Text_LetsGoBack, MSGBOX_DEFAULT
 	closemessage
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
-	setvar VAR_PETALBURG_CITY_STATE, 3
+	setvar VAR_DELPHI_STATE, 3
 	fadedefaultbgm
 	clearflag FLAG_DONT_TRANSITION_MUSIC
 	special LoadPlayerParty
-	setvar VAR_PETALBURG_GYM_STATE, 1
-	warp MAP_PETALBURG_CITY_GYM, 4, 108
+	setvar VAR_Delphi_GYM_STATE, 1
+	warp MAP_DELPHI_GYM, 4, 108
 	waitstate
 	releaseall
 	end
 
-PetalburgCity_EventScript_WalkToWallyHouse::
+Delphi_EventScript_WalkToWallyHouse::
 	lockall
 	setflag FLAG_HIDE_MAP_NAME_POPUP
-	applymovement LOCALID_ARGONAUT_2, PetalburgCity_Movement_WalkToWallyHouseWallysDad
-	applymovement OBJ_EVENT_ID_PLAYER, PetalburgCity_Movement_WalkToWallyHousePlayer
+	applymovement LOCALID_ARGONAUT_2, Delphi_Movement_WalkToWallyHouseWallysDad
+	applymovement OBJ_EVENT_ID_PLAYER, Delphi_Movement_WalkToWallyHousePlayer
 	waitmovement 0
 	setvar VAR_0x8004, 7
 	setvar VAR_0x8005, 5
 	opendoor VAR_0x8004, VAR_0x8005
 	waitdooranim
-	applymovement LOCALID_ARGONAUT_2, PetalburgCity_Movement_WalkInsideHouseWallysDad
-	applymovement OBJ_EVENT_ID_PLAYER, PetalburgCity_Movement_WalkInsideHousePlayer
+	applymovement LOCALID_ARGONAUT_2, Delphi_Movement_WalkInsideHouseWallysDad
+	applymovement OBJ_EVENT_ID_PLAYER, Delphi_Movement_WalkInsideHousePlayer
 	waitmovement 0
-	setflag FLAG_HIDE_PETALBURG_CITY_WALLYS_DAD
-	hideobjectat OBJ_EVENT_ID_PLAYER, MAP_PETALBURG_CITY
+	setflag FLAG_HIDE_DELPHI_WALLYS_DAD
+	hideobjectat OBJ_EVENT_ID_PLAYER, MAP_DELPHI
 	closedoor VAR_0x8004, VAR_0x8005
 	waitdooranim
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
 	fadedefaultbgm
 	clearflag FLAG_DONT_TRANSITION_MUSIC
-	warp MAP_PETALBURG_CITY_WALLYS_HOUSE, 2, 4
+	warp MAP_DELPHI_WALLYS_HOUSE, 2, 4
 	waitstate
 	releaseall
 	end
 
-PetalburgCity_EventScript_Boy::
+Delphi_EventScript_Boy::
 	lock
 	faceplayer
-	msgbox PetalburgCity_Text_WaterReflection, MSGBOX_DEFAULT
+	msgbox Delphi_Text_WaterReflection, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_BOY, Common_Movement_FaceOriginalDirection
 	waitmovement 0
 	release
 	end
 
-PetalburgCity_EventScript_WallysMom::
-	msgbox PetalburgCity_Text_WhereIsWally, MSGBOX_NPC
+Delphi_EventScript_WallysMom::
+	msgbox Delphi_Text_WhereIsWally, MSGBOX_NPC
 	end
 
-PetalburgCity_EventScript_GymBlocker::
-	msgbox PetalburgCity_Text_WaitForApolloAndArtemis, MSGBOX_DEFAULT
+Delphi_EventScript_GymBlocker::
+	msgbox Delphi_Text_WaitForApolloAndArtemis, MSGBOX_DEFAULT
 	closemessage
 	end
 
-PetalburgCity_EventScript_Nurse::
+Delphi_EventScript_Nurse::
 	setvar VAR_0x800B, LOCALID_NURSE
 	call Common_EventScript_PkmnCenterNurse
 	waitmessage
@@ -116,7 +116,7 @@ PetalburgCity_EventScript_Nurse::
 	release
 	end
 
-PetalburgCity_EventScript_Clerk::
+Delphi_EventScript_Clerk::
 	lock
 	faceplayer
 	message gText_HowMayIServeYou
@@ -127,7 +127,7 @@ PetalburgCity_EventScript_Clerk::
 	end
 
 	.align 2
-PetalburgCity_Mart:
+Delphi_Mart:
 	.2byte ITEM_GREAT_BALL
 	.2byte ITEM_SUPER_POTION
 	.2byte ITEM_ANTIDOTE
@@ -135,7 +135,7 @@ PetalburgCity_Mart:
 	.2byte ITEM_AWAKENING
 	pokemartlistend
 
-PetalburgCity_EventScript_UtilityScientist::
+Delphi_EventScript_UtilityScientist::
 	lock
 	faceplayer
 	call Common_EventScript_UtilitiesScientist
@@ -143,22 +143,22 @@ PetalburgCity_EventScript_UtilityScientist::
 	release
 	end
 
-PetalburgCity_EventScript_ArgonautsGoToTower::
+Delphi_EventScript_ArgonautsGoToTower::
 	lock
-	msgbox PetalburgCity_Text_ArgonautsGoToTower, MSGBOX_DEFAULT
+	msgbox Delphi_Text_ArgonautsGoToTower, MSGBOX_DEFAULT
 	closemessage
-	applymovement LOCALID_HERCULES, PetalburgCity_Movement_WalkToTower
-	applymovement LOCALID_ARGONAUT_1, PetalburgCity_Movement_WalkToTower
-	applymovement LOCALID_ARGONAUT_2, PetalburgCity_Movement_WalkToTower
-	applymovement LOCALID_ARGONAUT_3, PetalburgCity_Movement_WalkToTower
-	applymovement LOCALID_ARGONAUT_4, PetalburgCity_Movement_WalkToTower
+	applymovement LOCALID_HERCULES, Delphi_Movement_WalkToTower
+	applymovement LOCALID_ARGONAUT_1, Delphi_Movement_WalkToTower
+	applymovement LOCALID_ARGONAUT_2, Delphi_Movement_WalkToTower
+	applymovement LOCALID_ARGONAUT_3, Delphi_Movement_WalkToTower
+	applymovement LOCALID_ARGONAUT_4, Delphi_Movement_WalkToTower
 	waitmovement 0
-	setvar VAR_PETALBURG_CITY_STATE, 1
-	setflag FLAG_HIDE_PETALBURG_CITY_SCOTT
+	setvar VAR_DELPHI_STATE, 1
+	setflag FLAG_HIDE_DELPHI_SCOTT
 	release
 	end
 
-PetalburgCity_Movement_WalkToTower:
+Delphi_Movement_WalkToTower:
 	walk_left
 	walk_left
 	walk_left	
@@ -167,7 +167,7 @@ PetalburgCity_Movement_WalkToTower:
 	walk_left
 	step_end
 
-PetalburgCity_Movement_WalkToWallyHousePlayer:
+Delphi_Movement_WalkToWallyHousePlayer:
 	delay_8
 	walk_down
 	walk_down
@@ -187,12 +187,12 @@ PetalburgCity_Movement_WalkToWallyHousePlayer:
 	walk_up
 	step_end
 
-PetalburgCity_Movement_WalkInsideHousePlayer:
+Delphi_Movement_WalkInsideHousePlayer:
 	walk_up
 	walk_up
 	step_end
 
-PetalburgCity_Movement_WalkToWallyHouseWallysDad:
+Delphi_Movement_WalkToWallyHouseWallysDad:
 	delay_8
 	walk_down
 	walk_down
@@ -212,12 +212,12 @@ PetalburgCity_Movement_WalkToWallyHouseWallysDad:
 	walk_up
 	step_end
 
-PetalburgCity_Movement_WalkInsideHouseWallysDad:
+Delphi_Movement_WalkInsideHouseWallysDad:
 	walk_up
 	set_invisible
 	step_end
 
-PetalburgCity_Movement_WallyTutorialPlayer:
+Delphi_Movement_WallyTutorialPlayer:
 	delay_8
 	walk_down
 	walk_down
@@ -252,7 +252,7 @@ PetalburgCity_Movement_WallyTutorialPlayer:
 	walk_in_place_faster_right
 	step_end
 
-PetalburgCity_Movement_WallyTutorialWally:
+Delphi_Movement_WallyTutorialWally:
 	delay_8
 	walk_down
 	walk_down
@@ -291,47 +291,47 @@ PetalburgCity_Movement_WallyTutorialWally:
 	walk_in_place_faster_right
 	step_end
 
-PetalburgCity_EventScript_GymSign::
-	msgbox PetalburgCity_Text_GymSign, MSGBOX_SIGN
+Delphi_EventScript_GymSign::
+	msgbox Delphi_Text_GymSign, MSGBOX_SIGN
 	end
 
-PetalburgCity_EventScript_CitySign::
-	msgbox PetalburgCity_Text_CitySign, MSGBOX_SIGN
+Delphi_EventScript_CitySign::
+	msgbox Delphi_Text_CitySign, MSGBOX_SIGN
 	end
 
-PetalburgCity_EventScript_Gentleman::
-	msgbox PetalburgCity_Text_FullPartyExplanation, MSGBOX_NPC
+Delphi_EventScript_Gentleman::
+	msgbox Delphi_Text_FullPartyExplanation, MSGBOX_NPC
 	end
 
-PetalburgCity_EventScript_WallyHouseSign::
-	msgbox PetalburgCity_Text_WallyHouseSign, MSGBOX_SIGN
+Delphi_EventScript_WallyHouseSign::
+	msgbox Delphi_Text_WallyHouseSign, MSGBOX_SIGN
 	end
 
-PetalburgCity_EventScript_ShowGymToPlayer0::
+Delphi_EventScript_ShowGymToPlayer0::
 	lockall
 	setvar VAR_0x8008, 0
-	goto PetalburgCity_EventScript_ShowGymToPlayer
+	goto Delphi_EventScript_ShowGymToPlayer
 	end
 
-PetalburgCity_EventScript_ShowGymToPlayer1::
+Delphi_EventScript_ShowGymToPlayer1::
 	lockall
 	setvar VAR_0x8008, 1
-	goto PetalburgCity_EventScript_ShowGymToPlayer
+	goto Delphi_EventScript_ShowGymToPlayer
 	end
 
-PetalburgCity_EventScript_ShowGymToPlayer2::
+Delphi_EventScript_ShowGymToPlayer2::
 	lockall
 	setvar VAR_0x8008, 2
-	goto PetalburgCity_EventScript_ShowGymToPlayer
+	goto Delphi_EventScript_ShowGymToPlayer
 	end
 
-PetalburgCity_EventScript_ShowGymToPlayer3::
+Delphi_EventScript_ShowGymToPlayer3::
 	lockall
 	setvar VAR_0x8008, 3
-	goto PetalburgCity_EventScript_ShowGymToPlayer
+	goto Delphi_EventScript_ShowGymToPlayer
 	end
 
-PetalburgCity_EventScript_ShowGymToPlayer::
+Delphi_EventScript_ShowGymToPlayer::
 	applymovement LOCALID_GYM_BOY, Common_Movement_FacePlayer
 	waitmovement 0
 	playbgm MUS_FOLLOW_ME, FALSE
@@ -340,105 +340,105 @@ PetalburgCity_EventScript_ShowGymToPlayer::
 	waitmovement 0
 	applymovement LOCALID_GYM_BOY, Common_Movement_Delay48
 	waitmovement 0
-	call_if_eq VAR_0x8008, 0, PetalburgCity_EventScript_BoyApproachPlayer0
-	call_if_eq VAR_0x8008, 1, PetalburgCity_EventScript_BoyApproachPlayer1
-	call_if_eq VAR_0x8008, 2, PetalburgCity_EventScript_BoyApproachPlayer2
-	call_if_eq VAR_0x8008, 3, PetalburgCity_EventScript_BoyApproachPlayer3
-	msgbox PetalburgCity_Text_AreYouRookieTrainer, MSGBOX_DEFAULT
+	call_if_eq VAR_0x8008, 0, Delphi_EventScript_BoyApproachPlayer0
+	call_if_eq VAR_0x8008, 1, Delphi_EventScript_BoyApproachPlayer1
+	call_if_eq VAR_0x8008, 2, Delphi_EventScript_BoyApproachPlayer2
+	call_if_eq VAR_0x8008, 3, Delphi_EventScript_BoyApproachPlayer3
+	msgbox Delphi_Text_AreYouRookieTrainer, MSGBOX_DEFAULT
 	closemessage
-	call_if_eq VAR_0x8008, 0, PetalburgCity_EventScript_LeadPlayerToGym0
-	call_if_eq VAR_0x8008, 1, PetalburgCity_EventScript_LeadPlayerToGym1
-	call_if_eq VAR_0x8008, 2, PetalburgCity_EventScript_LeadPlayerToGym2
-	call_if_eq VAR_0x8008, 3, PetalburgCity_EventScript_LeadPlayerToGym3
-	msgbox PetalburgCity_Text_ThisIsPetalburgGym, MSGBOX_DEFAULT
+	call_if_eq VAR_0x8008, 0, Delphi_EventScript_LeadPlayerToGym0
+	call_if_eq VAR_0x8008, 1, Delphi_EventScript_LeadPlayerToGym1
+	call_if_eq VAR_0x8008, 2, Delphi_EventScript_LeadPlayerToGym2
+	call_if_eq VAR_0x8008, 3, Delphi_EventScript_LeadPlayerToGym3
+	msgbox Delphi_Text_ThisIsDelphiGym, MSGBOX_DEFAULT
 	applymovement LOCALID_GYM_BOY, Common_Movement_WalkInPlaceFasterRight
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
-	msgbox PetalburgCity_Text_ThisIsGymSign, MSGBOX_DEFAULT
+	msgbox Delphi_Text_ThisIsGymSign, MSGBOX_DEFAULT
 	closemessage
-	applymovement LOCALID_GYM_BOY, PetalburgCity_Movement_BoyWalkAway
+	applymovement LOCALID_GYM_BOY, Delphi_Movement_BoyWalkAway
 	waitmovement 0
 	fadedefaultbgm
 	releaseall
 	end
 
-PetalburgCity_EventScript_BoyApproachPlayer0::
-	applymovement LOCALID_GYM_BOY, PetalburgCity_Movement_BoyApproachPlayer0
+Delphi_EventScript_BoyApproachPlayer0::
+	applymovement LOCALID_GYM_BOY, Delphi_Movement_BoyApproachPlayer0
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterDown
 	waitmovement 0
 	return
 
-PetalburgCity_EventScript_BoyApproachPlayer1::
-	applymovement LOCALID_GYM_BOY, PetalburgCity_Movement_BoyApproachPlayer1
+Delphi_EventScript_BoyApproachPlayer1::
+	applymovement LOCALID_GYM_BOY, Delphi_Movement_BoyApproachPlayer1
 	waitmovement 0
 	return
 
-PetalburgCity_EventScript_BoyApproachPlayer2::
-	applymovement LOCALID_GYM_BOY, PetalburgCity_Movement_BoyApproachPlayer2
+Delphi_EventScript_BoyApproachPlayer2::
+	applymovement LOCALID_GYM_BOY, Delphi_Movement_BoyApproachPlayer2
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	return
 
-PetalburgCity_EventScript_BoyApproachPlayer3::
-	applymovement LOCALID_GYM_BOY, PetalburgCity_Movement_BoyApproachPlayer3
+Delphi_EventScript_BoyApproachPlayer3::
+	applymovement LOCALID_GYM_BOY, Delphi_Movement_BoyApproachPlayer3
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
 	return
 
-PetalburgCity_EventScript_LeadPlayerToGym0::
-	applymovement LOCALID_GYM_BOY, PetalburgCity_Movement_BoyWalkToGym0
-	applymovement OBJ_EVENT_ID_PLAYER, PetalburgCity_Movement_PlayerWalkToGym0
+Delphi_EventScript_LeadPlayerToGym0::
+	applymovement LOCALID_GYM_BOY, Delphi_Movement_BoyWalkToGym0
+	applymovement OBJ_EVENT_ID_PLAYER, Delphi_Movement_PlayerWalkToGym0
 	waitmovement 0
 	return
 
-PetalburgCity_EventScript_LeadPlayerToGym1::
-	applymovement LOCALID_GYM_BOY, PetalburgCity_Movement_BoyWalkToGym1
-	applymovement OBJ_EVENT_ID_PLAYER, PetalburgCity_Movement_PlayerWalkToGym1
+Delphi_EventScript_LeadPlayerToGym1::
+	applymovement LOCALID_GYM_BOY, Delphi_Movement_BoyWalkToGym1
+	applymovement OBJ_EVENT_ID_PLAYER, Delphi_Movement_PlayerWalkToGym1
 	waitmovement 0
 	return
 
-PetalburgCity_EventScript_LeadPlayerToGym2::
-	applymovement LOCALID_GYM_BOY, PetalburgCity_Movement_BoyWalkToGym2
-	applymovement OBJ_EVENT_ID_PLAYER, PetalburgCity_Movement_PlayerWalkToGym2
+Delphi_EventScript_LeadPlayerToGym2::
+	applymovement LOCALID_GYM_BOY, Delphi_Movement_BoyWalkToGym2
+	applymovement OBJ_EVENT_ID_PLAYER, Delphi_Movement_PlayerWalkToGym2
 	waitmovement 0
 	return
 
-PetalburgCity_EventScript_LeadPlayerToGym3::
-	applymovement LOCALID_GYM_BOY, PetalburgCity_Movement_BoyWalkToGym3
-	applymovement OBJ_EVENT_ID_PLAYER, PetalburgCity_Movement_PlayerWalkToGym3
+Delphi_EventScript_LeadPlayerToGym3::
+	applymovement LOCALID_GYM_BOY, Delphi_Movement_BoyWalkToGym3
+	applymovement OBJ_EVENT_ID_PLAYER, Delphi_Movement_PlayerWalkToGym3
 	waitmovement 0
 	return
 
 @ Unused
-PetalburgCity_Movement_Delay48::
+Delphi_Movement_Delay48::
 	delay_16
 	delay_16
 	delay_16
 	step_end
 
-PetalburgCity_Movement_BoyApproachPlayer0:
+Delphi_Movement_BoyApproachPlayer0:
 	walk_right
 	walk_right
 	walk_right
 	walk_in_place_faster_up
 	step_end
 
-PetalburgCity_Movement_BoyApproachPlayer1:
+Delphi_Movement_BoyApproachPlayer1:
 	walk_right
 	walk_right
 	step_end
 
-PetalburgCity_Movement_BoyApproachPlayer2:
+Delphi_Movement_BoyApproachPlayer2:
 	walk_right
 	walk_right
 	walk_right
 	walk_in_place_faster_down
 	step_end
 
-PetalburgCity_Movement_BoyApproachPlayer3:
+Delphi_Movement_BoyApproachPlayer3:
 	walk_down
 	walk_right
 	walk_right
@@ -446,7 +446,7 @@ PetalburgCity_Movement_BoyApproachPlayer3:
 	walk_in_place_faster_down
 	step_end
 
-PetalburgCity_Movement_BoyWalkToGym0:
+Delphi_Movement_BoyWalkToGym0:
 	walk_right
 	walk_right
 	walk_right
@@ -459,7 +459,7 @@ PetalburgCity_Movement_BoyWalkToGym0:
 	walk_in_place_faster_up
 	step_end
 
-PetalburgCity_Movement_BoyWalkToGym1:
+Delphi_Movement_BoyWalkToGym1:
 	walk_down
 	walk_right
 	walk_right
@@ -475,7 +475,7 @@ PetalburgCity_Movement_BoyWalkToGym1:
 	walk_in_place_faster_up
 	step_end
 
-PetalburgCity_Movement_BoyWalkToGym2:
+Delphi_Movement_BoyWalkToGym2:
 	walk_right
 	walk_right
 	walk_right
@@ -488,7 +488,7 @@ PetalburgCity_Movement_BoyWalkToGym2:
 	walk_in_place_faster_up
 	step_end
 
-PetalburgCity_Movement_BoyWalkToGym3:
+Delphi_Movement_BoyWalkToGym3:
 	walk_right
 	walk_right
 	walk_right
@@ -502,7 +502,7 @@ PetalburgCity_Movement_BoyWalkToGym3:
 	walk_in_place_faster_up
 	step_end
 
-PetalburgCity_Movement_BoyWalkAway:
+Delphi_Movement_BoyWalkAway:
 	walk_down
 	walk_left
 	walk_left
@@ -517,7 +517,7 @@ PetalburgCity_Movement_BoyWalkAway:
 	walk_left
 	step_end
 
-PetalburgCity_Movement_PlayerWalkToGym0:
+Delphi_Movement_PlayerWalkToGym0:
 	walk_down
 	walk_right
 	walk_right
@@ -529,7 +529,7 @@ PetalburgCity_Movement_PlayerWalkToGym0:
 	walk_up
 	step_end
 
-PetalburgCity_Movement_PlayerWalkToGym1:
+Delphi_Movement_PlayerWalkToGym1:
 	delay_16
 	delay_16
 	walk_down
@@ -544,7 +544,7 @@ PetalburgCity_Movement_PlayerWalkToGym1:
 	walk_up
 	step_end
 
-PetalburgCity_Movement_PlayerWalkToGym2:
+Delphi_Movement_PlayerWalkToGym2:
 	walk_up
 	walk_right
 	walk_right
@@ -556,7 +556,7 @@ PetalburgCity_Movement_PlayerWalkToGym2:
 	walk_up
 	step_end
 
-PetalburgCity_Movement_PlayerWalkToGym3:
+Delphi_Movement_PlayerWalkToGym3:
 	walk_up
 	walk_right
 	walk_right
@@ -569,111 +569,111 @@ PetalburgCity_Movement_PlayerWalkToGym3:
 	walk_up
 	step_end
 
-PetalburgCity_EventScript_Scott0::
+Delphi_EventScript_Scott0::
 	lockall
 	addobject LOCALID_HERCULES
 	setvar VAR_0x8008, 0
 	setobjectxy LOCALID_HERCULES, 13, 10
-	goto PetalburgCity_EventScript_Scott
+	goto Delphi_EventScript_Scott
 	end
 
-PetalburgCity_EventScript_Scott1::
+Delphi_EventScript_Scott1::
 	lockall
 	addobject LOCALID_HERCULES
 	setvar VAR_0x8008, 1
 	setobjectxy LOCALID_HERCULES, 13, 11
-	goto PetalburgCity_EventScript_Scott
+	goto Delphi_EventScript_Scott
 	end
 
-PetalburgCity_EventScript_Scott2::
+Delphi_EventScript_Scott2::
 	lockall
 	addobject LOCALID_HERCULES
 	setvar VAR_0x8008, 2
 	setobjectxy LOCALID_HERCULES, 13, 12
-	goto PetalburgCity_EventScript_Scott
+	goto Delphi_EventScript_Scott
 	end
 
-PetalburgCity_EventScript_Scott3::
+Delphi_EventScript_Scott3::
 	lockall
 	addobject LOCALID_HERCULES
 	setvar VAR_0x8008, 3
 	setobjectxy LOCALID_HERCULES, 13, 13
-	goto PetalburgCity_EventScript_Scott
+	goto Delphi_EventScript_Scott
 	end
 
-PetalburgCity_EventScript_Scott::
-	applymovement LOCALID_HERCULES, PetalburgCity_Movement_ScottStartWalkLeft
+Delphi_EventScript_Scott::
+	applymovement LOCALID_HERCULES, Delphi_Movement_ScottStartWalkLeft
 	waitmovement 0
 	playse SE_PIN
 	applymovement LOCALID_HERCULES, Common_Movement_ExclamationMark
 	waitmovement 0
 	applymovement LOCALID_HERCULES, Common_Movement_Delay48
 	waitmovement 0
-	applymovement LOCALID_HERCULES, PetalburgCity_Movement_ScottApproachPlayer
+	applymovement LOCALID_HERCULES, Delphi_Movement_ScottApproachPlayer
 	waitmovement 0
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 	setvar VAR_SCOTT_STATE, 1
-	msgbox PetalburgCity_Text_AreYouATrainer, MSGBOX_DEFAULT
+	msgbox Delphi_Text_AreYouATrainer, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_HERCULES, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
 	delay 30
-	msgbox PetalburgCity_Text_WellMaybeNot, MSGBOX_DEFAULT
+	msgbox Delphi_Text_WellMaybeNot, MSGBOX_DEFAULT
 	closemessage
 	applymovement LOCALID_HERCULES, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 	delay 30
-	msgbox PetalburgCity_Text_ImLookingForTalentedTrainers, MSGBOX_DEFAULT
+	msgbox Delphi_Text_ImLookingForTalentedTrainers, MSGBOX_DEFAULT
 	closemessage
-	call_if_eq VAR_0x8008, 0, PetalburgCity_EventScript_ScottExit0
-	call_if_eq VAR_0x8008, 1, PetalburgCity_EventScript_ScottExit1
-	call_if_eq VAR_0x8008, 2, PetalburgCity_EventScript_ScottExit2
-	call_if_eq VAR_0x8008, 3, PetalburgCity_EventScript_ScottExit3
-	setvar VAR_SCOTT_PETALBURG_ENCOUNTER, 1
+	call_if_eq VAR_0x8008, 0, Delphi_EventScript_ScottExit0
+	call_if_eq VAR_0x8008, 1, Delphi_EventScript_ScottExit1
+	call_if_eq VAR_0x8008, 2, Delphi_EventScript_ScottExit2
+	call_if_eq VAR_0x8008, 3, Delphi_EventScript_ScottExit3
+	setvar VAR_SCOTT_Delphi_ENCOUNTER, 1
 	removeobject LOCALID_HERCULES
 	releaseall
 	end
 
-PetalburgCity_EventScript_ScottExit0::
-	applymovement OBJ_EVENT_ID_PLAYER, PetalburgCity_Movement_PlayerWatchScottExit0
-	applymovement LOCALID_HERCULES, PetalburgCity_Movement_ScottExit0
+Delphi_EventScript_ScottExit0::
+	applymovement OBJ_EVENT_ID_PLAYER, Delphi_Movement_PlayerWatchScottExit0
+	applymovement LOCALID_HERCULES, Delphi_Movement_ScottExit0
 	waitmovement 0
 	return
 
-PetalburgCity_EventScript_ScottExit1::
-	applymovement OBJ_EVENT_ID_PLAYER, PetalburgCity_Movement_PlayerWatchScottExit1
-	applymovement LOCALID_HERCULES, PetalburgCity_Movement_ScottExit1
+Delphi_EventScript_ScottExit1::
+	applymovement OBJ_EVENT_ID_PLAYER, Delphi_Movement_PlayerWatchScottExit1
+	applymovement LOCALID_HERCULES, Delphi_Movement_ScottExit1
 	waitmovement 0
 	return
 
-PetalburgCity_EventScript_ScottExit2::
-	applymovement OBJ_EVENT_ID_PLAYER, PetalburgCity_Movement_PlayerWatchScottExit2
-	applymovement LOCALID_HERCULES, PetalburgCity_Movement_ScottExit2
+Delphi_EventScript_ScottExit2::
+	applymovement OBJ_EVENT_ID_PLAYER, Delphi_Movement_PlayerWatchScottExit2
+	applymovement LOCALID_HERCULES, Delphi_Movement_ScottExit2
 	waitmovement 0
 	return
 
-PetalburgCity_EventScript_ScottExit3::
-	applymovement OBJ_EVENT_ID_PLAYER, PetalburgCity_Movement_PlayerWatchScottExit3
-	applymovement LOCALID_HERCULES, PetalburgCity_Movement_ScottExit3
+Delphi_EventScript_ScottExit3::
+	applymovement OBJ_EVENT_ID_PLAYER, Delphi_Movement_PlayerWatchScottExit3
+	applymovement LOCALID_HERCULES, Delphi_Movement_ScottExit3
 	waitmovement 0
 	return
 
-PetalburgCity_Movement_ScottStartWalkLeft:
+Delphi_Movement_ScottStartWalkLeft:
 	walk_left
 	walk_left
 	walk_left
 	walk_left
 	step_end
 
-PetalburgCity_Movement_ScottApproachPlayer:
+Delphi_Movement_ScottApproachPlayer:
 	walk_left
 	walk_left
 	walk_left
 	walk_left
 	step_end
 
-PetalburgCity_Movement_ScottExit0:
+Delphi_Movement_ScottExit0:
 	walk_down
 	walk_down
 	walk_left
@@ -689,7 +689,7 @@ PetalburgCity_Movement_ScottExit0:
 	walk_left
 	step_end
 
-PetalburgCity_Movement_PlayerWatchScottExit0:
+Delphi_Movement_PlayerWatchScottExit0:
 	delay_16
 	walk_in_place_faster_down
 	delay_16
@@ -698,7 +698,7 @@ PetalburgCity_Movement_PlayerWatchScottExit0:
 	walk_in_place_faster_left
 	step_end
 
-PetalburgCity_Movement_ScottExit1:
+Delphi_Movement_ScottExit1:
 	walk_down
 	walk_left
 	walk_left
@@ -713,7 +713,7 @@ PetalburgCity_Movement_ScottExit1:
 	walk_left
 	step_end
 
-PetalburgCity_Movement_PlayerWatchScottExit1:
+Delphi_Movement_PlayerWatchScottExit1:
 	delay_16
 	walk_in_place_faster_down
 	delay_16
@@ -721,7 +721,7 @@ PetalburgCity_Movement_PlayerWatchScottExit1:
 	walk_in_place_faster_left
 	step_end
 
-PetalburgCity_Movement_ScottExit2:
+Delphi_Movement_ScottExit2:
 	walk_down
 	walk_left
 	walk_left
@@ -736,7 +736,7 @@ PetalburgCity_Movement_ScottExit2:
 	walk_left
 	step_end
 
-PetalburgCity_Movement_PlayerWatchScottExit2:
+Delphi_Movement_PlayerWatchScottExit2:
 	delay_16
 	walk_in_place_faster_down
 	delay_16
@@ -744,7 +744,7 @@ PetalburgCity_Movement_PlayerWatchScottExit2:
 	walk_in_place_faster_left
 	step_end
 
-PetalburgCity_Movement_ScottExit3:
+Delphi_Movement_ScottExit3:
 	walk_up
 	walk_left
 	walk_left
@@ -759,7 +759,7 @@ PetalburgCity_Movement_ScottExit3:
 	walk_left
 	step_end
 
-PetalburgCity_Movement_PlayerWatchScottExit3:
+Delphi_Movement_PlayerWatchScottExit3:
 	delay_16
 	walk_in_place_faster_up
 	delay_16
@@ -767,16 +767,16 @@ PetalburgCity_Movement_PlayerWatchScottExit3:
 	walk_in_place_faster_left
 	step_end
 
-PetalburgCity_EventScript_GymBoy::
-	msgbox PetalburgCity_Text_AreYouRookieTrainer, MSGBOX_NPC
+Delphi_EventScript_GymBoy::
+	msgbox Delphi_Text_AreYouRookieTrainer, MSGBOX_NPC
 	end
 
-PetalburgCity_Text_WhereIsWally:
+Delphi_Text_WhereIsWally:
 	.string "Where has our WALLY gone?\p"
 	.string "We have to leave for VERDANTURF TOWN\n"
 	.string "very soon…$"
 
-PetalburgCity_Text_AreYouRookieTrainer:
+Delphi_Text_AreYouRookieTrainer:
 	.string "Hiya! Are you maybe…\n"
 	.string "A rookie TRAINER?\p"
 	.string "Do you know what POKéMON TRAINERS\n"
@@ -784,61 +784,61 @@ PetalburgCity_Text_AreYouRookieTrainer:
 	.string "They first check what kind of GYM\n"
 	.string "is in the town.$"
 
-PetalburgCity_Text_ThisIsPetalburgGym:
-	.string "See? This is PETALBURG CITY's GYM.$"
+Delphi_Text_ThisIsDelphiGym:
+	.string "See? This is DELPHI's GYM.$"
 
-PetalburgCity_Text_ThisIsGymSign:
+Delphi_Text_ThisIsGymSign:
 	.string "This is the GYM's sign. Look for it\n"
 	.string "whenever you're looking for a GYM.$"
 
-PetalburgCity_Text_WaterReflection:
+Delphi_Text_WaterReflection:
 	.string "My face is reflected in the water.\p"
 	.string "It's a shining grin full of hope…\p"
 	.string "Or it could be a look of somber silence\n"
 	.string "struggling with fear…\p"
 	.string "What do you see reflected in your face?$"
 
-PetalburgCity_Text_FullPartyExplanation:
+Delphi_Text_FullPartyExplanation:
 	.string "Let's say you have six POKéMON.\n"
 	.string "If you catch another one…\p"
 	.string "It is automatically sent to a STORAGE\n"
 	.string "BOX over a PC connection.$"
 
-PetalburgCity_Text_GymSign:
-	.string "PETALBURG CITY POKéMON GYM\n"
+Delphi_Text_GymSign:
+	.string "DELPHI POKéMON GYM\n"
 	.string "LEADER: NORMAN\l"
 	.string "“A man in pursuit of power!”$"
 
-PetalburgCity_Text_CitySign:
-	.string "PETALBURG CITY\n"
+Delphi_Text_CitySign:
+	.string "DELPHI\n"
 	.string "“Where people mingle with nature.”$"
 
-PetalburgCity_Text_WallyHouseSign:
+Delphi_Text_WallyHouseSign:
 	.string "WALLY'S HOUSE$"
 
-PetalburgCity_Text_AreYouATrainer:
+Delphi_Text_AreYouATrainer:
 	.string "Excuse me!\p"
 	.string "Let me guess, from the way you're\n"
 	.string "dressed, are you a POKéMON TRAINER?$"
 
-PetalburgCity_Text_WellMaybeNot:
+Delphi_Text_WellMaybeNot:
 	.string "… … … … … …\p"
 	.string "Well, maybe not.\n"
 	.string "Your clothes aren't all that dirty.\p"
 	.string "You're either a rookie TRAINER,\n"
 	.string "or maybe you're just an ordinary kid.$"
 
-PetalburgCity_Text_ImLookingForTalentedTrainers:
+Delphi_Text_ImLookingForTalentedTrainers:
 	.string "I'm roaming the land in search of\n"
 	.string "talented TRAINERS.\p"
 	.string "I'm sorry to have taken your time.$"
 
-PetalburgCity_Text_ArgonautsGoToTower:
+Delphi_Text_ArgonautsGoToTower:
 	.string "Argonauts! Proceed to Delphi Tower!\n"
 	.string "Once we capture the oracle there will\l"
 	.string "be no stopping our plans!$"
 
-PetalburgCity_Text_WaitForApolloAndArtemis:
+Delphi_Text_WaitForApolloAndArtemis:
 	.string "Did you see those goons heading for \n"
 	.string "the oracle? \p"
 	.string "They looked like they were up to no \n"

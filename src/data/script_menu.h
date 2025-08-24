@@ -1,7 +1,7 @@
 // multichoice lists
 static const struct MenuAction MultichoiceList_BrineyOnCrete[] =
 {
-    {COMPOUND_STRING("PETALBURG")},
+    {COMPOUND_STRING("DELPHI")},
     {COMPOUND_STRING("SLATEPORT")},
     {gText_Exit},
 };

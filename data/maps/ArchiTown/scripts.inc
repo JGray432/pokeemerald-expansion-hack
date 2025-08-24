@@ -346,6 +346,11 @@ ArchiTown_EventScript_PlayersHouseSignFemale::
 	msgbox ArchiTown_Text_PlayersHouse, MSGBOX_DEFAULT
 	return
 
+ArchiTown_EventScript_RayquazaGiftForTesting::
+	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_RAYQUAZA
+	givemon SPECIES_RAYQUAZA, 100
+	end
+
 ArchiTown_Text_NotEnoughMoneyForCandy:
 	.string "Ahh sorry dude you're short.\n"
 	.string "My bills ain't gonna pay themselves$"

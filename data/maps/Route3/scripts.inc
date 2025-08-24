@@ -568,7 +568,7 @@ Route3_EventScript_Elijah::
 	end
 
 Crete_Text_BrineyLandedInSlateportDeliverGoods:
-	.string "MR. BRINEY: Ahoy!\n"
+	.string "CPT. MORGAN: Ahoy!\n"
 	.string "We've made land in SLATEPORT!\p"
 	.string "I suppose you're going to visit CAPT.\n"
 	.string "STERN and deliver the DEVON GOODS?$"
@@ -600,12 +600,12 @@ Route3_Text_AthenaSendOff:
 	.string "See you round, {PLAYER}!$"
 
 Route3_Text_BrineyDeliverDevonGoods:
-	.string "MR. BRINEY: Then you go on and deliver\n"
+	.string "CPT. MORGAN: Then you go on and deliver\n"
 	.string "the DEVON GOODS. I'll be waiting.$"
 
 Crete_Text_BrineyLandedInSlateport:
-	.string "MR. BRINEY: Ahoy! We've made land in\n"
-	.string "SLATEPORT!\p"
+	.string "CPT. MORGAN: Ahoy! We've made land in\n"
+	.string "CRETE!\p"
 	.string "You just go on and tell me whenever\n"
 	.string "you want to set sail again!$"
 

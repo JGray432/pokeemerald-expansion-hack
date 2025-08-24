@@ -10489,19 +10489,19 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_WATER_PULSE,
     },
 
-    [ITEM_TM_CALM_MIND] =
+    [ITEM_TM_FUTURE_SIGHT] =
     {
         .name = _("TM04"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "Raises Sp. Atk and\n"
-            "Sp. Def by focusing\n"
-            "the mind."),
+            "Predicts a strong\n"
+            "attack in 2 turns\n"
+            "time."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_CALM_MIND,
+        .secondaryId = MOVE_FUTURE_SIGHT,
     },
 
     [ITEM_TM_ROAR] =

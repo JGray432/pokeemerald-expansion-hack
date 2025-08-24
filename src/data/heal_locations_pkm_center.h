@@ -9,10 +9,10 @@ static const struct HealLocation sHealLocationsPokemonCenter[HEAL_LOCATION_COUNT
         .x = 2,
         .y = 7,
     },
-    [HEAL_LOCATION_PETALBURG_CITY - 1] =
+    [HEAL_LOCATION_DELPHI - 1] =
     {
-        .group = MAP_GROUP(PETALBURG_CITY_POKEMON_CENTER_1F),
-        .map = MAP_NUM(PETALBURG_CITY_POKEMON_CENTER_1F),
+        .group = MAP_GROUP(DELPHI_POKEMON_CENTER_1F),
+        .map = MAP_NUM(DELPHI_POKEMON_CENTER_1F),
         DEFAULT_POKEMON_CENTER_COORDS,
     },
     [HEAL_LOCATION_SLATEPORT_CITY - 1] =
@@ -130,7 +130,7 @@ static const struct HealLocation sHealLocationsPokemonCenter[HEAL_LOCATION_COUNT
 static const u8 sHealNpcLocalId[HEAL_LOCATION_COUNT - 1] =
 {
     [HEAL_LOCATION_ARCHI_TOWN_ATHENAS_HOUSE - 1] = 1,
-    [HEAL_LOCATION_PETALBURG_CITY - 1] = 1,
+    [HEAL_LOCATION_DELPHI - 1] = 1,
     [HEAL_LOCATION_SLATEPORT_CITY - 1] = 1,
     [HEAL_LOCATION_ATHENS - 1] = 1,
     [HEAL_LOCATION_RUSTBORO_CITY - 1] = 1,

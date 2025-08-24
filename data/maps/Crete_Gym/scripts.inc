@@ -149,8 +149,8 @@ Crete_Gym_EventScript_BrawlyDefeated::
 	msgbox Crete_Gym_Text_KnuckleBadgeInfoTakeThis, MSGBOX_DEFAULT
 	setflag FLAG_DEFEATED_CRETE_GYM
 	setflag FLAG_BADGE02_GET
-	addvar VAR_PETALBURG_GYM_STATE, 1
-	call_if_eq VAR_PETALBURG_GYM_STATE, 6, Common_EventScript_ReadyPetalburgGymForBattle
+	addvar VAR_Delphi_GYM_STATE, 1
+	call_if_eq VAR_Delphi_GYM_STATE, 6, Common_EventScript_ReadyDelphiGymForBattle
 	setvar VAR_0x8008, 2
 	call Common_EventScript_SetGymTrainers
 	call Crete_Gym_EventScript_GiveBulkUp

@@ -9,15 +9,15 @@ const struct Tileset gTileset_General =
     .callback = InitTilesetAnim_General,
 };
 
-const struct Tileset gTileset_Petalburg =
+const struct Tileset gTileset_Delphi =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_Petalburg,
-    .palettes = gTilesetPalettes_Petalburg,
-    .metatiles = gMetatiles_Petalburg,
-    .metatileAttributes = gMetatileAttributes_Petalburg,
-    .callback = InitTilesetAnim_Petalburg,
+    .tiles = gTilesetTiles_Delphi,
+    .palettes = gTilesetPalettes_Delphi,
+    .metatiles = gMetatiles_Delphi,
+    .metatileAttributes = gMetatileAttributes_Delphi,
+    .callback = InitTilesetAnim_Delphi,
 };
 
 const struct Tileset gTileset_Rustboro =
@@ -493,14 +493,14 @@ const struct Tileset gTileset_Underwater =
     .callback = InitTilesetAnim_Underwater,
 };
 
-const struct Tileset gTileset_PetalburgGym =
+const struct Tileset gTileset_DelphiGym =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_PetalburgGym,
-    .palettes = gTilesetPalettes_PetalburgGym,
-    .metatiles = gMetatiles_PetalburgGym,
-    .metatileAttributes = gMetatileAttributes_PetalburgGym,
+    .tiles = gTilesetTiles_DelphiGym,
+    .palettes = gTilesetPalettes_DelphiGym,
+    .metatiles = gMetatiles_DelphiGym,
+    .metatileAttributes = gMetatileAttributes_DelphiGym,
     .callback = NULL,
 };
 

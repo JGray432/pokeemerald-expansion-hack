@@ -35,8 +35,8 @@ MtPyre_6F_EventScript_Hercules::
 	msgbox MtPyre_6F_Text_HerculesPostBattle, MSGBOX_AUTOCLOSE
 	waitmessage
 	fadescreenspeed FADE_TO_BLACK, 24
-	setvar VAR_PETALBURG_CITY_STATE, 2
-	setflag FLAG_HIDE_PETALBURG_CITY_WALLY
+	setvar VAR_DELPHI_STATE, 2
+	setflag FLAG_HIDE_DELPHI_WALLY
 	setflag FLAG_EVIL_TEAM01
 	removeobject LOCALID_HERCULES
 	fadescreenspeed FADE_FROM_BLACK, 24

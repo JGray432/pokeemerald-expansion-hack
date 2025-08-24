@@ -134,7 +134,7 @@ EverGrandeCity_ChampionsRoom_EventScript_BirchArrivesExitForHoF::
 	applymovement LOCALID_WALLACE, EverGrandeCity_ChampionsRoom_Movement_WallaceExit
 	applymovement OBJ_EVENT_ID_PLAYER, EverGrandeCity_ChampionsRoom_Movement_PlayerExit
 	waitmovement 0
-	setflag FLAG_HIDE_PETALBURG_GYM_GREETER
+	setflag FLAG_HIDE_Delphi_GYM_GREETER
 	warp MAP_EVER_GRANDE_CITY_HALL_OF_FAME, 7, 16
 	waitstate
 	releaseall
@@ -300,7 +300,7 @@ EverGrandeCity_ChampionsRoom_Text_BirchArriveRatePokedex:
 	.string "… … … … … … … …\n"
 	.string "{PLAYER}{KUN}, you've finally done it.\p"
 	.string "When I heard that you defeated your\n"
-	.string "own father at the PETALBURG GYM,\l"
+	.string "own father at the DELPHI GYM,\l"
 	.string "I thought perhaps you had a chance…\p"
 	.string "But to think you've actually become\n"
 	.string "the CHAMPION!\p"

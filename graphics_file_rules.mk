@@ -28,7 +28,7 @@ contest_types := cool beauty cute smart tough
 
 ### Tilesets ###
 
-$(TILESETGFXDIR)/secondary/petalburg/tiles.4bpp: %.4bpp: %.png
+$(TILESETGFXDIR)/secondary/DELPHI/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 159 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/rustboro/tiles.4bpp: %.4bpp: %.png
@@ -169,7 +169,7 @@ $(TILESETGFXDIR)/secondary/crete_gym/tiles.4bpp: %.4bpp: %.png
 $(TILESETGFXDIR)/secondary/lavaridge_gym/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 54 -Wnum_tiles
 
-$(TILESETGFXDIR)/secondary/petalburg_gym/tiles.4bpp: %.4bpp: %.png
+$(TILESETGFXDIR)/secondary/Delphi_gym/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 148 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/fortree_gym/tiles.4bpp: %.4bpp: %.png
