@@ -268,10 +268,27 @@ DionysusVineyard_EventScript_MiguelRematch::
 	msgbox DionysusVineyard_Text_MiguelRematchPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-DionysusVineyard_EventScript_Marcos::
-	trainerbattle_single TRAINER_DIONYSUS, DionysusVineyard_Text_MarcosIntro, DionysusVineyard_Text_MarcosDefeated
-	msgbox DionysusVineyard_Text_MarcosPostBattle, MSGBOX_AUTOCLOSE
-	setflag FLAG_BADGE01_GET
+DionysusVineyard_EventScript_Dionysus::
+	trainerbattle_single TRAINER_DIONYSUS, DionysusVineyard_Text_DionysusIntro, DionysusVineyard_Text_DionysusDefeated
+	goto DionysusVineyardPostDefeat	
+	end
+
+DionysusVineyardPostDefeat::
+	msgbox DionysusVineyard_Text_DionysusPostBattle, MSGBOX_AUTOCLOSE
+	message DionysusVineyard_Text_ReceivedGrapeBadge
+	waitmessage
+	call Common_EventScript_PlayGymBadgeFanfare
+	msgbox DionysusVineyard_Text_GrapeBadgeInfoTakeThis, MSGBOX_DEFAULT
+	setflag FLAG_BADGE01_GET	
+	goto DionysusVineyard_EventScript_GiveEchoedVoice
+	end	
+
+DionysusVineyard_EventScript_GiveEchoedVoice::
+	giveitem ITEM_TM_ECHOED_VOICE
+	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
+	setflag FLAG_RECEIVED_TM_ROCK_TOMB
+	msgbox DionysusVineyard_Text_ExplainEchoedVoice, MSGBOX_DEFAULT
+	release
 	end
 
 DionysusVineyard_EventScript_Rhett::
@@ -288,6 +305,22 @@ DionysusVineyard_EventScript_Isabelle::
 	trainerbattle_single TRAINER_ISABELLE, DionysusVineyard_Text_IsabelleIntro, DionysusVineyard_Text_IsabelleDefeated
 	msgbox DionysusVineyard_Text_IsabellePostBattle, MSGBOX_AUTOCLOSE
 	end
+
+DionysusVineyard_Text_ReceivedGrapeBadge:
+	.string "{PLAYER} received the GRAPE BADGE\n"
+	.string "from DIONYSUS.$"
+
+DionysusVineyard_Text_GrapeBadgeInfoTakeThis:
+	.string "DIONYSUS: The GRAPE BADGE is proof of\n"
+	.string "your triumph here today.\p"
+	.string "It also enables you to use the HM\n"
+	.string "CUT outside of battle.\p"
+	.string "I have one final gift for you, \n"
+	.string "my dear.$"
+
+DionysusVineyard_Text_ExplainEchoedVoice:
+	.string "DIONYSUS: Go, take this TM and project \n"
+	.string "your beautiful voice into the world!$"
 
 DionysusVineyard_Text_MayDionysusVineyardPokemon:
 	.string "MAY: Let's see… The POKéMON found\n"

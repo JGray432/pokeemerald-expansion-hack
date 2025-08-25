@@ -145,7 +145,7 @@
       "id": "LAYOUT_VERDANTURF_TOWN",
       "name": "VerdanturfTown_Layout",
       "width": 20,
-      "height": 20,
+      "height": 24,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Athens",
       "border_filepath": "data/layouts/VerdanturfTown/border.bin",
@@ -612,14 +612,14 @@
       "blockdata_filepath": "data/layouts/House3/map.bin"
     },
     {
-      "id": "LAYOUT_CRETE_GYM",
-      "name": "Crete_Gym_Layout",
+      "id": "LAYOUT_DELPHI_GYM",
+      "name": "Delphi_Gym_Layout",
       "width": 18,
       "height": 28,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_CreteGym",
-      "border_filepath": "data/layouts/Crete_Gym/border.bin",
-      "blockdata_filepath": "data/layouts/Crete_Gym/map.bin"
+      "secondary_tileset": "gTileset_DelphiGym",
+      "border_filepath": "data/layouts/Delphi_Gym/border.bin",
+      "blockdata_filepath": "data/layouts/Delphi_Gym/map.bin"
     },
     {
       "id": "LAYOUT_CRETE_HALL",
@@ -752,14 +752,14 @@
       "blockdata_filepath": "data/layouts/PacifidlogTown_House2/map.bin"
     },
     {
-      "id": "LAYOUT_DELPHI_GYM",
-      "name": "Delphi_Gym_Layout",
+      "id": "LAYOUT_LIMANI_GYM",
+      "name": "Limani_Gym_Layout",
       "width": 9,
       "height": 112,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_DelphiGym",
-      "border_filepath": "data/layouts/Delphi_Gym/border.bin",
-      "blockdata_filepath": "data/layouts/Delphi_Gym/map.bin"
+      "secondary_tileset": "gTileset_LimaniGym",
+      "border_filepath": "data/layouts/Limani_Gym/border.bin",
+      "blockdata_filepath": "data/layouts/Limani_Gym/map.bin"
     },
     {
       "id": "LAYOUT_HOUSE_WITH_BED",

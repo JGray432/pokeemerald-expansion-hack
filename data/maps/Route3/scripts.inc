@@ -74,6 +74,10 @@ Route3_EventScript_StartAthenaBattlePawniard::
 Route3_EventScript_AfterAthenaBattle:
 	msgbox Route3_Text_AthenaSendOff, MSGBOX_DEFAULT
 	closemessage
+	giveitem ITEM_HM_CUT
+	setflag FLAG_RECEIVED_HM_CUT
+	msgbox RustboroCity_CuttersHouse_Text_ExplainCut, MSGBOX_DEFAULT
+	release
 	applymovement LOCALID_ATHENA, Route3_Movement_AthenaExit
 	waitmovement 0
 	removeobject LOCALID_ATHENA

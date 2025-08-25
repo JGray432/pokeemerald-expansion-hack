@@ -83,6 +83,9 @@ VerdanturfTown_WandasHouse_EventScript_WallysAuntEverGrande::
 	end
 
 VerdanturfTown_WandasHouse_EventScript_ReceiveEevee::
+	lock
+	faceplayer
+	goto_if_set FLAG_RECEIVED_EEVEE, VerdanturfTown_WandasHouse_EventScript_ExplainEevee
 	msgbox VerdanturfTown_WandasHouse_Text_ThanksPleaseTakePokemon, MSGBOX_DEFAULT
 	setvar VAR_TEMP_TRANSFERRED_SPECIES, SPECIES_EEVEE
 	givemon SPECIES_EEVEE, 15

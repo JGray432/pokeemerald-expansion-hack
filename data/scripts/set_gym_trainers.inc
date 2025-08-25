@@ -1,10 +1,10 @@
 Common_EventScript_SetGymTrainers::
 	switch VAR_0x8008
 	case 1, RustboroCity_Gym_SetGymTrainers
-	case 2, Crete_Gym_SetGymTrainers
+	case 2, Delphi_Gym_SetGymTrainers
 	case 3, Athens_Gym_SetGymTrainers
 	case 4, LavaridgeTown_Gym_SetGymTrainers
-	case 5, Delphi_Gym_SetGymTrainers
+	case 5, Limani_Gym_SetGymTrainers
 	case 6, FortreeCity_Gym_SetGymTrainers
 	case 7, MossdeepCity_Gym_SetGymTrainers
 	case 8, SootopolisCity_Gym_SetGymTrainers
@@ -16,7 +16,7 @@ RustboroCity_Gym_SetGymTrainers::
 	settrainerflag TRAINER_MARC
 	return
 
-Crete_Gym_SetGymTrainers::
+Delphi_Gym_SetGymTrainers::
 	settrainerflag TRAINER_TAKAO
 	settrainerflag TRAINER_JOCELYN
 	settrainerflag TRAINER_LAURA
@@ -44,7 +44,7 @@ LavaridgeTown_Gym_SetGymTrainers::
 	settrainerflag TRAINER_ELI
 	return
 
-Delphi_Gym_SetGymTrainers::
+Limani_Gym_SetGymTrainers::
 	settrainerflag TRAINER_RANDALL
 	settrainerflag TRAINER_PARKER
 	settrainerflag TRAINER_GEORGE

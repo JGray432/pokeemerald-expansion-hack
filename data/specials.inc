@@ -163,8 +163,8 @@ gSpecials::
 	def_special DrawWholeMapView
 	def_special StorePlayerCoordsInVars
 	def_special AthensGymDeactivatePuzzle
-	def_special DelphiGymSlideOpenRoomDoors
-	def_special DelphiGymUnlockRoomDoors
+	def_special LimaniGymSlideOpenRoomDoors
+	def_special LimaniGymUnlockRoomDoors
 	def_special GetPlayerTrainerIdOnesDigit
 	def_special GetPlayerBigGuyGirlString
 	def_special GetRivalSonDaughterString

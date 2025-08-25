@@ -174,7 +174,7 @@ gStdScripts_End::
 	.include "data/maps/Crete_House1/scripts.inc"
 	.include "data/maps/Crete_PokemonCenter_1F/scripts.inc"
 	.include "data/maps/Crete_PokemonCenter_2F/scripts.inc"
-	.include "data/maps/Crete_Gym/scripts.inc"
+	.include "data/maps/Delphi_Gym/scripts.inc"
 	.include "data/maps/Crete_Hall/scripts.inc"
 	.include "data/maps/Crete_House2/scripts.inc"
 	.include "data/maps/LavaridgeTown_HerbShop/scripts.inc"
@@ -209,7 +209,7 @@ gStdScripts_End::
 	.include "data/maps/PacifidlogTown_House4/scripts.inc"
 	.include "data/maps/PacifidlogTown_House5/scripts.inc"
 	.include "data/maps/Delphi_WallysHouse/scripts.inc"
-	.include "data/maps/Delphi_Gym/scripts.inc"
+	.include "data/maps/Limani_Gym/scripts.inc"
 	.include "data/maps/Delphi_House1/scripts.inc"
 	.include "data/maps/Delphi_House2/scripts.inc"
 	.include "data/maps/Delphi_PokemonCenter_1F/scripts.inc"
@@ -666,7 +666,7 @@ EverGrandeCity_HallOfFame_EventScript_ResetEliteFour::
 
 Common_EventScript_UpdateBrineyLocation::
 	goto_if_unset FLAG_RECEIVED_POKENAV, Common_EventScript_NopReturn
-	goto_if_set FLAG_DEFEATED_Delphi_GYM, Common_EventScript_NopReturn
+	goto_if_set FLAG_DEFEATED_Limani_GYM, Common_EventScript_NopReturn
 	goto_if_unset FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT, EventScript_SetBrineyLocation_House
 	goto_if_unset FLAG_HIDE_MR_BRINEY_CRETE, EventScript_SetBrineyLocation_Crete
 	goto_if_unset FLAG_HIDE_ROUTE_3_MR_BRINEY, EventScript_SetBrineyLocation_Route3
@@ -704,8 +704,8 @@ Common_ShowEasyChatScreen::
 	fadescreen FADE_FROM_BLACK
 	return
 
-Common_EventScript_ReadyDelphiGymForBattle::
-	clearflag FLAG_HIDE_Delphi_GYM_GREETER
+Common_EventScript_ReadyLimaniGymForBattle::
+	clearflag FLAG_HIDE_Limani_GYM_GREETER
 	setflag FLAG_Delphi_MART_EXPANDED_ITEMS
 	return
 

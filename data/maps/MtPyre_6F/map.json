@@ -51,7 +51,7 @@
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "MtPyre_6F_EventScript_Hercules",
-      "flag": "FLAG_HIDE_DELPHI_WALLY"
+      "flag": "FLAG_HIDE_DELPHI_GYM_BLOCKER"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BREAKABLE_ROCK",

@@ -772,7 +772,7 @@
 #define FLAG_HIDE_DIONYSUS_VINEYARD_RIVAL                                   0x2D3
 #define FLAG_HIDE_ENTOMO_WOODS_DEVON_EMPLOYEE                    0x2D4
 #define FLAG_HIDE_ENTOMO_WOODS_AQUA_GRUNT                        0x2D5
-#define FLAG_HIDE_DELPHI_WALLY                              0x2D6
+#define FLAG_HIDE_DELPHI_GYM_BLOCKER                              0x2D6
 #define FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_INVISIBLE_NINJA_BOY   0x2D7
 #define FLAG_HIDE_DELPHI_WALLYS_MOM                         0x2D8
 
@@ -820,7 +820,7 @@
 #define FLAG_HIDE_ROUTE_111_VICTORIA_WINSTRATE                      0x301
 #define FLAG_HIDE_ROUTE_111_VIVI_WINSTRATE                          0x302
 #define FLAG_HIDE_ROUTE_111_VICKY_WINSTRATE                         0x303
-#define FLAG_HIDE_Delphi_GYM_NORMAN                              0x304
+#define FLAG_HIDE_Limani_GYM_NORMAN                              0x304
 #define FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA                           0x305
 #define FLAG_HIDE_LILYCOVE_CONTEST_HALL_CONTEST_ATTENDANT_1         0x306
 #define FLAG_HIDE_LILYCOVE_MUSEUM_CURATOR                           0x307
@@ -829,7 +829,7 @@
 #define FLAG_HIDE_LILYCOVE_MUSEUM_PATRON_3                          0x30A
 #define FLAG_HIDE_LILYCOVE_MUSEUM_PATRON_4                          0x30B
 #define FLAG_HIDE_LILYCOVE_MUSEUM_TOURISTS                          0x30C
-#define FLAG_HIDE_Delphi_GYM_GREETER                             0x30D
+#define FLAG_HIDE_Limani_GYM_GREETER                             0x30D
 #define FLAG_HIDE_MARINE_CAVE_KYOGRE                                0x30E
 #define FLAG_HIDE_TERRA_CAVE_GROUDON                                0x30F
 #define FLAG_HIDE_ARCHI_TOWN_BRENDANS_HOUSE_RIVAL_MOM          0x310
@@ -1043,7 +1043,7 @@
 #define FLAG_HIDE_WEATHER_INSTITUTE_2F_AQUA_GRUNT_M                 0x3E0
 #define FLAG_HIDE_LILYCOVE_POKEMON_CENTER_CONTEST_LADY_MON          0x3E1
 #define FLAG_HIDE_MT_CHIMNEY_LAVA_COOKIE_LADY                       0x3E2
-#define FLAG_HIDE_DELPHI_SCOTT                              0x3E3
+#define FLAG_HIDE_DELPHI_ARGONAUTS                              0x3E3
 #define FLAG_HIDE_SOOTOPOLIS_CITY_RAYQUAZA                          0x3E4
 #define FLAG_HIDE_SOOTOPOLIS_CITY_KYOGRE                            0x3E5
 #define FLAG_HIDE_SOOTOPOLIS_CITY_GROUDON                           0x3E6
@@ -1317,10 +1317,10 @@
 #define FLAG_UNUSED_0x4EF                                           0x4EF // Unused Flag
 
 #define FLAG_DEFEATED_RUSTBORO_GYM                                  0x4F0
-#define FLAG_DEFEATED_CRETE_GYM                                   0x4F1
+#define FLAG_DEFEATED_DELPHI_GYM                                   0x4F1
 #define FLAG_DEFEATED_ATHENS_GYM                                  0x4F2
 #define FLAG_DEFEATED_LAVARIDGE_GYM                                 0x4F3
-#define FLAG_DEFEATED_Delphi_GYM                                 0x4F4
+#define FLAG_DEFEATED_Limani_GYM                                 0x4F4
 #define FLAG_DEFEATED_FORTREE_GYM                                   0x4F5
 #define FLAG_DEFEATED_MOSSDEEP_GYM                                  0x4F6
 #define FLAG_DEFEATED_SOOTOPOLIS_GYM                                0x4F7

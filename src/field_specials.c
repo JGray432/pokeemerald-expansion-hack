@@ -107,8 +107,8 @@ u16 GetNumFansOfPlayerInTrainerFanClub(void);
 
 static void RecordCyclingRoadResults(u32, u8);
 static void LoadLinkPartnerObjectEventSpritePalette(u16, u8, u8);
-static void Task_DelphiGymSlideOpenRoomDoors(u8);
-static void DelphiGymSetDoorMetatiles(u8, u16);
+static void Task_LimaniGymSlideOpenRoomDoors(u8);
+static void LimaniGymSetDoorMetatiles(u8, u16);
 static void Task_PCTurnOnEffect(u8);
 static void PCTurnOnEffect(struct Task *);
 static void PCTurnOnEffect_SetMetatile(s16, s8, s8);
@@ -803,29 +803,29 @@ void AthensGymDeactivatePuzzle(void)
 
 static const bool8 sSlidingDoorNextFrameDelay[] = {0, 1, 1, 1, 1};
 
-static const u16 sDelphiGymSlidingDoorMetatiles[] = {
-    METATILE_DelphiGym_SlidingDoor_Frame0,
-    METATILE_DelphiGym_SlidingDoor_Frame1,
-    METATILE_DelphiGym_SlidingDoor_Frame2,
-    METATILE_DelphiGym_SlidingDoor_Frame3,
-    METATILE_DelphiGym_SlidingDoor_Frame4,
+static const u16 sLimaniGymSlidingDoorMetatiles[] = {
+    METATILE_LimaniGym_SlidingDoor_Frame0,
+    METATILE_LimaniGym_SlidingDoor_Frame1,
+    METATILE_LimaniGym_SlidingDoor_Frame2,
+    METATILE_LimaniGym_SlidingDoor_Frame3,
+    METATILE_LimaniGym_SlidingDoor_Frame4,
 };
 
-void DelphiGymSlideOpenRoomDoors(void)
+void LimaniGymSlideOpenRoomDoors(void)
 {
     sSlidingDoorNextFrameCounter = 0;
     sSlidingDoorFrame = 0;
     PlaySE(SE_UNLOCK);
-    CreateTask(Task_DelphiGymSlideOpenRoomDoors, 8);
+    CreateTask(Task_LimaniGymSlideOpenRoomDoors, 8);
 }
 
-static void Task_DelphiGymSlideOpenRoomDoors(u8 taskId)
+static void Task_LimaniGymSlideOpenRoomDoors(u8 taskId)
 {
     if (sSlidingDoorNextFrameDelay[sSlidingDoorFrame] == sSlidingDoorNextFrameCounter)
     {
-        DelphiGymSetDoorMetatiles(gSpecialVar_0x8004, sDelphiGymSlidingDoorMetatiles[sSlidingDoorFrame]);
+        LimaniGymSetDoorMetatiles(gSpecialVar_0x8004, sLimaniGymSlidingDoorMetatiles[sSlidingDoorFrame]);
         sSlidingDoorNextFrameCounter = 0;
-        if ((++sSlidingDoorFrame) == ARRAY_COUNT(sDelphiGymSlidingDoorMetatiles))
+        if ((++sSlidingDoorFrame) == ARRAY_COUNT(sLimaniGymSlidingDoorMetatiles))
         {
             DestroyTask(taskId);
             ScriptContext_Enable();
@@ -837,7 +837,7 @@ static void Task_DelphiGymSlideOpenRoomDoors(u8 taskId)
     }
 }
 
-static void DelphiGymSetDoorMetatiles(u8 roomNumber, u16 metatileId)
+static void LimaniGymSetDoorMetatiles(u8 roomNumber, u16 metatileId)
 {
     u16 doorCoordsX[4];
     u16 doorCoordsY[4];
@@ -902,9 +902,9 @@ static void DelphiGymSetDoorMetatiles(u8 roomNumber, u16 metatileId)
     DrawWholeMapView();
 }
 
-void DelphiGymUnlockRoomDoors(void)
+void LimaniGymUnlockRoomDoors(void)
 {
-    DelphiGymSetDoorMetatiles(gSpecialVar_0x8004, sDelphiGymSlidingDoorMetatiles[4]);
+    LimaniGymSetDoorMetatiles(gSpecialVar_0x8004, sLimaniGymSlidingDoorMetatiles[4]);
 }
 
 void ShowFieldMessageStringVar4(void)

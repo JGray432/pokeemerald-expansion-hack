@@ -165,7 +165,7 @@ static const match_call_text_data_t sMrStoneTextScripts[] = {
     { MatchCall_Text_MrStone3,  FLAG_DELIVERED_STEVEN_LETTER,        0xFFFF },
     { MatchCall_Text_MrStone4,  FLAG_RECEIVED_EXP_SHARE,             0xFFFF },
     { MatchCall_Text_MrStone5,  FLAG_RECEIVED_HM_STRENGTH,           0xFFFF },
-    { MatchCall_Text_MrStone6,  FLAG_DEFEATED_Delphi_GYM,         0xFFFF },
+    { MatchCall_Text_MrStone6,  FLAG_DEFEATED_Limani_GYM,         0xFFFF },
     { MatchCall_Text_MrStone7,  FLAG_RECEIVED_EEVEE,              0xFFFF },
     { MatchCall_Text_MrStone8,  FLAG_GROUDON_AWAKENED_MAGMA_HIDEOUT, 0xFFFF },
     { MatchCall_Text_MrStone9,  FLAG_TEAM_AQUA_ESCAPED_IN_SUBMARINE, 0xFFFF },
@@ -186,9 +186,9 @@ static const struct MatchCallStructNPC sMrStoneMatchCallHeader =
 
 static const match_call_text_data_t sNormanTextScripts[] = {
     { MatchCall_Text_Norman1, FLAG_ENABLE_NORMAN_MATCH_CALL, 0xFFFF },
-    { MatchCall_Text_Norman2, FLAG_DEFEATED_CRETE_GYM,     0xFFFF },
+    { MatchCall_Text_Norman2, FLAG_DEFEATED_DELPHI_GYM,     0xFFFF },
     { MatchCall_Text_Norman3, FLAG_DEFEATED_LAVARIDGE_GYM,   0xFFFF },
-    { MatchCall_Text_Norman4, FLAG_DEFEATED_Delphi_GYM,   0xFFFF },
+    { MatchCall_Text_Norman4, FLAG_DEFEATED_Limani_GYM,   0xFFFF },
     { MatchCall_Text_Norman5, FLAG_RECEIVED_RED_OR_BLUE_ORB, 0xFFFF },
     { MatchCall_Text_Norman6, 0xFFFE,                        0xFFFF },
     { MatchCall_Text_Norman7, FLAG_SYS_GAME_CLEAR,           0xFFFF },
@@ -219,7 +219,7 @@ static const struct MatchCallBirch sProfBirchMatchCallHeader =
 
 static const match_call_text_data_t sMomTextScripts[] = {
     { MatchCall_Text_Mom1, 0xFFFF,                      0xFFFF },
-    { MatchCall_Text_Mom2, FLAG_DEFEATED_Delphi_GYM, 0xFFFF },
+    { MatchCall_Text_Mom2, FLAG_DEFEATED_Limani_GYM, 0xFFFF },
     { MatchCall_Text_Mom3, FLAG_SYS_GAME_CLEAR,         0xFFFF },
     { NULL,                0xFFFF,                      0xFFFF }
 };
@@ -259,12 +259,12 @@ static const u8 gText_MayBrendanMatchCallDesc[] = _("RAD NEIGHBOR");
 
 static const match_call_text_data_t sMayTextScripts[] = {
     { MatchCall_Text_May1,  0xFFFF,                              0xFFFF },
-    { MatchCall_Text_May2,  FLAG_DEFEATED_CRETE_GYM,           0xFFFF },
+    { MatchCall_Text_May2,  FLAG_DEFEATED_DELPHI_GYM,           0xFFFF },
     { MatchCall_Text_May3,  FLAG_DELIVERED_DEVON_GOODS,          0xFFFF },
     { MatchCall_Text_May4,  FLAG_HIDE_ATHENS_WALLY,       0xFFFF },
     { MatchCall_Text_May5,  FLAG_RECEIVED_HM_STRENGTH,           0xFFFF },
     { MatchCall_Text_May6,  FLAG_DEFEATED_LAVARIDGE_GYM,         0xFFFF },
-    { MatchCall_Text_May7,  FLAG_DEFEATED_Delphi_GYM,         0xFFFF },
+    { MatchCall_Text_May7,  FLAG_DEFEATED_Limani_GYM,         0xFFFF },
     { MatchCall_Text_May8,  FLAG_RECEIVED_EEVEE,              0xFFFF },
     { MatchCall_Text_May9,  FLAG_RECEIVED_RED_OR_BLUE_ORB,       0xFFFF },
     { MatchCall_Text_May10, FLAG_GROUDON_AWAKENED_MAGMA_HIDEOUT, 0xFFFF },
@@ -288,12 +288,12 @@ static const struct MatchCallRival sMayMatchCallHeader =
 
 static const match_call_text_data_t sBrendanTextScripts[] = {
     { MatchCall_Text_Brendan1,  0xFFFF,                              0xFFFF },
-    { MatchCall_Text_Brendan2,  FLAG_DEFEATED_CRETE_GYM,           0xFFFF },
+    { MatchCall_Text_Brendan2,  FLAG_DEFEATED_DELPHI_GYM,           0xFFFF },
     { MatchCall_Text_Brendan3,  FLAG_DELIVERED_DEVON_GOODS,          0xFFFF },
     { MatchCall_Text_Brendan4,  FLAG_HIDE_ATHENS_WALLY,       0xFFFF },
     { MatchCall_Text_Brendan5,  FLAG_RECEIVED_HM_STRENGTH,           0xFFFF },
     { MatchCall_Text_Brendan6,  FLAG_DEFEATED_LAVARIDGE_GYM,         0xFFFF },
-    { MatchCall_Text_Brendan7,  FLAG_DEFEATED_Delphi_GYM,         0xFFFF },
+    { MatchCall_Text_Brendan7,  FLAG_DEFEATED_Limani_GYM,         0xFFFF },
     { MatchCall_Text_Brendan8,  FLAG_RECEIVED_EEVEE,              0xFFFF },
     { MatchCall_Text_Brendan9,  FLAG_RECEIVED_RED_OR_BLUE_ORB,       0xFFFF },
     { MatchCall_Text_Brendan10, FLAG_GROUDON_AWAKENED_MAGMA_HIDEOUT, 0xFFFF },
