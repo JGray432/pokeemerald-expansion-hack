@@ -18,10 +18,10 @@ RustboroCity_Gym_EventScript_RoxanneDefeated::
 	setflag FLAG_DEFEATED_RUSTBORO_GYM
 	setflag FLAG_BADGE01_GET
 	setvar VAR_RUSTBORO_CITY_STATE, 1
-	addvar VAR_Limani_GYM_STATE, 1
+	addvar VAR_Delphi_GYM_STATE, 1
 	setvar VAR_0x8008, 1
 	call Common_EventScript_SetGymTrainers
-	call_if_eq VAR_Limani_GYM_STATE, 6, Common_EventScript_ReadyLimaniGymForBattle
+	call_if_eq VAR_Delphi_GYM_STATE, 6, Common_EventScript_ReadyDelphiGymForBattle
 	goto RustboroCity_Gym_EventScript_GiveRockTomb
 	end
 

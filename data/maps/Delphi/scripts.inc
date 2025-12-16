@@ -17,7 +17,7 @@ Delphi_OnTransition:
 	call_if_eq VAR_DELPHI_STATE, 0, Delphi_EventScript_MoveGymBoyToWestEntrance
 	call_if_eq VAR_DELPHI_STATE, 2, Delphi_EventScript_DisableMapNameAndMusic
 	call_if_eq VAR_DELPHI_STATE, 4, Delphi_EventScript_DisableMapNameAndMusic
-	call_if_eq VAR_Limani_GYM_STATE, 8, Delphi_EventScript_SetGymDoorsUnlocked
+	call_if_eq VAR_Delphi_GYM_STATE, 8, Delphi_EventScript_SetGymDoorsUnlocked
 	end
 
 Delphi_EventScript_MoveGymBoyToWestEntrance::
@@ -30,7 +30,7 @@ Delphi_EventScript_DisableMapNameAndMusic::
 	return
 
 Delphi_EventScript_SetGymDoorsUnlocked::
-	setvar VAR_Limani_GYM_STATE, 7
+	setvar VAR_Delphi_GYM_STATE, 7
 	return
 
 Delphi_OnFrame:
@@ -58,8 +58,8 @@ Delphi_EventScript_WallyTutorial::
 	fadedefaultbgm
 	clearflag FLAG_DONT_TRANSITION_MUSIC
 	special LoadPlayerParty
-	setvar VAR_Limani_GYM_STATE, 1
-	warp MAP_LIMANI_GYM, 4, 108
+	setvar VAR_Delphi_GYM_STATE, 1
+	warp MAP_DELPHI_GYM, 4, 108
 	waitstate
 	releaseall
 	end
@@ -154,7 +154,7 @@ Delphi_EventScript_ArgonautsGoToTower::
 	applymovement LOCALID_ARGONAUT_4, Delphi_Movement_WalkToTower
 	waitmovement 0
 	setvar VAR_DELPHI_STATE, 1
-	setflag FLAG_HIDE_DELPHI_ARGONAUTS
+	setflag FLAG_HIDE_DELPHI_SCOTT
 	release
 	end
 
@@ -350,7 +350,7 @@ Delphi_EventScript_ShowGymToPlayer::
 	call_if_eq VAR_0x8008, 1, Delphi_EventScript_LeadPlayerToGym1
 	call_if_eq VAR_0x8008, 2, Delphi_EventScript_LeadPlayerToGym2
 	call_if_eq VAR_0x8008, 3, Delphi_EventScript_LeadPlayerToGym3
-	msgbox Delphi_Text_ThisIsLimaniGym, MSGBOX_DEFAULT
+	msgbox Delphi_Text_ThisIsDelphiGym, MSGBOX_DEFAULT
 	applymovement LOCALID_GYM_BOY, Common_Movement_WalkInPlaceFasterRight
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
 	waitmovement 0
@@ -784,7 +784,7 @@ Delphi_Text_AreYouRookieTrainer:
 	.string "They first check what kind of GYM\n"
 	.string "is in the town.$"
 
-Delphi_Text_ThisIsLimaniGym:
+Delphi_Text_ThisIsDelphiGym:
 	.string "See? This is DELPHI's GYM.$"
 
 Delphi_Text_ThisIsGymSign:

@@ -36,7 +36,7 @@ MtPyre_6F_EventScript_Hercules::
 	waitmessage
 	fadescreenspeed FADE_TO_BLACK, 24
 	setvar VAR_DELPHI_STATE, 2
-	setflag FLAG_HIDE_DELPHI_GYM_BLOCKER
+	setflag FLAG_HIDE_DELPHI_WALLY
 	setflag FLAG_EVIL_TEAM01
 	removeobject LOCALID_HERCULES
 	fadescreenspeed FADE_FROM_BLACK, 24

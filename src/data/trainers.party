@@ -1483,7 +1483,6 @@ Double Battle: No
 AI: Basic Trainer
 
 Furret @ Eject Button
-Level: 25
 Ability: Keen Eye
 Nature: Impish
 - Follow Me
@@ -1492,7 +1491,6 @@ Nature: Impish
 - Sucker Punch
 
 Clodsire @ Weakness Policy
-Level: 26
 Ability: Poison Point
 Nature: Adamant
 - Poison Jab
@@ -1510,7 +1508,6 @@ Double Battle: No
 AI: Basic Trainer
 
 Slowpoke-Galar @ Eviolite
-Level: 25
 Ability: Gluttony
 Nature: Impish
 - Trick Room
@@ -1519,7 +1516,6 @@ Nature: Impish
 - Yawn
 
 Shiinotic @ Big Root
-Level: 26
 Ability: Effect Spore
 Nature: Modest
 - Spore
@@ -1545,15 +1541,6 @@ Nature: Bold
 - Hypnosis
 - Energy Ball
 
-Charmeleon @ Liechi Berry
-Level: 26
-Ability: Solar Power
-Nature: Modest
-- Weather Ball
-- Ancient Power
-- Natural Gift
-- Dragon Pulse
-
 === TRAINER_HOLLY ===
 Name: HOLLY
 Class: Lady
@@ -1564,7 +1551,6 @@ Double Battle: No
 AI: Basic Trainer
 
 Ivysaur @ Occa Berry
-Level: 25
 Ability: Chlorophyll
 Nature: Modest
 - Solarbeam
@@ -1573,7 +1559,6 @@ Nature: Modest
 - Growth
 
 Tropius @ Sitrus Berry
-Level: 26
 Ability: Harvest
 Nature: Modest
 - Solarbeam
@@ -1587,7 +1572,7 @@ Class: Leader
 Pic: Leader Tate And Liza
 Gender: Male
 Music: Aqua
-Double Battle: Yes
+Double Battle: No
 AI: Basic Trainer
 
 Whimsicott @ Focus Sash

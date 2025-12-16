@@ -10519,18 +10519,19 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_ROAR,
     },
 
-    [ITEM_TM_ECHOED_VOICE] =
+    [ITEM_TM_TOXIC] =
     {
         .name = _("TM06"),
         .price = 3000,
         .description = COMPOUND_STRING(
-            "The user shouts\n"
-            "with growing power."),
+            "Poisons the foe\n"
+            "with a toxin that\n"
+            "gradually worsens."),
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_ECHOED_VOICE,
+        .secondaryId = MOVE_TOXIC,
     },
 
     [ITEM_TM_HAIL] =

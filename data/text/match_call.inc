@@ -2025,7 +2025,7 @@ MatchCall_Text_Mom1::
 MatchCall_Text_Mom2::
 	.string "MOM: Hi, {PLAYER}!\n"
 	.string "Your father keeps himself locked\l"
-	.string "away in the LIMANI GYM.\p"
+	.string "away in the DELPHI GYM.\p"
 	.string "He comes home every so often.\n"
 	.string "But he goes back to the GYM when\l"
 	.string "he's eaten everything he can.\p"
@@ -2766,7 +2766,7 @@ MatchCall_Text_Norman8::
 	.string "What good timing!\p"
 	.string "This time, I'm going to challenge\n"
 	.string "you to battle.\p"
-	.string "I'm waiting in the LIMANI GYM.\n"
+	.string "I'm waiting in the DELPHI GYM.\n"
 	.string "Accept my challenge anytime!$"
 
 MatchCall_Text_Norman9::

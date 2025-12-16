@@ -232,26 +232,17 @@ DionysusVineyard_Text_RhettPostBattle:
 	.string "Do you like cramped quarters\n"
 	.string "like this?$"
 
-DionysusVineyard_Text_DionysusIntro:
-	.string "DIONYSUS: Hey, {PLAYER}!\p"
-	.string "Thanks again for saving the show \n"
-	.string "last night, it might have been our \l"
-	.string "best performance yet! \p"
-	.string "Let's hope the Athens Times agrees... \p"
-	.string "Anyway, don't think that your help means \n"
-	.string "I'll be going easy on you. \p"
-	.string "Time for my dazzling solo act! $" 
+DionysusVineyard_Text_MarcosIntro:
+	.string "Did my guitar's wailing draw you in?$"
 
-DionysusVineyard_Text_DionysusDefeated:
-	.string "Out, brief candle…$"
+DionysusVineyard_Text_MarcosDefeated:
+	.string "My one-man show is ruined…$"
 
-DionysusVineyard_Text_DionysusPostBattle:
-	.string "And that, ladies and gentlemen \n"
-	.string "is curtains. \p"
-	.string "Tremendous, darling!\n"
-	.string "And you weren't half bad either!\p"
-	.string "All jokes aside, you have fully \n"
-	.string "earned this badge.$"
+DionysusVineyard_Text_MarcosPostBattle:
+	.string "I was playing my guitar where few\n"
+	.string "people were around, but a lot of fans\l"
+	.string "have gathered.\p"
+	.string "Heh, maybe I should turn pro.$"
 
 Route104_Text_GinaIntro:
 	.string "GINA: Okay, let's battle with our\n"
