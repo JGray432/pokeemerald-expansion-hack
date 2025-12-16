@@ -1,9 +1,9 @@
 {
-  "id": "MAP_ROUTE4",
-  "name": "Route4",
-  "layout": "LAYOUT_ROUTE4",
+  "id": "MAP_ROUTE108",
+  "name": "Route108",
+  "layout": "LAYOUT_ROUTE108",
   "music": "MUS_ROUTE104",
-  "region_map_section": "MAPSEC_ROUTE_4",
+  "region_map_section": "MAPSEC_ROUTE_108",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
   "map_type": "MAP_TYPE_ROUTE",
@@ -14,7 +14,7 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
-      "map": "MAP_ROUTE5",
+      "map": "MAP_ROUTE107",
       "offset": 0,
       "direction": "left"
     },
@@ -35,7 +35,7 @@
       "movement_range_y": 3,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "Route4_EventScript_Jerome",
+      "script": "Route108_EventScript_Jerome",
       "flag": "0"
     },
     {
@@ -48,7 +48,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "Route4_EventScript_Tara",
+      "script": "Route108_EventScript_Tara",
       "flag": "0"
     },
     {
@@ -61,7 +61,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "Route4_EventScript_Matthew",
+      "script": "Route108_EventScript_Matthew",
       "flag": "0"
     },
     {
@@ -74,7 +74,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "Route4_EventScript_Missy",
+      "script": "Route108_EventScript_Missy",
       "flag": "0"
     },
     {
@@ -87,7 +87,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "Route4_EventScript_Carolina",
+      "script": "Route108_EventScript_Carolina",
       "flag": "0"
     },
     {
@@ -100,7 +100,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "Route4_EventScript_Cory",
+      "script": "Route108_EventScript_Cory",
       "flag": "0"
     },
     {
@@ -114,7 +114,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "ITEM_STAR_PIECE",
       "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_ITEM_ROUTE_4_STAR_PIECE"
+      "flag": "FLAG_ITEM_ROUTE_108_STAR_PIECE"
     }
   ],
   "warp_events": [
@@ -136,7 +136,7 @@
       "y": 14,
       "elevation": 3,
       "item": "ITEM_RARE_CANDY",
-      "flag": "FLAG_HIDDEN_ITEM_ROUTE_4_RARE_CANDY"
+      "flag": "FLAG_HIDDEN_ITEM_ROUTE_108_RARE_CANDY"
     }
   ]
 }

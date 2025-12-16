@@ -22,9 +22,9 @@
 #define MAPSEC_DIONYSUS_VINEYARD                    0x12
 #define MAPSEC_ROUTE_104                    0x13
 #define MAPSEC_ROUTE_105                    0x14
-#define MAPSEC_ROUTE_6                    0x15
-#define MAPSEC_ROUTE_5                    0x16
-#define MAPSEC_ROUTE_4                    0x17
+#define MAPSEC_ROUTE_106                    0x15
+#define MAPSEC_ROUTE_107                    0x16
+#define MAPSEC_ROUTE_108                    0x17
 #define MAPSEC_ROUTE_3                    0x18
 #define MAPSEC_ROUTE_110                    0x19
 #define MAPSEC_ROUTE_111                    0x1A
@@ -102,6 +102,9 @@
 #define MAPSEC_SAFFRON_CITY                 0x62
 #define MAPSEC_ROUTE_4_POKECENTER           0x63
 #define MAPSEC_ROUTE_10_POKECENTER          0x64
+#define MAPSEC_ROUTE_4                      0x68
+#define MAPSEC_ROUTE_5                      0x69
+#define MAPSEC_ROUTE_6                      0x6A
 #define MAPSEC_ROUTE_7                      0x6B
 #define MAPSEC_ROUTE_8                      0x6C
 #define MAPSEC_ROUTE_9                      0x6D

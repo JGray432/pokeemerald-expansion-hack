@@ -2080,8 +2080,8 @@
           }
         },
         {
-          "map": "MAP_ROUTE6",
-          "base_label": "gRoute6",
+          "map": "MAP_ROUTE106",
+          "base_label": "gRoute106",
           "land_mons": {
             "encounter_rate": 10,
             "mons": [
@@ -2184,8 +2184,8 @@
           }
         },
         {
-          "map": "MAP_ROUTE5",
-          "base_label": "gRoute5",
+          "map": "MAP_ROUTE107",
+          "base_label": "gRoute107",
           "water_mons": {
             "encounter_rate": 4,
             "mons": [
@@ -2238,8 +2238,8 @@
           }
         },
         {
-          "map": "MAP_ROUTE4",
-          "base_label": "gRoute4",
+          "map": "MAP_ROUTE108",
+          "base_label": "gRoute108",
           "water_mons": {
             "encounter_rate": 4,
             "mons": [

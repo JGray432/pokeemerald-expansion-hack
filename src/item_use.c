@@ -1669,21 +1669,6 @@ void ItemUseOutOfBattle_NectarReserves(u8 taskId)
         else
             DisplayItemMessageOnField(taskId, gText_WontHaveEffect, Task_CloseCantUseKeyItemMessage);
     }
-}
-
-static void ItemUseOnFieldCB_TheSack(u8 taskId)
-{
-    LockPlayerFieldControls();
-    ScriptContext_SetupScript(EventScript_PC);
-    DestroyTask(taskId);
-}
-
-void ItemUseOutOfBattle_TheSack(u8 taskId)
-{
-   sItemUseOnFieldCB = ItemUseOnFieldCB_TheSack;
-        gFieldCallback = FieldCB_UseItemOnField;
-        gBagMenu->newScreenCallback = CB2_ReturnToField;
-        Task_FadeAndCloseBagMenu(taskId);
-}
+    }
 
 #undef tUsingRegisteredKeyItem

@@ -1,9 +1,9 @@
 {
-  "id": "MAP_ROUTE6",
-  "name": "Route6",
-  "layout": "LAYOUT_ROUTE6",
+  "id": "MAP_ROUTE106",
+  "name": "Route106",
+  "layout": "LAYOUT_ROUTE106",
   "music": "MUS_ROUTE104",
-  "region_map_section": "MAPSEC_ROUTE_6",
+  "region_map_section": "MAPSEC_ROUTE_106",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
   "map_type": "MAP_TYPE_ROUTE",
@@ -35,7 +35,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "Route6_EventScript_Elliot",
+      "script": "Route106_EventScript_Elliot",
       "flag": "0"
     },
     {
@@ -48,7 +48,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "Route6_EventScript_Ned",
+      "script": "Route106_EventScript_Ned",
       "flag": "0"
     },
     {
@@ -62,7 +62,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "ITEM_CLEAR_AMULET",
       "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_ITEM_ROUTE_6_PROTEIN"
+      "flag": "FLAG_ITEM_ROUTE_106_PROTEIN"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_TUBER_M",
@@ -74,7 +74,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "Route6_EventScript_Douglas",
+      "script": "Route106_EventScript_Douglas",
       "flag": "0"
     },
     {
@@ -87,7 +87,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "5",
-      "script": "Route6_EventScript_Kyla_BackToBack",
+      "script": "Route106_EventScript_Kyla_BackToBack",
       "flag": "0"
     }
   ],

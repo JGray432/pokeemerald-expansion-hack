@@ -14157,19 +14157,4 @@ const struct Item gItemsInfo[] =
     .iconPic = gItemIcon_Honey,
     .iconPalette = gItemIconPalette_Honey,
 },
-
-[ITEM_THE_SACK] =
-{
-    .name = _("The Sack"),
-    .price = 0,
-    .description = COMPOUND_STRING(
-        "A safe place to store \n"
-        "non party members."),
-    .importance = TRUE,
-    .pocket = POCKET_KEY_ITEMS,
-    .type = ITEM_USE_FIELD,
-    .fieldUseFunc = ItemUseOutOfBattle_TheSack,
-    .iconPic = gItemIcon_Honey,
-    .iconPalette = gItemIconPalette_Honey,
-},
 };
