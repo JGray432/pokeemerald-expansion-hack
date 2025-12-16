@@ -942,18 +942,6 @@ void ItemUseOutOfBattle_Repel(u8 taskId)
         DisplayItemMessageInBattlePyramid(taskId, gText_RepelEffectsLingered, Task_CloseBattlePyramidBagMessage);
 }
 
-void ItemUseOutOfBattle_InfRepel(u8 taskId)
-{
-    if (VAR_INF_REPEL_ON)
-        gTasks[taskId].func = Task_StartUseInfRepel;
-    else if (!VAR_INF_REPEL_ON)
-        gTasks[taskId].func = Task_StopUseInfRepel;
-    else if (!InBattlePyramid())
-        DisplayItemMessage(taskId, FONT_NORMAL, gText_RepelEffectsLingered, CloseItemMessage);
-    else
-        DisplayItemMessageInBattlePyramid(taskId, gText_RepelEffectsLingered, Task_CloseBattlePyramidBagMessage);
-}
-
 static void Task_StartUseRepel(u8 taskId)
 {
     s16 *data = gTasks[taskId].data;
@@ -966,30 +954,6 @@ static void Task_StartUseRepel(u8 taskId)
     }
 }
 
-static void Task_StartUseInfRepel(u8 taskId)
-{
-    s16 *data = gTasks[taskId].data;
-
-    if (++data[8] > 7)
-    {
-        data[8] = 0;
-        PlaySE(SE_REPEL);
-        gTasks[taskId].func = Task_UseInfRepel;
-    }
-}
-
-static void Task_StopUseInfRepel(u8 taskId)
-{
-    s16 *data = gTasks[taskId].data;
-
-    if (++data[8] > 7)
-    {
-        data[8] = 0;
-        PlaySE(SE_REPEL);
-        gTasks[taskId].func = Task_StopUseInfRepel;
-    }
-}
-
 static void Task_UseRepel(u8 taskId)
 {
     if (!IsSEPlaying())
@@ -999,36 +963,6 @@ static void Task_UseRepel(u8 taskId)
         VarSet(VAR_LAST_REPEL_LURE_USED, gSpecialVar_ItemId);
     #endif
         RemoveUsedItem();
-        if (!InBattlePyramid())
-            DisplayItemMessage(taskId, FONT_NORMAL, gStringVar4, CloseItemMessage);
-        else
-            DisplayItemMessageInBattlePyramid(taskId, gStringVar4, Task_CloseBattlePyramidBagMessage);
-    }
-}
-
-static void Task_UseInfRepel(u8 taskId)
-{
-    if (!IsSEPlaying())
-    {
-        VarSet(VAR_INF_REPEL_ON, TRUE);
-    #if VAR_LAST_REPEL_LURE_USED != 0
-        VarSet(VAR_LAST_REPEL_LURE_USED, gSpecialVar_ItemId);
-    #endif
-        if (!InBattlePyramid())
-            DisplayItemMessage(taskId, FONT_NORMAL, gStringVar4, CloseItemMessage);
-        else
-            DisplayItemMessageInBattlePyramid(taskId, gStringVar4, Task_CloseBattlePyramidBagMessage);
-    }
-}
-
-static void Task_StopUseInfRepel(u8 taskId)
-{
-    if (!IsSEPlaying())
-    {
-        VarSet(VAR_INF_REPEL_ON, FALSE);
-    #if VAR_LAST_REPEL_LURE_USED != 0
-        VarSet(VAR_LAST_REPEL_LURE_USED, gSpecialVar_ItemId);
-    #endif
         if (!InBattlePyramid())
             DisplayItemMessage(taskId, FONT_NORMAL, gStringVar4, CloseItemMessage);
         else

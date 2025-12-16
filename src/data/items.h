@@ -2029,13 +2029,13 @@ const struct Item gItemsInfo[] =
     {
         .name = _("Inf. Candy"),
         .pluralName = _("Inf. Candies"),
-        .price = 0,
+        .price = 1,
         .description = COMPOUND_STRING(
             "Raises the level\n"
             "of a Pokémon by\n"
             "one."),
         .pocket = POCKET_KEY_ITEMS,
-        .type = ITEM_USE_FIELD,
+        .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_RareCandy,
         .effect = gItemEffect_RareCandy,
         .flingPower = 30,
@@ -2187,21 +2187,6 @@ const struct Item gItemsInfo[] =
         .pocket = POCKET_ITEMS,
         .type = ITEM_USE_BAG_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_Repel,
-        .flingPower = 30,
-        .iconPic = gItemIcon_Repel,
-        .iconPalette = gItemIconPalette_MaxRepel,
-    },
-
-    [ITEM_INF_REPEL] =
-    {
-        .name = _("Inf Repel"),
-        .price = 0,
-        .description = COMPOUND_STRING(
-            "Repels weak wild\n"
-            "Pokémon."),
-        .pocket = POCKET_KEY_ITEMS,
-        .type = ITEM_USE_FIELD,
-        .fieldUseFunc = ItemUseOutOfBattle_InfRepel,
         .flingPower = 30,
         .iconPic = gItemIcon_Repel,
         .iconPalette = gItemIconPalette_MaxRepel,
