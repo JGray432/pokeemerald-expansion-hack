@@ -1,6 +1,6 @@
 #include "global.h"
 #include "constants/decorations.h"
-#include "constants/athens_old_man.h"
+#include "constants/mauville_old_man.h"
 #include "decoration.h"
 #include "decoration_inventory.h"
 #include "event_data.h"
@@ -34,7 +34,7 @@ static const u8 sDefaultTraderDecorations[NUM_TRADER_ITEMS] =
 void TraderSetup(void)
 {
     u8 i;
-    struct AthensOldManTrader *trader = &gSaveBlock1Ptr->oldMan.trader;
+    struct MauvilleOldManTrader *trader = &gSaveBlock1Ptr->oldMan.trader;
 
     trader->id = ATHENS_MAN_TRADER;
     trader->alreadyTraded = FALSE;
@@ -49,7 +49,7 @@ void TraderSetup(void)
 
 void Trader_ResetFlag(void)
 {
-    struct AthensOldManTrader *trader = &gSaveBlock1Ptr->oldMan.trader;
+    struct MauvilleOldManTrader *trader = &gSaveBlock1Ptr->oldMan.trader;
     trader->alreadyTraded = FALSE;
 }
 
@@ -59,7 +59,7 @@ void CreateAvailableDecorationsMenu(u8 taskId)
 {
     u8 i;
     s16 * data = gTasks[taskId].data;
-    struct AthensOldManTrader *trader = &gSaveBlock1Ptr->oldMan.trader;
+    struct MauvilleOldManTrader *trader = &gSaveBlock1Ptr->oldMan.trader;
     struct WindowTemplate windowTemplate = {
         .bg = 0,
         .tilemapLeft = 1,
@@ -114,7 +114,7 @@ void Task_BufferDecorSelectionAndCloseWindow(u8 taskId, u8 decorationId)
 
 void Task_HandleGetDecorationMenuInput(u8 taskId)
 {
-    struct AthensOldManTrader *trader = &gSaveBlock1Ptr->oldMan.trader;
+    struct MauvilleOldManTrader *trader = &gSaveBlock1Ptr->oldMan.trader;
     s8 input = Menu_ProcessInput();
 
     switch (input)
@@ -138,7 +138,7 @@ void Task_HandleGetDecorationMenuInput(u8 taskId)
 
 void GetTraderTradedFlag(void)
 {
-    struct AthensOldManTrader *trader = &gSaveBlock1Ptr->oldMan.trader;
+    struct MauvilleOldManTrader *trader = &gSaveBlock1Ptr->oldMan.trader;
     gSpecialVar_Result = trader->alreadyTraded;
 }
 
@@ -198,7 +198,7 @@ void ExitTraderMenu(u8 taskId)
 
 void TraderDoDecorationTrade(void)
 {
-    struct AthensOldManTrader *trader = &gSaveBlock1Ptr->oldMan.trader;
+    struct MauvilleOldManTrader *trader = &gSaveBlock1Ptr->oldMan.trader;
 
     DecorationRemove(gSpecialVar_0x8006);
     DecorationAdd(gSpecialVar_0x8004);

@@ -12697,8 +12697,8 @@ const struct Item gItemsInfo[] =
         .price = 0,
         .description = COMPOUND_STRING(
             "The key for New\n"
-            "Athens beneath\n"
-            "Athens City."),
+            "Mauville beneath\n"
+            "Mauville City."),
         .importance = 1,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_BAG_MENU,

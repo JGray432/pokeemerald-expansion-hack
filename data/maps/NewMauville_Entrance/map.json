@@ -1,6 +1,6 @@
 {
   "id": "MAP_NEW_ATHENS_ENTRANCE",
-  "name": "NewAthens_Entrance",
+  "name": "NewMauville_Entrance",
   "layout": "LAYOUT_NEW_ATHENS_ENTRANCE",
   "music": "MUS_MT_PYRE",
   "region_map_section": "MAPSEC_NEW_ATHENS",
@@ -38,7 +38,7 @@
       "elevation": 3,
       "var": "VAR_NEW_ATHENS_STATE",
       "var_value": "0",
-      "script": "NewAthens_Entrance_EventScript_Door"
+      "script": "NewMauville_Entrance_EventScript_Door"
     }
   ],
   "bg_events": []

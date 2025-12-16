@@ -24,7 +24,7 @@ Athens_EventScript_MoveWattsonBackToGym::
 	setflag FLAG_WATTSON_REMATCH_AVAILABLE
 	return
 
-AthensCit_EventScript_Nurse::
+MauvilleCit_EventScript_Nurse::
 	setvar VAR_0x800B, LOCALID_NURSE
 	call Common_EventScript_PkmnCenterNurse
 	waitmessage
@@ -448,8 +448,8 @@ Athens_EventScript_Wattson::
 	lock
 	faceplayer
 	goto_if_set FLAG_GOT_TM_THUNDERBOLT_FROM_WATTSON, Athens_EventScript_ReceivedThunderbolt
-	goto_if_eq VAR_NEW_ATHENS_STATE, 2, Athens_EventScript_CompletedNewAthens
-	goto_if_set FLAG_GOT_BASEMENT_KEY_FROM_WATTSON, Athens_EventScript_BegunNewAthens
+	goto_if_eq VAR_NEW_ATHENS_STATE, 2, Athens_EventScript_CompletedNewMauville
+	goto_if_set FLAG_GOT_BASEMENT_KEY_FROM_WATTSON, Athens_EventScript_BegunNewMauville
 	msgbox Athens_Text_WattsonNeedFavorTakeKey, MSGBOX_DEFAULT
 	giveitem ITEM_BASEMENT_KEY
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
@@ -458,12 +458,12 @@ Athens_EventScript_Wattson::
 	release
 	end
 
-Athens_EventScript_BegunNewAthens::
+Athens_EventScript_BegunNewMauville::
 	msgbox Athens_Text_WattsonWontBeChallenge, MSGBOX_DEFAULT
 	release
 	end
 
-Athens_EventScript_CompletedNewAthens::
+Athens_EventScript_CompletedNewMauville::
 	msgbox Athens_Text_WattsonThanksTakeTM, MSGBOX_DEFAULT
 	giveitem ITEM_TM_THUNDERBOLT
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull

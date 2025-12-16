@@ -9,7 +9,7 @@ static void UpdateGymLeaderRematchFromArray(const u16 *data, size_t size, u32 ma
 static s32 GetRematchIndex(u32 trainerIdx);
 #endif //FREE_MATCH_CALL
 
-static const u16 GymLeaderRematches_AfterNewAthens[] = {
+static const u16 GymLeaderRematches_AfterNewMauville[] = {
     REMATCH_ROXANNE,
     REMATCH_BRAWLY,
     REMATCH_WATTSON,
@@ -20,7 +20,7 @@ static const u16 GymLeaderRematches_AfterNewAthens[] = {
     REMATCH_JUAN
 };
 
-static const u16 GymLeaderRematches_BeforeNewAthens[] = {
+static const u16 GymLeaderRematches_BeforeNewMauville[] = {
     REMATCH_ROXANNE,
     REMATCH_BRAWLY,
     // Wattson isn't available at this time
@@ -36,9 +36,9 @@ void UpdateGymLeaderRematch(void)
     if (FlagGet(FLAG_SYS_GAME_CLEAR) && (Random() % 100) <= 30)
     {
         if (FlagGet(FLAG_WATTSON_REMATCH_AVAILABLE))
-            UpdateGymLeaderRematchFromArray(GymLeaderRematches_AfterNewAthens, ARRAY_COUNT(GymLeaderRematches_AfterNewAthens), 5);
+            UpdateGymLeaderRematchFromArray(GymLeaderRematches_AfterNewMauville, ARRAY_COUNT(GymLeaderRematches_AfterNewMauville), 5);
         else
-            UpdateGymLeaderRematchFromArray(GymLeaderRematches_BeforeNewAthens, ARRAY_COUNT(GymLeaderRematches_BeforeNewAthens), 1);
+            UpdateGymLeaderRematchFromArray(GymLeaderRematches_BeforeNewMauville, ARRAY_COUNT(GymLeaderRematches_BeforeNewMauville), 1);
     }
 }
 

@@ -3,12 +3,12 @@
 
 extern struct BardSong gBardSong;
 
-void SetAthensOldMan(void);
-u8 GetCurrentAthensOldMan(void);
-void SetAthensOldManObjEventGfx(void);
-void SanitizeAthensOldManForRuby(OldMan *dest);
+void SetMauvilleOldMan(void);
+u8 GetCurrentMauvilleOldMan(void);
+void SetMauvilleOldManObjEventGfx(void);
+void SanitizeMauvilleOldManForRuby(OldMan *dest);
 void SanitizeReceivedRubyOldMan(union OldMan * oldMan, u32 version, u32 language);
 void SanitizeReceivedEmeraldOldMan(union OldMan * oldMan, u32 version, u32 language);
-void ResetAthensOldManFlag(void);
+void ResetMauvilleOldManFlag(void);
 
 #endif // GUARD_ATHENS_OLD_MAN_H

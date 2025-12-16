@@ -2,7 +2,7 @@
 #include "main.h"
 #include "constants/songs.h"
 #include "constants/event_objects.h"
-#include "athens_old_man.h"
+#include "mauville_old_man.h"
 #include "event_data.h"
 #include "string_util.h"
 #include "text.h"
@@ -21,7 +21,7 @@
 #include "script_menu.h"
 #include "trader.h"
 #include "m4a.h"
-#include "constants/athens_old_man.h"
+#include "constants/mauville_old_man.h"
 
 static void InitGiddyTaleList(void);
 static void StartBardSong(bool8 useNewSongLyrics);
@@ -34,7 +34,7 @@ static u8 sSelectedStory;
 COMMON_DATA struct BardSong gBardSong = {0};
 
 static EWRAM_DATA u16 sUnusedPitchTableIndex = 0;
-static EWRAM_DATA struct AthensManStoryteller * sStorytellerPtr = NULL;
+static EWRAM_DATA struct MauvilleManStoryteller * sStorytellerPtr = NULL;
 static EWRAM_DATA u8 sStorytellerWindowId = 0;
 
 static const u16 sDefaultBardSongLyrics[NUM_BARD_SONG_WORDS] = {
@@ -74,7 +74,7 @@ static const u8 *const sGiddyQuestions[GIDDY_MAX_QUESTIONS] = {
 static void SetupBard(void)
 {
     u16 i;
-    struct AthensManBard *bard = &gSaveBlock1Ptr->oldMan.bard;
+    struct MauvilleManBard *bard = &gSaveBlock1Ptr->oldMan.bard;
 
     bard->id = ATHENS_MAN_BARD;
     bard->hasChangedSong = FALSE;
@@ -85,7 +85,7 @@ static void SetupBard(void)
 
 static void SetupHipster(void)
 {
-    struct AthensManHipster *hipster = &gSaveBlock1Ptr->oldMan.hipster;
+    struct MauvilleManHipster *hipster = &gSaveBlock1Ptr->oldMan.hipster;
 
     hipster->id = ATHENS_MAN_HIPSTER;
     hipster->taughtWord = FALSE;
@@ -99,7 +99,7 @@ static void SetupStoryteller(void)
 
 static void SetupGiddy(void)
 {
-    struct AthensManGiddy *giddy = &gSaveBlock1Ptr->oldMan.giddy;
+    struct MauvilleManGiddy *giddy = &gSaveBlock1Ptr->oldMan.giddy;
 
     giddy->id = ATHENS_MAN_GIDDY;
     giddy->taleCounter = 0;
@@ -111,7 +111,7 @@ static void SetupTrader(void)
     TraderSetup();
 }
 
-void SetAthensOldMan(void)
+void SetMauvilleOldMan(void)
 {
     u16 trainerId = (gSaveBlock2Ptr->playerTrainerId[1] << 8) | gSaveBlock2Ptr->playerTrainerId[0];
 
@@ -135,17 +135,17 @@ void SetAthensOldMan(void)
         SetupGiddy();
         break;
     }
-    SetAthensOldManObjEventGfx();
+    SetMauvilleOldManObjEventGfx();
 }
 
-u8 GetCurrentAthensOldMan(void)
+u8 GetCurrentMauvilleOldMan(void)
 {
     return gSaveBlock1Ptr->oldMan.common.id;
 }
 
-void Script_GetCurrentAthensMan(void)
+void Script_GetCurrentMauvilleMan(void)
 {
-    gSpecialVar_Result = GetCurrentAthensOldMan();
+    gSpecialVar_Result = GetCurrentMauvilleOldMan();
 }
 
 void HasBardSongBeenChanged(void)
@@ -156,7 +156,7 @@ void HasBardSongBeenChanged(void)
 void SaveBardSongLyrics(void)
 {
     u16 i;
-    struct AthensManBard *bard = &gSaveBlock1Ptr->oldMan.bard;
+    struct MauvilleManBard *bard = &gSaveBlock1Ptr->oldMan.bard;
 
     StringCopy(bard->playerName, gSaveBlock2Ptr->playerName);
 
@@ -175,7 +175,7 @@ void SaveBardSongLyrics(void)
 // Its set in the scripts right before 'PlayBardSong' is called.
 static void PrepareSongText(void)
 {
-    struct AthensManBard *bard = &gSaveBlock1Ptr->oldMan.bard;
+    struct MauvilleManBard *bard = &gSaveBlock1Ptr->oldMan.bard;
     u16 * lyrics = !gSpecialVar_0x8004 ? bard->songLyrics : bard->newSongLyrics;
     u8 *wordEnd = gStringVar4;
     u8 *str = wordEnd;
@@ -266,7 +266,7 @@ void HipsterTryTeachWord(void)
 
 void GiddyShouldTellAnotherTale(void)
 {
-    struct AthensManGiddy *giddy = &gSaveBlock1Ptr->oldMan.giddy;
+    struct MauvilleManGiddy *giddy = &gSaveBlock1Ptr->oldMan.giddy;
 
     if (giddy->taleCounter == GIDDY_MAX_TALES)
     {
@@ -281,7 +281,7 @@ void GiddyShouldTellAnotherTale(void)
 
 void GenerateGiddyLine(void)
 {
-    struct AthensManGiddy *giddy = &gSaveBlock1Ptr->oldMan.giddy;
+    struct MauvilleManGiddy *giddy = &gSaveBlock1Ptr->oldMan.giddy;
 
     if (giddy->taleCounter == 0)
         InitGiddyTaleList();
@@ -316,7 +316,7 @@ void GenerateGiddyLine(void)
 
 static void InitGiddyTaleList(void)
 {
-    struct AthensManGiddy *giddy = &gSaveBlock1Ptr->oldMan.giddy;
+    struct MauvilleManGiddy *giddy = &gSaveBlock1Ptr->oldMan.giddy;
     u16 wordGroupsAndCount[][2] = {
         {EC_GROUP_POKEMON,   0},
         {EC_GROUP_LIFESTYLE, 0},
@@ -392,9 +392,9 @@ static void ResetStorytellerFlag(void)
     Storyteller_ResetFlag();
 }
 
-void ResetAthensOldManFlag(void)
+void ResetMauvilleOldManFlag(void)
 {
-    switch (GetCurrentAthensOldMan())
+    switch (GetCurrentMauvilleOldMan())
     {
     case ATHENS_MAN_BARD:
         ResetBardFlag();
@@ -411,7 +411,7 @@ void ResetAthensOldManFlag(void)
     case ATHENS_MAN_GIDDY:
         break;
     }
-    SetAthensOldManObjEventGfx();
+    SetMauvilleOldManObjEventGfx();
 }
 
 // States and task data for Task_BardSong.
@@ -481,7 +481,7 @@ static void BardSing(struct Task *task, struct BardSong *song)
     {
     case BARD_STATE_INIT:
     {
-        struct AthensManBard *bard = &gSaveBlock1Ptr->oldMan.bard;
+        struct MauvilleManBard *bard = &gSaveBlock1Ptr->oldMan.bard;
         u16 *lyrics;
         s32 i;
 
@@ -621,7 +621,7 @@ static void Task_BardSong(u8 taskId)
         break;
     case BARD_STATE_GET_WORD:
     {
-        struct AthensManBard *bard = &gSaveBlock1Ptr->oldMan.bard;
+        struct MauvilleManBard *bard = &gSaveBlock1Ptr->oldMan.bard;
         u8 *str = &gStringVar4[task->tCharIndex];
         u16 wordLen = 0;
 
@@ -739,14 +739,14 @@ static void Task_BardSong(u8 taskId)
     RunTextPrintersAndIsPrinter0Active();
 }
 
-void SetAthensOldManObjEventGfx(void)
+void SetMauvilleOldManObjEventGfx(void)
 {
     VarSet(VAR_OBJ_GFX_ID_0, OBJ_EVENT_GFX_BARD);
 }
 
 // Language fixers?
 
-void SanitizeAthensOldManForRuby(union OldMan * oldMan)
+void SanitizeMauvilleOldManForRuby(union OldMan * oldMan)
 {
     s32 i;
     u8 playerName[PLAYER_NAME_LENGTH + 1];
@@ -755,7 +755,7 @@ void SanitizeAthensOldManForRuby(union OldMan * oldMan)
     {
     case ATHENS_MAN_TRADER:
     {
-        struct AthensOldManTrader * trader = &oldMan->trader;
+        struct MauvilleOldManTrader * trader = &oldMan->trader;
         for (i = 0; i < NUM_TRADER_ITEMS; i++)
         {
             if (trader->language[i] == LANGUAGE_JAPANESE)
@@ -765,7 +765,7 @@ void SanitizeAthensOldManForRuby(union OldMan * oldMan)
     }
     case ATHENS_MAN_STORYTELLER:
     {
-        struct AthensManStoryteller * storyteller = &oldMan->storyteller;
+        struct MauvilleManStoryteller * storyteller = &oldMan->storyteller;
         for (i = 0; i < NUM_STORYTELLER_TALES; i++)
         {
             if (storyteller->gameStatIDs[i] != 0)
@@ -786,7 +786,7 @@ void SanitizeAthensOldManForRuby(union OldMan * oldMan)
     }
 }
 
-static void UNUSED SetAthensOldManLanguage(union OldMan * oldMan, u32 language1, u32 language2, u32 language3)
+static void UNUSED SetMauvilleOldManLanguage(union OldMan * oldMan, u32 language1, u32 language2, u32 language3)
 {
     s32 i;
 
@@ -794,7 +794,7 @@ static void UNUSED SetAthensOldManLanguage(union OldMan * oldMan, u32 language1,
     {
     case ATHENS_MAN_TRADER:
     {
-        struct AthensOldManTrader * trader = &oldMan->trader;
+        struct MauvilleOldManTrader * trader = &oldMan->trader;
 
         for (i = 0; i < NUM_TRADER_ITEMS; i++)
         {
@@ -807,7 +807,7 @@ static void UNUSED SetAthensOldManLanguage(union OldMan * oldMan, u32 language1,
     break;
     case ATHENS_MAN_STORYTELLER:
     {
-        struct AthensManStoryteller * storyteller = &oldMan->storyteller;
+        struct MauvilleManStoryteller * storyteller = &oldMan->storyteller;
 
         for (i = 0; i < NUM_STORYTELLER_TALES; i++)
         {
@@ -820,7 +820,7 @@ static void UNUSED SetAthensOldManLanguage(union OldMan * oldMan, u32 language1,
     break;
     case ATHENS_MAN_BARD:
     {
-        struct AthensManBard * bard = &oldMan->bard;
+        struct MauvilleManBard * bard = &oldMan->bard;
 
         if (language3 == LANGUAGE_JAPANESE)
             bard->language = language1;
@@ -830,7 +830,7 @@ static void UNUSED SetAthensOldManLanguage(union OldMan * oldMan, u32 language1,
     break;
     case ATHENS_MAN_HIPSTER:
     {
-        struct AthensManHipster * hipster = &oldMan->hipster;
+        struct MauvilleManHipster * hipster = &oldMan->hipster;
 
         if (language3 == LANGUAGE_JAPANESE)
             hipster->language = language1;
@@ -840,7 +840,7 @@ static void UNUSED SetAthensOldManLanguage(union OldMan * oldMan, u32 language1,
     break;
     case ATHENS_MAN_GIDDY:
     {
-        struct AthensManGiddy * giddy = &oldMan->giddy;
+        struct MauvilleManGiddy * giddy = &oldMan->giddy;
 
         if (language3 == LANGUAGE_JAPANESE)
             giddy->language = language1;
@@ -857,7 +857,7 @@ void SanitizeReceivedEmeraldOldMan(union OldMan * oldMan, u32 version, u32 langu
     s32 i;
     if (oldMan->common.id == ATHENS_MAN_STORYTELLER && language == LANGUAGE_JAPANESE)
     {
-        struct AthensManStoryteller * storyteller = &oldMan->storyteller;
+        struct MauvilleManStoryteller * storyteller = &oldMan->storyteller;
 
         for (i = 0; i < NUM_STORYTELLER_TALES; i++)
         {
@@ -882,7 +882,7 @@ void SanitizeReceivedRubyOldMan(union OldMan * oldMan, u32 version, u32 language
     {
     case ATHENS_MAN_TRADER:
     {
-        struct AthensOldManTrader * trader = &oldMan->trader;
+        struct MauvilleOldManTrader * trader = &oldMan->trader;
         s32 i;
 
         if (isRuby)
@@ -916,7 +916,7 @@ void SanitizeReceivedRubyOldMan(union OldMan * oldMan, u32 version, u32 language
     case ATHENS_MAN_STORYTELLER:
     {
 
-        struct AthensManStoryteller * storyteller = &oldMan->storyteller;
+        struct MauvilleManStoryteller * storyteller = &oldMan->storyteller;
         s32 i;
 
         if (isRuby)
@@ -931,7 +931,7 @@ void SanitizeReceivedRubyOldMan(union OldMan * oldMan, u32 version, u32 language
     break;
     case ATHENS_MAN_BARD:
     {
-        struct AthensManBard * bard = &oldMan->bard;
+        struct MauvilleManBard * bard = &oldMan->bard;
 
         if (isRuby)
         {
@@ -941,7 +941,7 @@ void SanitizeReceivedRubyOldMan(union OldMan * oldMan, u32 version, u32 language
     break;
     case ATHENS_MAN_HIPSTER:
     {
-        struct AthensManHipster * hipster = &oldMan->hipster;
+        struct MauvilleManHipster * hipster = &oldMan->hipster;
 
         if (isRuby)
         {
@@ -951,7 +951,7 @@ void SanitizeReceivedRubyOldMan(union OldMan * oldMan, u32 version, u32 language
     break;
     case ATHENS_MAN_GIDDY:
     {
-        struct AthensManGiddy * giddy = &oldMan->giddy;
+        struct MauvilleManGiddy * giddy = &oldMan->giddy;
 
         if (isRuby)
         {

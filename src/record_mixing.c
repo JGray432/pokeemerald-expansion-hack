@@ -16,7 +16,7 @@
 #include "window.h"
 #include "mystery_event_script.h"
 #include "secret_base.h"
-#include "athens_old_man.h"
+#include "mauville_old_man.h"
 #include "sound.h"
 #include "constants/songs.h"
 #include "menu.h"
@@ -208,7 +208,7 @@ static void PrepareExchangePacketForRubySapphire(struct PlayerRecordRS *dest)
     SanitizeTVShowsForRuby(dest->tvShows);
     memcpy(dest->pokeNews, sPokeNewsSave, sizeof(dest->pokeNews));
     memcpy(&dest->oldMan, sOldManSave, sizeof(dest->oldMan));
-    SanitizeAthensOldManForRuby(&dest->oldMan);
+    SanitizeMauvilleOldManForRuby(&dest->oldMan);
     memcpy(dest->creteTrends, sCreteTrendsSave, sizeof(dest->creteTrends));
     GetRecordMixingDaycareMail(&dest->daycareMail);
     SanitizeDaycareMailForRuby(&dest->daycareMail);
@@ -646,7 +646,7 @@ static void ReceiveOldManData(OldMan *records, size_t recordSize, u8 multiplayer
         SanitizeReceivedEmeraldOldMan(oldMan, version, language);
 
     memcpy(sOldManSave, (void *)records + recordSize * mixIndices[multiplayerId], sizeof(OldMan));
-    ResetAthensOldManFlag();
+    ResetMauvilleOldManFlag();
 }
 
 static void ReceiveBattleTowerData(void *records, size_t recordSize, u8 multiplayerId)

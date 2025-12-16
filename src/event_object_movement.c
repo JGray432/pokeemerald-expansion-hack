@@ -21,7 +21,7 @@
 #include "follower_helper.h"
 #include "gpu_regs.h"
 #include "graphics.h"
-#include "athens_old_man.h"
+#include "mauville_old_man.h"
 #include "metatile_behavior.h"
 #include "overworld.h"
 #include "palette.h"
@@ -45,7 +45,7 @@
 #include "constants/field_effects.h"
 #include "constants/items.h"
 #include "constants/map_types.h"
-#include "constants/athens_old_man.h"
+#include "constants/mauville_old_man.h"
 #include "constants/rgb.h"
 #include "constants/region_map_sections.h"
 #include "constants/songs.h"
@@ -2872,7 +2872,7 @@ const struct ObjectEventGraphicsInfo *GetObjectEventGraphicsInfo(u16 graphicsId)
         graphicsId = VarGetObjectEventGraphicsId(graphicsId - OBJ_EVENT_GFX_VARS);
 
     if (graphicsId == OBJ_EVENT_GFX_BARD)
-        return gAthensOldManGraphicsInfoPointers[GetCurrentAthensOldMan()];
+        return gMauvilleOldManGraphicsInfoPointers[GetCurrentMauvilleOldMan()];
 
     if (graphicsId & OBJ_EVENT_MON)
         return SpeciesToGraphicsInfo(graphicsId & OBJ_EVENT_MON_SPECIES_MASK, graphicsId & OBJ_EVENT_MON_SHINY, graphicsId & OBJ_EVENT_MON_FEMALE);

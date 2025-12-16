@@ -15,7 +15,7 @@ Athens_GameCorner_MapScripts::
 Athens_GameCorner_EventScript_CoinsClerk::
 	lock
 	faceplayer
-	msgbox Athens_GameCorner_Text_ThisIsAthensGameCorner, MSGBOX_DEFAULT
+	msgbox Athens_GameCorner_Text_ThisIsMauvilleGameCorner, MSGBOX_DEFAULT
 	checkitem ITEM_COIN_CASE
 	goto_if_eq VAR_RESULT, FALSE, Athens_GameCorner_EventScript_NeedCoinCase
 	message Athens_GameCorner_Text_WereYouLookingForCoins
@@ -455,7 +455,7 @@ Athens_GameCorner_EventScript_TryGive20Coins::
 	end
 
 Athens_GameCorner_EventScript_PokefanMNormal::
-	msgbox Athens_GameCorner_Text_AthensSomethingForEveryone, MSGBOX_DEFAULT
+	msgbox Athens_GameCorner_Text_MauvilleSomethingForEveryone, MSGBOX_DEFAULT
 	goto Athens_GameCorner_EventScript_NPCReturnToSlots
 	end
 
@@ -626,7 +626,7 @@ Athens_GameCorner_EventScript_NoCoinCase::
 	releaseall
 	end
 
-Athens_GameCorner_Text_ThisIsAthensGameCorner:
+Athens_GameCorner_Text_ThisIsMauvilleGameCorner:
 	.string "This is ATHENS GAME CORNER.$"
 
 Athens_GameCorner_Text_NeedCoinCaseForCoins:
@@ -726,7 +726,7 @@ Athens_GameCorner_Text_LuckOnlyLastSoLongTakeCoins:
 	.string "This is too much for me.\l"
 	.string "Here, take some COINS!$"
 
-Athens_GameCorner_Text_AthensSomethingForEveryone:
+Athens_GameCorner_Text_MauvilleSomethingForEveryone:
 	.string "ATHENS has something for\n"
 	.string "everyone.\p"
 	.string "For me, it's the GAME CORNER.$"

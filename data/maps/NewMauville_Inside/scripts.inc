@@ -1,66 +1,66 @@
-NewAthens_Inside_MapScripts::
-	map_script MAP_SCRIPT_ON_RESUME, NewAthens_Inside_OnResume
-	map_script MAP_SCRIPT_ON_TRANSITION, NewAthens_Inside_OnTransition
-	map_script MAP_SCRIPT_ON_LOAD, NewAthens_Inside_OnLoad
+NewMauville_Inside_MapScripts::
+	map_script MAP_SCRIPT_ON_RESUME, NewMauville_Inside_OnResume
+	map_script MAP_SCRIPT_ON_TRANSITION, NewMauville_Inside_OnTransition
+	map_script MAP_SCRIPT_ON_LOAD, NewMauville_Inside_OnLoad
 	.byte 0
 
-NewAthens_Inside_OnResume:
-	call_if_eq VAR_TEMP_1, 1, NewAthens_Inside_EventScript_SetBarrierStateBlueButton
-	call_if_eq VAR_TEMP_2, 1, NewAthens_Inside_EventScript_SetBarrierStateGreenButton
-	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, NewAthens_Inside_EventScript_TryRemoveVoltorb
+NewMauville_Inside_OnResume:
+	call_if_eq VAR_TEMP_1, 1, NewMauville_Inside_EventScript_SetBarrierStateBlueButton
+	call_if_eq VAR_TEMP_2, 1, NewMauville_Inside_EventScript_SetBarrierStateGreenButton
+	call_if_set FLAG_SYS_CTRL_OBJ_DELETE, NewMauville_Inside_EventScript_TryRemoveVoltorb
 	end
 
-NewAthens_Inside_EventScript_TryRemoveVoltorb::
+NewMauville_Inside_EventScript_TryRemoveVoltorb::
 	specialvar VAR_RESULT, GetBattleOutcome
 	goto_if_ne VAR_RESULT, B_OUTCOME_CAUGHT, Common_EventScript_NopReturn
 	removeobject VAR_LAST_TALKED
 	return
 
-NewAthens_Inside_OnTransition:
+NewMauville_Inside_OnTransition:
 	setvar VAR_TEMP_1, 0
 	setvar VAR_TEMP_2, 0
-	call_if_unset FLAG_DEFEATED_VOLTORB_1_NEW_ATHENS, NewAthens_Inside_EventScript_ShowVoltorb1
-	call_if_unset FLAG_DEFEATED_VOLTORB_2_NEW_ATHENS, NewAthens_Inside_EventScript_ShowVoltorb2
-	call_if_unset FLAG_DEFEATED_VOLTORB_3_NEW_ATHENS, NewAthens_Inside_EventScript_ShowVoltorb3
+	call_if_unset FLAG_DEFEATED_VOLTORB_1_NEW_ATHENS, NewMauville_Inside_EventScript_ShowVoltorb1
+	call_if_unset FLAG_DEFEATED_VOLTORB_2_NEW_ATHENS, NewMauville_Inside_EventScript_ShowVoltorb2
+	call_if_unset FLAG_DEFEATED_VOLTORB_3_NEW_ATHENS, NewMauville_Inside_EventScript_ShowVoltorb3
 	end
 
-NewAthens_Inside_EventScript_ShowVoltorb1::
+NewMauville_Inside_EventScript_ShowVoltorb1::
 	clearflag FLAG_HIDE_NEW_ATHENS_VOLTORB_1
 	return
 
-NewAthens_Inside_EventScript_ShowVoltorb2::
+NewMauville_Inside_EventScript_ShowVoltorb2::
 	clearflag FLAG_HIDE_NEW_ATHENS_VOLTORB_2
 	return
 
-NewAthens_Inside_EventScript_ShowVoltorb3::
+NewMauville_Inside_EventScript_ShowVoltorb3::
 	clearflag FLAG_HIDE_NEW_ATHENS_VOLTORB_3
 	return
 
-NewAthens_Inside_OnLoad:
-	call_if_eq VAR_NEW_ATHENS_STATE, 2, NewAthens_Inside_EventScript_SetGeneratorOffMetatiles
+NewMauville_Inside_OnLoad:
+	call_if_eq VAR_NEW_ATHENS_STATE, 2, NewMauville_Inside_EventScript_SetGeneratorOffMetatiles
 	end
 
-NewAthens_Inside_EventScript_BlueButton::
+NewMauville_Inside_EventScript_BlueButton::
 	lockall
 	setvar VAR_TEMP_1, 1
 	setvar VAR_TEMP_2, 0
 	playse SE_PIN
-	call NewAthens_Inside_EventScript_SetBarrierStateBlueButton
+	call NewMauville_Inside_EventScript_SetBarrierStateBlueButton
 	special DrawWholeMapView
 	releaseall
 	end
 
-NewAthens_Inside_EventScript_GreenButton::
+NewMauville_Inside_EventScript_GreenButton::
 	lockall
 	setvar VAR_TEMP_1, 0
 	setvar VAR_TEMP_2, 1
 	playse SE_PIN
-	call NewAthens_Inside_EventScript_SetBarrierStateGreenButton
+	call NewMauville_Inside_EventScript_SetBarrierStateGreenButton
 	special DrawWholeMapView
 	releaseall
 	end
 
-NewAthens_Inside_EventScript_SetBarrierStateBlueButton::
+NewMauville_Inside_EventScript_SetBarrierStateBlueButton::
 	setmetatile 23, 34, METATILE_BikeShop_Barrier_Hidden_Top, TRUE
 	setmetatile 23, 35, METATILE_BikeShop_Barrier_Hidden_Bottom, TRUE
 	setmetatile 23, 36, METATILE_BikeShop_Floor_Shadow_Top, FALSE
@@ -100,7 +100,7 @@ NewAthens_Inside_EventScript_SetBarrierStateBlueButton::
 	setmetatile 18, 36, METATILE_BikeShop_Button_Green, FALSE
 	return
 
-NewAthens_Inside_EventScript_SetBarrierStateGreenButton::
+NewMauville_Inside_EventScript_SetBarrierStateGreenButton::
 	setmetatile 23, 34, METATILE_BikeShop_Barrier_Blue_Top, TRUE
 	setmetatile 23, 35, METATILE_BikeShop_Barrier_Blue_TopMid, TRUE
 	setmetatile 23, 36, METATILE_BikeShop_Barrier_Blue_BottomMid, TRUE
@@ -140,15 +140,15 @@ NewAthens_Inside_EventScript_SetBarrierStateGreenButton::
 	setmetatile 30, 38, METATILE_BikeShop_Button_Blue, FALSE
 	return
 
-NewAthens_Inside_EventScript_RedButton::
+NewMauville_Inside_EventScript_RedButton::
 	lockall
-	msgbox NewAthens_Inside_Text_SteppedOnSwitchGeneratorStopped, MSGBOX_DEFAULT
-	call NewAthens_Inside_EventScript_SetGeneratorOffMetatiles
+	msgbox NewMauville_Inside_Text_SteppedOnSwitchGeneratorStopped, MSGBOX_DEFAULT
+	call NewMauville_Inside_EventScript_SetGeneratorOffMetatiles
 	setvar VAR_NEW_ATHENS_STATE, 2
 	releaseall
 	end
 
-NewAthens_Inside_EventScript_SetGeneratorOffMetatiles::
+NewMauville_Inside_EventScript_SetGeneratorOffMetatiles::
 	setmetatile 33, 6, METATILE_BikeShop_Button_Pressed, FALSE
 	setmetatile 32, 2, METATILE_BikeShop_Generator_Off_Tile0, TRUE
 	setmetatile 33, 2, METATILE_BikeShop_Generator_Off_Tile1, TRUE
@@ -161,19 +161,19 @@ NewAthens_Inside_EventScript_SetGeneratorOffMetatiles::
 	special DrawWholeMapView
 	return
 
-NewAthens_Inside_EventScript_Generator::
+NewMauville_Inside_EventScript_Generator::
 	lockall
-	goto_if_eq VAR_NEW_ATHENS_STATE, 2, NewAthens_Inside_EventScript_GeneratorOff
-	msgbox NewAthens_Inside_Text_GeneratorRadiatingHeat, MSGBOX_DEFAULT
+	goto_if_eq VAR_NEW_ATHENS_STATE, 2, NewMauville_Inside_EventScript_GeneratorOff
+	msgbox NewMauville_Inside_Text_GeneratorRadiatingHeat, MSGBOX_DEFAULT
 	releaseall
 	end
 
-NewAthens_Inside_EventScript_GeneratorOff::
-	msgbox NewAthens_Inside_Text_GeneratorQuietedDown, MSGBOX_DEFAULT
+NewMauville_Inside_EventScript_GeneratorOff::
+	msgbox NewMauville_Inside_Text_GeneratorQuietedDown, MSGBOX_DEFAULT
 	releaseall
 	end
 
-NewAthens_Inside_EventScript_Voltorb1::
+NewMauville_Inside_EventScript_Voltorb1::
 	lock
 	faceplayer
 	setwildbattle SPECIES_VOLTORB, 25
@@ -185,19 +185,19 @@ NewAthens_Inside_EventScript_Voltorb1::
 	dowildbattle
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
-	goto_if_eq VAR_RESULT, B_OUTCOME_WON, NewAthens_Inside_EventScript_DefeatedVoltorb1
-	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, NewAthens_Inside_EventScript_DefeatedVoltorb1
-	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, NewAthens_Inside_EventScript_DefeatedVoltorb1
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, NewMauville_Inside_EventScript_DefeatedVoltorb1
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, NewMauville_Inside_EventScript_DefeatedVoltorb1
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, NewMauville_Inside_EventScript_DefeatedVoltorb1
 	setflag FLAG_DEFEATED_VOLTORB_1_NEW_ATHENS
 	release
 	end
 
-NewAthens_Inside_EventScript_DefeatedVoltorb1::
+NewMauville_Inside_EventScript_DefeatedVoltorb1::
 	setflag FLAG_DEFEATED_VOLTORB_1_NEW_ATHENS
 	goto Common_EventScript_RemoveStaticPokemon
 	end
 
-NewAthens_Inside_EventScript_Voltorb2::
+NewMauville_Inside_EventScript_Voltorb2::
 	lock
 	faceplayer
 	setwildbattle SPECIES_VOLTORB, 25
@@ -209,19 +209,19 @@ NewAthens_Inside_EventScript_Voltorb2::
 	dowildbattle
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
-	goto_if_eq VAR_RESULT, B_OUTCOME_WON, NewAthens_Inside_EventScript_DefeatedVoltorb2
-	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, NewAthens_Inside_EventScript_DefeatedVoltorb2
-	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, NewAthens_Inside_EventScript_DefeatedVoltorb2
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, NewMauville_Inside_EventScript_DefeatedVoltorb2
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, NewMauville_Inside_EventScript_DefeatedVoltorb2
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, NewMauville_Inside_EventScript_DefeatedVoltorb2
 	setflag FLAG_DEFEATED_VOLTORB_2_NEW_ATHENS
 	release
 	end
 
-NewAthens_Inside_EventScript_DefeatedVoltorb2::
+NewMauville_Inside_EventScript_DefeatedVoltorb2::
 	setflag FLAG_DEFEATED_VOLTORB_2_NEW_ATHENS
 	goto Common_EventScript_RemoveStaticPokemon
 	end
 
-NewAthens_Inside_EventScript_Voltorb3::
+NewMauville_Inside_EventScript_Voltorb3::
 	lock
 	faceplayer
 	setwildbattle SPECIES_VOLTORB, 25
@@ -233,28 +233,28 @@ NewAthens_Inside_EventScript_Voltorb3::
 	dowildbattle
 	clearflag FLAG_SYS_CTRL_OBJ_DELETE
 	specialvar VAR_RESULT, GetBattleOutcome
-	goto_if_eq VAR_RESULT, B_OUTCOME_WON, NewAthens_Inside_EventScript_DefeatedVoltorb3
-	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, NewAthens_Inside_EventScript_DefeatedVoltorb3
-	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, NewAthens_Inside_EventScript_DefeatedVoltorb3
+	goto_if_eq VAR_RESULT, B_OUTCOME_WON, NewMauville_Inside_EventScript_DefeatedVoltorb3
+	goto_if_eq VAR_RESULT, B_OUTCOME_RAN, NewMauville_Inside_EventScript_DefeatedVoltorb3
+	goto_if_eq VAR_RESULT, B_OUTCOME_PLAYER_TELEPORTED, NewMauville_Inside_EventScript_DefeatedVoltorb3
 	setflag FLAG_DEFEATED_VOLTORB_3_NEW_ATHENS
 	release
 	end
 
-NewAthens_Inside_EventScript_DefeatedVoltorb3::
+NewMauville_Inside_EventScript_DefeatedVoltorb3::
 	setflag FLAG_DEFEATED_VOLTORB_3_NEW_ATHENS
 	goto Common_EventScript_RemoveStaticPokemon
 	end
 
-NewAthens_Inside_Text_GeneratorRadiatingHeat:
+NewMauville_Inside_Text_GeneratorRadiatingHeat:
 	.string "The generator is radiating heat that\n"
 	.string "can be felt even at a distance.\p"
 	.string "It looks like it should be turned off\n"
 	.string "as soon as possible.$"
 
-NewAthens_Inside_Text_GeneratorQuietedDown:
+NewMauville_Inside_Text_GeneratorQuietedDown:
 	.string "The generator quieted down.$"
 
-NewAthens_Inside_Text_SteppedOnSwitchGeneratorStopped:
+NewMauville_Inside_Text_SteppedOnSwitchGeneratorStopped:
 	.string "{PLAYER} stepped on the switch.\p"
 	.string "Click…\p"
 	.string "… … … … … … … …\n"

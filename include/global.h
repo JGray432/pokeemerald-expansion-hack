@@ -675,12 +675,12 @@ struct CreteTrend
     u16 words[2];
 }; /*size = 0x8*/
 
-struct AthensManCommon
+struct MauvilleManCommon
 {
     u8 id;
 };
 
-struct AthensManBard
+struct MauvilleManBard
 {
     /*0x00*/ u8 id;
     /*0x01*/ //u8 padding1;
@@ -694,7 +694,7 @@ struct AthensManBard
     /*0x2B*/ //u8 padding2;
 }; /*size = 0x2C*/
 
-struct AthensManStoryteller
+struct MauvilleManStoryteller
 {
     u8 id;
     bool8 alreadyRecorded;
@@ -705,7 +705,7 @@ struct AthensManStoryteller
     u8 language[NUM_STORYTELLER_TALES];
 };
 
-struct AthensManGiddy
+struct MauvilleManGiddy
 {
     /*0x00*/ u8 id;
     /*0x01*/ u8 taleCounter;
@@ -717,14 +717,14 @@ struct AthensManGiddy
     /*0x21*/ //u8 padding2;
 }; /*size = 0x2C*/
 
-struct AthensManHipster
+struct MauvilleManHipster
 {
     u8 id;
     bool8 taughtWord;
     u8 language;
 };
 
-struct AthensOldManTrader
+struct MauvilleOldManTrader
 {
     u8 id;
     u8 decorations[NUM_TRADER_ITEMS];
@@ -735,12 +735,12 @@ struct AthensOldManTrader
 
 typedef union OldMan
 {
-    struct AthensManCommon common;
-    struct AthensManBard bard;
-    struct AthensManGiddy giddy;
-    struct AthensManHipster hipster;
-    struct AthensOldManTrader trader;
-    struct AthensManStoryteller storyteller;
+    struct MauvilleManCommon common;
+    struct MauvilleManBard bard;
+    struct MauvilleManGiddy giddy;
+    struct MauvilleManHipster hipster;
+    struct MauvilleOldManTrader trader;
+    struct MauvilleManStoryteller storyteller;
     u8 filler[0x40];
 } OldMan;
 

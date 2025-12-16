@@ -53,15 +53,15 @@ const struct Tileset gTileset_Slateport =
     .callback = InitTilesetAnim_Slateport,
 };
 
-const struct Tileset gTileset_Athens =
+const struct Tileset gTileset_Mauville =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_Athens,
-    .palettes = gTilesetPalettes_Athens,
-    .metatiles = gMetatiles_Athens,
-    .metatileAttributes = gMetatileAttributes_Athens,
-    .callback = InitTilesetAnim_Athens,
+    .tiles = gTilesetTiles_Mauville,
+    .palettes = gTilesetPalettes_Mauville,
+    .metatiles = gMetatiles_Mauville,
+    .metatileAttributes = gMetatileAttributes_Mauville,
+    .callback = InitTilesetAnim_Mauville,
 };
 
 const struct Tileset gTileset_Lavaridge =
@@ -526,14 +526,14 @@ const struct Tileset gTileset_GenericBuilding =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_AthensGameCorner =
+const struct Tileset gTileset_MauvilleGameCorner =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_AthensGameCorner,
-    .palettes = gTilesetPalettes_AthensGameCorner,
-    .metatiles = gMetatiles_AthensGameCorner,
-    .metatileAttributes = gMetatileAttributes_AthensGameCorner,
+    .tiles = gTilesetTiles_MauvilleGameCorner,
+    .palettes = gTilesetPalettes_MauvilleGameCorner,
+    .metatiles = gMetatiles_MauvilleGameCorner,
+    .metatileAttributes = gMetatileAttributes_MauvilleGameCorner,
     .callback = NULL,
 };
 
@@ -559,15 +559,15 @@ const struct Tileset gTileset_CreteGym =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_AthensGym =
+const struct Tileset gTileset_MauvilleGym =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_AthensGym,
-    .palettes = gTilesetPalettes_AthensGym,
-    .metatiles = gMetatiles_AthensGym,
-    .metatileAttributes = gMetatileAttributes_AthensGym,
-    .callback = InitTilesetAnim_AthensGym,
+    .tiles = gTilesetTiles_MauvilleGym,
+    .palettes = gTilesetPalettes_MauvilleGym,
+    .metatiles = gMetatiles_MauvilleGym,
+    .metatileAttributes = gMetatileAttributes_MauvilleGym,
+    .callback = InitTilesetAnim_MauvilleGym,
 };
 
 const struct Tileset gTileset_LavaridgeGym =

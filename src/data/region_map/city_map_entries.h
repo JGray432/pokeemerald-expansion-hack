@@ -53,12 +53,12 @@ static const struct CityMapEntry sPokenavCityMaps[NUM_CITY_MAPS] =
     {
         .mapSecId = MAPSEC_ATHENS,
         .index = 0,
-        .tilemap = gPokenavCityMap_Athens_0,
+        .tilemap = gPokenavCityMap_Mauville_0,
     },
     {
         .mapSecId = MAPSEC_ATHENS,
         .index = 1,
-        .tilemap = gPokenavCityMap_Athens_1,
+        .tilemap = gPokenavCityMap_Mauville_1,
     },
     {
         .mapSecId = MAPSEC_RUSTBORO_CITY,

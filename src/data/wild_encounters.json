@@ -2451,7 +2451,7 @@
         },
         {
           "map": "MAP_NEW_ATHENS_INSIDE",
-          "base_label": "gNewAthens_Inside",
+          "base_label": "gNewMauville_Inside",
           "land_mons": {
             "encounter_rate": 10,
             "mons": [
@@ -4907,7 +4907,7 @@
         },
         {
           "map": "MAP_NEW_ATHENS_ENTRANCE",
-          "base_label": "gNewAthens_Entrance",
+          "base_label": "gNewMauville_Entrance",
           "land_mons": {
             "encounter_rate": 10,
             "mons": [

@@ -244,7 +244,7 @@ SlateportCity_EventScript_RichBoySternInterview::
 
 SlateportCity_EventScript_FatMan::
 	goto_if_eq VAR_SLATEPORT_CITY_STATE, 1, SlateportCity_EventScript_FatManSternInterview
-	msgbox SlateportCity_Text_BushedHikingFromAthens, MSGBOX_NPC
+	msgbox SlateportCity_Text_BushedHikingFromMauville, MSGBOX_NPC
 	end
 
 SlateportCity_EventScript_FatManSternInterview::
@@ -1009,7 +1009,7 @@ SlateportCity_Text_GoingToCompeteInBattleTent:
 	.string "But before that, I need to catch\n"
 	.string "some POKéMON!$"
 
-SlateportCity_Text_BushedHikingFromAthens:
+SlateportCity_Text_BushedHikingFromMauville:
 	.string "Whew… I'm just bushed…\p"
 	.string "I hiked over from ATHENS.\n"
 	.string "But, boy, this city's huge.\p"

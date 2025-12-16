@@ -40,7 +40,7 @@ $(TILESETGFXDIR)/secondary/crete/tiles.4bpp: %.4bpp: %.png
 $(TILESETGFXDIR)/secondary/slateport/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 504 -Wnum_tiles
 
-$(TILESETGFXDIR)/secondary/athens/tiles.4bpp: %.4bpp: %.png
+$(TILESETGFXDIR)/secondary/mauville/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 503 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/lavaridge/tiles.4bpp: %.4bpp: %.png
@@ -154,7 +154,7 @@ $(TILESETGFXDIR)/secondary/underwater/tiles.4bpp: %.4bpp: %.png
 $(TILESETGFXDIR)/secondary/generic_building/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 509 -Wnum_tiles
 
-$(TILESETGFXDIR)/secondary/athens_game_corner/tiles.4bpp: %.4bpp: %.png
+$(TILESETGFXDIR)/secondary/mauville_game_corner/tiles.4bpp: %.4bpp: %.png
 	$(GFX) $< $@ -num_tiles 469 -Wnum_tiles
 
 $(TILESETGFXDIR)/secondary/unused_2/tiles.4bpp: %.4bpp: %.png

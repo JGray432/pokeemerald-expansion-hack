@@ -1,4 +1,4 @@
-@ Only contains the text for the Athens Man named Giddy. The rest is in scripts/athens_man.inc
+@ Only contains the text for the Mauville Man named Giddy. The rest is in scripts/mauville_man.inc
 GiddyText_SoPretty::
 	.string " so pretty!$"
 

@@ -30,7 +30,7 @@
 #include "window.h"
 #include "constants/event_objects.h"
 #include "constants/lilycove_lady.h"
-#include "constants/athens_old_man.h"
+#include "constants/mauville_old_man.h"
 #include "constants/songs.h"
 #include "constants/rgb.h"
 
@@ -1458,7 +1458,7 @@ void ShowEasyChatScreen(void)
 {
     int i;
     u16 *words;
-    struct AthensManBard *bard;
+    struct MauvilleManBard *bard;
     u8 displayedPersonType = EASY_CHAT_PERSON_DISPLAY_NONE;
     switch (gSpecialVar_0x8004)
     {
@@ -5433,7 +5433,7 @@ void BufferDeepLinkPhrase(void)
 
     This is a group of easy chat words (EC_GROUP_TRENDY_SAYING) that are normally inaccessible.
     They can be unlocked either through Mystery Event (where they're referred to as "rare" words)
-    or from the "Hipster" variety of the Athens Old Man. The Hipster can unlock one word each
+    or from the "Hipster" variety of the Mauville Old Man. The Hipster can unlock one word each
     time he is received via record mixing (and once if he is the player's default Old Man).
 
     Which words have been unlocked is saved in the unlockedTrendySayings bitfield in SaveBlock1
@@ -5585,7 +5585,7 @@ void InitEasyChatPhrases(void)
 #ifndef UBFIX
     // BUG: This is supposed to clear 64 bits, but this loop is clearing 64 bytes.
     // However, this bug has no resulting effect on gameplay because only the
-    // Athens old man data is corrupted, which is initialized directly after
+    // Mauville old man data is corrupted, which is initialized directly after
     // this function is called when starting a new game.
     for (i = 0; i < 64; i++)
         gSaveBlock1Ptr->unlockedTrendySayings[i] = 0;
