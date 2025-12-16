@@ -278,7 +278,7 @@ EntomoWoods_EventScript_Lyle::
 	end
 
 EntomoWoods_EventScript_Harry::
-	trainerbattle_single TRAINER_HARRY, EntomoWoods_Text_Defense, EntomoWoods_Text_DefenseLost
+	trainerbattle_single TRAINER_HARRY, EntomoWoods_Text_GoBugPokemonTeam, EntomoWoods_Text_ICouldntWin
 	msgbox EntomoWoods_Text_ImOutOfPokeBalls, MSGBOX_AUTOCLOSE
 	end
 
@@ -389,17 +389,13 @@ EntomoWoods_Text_YoureLoadedWithItems:
 	.string "I can't give you this GREAT BALL.$"
 
 EntomoWoods_Text_GoBugPokemonTeam:
-	.string "My bug POKéMON is so strong!\p"
-	.string "We'll blast you away with 1 move!$"
+	.string "I caught a whole bunch of POKéMON!\p"
+	.string "Go, go, go!\n"
+	.string "My BUG POKéMON team!$"
 
 EntomoWoods_Text_ICouldntWin:
-	.string "Maybe I need a plan B…$"
-
-EntomoWoods_Text_Defense:
-	.string "The best offence is a good defence!$"
-
-EntomoWoods_Text_DefenseLost:
-	.string "DEFENCE! DEFENCE!$"
+	.string "I have all these POKéMON,\n"
+	.string "but I couldn't win…$"
 
 EntomoWoods_Text_ImOutOfPokeBalls:
 	.string "I caught a bunch of POKéMON.\n"

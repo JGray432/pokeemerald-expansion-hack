@@ -587,17 +587,15 @@ Route3_Text_AthenaBattleIntro:
 	.string "ATHENA: Hey, {PLAYER}!\n"
 	.string "Leaving Athens so soon?\p"
 	.string "Let's see if you've gotten \n"
-	.string "any stronger!$"
+	.string "any stonger!$"
 
 Route3_Text_AthenaDefeated:
-	.string "ATHENA: Oh, no! I lost!$"
+	.string "ATHENA: Oh, no! I lost!\n"
+	.string "I guess I have to go back to the\n"
+	.string "drawing board.$"
 
 Route3_Text_AthenaSendOff:
-	.string "ATHENA: Wow I can't believe how \n"
-	.string "much you've grown already!\p"
-	.string "Heh, keep it up and you might find\n"
-	.string "yourself challenging Mt Olympus soon!\p"
-	.string "See you round, {PLAYER}!$"
+	.string "ATHENA: Cya$"
 
 Route3_Text_BrineyDeliverDevonGoods:
 	.string "MR. BRINEY: Then you go on and deliver\n"
@@ -614,7 +612,7 @@ Route3_Text_BrineyHappyToSail:
 	.string "Dionysus needs you to go to Crete?\p"
 	.string "Why that changes everything! He \n"
 	.string "provides me with the best rum this\l"
-	.string "side of the Mediterranean!$"
+	.string "side of the Pacific!$"
 
 Route3_Text_BrineySailToCreteQuestion:
 	.string "You ready to set sail?$"

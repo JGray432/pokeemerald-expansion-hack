@@ -89,6 +89,7 @@ ArchiTown_AthenasHouse_EventScript_Bag::
 	setflag FLAG_RESCUED_BIRCH
 	fadescreen FADE_TO_BLACK
 	special ChooseStarter
+	call SetStarterMetLocationToSpecial
 	
 	setflag FLAG_HIDE_ROUTE_1_BIRCH_ZIGZAGOON_BATTLE
 	clearflag FLAG_HIDE_ARCHI_TOWN_BIRCHS_LAB_BIRCH
@@ -98,6 +99,10 @@ ArchiTown_AthenasHouse_EventScript_Bag::
 	setvar VAR_ARCHI_INTRO_STATE, 4
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
 	goto AthenasHouse_EventScript_AthenaFiredUp
+	end
+
+SetStarterMetLocationToSpecial::
+	setmodernfatefulencounter 1
 	end
 
 ArchiTown_AthenasHouse_EventScript_AlreadyChosenStarter::
@@ -209,20 +214,18 @@ AthenasHouse_Movement_AthenaLeave:
 
 
 AthenasHouse_Text_IsntItNiceInHere:
-	.string "ATHENA: Welcome, {PLAYER}, to Greece!\n"
-	.string "I hear you're itching to start your own\l"
-	.string "odyssey? Well first things first you're \p"
-	.string "going to need a partner POKéMON.$"
+	.string "Athena: See, {PLAYER}?\n"
+	.string "Isn't it nice in here, too?$"
 
 AthenasHouse_Text_OfferStarters:
-	.string "That bag on the table contains\n"
+	.string "Now, that bag on the table contains\n"
 	.string "some offerings I recently received.\l"
 	.string "But frankly I receive more gifts\l"
 	.string "than I know what to do with, so why\l"
 	.string "don't you check it out instead?$"
 
 AthenasHouse_Text_ArentYouInterestedInBag:
-	.string "ATHENA: Well, {PLAYER}?\p"
+	.string "Athena: Well, {PLAYER}?\p"
 	.string "Aren't you interested in seeing what's\n"
 	.string "in the bag?$"
 
@@ -231,28 +234,27 @@ AthenasHouse_Text_AlreadyChosenStarters:
 	.string "as it is, best to leave it alone. $"
 
 AthenasHouse_Text_AthenaFiredUp:
-	.string "ATHENA: Great choice {PLAYER}!\n"
-	.string "You two look like a perfect match.\p"
-	.string "Seeing you two together has lit\n"
+	.string "Athena: Great choice {PLAYER}!\n"
+	.string "Seeing you two together has lit\l"
 	.string "a fire in me, I think I'll start\l"
 	.string "my own new adventure too!\p"
-	.string "I'll take this little guy.$"	
+	.string "I'll take this little guy.$"
+	
 
 AthenasHouse_Text_AthenaTasteOfBattle:
 	.string "Hey, why don't I give you a taste of \n"
 	.string "what being a trainer is all about? $"
 	
 Athenas_House_Text_ATHENADefeated:
-	.string "ATHENA: Wow, I didn't expect you\n"
-	.string "to be such a natural battler!$"
+	.string "ATHENA: Oh, I lost…\n"
+	.string "But that was fun!$"
 
 AthenasHouse_Text_AthenaSendOff:
-	.string "ATHENA: Heh, that was fun!$"
+	.string "Athena: Wow, that was fun!$"
 
 ArchiTown_AthenasHouse_Text_GiveKeyItems:
-	.string "Now that you and your partner have \n"
-	.string "gotten acquainted, you can take these \n"
-	.string "useful items to help start your journey$"
+	.string "Here are some useful\n"
+	.string "items to help start your journey$"
 
 ArchiTown_AthenasHouse_Text_AthenaLeaving:
 	.string "ATHENA: Ok, I'll be off now, I have \n"

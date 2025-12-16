@@ -53,29 +53,33 @@ void ApplyPoisonStatusConditionToPartyMon(void)
 
 void ApplyBurnStatusConditionToPartyMon(void)
 {
-   u32 status = STATUS1_BURN;
-    SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_STATUS, &status);
+    struct Pokemon *mon = &gPlayerParty[gSpecialVar_0x8004];
+    u32 status = STATUS1_BURN;
+    SetMonData(mon, MON_DATA_STATUS, &status);
     CB2_ReturnToFieldContinueScriptPlayMapMusic();
 }
 
 void ApplyParalyzeStatusConditionToPartyMon(void)
 {
+    struct Pokemon *mon = &gPlayerParty[gSpecialVar_0x8004];
     u32 status = STATUS1_PARALYSIS;
-    SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_STATUS, &status);
+    SetMonData(mon, MON_DATA_STATUS, &status);
     CB2_ReturnToFieldContinueScriptPlayMapMusic();
 }
 
 void ApplyFrostbiteStatusConditionToPartyMon(void)
 {
+    struct Pokemon *mon = &gPlayerParty[gSpecialVar_0x8004];
     u32 status = STATUS1_FROSTBITE;
-    SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_STATUS, &status);
+    SetMonData(mon, MON_DATA_STATUS, &status);
     CB2_ReturnToFieldContinueScriptPlayMapMusic();
 }
 
 void ApplySleepStatusConditionToPartyMon(void)
 {
+    struct Pokemon *mon = &gPlayerParty[gSpecialVar_0x8004];
     u32 status = STATUS1_SLEEP;
-    SetMonData(&gPlayerParty[gSpecialVar_0x8004], MON_DATA_STATUS, &status);
+    SetMonData(mon, MON_DATA_STATUS, &status);
     CB2_ReturnToFieldContinueScriptPlayMapMusic();
 }
 
@@ -83,7 +87,9 @@ void MaximizeIVOfChosenMon(void)
 {
     u8 statId = VarGet(gSpecialVar_0x8004); // 0 = HP, 1 = Atk, ...
     u8 monId = GetCursorSelectionMonId();
+    struct Pokemon *mon = &gPlayerParty[monId];
+
     u8 maxIV = 31;
-    SetMonData(&gPlayerParty[monId], MON_DATA_HP_IV + statId, &maxIV);
+    SetMonData(mon, MON_DATA_HP_IV + statId, &maxIV);
     CB2_ReturnToFieldContinueScriptPlayMapMusic();
 }
