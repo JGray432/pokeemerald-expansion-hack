@@ -52,7 +52,7 @@
     "FallarborTown",
     "VerdanturfTown",
     "PacifidlogTown",
-    "Route1",
+    "Route101",
     "Route102",
     "Route103",
     "Route104",
@@ -95,7 +95,10 @@
     "Underwater_Route125"
   ],
   "gMapGroup_IndoorLittleroot": [
-    "LittlerootTown_AthenasHouse_1F",
+    "LittlerootTown_BrendansHouse_1F",
+    "LittlerootTown_BrendansHouse_2F",
+    "LittlerootTown_MaysHouse_1F",
+    "LittlerootTown_MaysHouse_2F",
     "LittlerootTown_ProfessorBirchsLab"
   ],
   "gMapGroup_IndoorOldale": [

@@ -2,11 +2,18 @@
 
 static const struct HealLocation sHealLocationsPokemonCenter[HEAL_LOCATION_COUNT - 1] =
 {
-    [HEAL_LOCATION_LITTLEROOT_TOWN_ATHENAS_HOUSE - 1] =
+    [HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F - 1] =
     {
-        .group = MAP_GROUP(LITTLEROOT_TOWN),
-        .map = MAP_NUM(LITTLEROOT_TOWN),
+        .group = MAP_GROUP(LITTLEROOT_TOWN_BRENDANS_HOUSE_1F),
+        .map = MAP_NUM(LITTLEROOT_TOWN_BRENDANS_HOUSE_1F),
         .x = 2,
+        .y = 7,
+    },
+    [HEAL_LOCATION_LITTLEROOT_TOWN_MAYS_HOUSE_2F - 1] =
+    {
+        .group = MAP_GROUP(LITTLEROOT_TOWN_MAYS_HOUSE_1F),
+        .map = MAP_NUM(LITTLEROOT_TOWN_MAYS_HOUSE_1F),
+        .x = 8,
         .y = 7,
     },
     [HEAL_LOCATION_PETALBURG_CITY - 1] =
@@ -62,6 +69,20 @@ static const struct HealLocation sHealLocationsPokemonCenter[HEAL_LOCATION_COUNT
         .group = MAP_GROUP(EVER_GRANDE_CITY_POKEMON_CENTER_1F),
         .map = MAP_NUM(EVER_GRANDE_CITY_POKEMON_CENTER_1F),
         DEFAULT_POKEMON_CENTER_COORDS,
+    },
+    [HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE - 1] =
+    {
+        .group = MAP_GROUP(LITTLEROOT_TOWN_BRENDANS_HOUSE_1F),
+        .map = MAP_NUM(LITTLEROOT_TOWN_BRENDANS_HOUSE_1F),
+        .x = 2,
+        .y = 7,
+    },
+    [HEAL_LOCATION_LITTLEROOT_TOWN_MAYS_HOUSE - 1] =
+    {
+        .group = MAP_GROUP(LITTLEROOT_TOWN_MAYS_HOUSE_1F),
+        .map = MAP_NUM(LITTLEROOT_TOWN_MAYS_HOUSE_1F),
+        .x = 8,
+        .y = 7,
     },
     [HEAL_LOCATION_OLDALE_TOWN - 1] =
     {
@@ -129,7 +150,8 @@ static const struct HealLocation sHealLocationsPokemonCenter[HEAL_LOCATION_COUNT
 // In this case the localId is 1.
 static const u8 sHealNpcLocalId[HEAL_LOCATION_COUNT - 1] =
 {
-    [HEAL_LOCATION_LITTLEROOT_TOWN_ATHENAS_HOUSE - 1] = 1,
+    [HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE_2F - 1] = 1,
+    [HEAL_LOCATION_LITTLEROOT_TOWN_MAYS_HOUSE_2F - 1] = 1,
     [HEAL_LOCATION_PETALBURG_CITY - 1] = 1,
     [HEAL_LOCATION_SLATEPORT_CITY - 1] = 1,
     [HEAL_LOCATION_MAUVILLE_CITY - 1] = 1,
@@ -139,6 +161,8 @@ static const u8 sHealNpcLocalId[HEAL_LOCATION_COUNT - 1] =
     [HEAL_LOCATION_MOSSDEEP_CITY - 1] = 1,
     [HEAL_LOCATION_SOOTOPOLIS_CITY - 1] = 1,
     [HEAL_LOCATION_EVER_GRANDE_CITY - 1] = 1,
+    [HEAL_LOCATION_LITTLEROOT_TOWN_BRENDANS_HOUSE - 1] = 1,
+    [HEAL_LOCATION_LITTLEROOT_TOWN_MAYS_HOUSE - 1] = 1,
     [HEAL_LOCATION_OLDALE_TOWN - 1] = 1,
     [HEAL_LOCATION_DEWFORD_TOWN - 1] = 1,
     [HEAL_LOCATION_LAVARIDGE_TOWN - 1] = 1,

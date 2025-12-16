@@ -1,7 +1,7 @@
 .set LOCALID_BIRCH, 2
 .set LOCALID_ZIGZAGOON, 4
 
-Route1_MapScripts::
+Route101_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, Route101_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route101_OnFrame
 	.byte 0
