@@ -1,9 +1,9 @@
 {
-  "id": "MAP_NEW_ATHENS_ENTRANCE",
+  "id": "MAP_NEW_MAUVILLE_ENTRANCE",
   "name": "NewMauville_Entrance",
-  "layout": "LAYOUT_NEW_ATHENS_ENTRANCE",
+  "layout": "LAYOUT_NEW_MAUVILLE_ENTRANCE",
   "music": "MUS_MT_PYRE",
-  "region_map_section": "MAPSEC_NEW_ATHENS",
+  "region_map_section": "MAPSEC_NEW_MAUVILLE",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_UNDERGROUND",
@@ -26,7 +26,7 @@
       "x": 4,
       "y": 1,
       "elevation": 3,
-      "dest_map": "MAP_NEW_ATHENS_INSIDE",
+      "dest_map": "MAP_NEW_MAUVILLE_INSIDE",
       "dest_warp_id": "0"
     }
   ],
@@ -36,7 +36,7 @@
       "x": 4,
       "y": 2,
       "elevation": 3,
-      "var": "VAR_NEW_ATHENS_STATE",
+      "var": "VAR_NEW_MAUVILLE_STATE",
       "var_value": "0",
       "script": "NewMauville_Entrance_EventScript_Door"
     }

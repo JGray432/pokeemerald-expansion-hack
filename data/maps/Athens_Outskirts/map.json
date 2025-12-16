@@ -19,12 +19,12 @@
       "direction": "up"
     },
     {
-      "map": "MAP_ATHENS",
+      "map": "MAP_MAUVILLE_CITY",
       "offset": 0,
       "direction": "left"
     },
     {
-      "map": "MAP_ATHENS",
+      "map": "MAP_MAUVILLE_CITY",
       "offset": 0,
       "direction": "left"
     }

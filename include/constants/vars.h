@@ -164,7 +164,7 @@
 #define VAR_BRINEY_HOUSE_STATE                           0x4090
 #define VAR_UNUSED_0x4091                                0x4091 // Unused Var
 #define VAR_LITTLEROOT_INTRO_STATE                       0x4092
-#define VAR_ATHENS_GYM_STATE                           0x4093
+#define VAR_MAUVILLE_GYM_STATE                           0x4093
 #define VAR_LILYCOVE_MUSEUM_2F_STATE                     0x4094
 #define VAR_LILYCOVE_FAN_CLUB_STATE                      0x4095
 #define VAR_BRINEY_LOCATION                              0x4096
@@ -203,7 +203,7 @@
 #define VAR_SLATEPORT_FAN_CLUB_STATE                     0x40B7
 #define VAR_UNUSED_0x40B8                                0x40B8 // Unused Var
 #define VAR_MT_PYRE_STATE                                0x40B9
-#define VAR_NEW_ATHENS_STATE                           0x40BA
+#define VAR_NEW_MAUVILLE_STATE                           0x40BA
 #define VAR_UNUSED_0x40BB                                0x40BB // Unused Var
 #define VAR_BRAVO_TRAINER_BATTLE_TOWER_ON                0x40BC
 #define VAR_JAGGED_PASS_ASH_WEATHER                      0x40BD

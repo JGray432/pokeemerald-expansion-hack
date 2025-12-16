@@ -1,17 +1,17 @@
 Text_BootUpPC:
-	.string "{PLAYER} reached into The Sack.$"
+	.string "{PLAYER} booted up the PC.$"
 
 gText_WhichPCShouldBeAccessed::
-	.string "Which pocket should be accessed?$"
+	.string "Which PC should be accessed?$"
 
 gText_AccessedSomeonesPC::
-	.string "Accessed POKéMON storage pocket.$"
+	.string "Accessed SOMEONE'S PC.$"
 
 gText_StorageSystemOpened::
-	.string "POKéMON Storage Pocket opened.$"
+	.string "POKéMON Storage System opened.$"
 
 gText_AccessedPlayersPC::
-	.string "Accessed {PLAYER}'s Pocket.$"
+	.string "Accessed {PLAYER}'s PC.$"
 
 gText_AccessedLanettesPC::
 	.string "Accessed LANETTE's PC.$"

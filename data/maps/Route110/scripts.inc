@@ -116,8 +116,8 @@ Route110_EventScript_SeasideParkingSign::
 	msgbox Route110_Text_SeasideParkingSign, MSGBOX_SIGN
 	end
 
-Route110_EventScript_AthensSign::
-	msgbox Route110_Text_AthensSign, MSGBOX_SIGN
+Route110_EventScript_MauvilleCitySign::
+	msgbox Route110_Text_MauvilleCitySign, MSGBOX_SIGN
 	end
 
 Route110_EventScript_TrainerTipsPrlzSleep::
@@ -854,7 +854,7 @@ Route110_Text_BikeTechniques:
 
 Route110_Text_WhichShouldIChoose:
 	.string "Which should I choose?\p"
-	.string "Make a beeline for ATHENS on\n"
+	.string "Make a beeline for MAUVILLE on\n"
 	.string "CYCLING ROAD, or take the low road\l"
 	.string "and look for POKéMON?$"
 
@@ -896,7 +896,7 @@ Route110_Text_ChallengeReactionWorst:
 
 Route110_Text_RatedForNumberOfCollisions:
 	.string "This is CYCLING ROAD.\p"
-	.string "If you were to ride from ATHENS to\n"
+	.string "If you were to ride from MAUVILLE to\n"
 	.string "SLATEPORT on a MACH BIKE, you would\l"
 	.string "be rated for the number of collisions\l"
 	.string "and your total time.$"
@@ -934,9 +934,9 @@ Route110_Text_DionysusVineyardSign:
 Route110_Text_SeasideParkingSign:
 	.string "SEASIDE PARKING$"
 
-Route110_Text_AthensSign:
+Route110_Text_MauvilleCitySign:
 	.string "ROUTE 110\n"
-	.string "{UP_ARROW} ATHENS$"
+	.string "{UP_ARROW} MAUVILLE CITY$"
 
 Route110_Text_TrainerTipsPrlzSleep:
 	.string "TRAINER TIPS\p"

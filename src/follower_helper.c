@@ -146,7 +146,7 @@ const struct FollowerMsgInfoExtended gFollowerConditionalMessages[COND_MSG_COUNT
         .emotion = FOLLOWER_EMOTION_PENSIVE,
         .conditions =
         {
-            MATCH_MAP(ATHENS_BIKE_SHOP)
+            MATCH_MAP(MAUVILLE_CITY_BIKE_SHOP)
         },
     },
     [COND_MSG_MACHINES] =
@@ -157,7 +157,7 @@ const struct FollowerMsgInfoExtended gFollowerConditionalMessages[COND_MSG_COUNT
         .orFlag = 1, // match any of these maps
         .conditions =
         {
-            MATCH_MAP(NEW_ATHENS_INSIDE),
+            MATCH_MAP(NEW_MAUVILLE_INSIDE),
             MATCH_MAP(SLATEPORT_CITY_STERNS_SHIPYARD_1F),
             MATCH_MAP(SLATEPORT_CITY_STERNS_SHIPYARD_2F),
         },

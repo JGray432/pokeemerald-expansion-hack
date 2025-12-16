@@ -1,9 +1,9 @@
 {
-  "id": "MAP_ATHENS",
-  "name": "Athens",
-  "layout": "LAYOUT_ATHENS",
+  "id": "MAP_MAUVILLE_CITY",
+  "name": "MauvilleCity",
+  "layout": "LAYOUT_MAUVILLE_CITY",
   "music": "MUS_RUSTBORO",
-  "region_map_section": "MAPSEC_ATHENS",
+  "region_map_section": "MAPSEC_MAUVILLE_CITY",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
   "map_type": "MAP_TYPE_CITY",
@@ -50,7 +50,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Athens_EventScript_Boy",
+      "script": "MauvilleCity_EventScript_Boy",
       "flag": "0"
     },
     {
@@ -63,7 +63,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Athens_EventScript_RichBoy",
+      "script": "MauvilleCity_EventScript_RichBoy",
       "flag": "0"
     },
     {
@@ -76,7 +76,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Athens_EventScript_Maniac",
+      "script": "MauvilleCity_EventScript_Maniac",
       "flag": "0"
     },
     {
@@ -102,7 +102,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Athens_EventScript_Clerk",
+      "script": "MauvilleCity_EventScript_Clerk",
       "flag": "0"
     },
     {
@@ -115,8 +115,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Athens_EventScript_Wattson",
-      "flag": "FLAG_HIDE_ATHENS_WATTSON"
+      "script": "MauvilleCity_EventScript_Wattson",
+      "flag": "FLAG_HIDE_MAUVILLE_CITY_WATTSON"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -129,7 +129,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "ITEM_SILK_SCARF",
       "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_ITEM_ATHENS_X_SPEED"
+      "flag": "FLAG_ITEM_MAUVILLE_CITY_X_SPEED"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_FAT_MAN",
@@ -141,7 +141,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Athens_EventScript_RolloutTutor",
+      "script": "MauvilleCity_EventScript_RolloutTutor",
       "flag": "0"
     },
     {
@@ -155,7 +155,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_HIDE_ATHENS_SCOTT"
+      "flag": "FLAG_HIDE_MAUVILLE_CITY_SCOTT"
     }
   ],
   "warp_events": [
@@ -163,35 +163,35 @@
       "x": 8,
       "y": 5,
       "elevation": 0,
-      "dest_map": "MAP_ATHENS_GYM",
+      "dest_map": "MAP_MAUVILLE_CITY_GYM",
       "dest_warp_id": "0"
     },
     {
       "x": 35,
       "y": 5,
       "elevation": 0,
-      "dest_map": "MAP_ATHENS_BIKE_SHOP",
+      "dest_map": "MAP_MAUVILLE_CITY_BIKE_SHOP",
       "dest_warp_id": "0"
     },
     {
       "x": 32,
       "y": 14,
       "elevation": 0,
-      "dest_map": "MAP_ATHENS_HOUSE1",
+      "dest_map": "MAP_MAUVILLE_CITY_HOUSE1",
       "dest_warp_id": "0"
     },
     {
       "x": 8,
       "y": 13,
       "elevation": 0,
-      "dest_map": "MAP_ATHENS_GAME_CORNER",
+      "dest_map": "MAP_MAUVILLE_CITY_GAME_CORNER",
       "dest_warp_id": "0"
     },
     {
       "x": 19,
       "y": 14,
       "elevation": 0,
-      "dest_map": "MAP_ATHENS_HOUSE2",
+      "dest_map": "MAP_MAUVILLE_CITY_HOUSE2",
       "dest_warp_id": "0"
     }
   ],
@@ -205,7 +205,7 @@
       "y": 6,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Athens_EventScript_GymSign"
+      "script": "MauvilleCity_EventScript_GymSign"
     },
     {
       "type": "sign",
@@ -213,7 +213,7 @@
       "y": 7,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Athens_EventScript_CitySign"
+      "script": "MauvilleCity_EventScript_CitySign"
     },
     {
       "type": "sign",
@@ -221,7 +221,7 @@
       "y": 6,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Athens_EventScript_BikeShopSign"
+      "script": "MauvilleCity_EventScript_BikeShopSign"
     },
     {
       "type": "sign",
@@ -229,7 +229,7 @@
       "y": 15,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Athens_EventScript_GameCornerSign"
+      "script": "MauvilleCity_EventScript_GameCornerSign"
     }
   ]
 }

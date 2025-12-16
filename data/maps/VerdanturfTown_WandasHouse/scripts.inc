@@ -42,7 +42,7 @@ VerdanturfTown_WandasHouse_EventScript_Wanda::
 	lock
 	faceplayer
 	goto_if_set FLAG_DEFEATED_LAVARIDGE_GYM, VerdanturfTown_WandasHouse_EventScript_WandaDontWorry
-	goto_if_set FLAG_DEFEATED_WALLY_ATHENS, VerdanturfTown_WandasHouse_EventScript_MeetWanda
+	goto_if_set FLAG_DEFEATED_WALLY_MAUVILLE, VerdanturfTown_WandasHouse_EventScript_MeetWanda
 	msgbox VerdanturfTown_WandasHouse_Text_DontWorryAboutWally, MSGBOX_DEFAULT
 	release
 	end

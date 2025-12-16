@@ -31342,7 +31342,7 @@ F_TRAINER_FEMALE |
         },
     },
 #line 12392
-    [DIFFICULTY_NORMAL][TRAINER_WALLY_ATHENS] =
+    [DIFFICULTY_NORMAL][TRAINER_WALLY_MAUVILLE] =
     {
 #line 12393
         .trainerName = _("WALLY"),

@@ -1,9 +1,9 @@
 {
-  "id": "MAP_ATHENS_HOUSE1",
-  "name": "Athens_House1",
+  "id": "MAP_MAUVILLE_CITY_HOUSE1",
+  "name": "MauvilleCity_House1",
   "layout": "LAYOUT_HOUSE2",
   "music": "MUS_RUSTBORO",
-  "region_map_section": "MAPSEC_ATHENS",
+  "region_map_section": "MAPSEC_MAUVILLE_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Athens_House1_EventScript_RockSmashDude",
+      "script": "MauvilleCity_House1_EventScript_RockSmashDude",
       "flag": "0"
     }
   ],
@@ -33,14 +33,14 @@
       "x": 3,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_ATHENS",
+      "dest_map": "MAP_MAUVILLE_CITY",
       "dest_warp_id": "2"
     },
     {
       "x": 4,
       "y": 7,
       "elevation": 0,
-      "dest_map": "MAP_ATHENS",
+      "dest_map": "MAP_MAUVILLE_CITY",
       "dest_warp_id": "2"
     }
   ],

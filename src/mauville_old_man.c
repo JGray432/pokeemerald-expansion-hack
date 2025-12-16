@@ -76,7 +76,7 @@ static void SetupBard(void)
     u16 i;
     struct MauvilleManBard *bard = &gSaveBlock1Ptr->oldMan.bard;
 
-    bard->id = ATHENS_MAN_BARD;
+    bard->id = MAUVILLE_MAN_BARD;
     bard->hasChangedSong = FALSE;
     bard->language = gGameLanguage;
     for (i = 0; i < NUM_BARD_SONG_WORDS; i++)
@@ -87,7 +87,7 @@ static void SetupHipster(void)
 {
     struct MauvilleManHipster *hipster = &gSaveBlock1Ptr->oldMan.hipster;
 
-    hipster->id = ATHENS_MAN_HIPSTER;
+    hipster->id = MAUVILLE_MAN_HIPSTER;
     hipster->taughtWord = FALSE;
     hipster->language = gGameLanguage;
 }
@@ -101,7 +101,7 @@ static void SetupGiddy(void)
 {
     struct MauvilleManGiddy *giddy = &gSaveBlock1Ptr->oldMan.giddy;
 
-    giddy->id = ATHENS_MAN_GIDDY;
+    giddy->id = MAUVILLE_MAN_GIDDY;
     giddy->taleCounter = 0;
     giddy->language = gGameLanguage;
 }
@@ -119,19 +119,19 @@ void SetMauvilleOldMan(void)
     // Determine man based on the last digit of the player's trainer ID.
     switch ((trainerId % 10) / 2)
     {
-    case ATHENS_MAN_BARD:
+    case MAUVILLE_MAN_BARD:
         SetupBard();
         break;
-    case ATHENS_MAN_HIPSTER:
+    case MAUVILLE_MAN_HIPSTER:
         SetupHipster();
         break;
-    case ATHENS_MAN_TRADER:
+    case MAUVILLE_MAN_TRADER:
         SetupTrader();
         break;
-    case ATHENS_MAN_STORYTELLER:
+    case MAUVILLE_MAN_STORYTELLER:
         SetupStoryteller();
         break;
-    case ATHENS_MAN_GIDDY:
+    case MAUVILLE_MAN_GIDDY:
         SetupGiddy();
         break;
     }
@@ -396,19 +396,19 @@ void ResetMauvilleOldManFlag(void)
 {
     switch (GetCurrentMauvilleOldMan())
     {
-    case ATHENS_MAN_BARD:
+    case MAUVILLE_MAN_BARD:
         ResetBardFlag();
         break;
-    case ATHENS_MAN_HIPSTER:
+    case MAUVILLE_MAN_HIPSTER:
         ResetHipsterFlag();
         break;
-    case ATHENS_MAN_STORYTELLER:
+    case MAUVILLE_MAN_STORYTELLER:
         ResetStorytellerFlag();
         break;
-    case ATHENS_MAN_TRADER:
+    case MAUVILLE_MAN_TRADER:
         ResetTraderFlag();
         break;
-    case ATHENS_MAN_GIDDY:
+    case MAUVILLE_MAN_GIDDY:
         break;
     }
     SetMauvilleOldManObjEventGfx();
@@ -753,7 +753,7 @@ void SanitizeMauvilleOldManForRuby(union OldMan * oldMan)
 
     switch (oldMan->common.id)
     {
-    case ATHENS_MAN_TRADER:
+    case MAUVILLE_MAN_TRADER:
     {
         struct MauvilleOldManTrader * trader = &oldMan->trader;
         for (i = 0; i < NUM_TRADER_ITEMS; i++)
@@ -763,7 +763,7 @@ void SanitizeMauvilleOldManForRuby(union OldMan * oldMan)
         }
         break;
     }
-    case ATHENS_MAN_STORYTELLER:
+    case MAUVILLE_MAN_STORYTELLER:
     {
         struct MauvilleManStoryteller * storyteller = &oldMan->storyteller;
         for (i = 0; i < NUM_STORYTELLER_TALES; i++)
@@ -792,7 +792,7 @@ static void UNUSED SetMauvilleOldManLanguage(union OldMan * oldMan, u32 language
 
     switch (oldMan->common.id)
     {
-    case ATHENS_MAN_TRADER:
+    case MAUVILLE_MAN_TRADER:
     {
         struct MauvilleOldManTrader * trader = &oldMan->trader;
 
@@ -805,7 +805,7 @@ static void UNUSED SetMauvilleOldManLanguage(union OldMan * oldMan, u32 language
         }
     }
     break;
-    case ATHENS_MAN_STORYTELLER:
+    case MAUVILLE_MAN_STORYTELLER:
     {
         struct MauvilleManStoryteller * storyteller = &oldMan->storyteller;
 
@@ -818,7 +818,7 @@ static void UNUSED SetMauvilleOldManLanguage(union OldMan * oldMan, u32 language
         }
     }
     break;
-    case ATHENS_MAN_BARD:
+    case MAUVILLE_MAN_BARD:
     {
         struct MauvilleManBard * bard = &oldMan->bard;
 
@@ -828,7 +828,7 @@ static void UNUSED SetMauvilleOldManLanguage(union OldMan * oldMan, u32 language
             bard->language = language2;
     }
     break;
-    case ATHENS_MAN_HIPSTER:
+    case MAUVILLE_MAN_HIPSTER:
     {
         struct MauvilleManHipster * hipster = &oldMan->hipster;
 
@@ -838,7 +838,7 @@ static void UNUSED SetMauvilleOldManLanguage(union OldMan * oldMan, u32 language
             hipster->language = language2;
     }
     break;
-    case ATHENS_MAN_GIDDY:
+    case MAUVILLE_MAN_GIDDY:
     {
         struct MauvilleManGiddy * giddy = &oldMan->giddy;
 
@@ -855,7 +855,7 @@ void SanitizeReceivedEmeraldOldMan(union OldMan * oldMan, u32 version, u32 langu
 {
     u8 playerName[PLAYER_NAME_LENGTH + 1];
     s32 i;
-    if (oldMan->common.id == ATHENS_MAN_STORYTELLER && language == LANGUAGE_JAPANESE)
+    if (oldMan->common.id == MAUVILLE_MAN_STORYTELLER && language == LANGUAGE_JAPANESE)
     {
         struct MauvilleManStoryteller * storyteller = &oldMan->storyteller;
 
@@ -880,7 +880,7 @@ void SanitizeReceivedRubyOldMan(union OldMan * oldMan, u32 version, u32 language
 
     switch (oldMan->common.id)
     {
-    case ATHENS_MAN_TRADER:
+    case MAUVILLE_MAN_TRADER:
     {
         struct MauvilleOldManTrader * trader = &oldMan->trader;
         s32 i;
@@ -913,7 +913,7 @@ void SanitizeReceivedRubyOldMan(union OldMan * oldMan, u32 version, u32 language
         }
     }
     break;
-    case ATHENS_MAN_STORYTELLER:
+    case MAUVILLE_MAN_STORYTELLER:
     {
 
         struct MauvilleManStoryteller * storyteller = &oldMan->storyteller;
@@ -929,7 +929,7 @@ void SanitizeReceivedRubyOldMan(union OldMan * oldMan, u32 version, u32 language
         }
     }
     break;
-    case ATHENS_MAN_BARD:
+    case MAUVILLE_MAN_BARD:
     {
         struct MauvilleManBard * bard = &oldMan->bard;
 
@@ -939,7 +939,7 @@ void SanitizeReceivedRubyOldMan(union OldMan * oldMan, u32 version, u32 language
         }
     }
     break;
-    case ATHENS_MAN_HIPSTER:
+    case MAUVILLE_MAN_HIPSTER:
     {
         struct MauvilleManHipster * hipster = &oldMan->hipster;
 
@@ -949,7 +949,7 @@ void SanitizeReceivedRubyOldMan(union OldMan * oldMan, u32 version, u32 language
         }
     }
     break;
-    case ATHENS_MAN_GIDDY:
+    case MAUVILLE_MAN_GIDDY:
     {
         struct MauvilleManGiddy * giddy = &oldMan->giddy;
 
@@ -975,219 +975,219 @@ static const struct Story sStorytellerStories[] = {
     // The 50 below is replaced with GAME_STAT_SAVED_GAME
     {
         50, 1,
-        Athens_PokemonCenter_1F_Text_SavedGameTitle,
-        Athens_PokemonCenter_1F_Text_SavedGameAction,
-        Athens_PokemonCenter_1F_Text_SavedGameStory
+        MauvilleCity_PokemonCenter_1F_Text_SavedGameTitle,
+        MauvilleCity_PokemonCenter_1F_Text_SavedGameAction,
+        MauvilleCity_PokemonCenter_1F_Text_SavedGameStory
     },
     {
         GAME_STAT_STARTED_TRENDS, 1,
-        Athens_PokemonCenter_1F_Text_TrendsStartedTitle,
-        Athens_PokemonCenter_1F_Text_TrendsStartedAction,
-        Athens_PokemonCenter_1F_Text_TrendsStartedStory
+        MauvilleCity_PokemonCenter_1F_Text_TrendsStartedTitle,
+        MauvilleCity_PokemonCenter_1F_Text_TrendsStartedAction,
+        MauvilleCity_PokemonCenter_1F_Text_TrendsStartedStory
     },
     {
         GAME_STAT_PLANTED_BERRIES, 1,
-        Athens_PokemonCenter_1F_Text_BerriesPlantedTitle,
-        Athens_PokemonCenter_1F_Text_BerriesPlantedAction,
-        Athens_PokemonCenter_1F_Text_BerriesPlantedStory
+        MauvilleCity_PokemonCenter_1F_Text_BerriesPlantedTitle,
+        MauvilleCity_PokemonCenter_1F_Text_BerriesPlantedAction,
+        MauvilleCity_PokemonCenter_1F_Text_BerriesPlantedStory
     },
     {
         GAME_STAT_TRADED_BIKES, 1,
-        Athens_PokemonCenter_1F_Text_BikeTradesTitle,
-        Athens_PokemonCenter_1F_Text_BikeTradesAction,
-        Athens_PokemonCenter_1F_Text_BikeTradesStory
+        MauvilleCity_PokemonCenter_1F_Text_BikeTradesTitle,
+        MauvilleCity_PokemonCenter_1F_Text_BikeTradesAction,
+        MauvilleCity_PokemonCenter_1F_Text_BikeTradesStory
     },
     {
         GAME_STAT_GOT_INTERVIEWED, 1,
-        Athens_PokemonCenter_1F_Text_InterviewsTitle,
-        Athens_PokemonCenter_1F_Text_InterviewsAction,
-        Athens_PokemonCenter_1F_Text_InterviewsStory
+        MauvilleCity_PokemonCenter_1F_Text_InterviewsTitle,
+        MauvilleCity_PokemonCenter_1F_Text_InterviewsAction,
+        MauvilleCity_PokemonCenter_1F_Text_InterviewsStory
     },
     {
         GAME_STAT_TRAINER_BATTLES, 1,
-        Athens_PokemonCenter_1F_Text_TrainerBattlesTitle,
-        Athens_PokemonCenter_1F_Text_TrainerBattlesAction,
-        Athens_PokemonCenter_1F_Text_TrainerBattlesStory
+        MauvilleCity_PokemonCenter_1F_Text_TrainerBattlesTitle,
+        MauvilleCity_PokemonCenter_1F_Text_TrainerBattlesAction,
+        MauvilleCity_PokemonCenter_1F_Text_TrainerBattlesStory
     },
     {
         GAME_STAT_POKEMON_CAPTURES, 1,
-        Athens_PokemonCenter_1F_Text_PokemonCaughtTitle,
-        Athens_PokemonCenter_1F_Text_PokemonCaughtAction,
-        Athens_PokemonCenter_1F_Text_PokemonCaughtStory
+        MauvilleCity_PokemonCenter_1F_Text_PokemonCaughtTitle,
+        MauvilleCity_PokemonCenter_1F_Text_PokemonCaughtAction,
+        MauvilleCity_PokemonCenter_1F_Text_PokemonCaughtStory
     },
     {
         GAME_STAT_FISHING_ENCOUNTERS, 1,
-        Athens_PokemonCenter_1F_Text_FishingPokemonCaughtTitle,
-        Athens_PokemonCenter_1F_Text_FishingPokemonCaughtAction,
-        Athens_PokemonCenter_1F_Text_FishingPokemonCaughtStory
+        MauvilleCity_PokemonCenter_1F_Text_FishingPokemonCaughtTitle,
+        MauvilleCity_PokemonCenter_1F_Text_FishingPokemonCaughtAction,
+        MauvilleCity_PokemonCenter_1F_Text_FishingPokemonCaughtStory
     },
     {
         GAME_STAT_HATCHED_EGGS, 1,
-        Athens_PokemonCenter_1F_Text_EggsHatchedTitle,
-        Athens_PokemonCenter_1F_Text_EggsHatchedAction,
-        Athens_PokemonCenter_1F_Text_EggsHatchedStory
+        MauvilleCity_PokemonCenter_1F_Text_EggsHatchedTitle,
+        MauvilleCity_PokemonCenter_1F_Text_EggsHatchedAction,
+        MauvilleCity_PokemonCenter_1F_Text_EggsHatchedStory
     },
     {
         GAME_STAT_EVOLVED_POKEMON, 1,
-        Athens_PokemonCenter_1F_Text_PokemonEvolvedTitle,
-        Athens_PokemonCenter_1F_Text_PokemonEvolvedAction,
-        Athens_PokemonCenter_1F_Text_PokemonEvolvedStory
+        MauvilleCity_PokemonCenter_1F_Text_PokemonEvolvedTitle,
+        MauvilleCity_PokemonCenter_1F_Text_PokemonEvolvedAction,
+        MauvilleCity_PokemonCenter_1F_Text_PokemonEvolvedStory
     },
     {
         GAME_STAT_USED_POKECENTER, 1,
-        Athens_PokemonCenter_1F_Text_UsedPokemonCenterTitle,
-        Athens_PokemonCenter_1F_Text_UsedPokemonCenterAction,
-        Athens_PokemonCenter_1F_Text_UsedPokemonCenterStory
+        MauvilleCity_PokemonCenter_1F_Text_UsedPokemonCenterTitle,
+        MauvilleCity_PokemonCenter_1F_Text_UsedPokemonCenterAction,
+        MauvilleCity_PokemonCenter_1F_Text_UsedPokemonCenterStory
     },
     {
         GAME_STAT_RESTED_AT_HOME, 1,
-        Athens_PokemonCenter_1F_Text_RestedAtHomeTitle,
-        Athens_PokemonCenter_1F_Text_RestedAtHomeAction,
-        Athens_PokemonCenter_1F_Text_RestedAtHomeStory
+        MauvilleCity_PokemonCenter_1F_Text_RestedAtHomeTitle,
+        MauvilleCity_PokemonCenter_1F_Text_RestedAtHomeAction,
+        MauvilleCity_PokemonCenter_1F_Text_RestedAtHomeStory
     },
     {
         GAME_STAT_ENTERED_SAFARI_ZONE, 1,
-        Athens_PokemonCenter_1F_Text_SafariGamesTitle,
-        Athens_PokemonCenter_1F_Text_SafariGamesAction,
-        Athens_PokemonCenter_1F_Text_SafariGamesStory
+        MauvilleCity_PokemonCenter_1F_Text_SafariGamesTitle,
+        MauvilleCity_PokemonCenter_1F_Text_SafariGamesAction,
+        MauvilleCity_PokemonCenter_1F_Text_SafariGamesStory
     },
     {
         GAME_STAT_USED_CUT, 1,
-        Athens_PokemonCenter_1F_Text_UsedCutTitle,
-        Athens_PokemonCenter_1F_Text_UsedCutAction,
-        Athens_PokemonCenter_1F_Text_UsedCutStory
+        MauvilleCity_PokemonCenter_1F_Text_UsedCutTitle,
+        MauvilleCity_PokemonCenter_1F_Text_UsedCutAction,
+        MauvilleCity_PokemonCenter_1F_Text_UsedCutStory
     },
     {
         GAME_STAT_USED_ROCK_SMASH, 1,
-        Athens_PokemonCenter_1F_Text_UsedRockSmashTitle,
-        Athens_PokemonCenter_1F_Text_UsedRockSmashAction,
-        Athens_PokemonCenter_1F_Text_UsedRockSmashStory
+        MauvilleCity_PokemonCenter_1F_Text_UsedRockSmashTitle,
+        MauvilleCity_PokemonCenter_1F_Text_UsedRockSmashAction,
+        MauvilleCity_PokemonCenter_1F_Text_UsedRockSmashStory
     },
     {
         GAME_STAT_MOVED_SECRET_BASE, 1,
-        Athens_PokemonCenter_1F_Text_MovedBasesTitle,
-        Athens_PokemonCenter_1F_Text_MovedBasesAction,
-        Athens_PokemonCenter_1F_Text_MovedBasesStory
+        MauvilleCity_PokemonCenter_1F_Text_MovedBasesTitle,
+        MauvilleCity_PokemonCenter_1F_Text_MovedBasesAction,
+        MauvilleCity_PokemonCenter_1F_Text_MovedBasesStory
     },
     {
         GAME_STAT_USED_SPLASH, 1,
-        Athens_PokemonCenter_1F_Text_UsedSplashTitle,
-        Athens_PokemonCenter_1F_Text_UsedSplashAction,
-        Athens_PokemonCenter_1F_Text_UsedSplashStory
+        MauvilleCity_PokemonCenter_1F_Text_UsedSplashTitle,
+        MauvilleCity_PokemonCenter_1F_Text_UsedSplashAction,
+        MauvilleCity_PokemonCenter_1F_Text_UsedSplashStory
     },
     {
         GAME_STAT_USED_STRUGGLE, 1,
-        Athens_PokemonCenter_1F_Text_UsedStruggleTitle,
-        Athens_PokemonCenter_1F_Text_UsedStruggleAction,
-        Athens_PokemonCenter_1F_Text_UsedStruggleStory
+        MauvilleCity_PokemonCenter_1F_Text_UsedStruggleTitle,
+        MauvilleCity_PokemonCenter_1F_Text_UsedStruggleAction,
+        MauvilleCity_PokemonCenter_1F_Text_UsedStruggleStory
     },
     {
         GAME_STAT_SLOT_JACKPOTS, 1,
-        Athens_PokemonCenter_1F_Text_SlotJackpotsTitle,
-        Athens_PokemonCenter_1F_Text_SlotJackpotsAction,
-        Athens_PokemonCenter_1F_Text_SlotJackpotsStory
+        MauvilleCity_PokemonCenter_1F_Text_SlotJackpotsTitle,
+        MauvilleCity_PokemonCenter_1F_Text_SlotJackpotsAction,
+        MauvilleCity_PokemonCenter_1F_Text_SlotJackpotsStory
     },
     {
         GAME_STAT_CONSECUTIVE_ROULETTE_WINS, 2,
-        Athens_PokemonCenter_1F_Text_RouletteWinsTitle,
-        Athens_PokemonCenter_1F_Text_RouletteWinsAction,
-        Athens_PokemonCenter_1F_Text_RouletteWinsStory
+        MauvilleCity_PokemonCenter_1F_Text_RouletteWinsTitle,
+        MauvilleCity_PokemonCenter_1F_Text_RouletteWinsAction,
+        MauvilleCity_PokemonCenter_1F_Text_RouletteWinsStory
     },
     {
         GAME_STAT_ENTERED_BATTLE_TOWER, 1,
-        Athens_PokemonCenter_1F_Text_BattleTowerChallengesTitle,
-        Athens_PokemonCenter_1F_Text_BattleTowerChallengesAction,
-        Athens_PokemonCenter_1F_Text_BattleTowerChallengesStory
+        MauvilleCity_PokemonCenter_1F_Text_BattleTowerChallengesTitle,
+        MauvilleCity_PokemonCenter_1F_Text_BattleTowerChallengesAction,
+        MauvilleCity_PokemonCenter_1F_Text_BattleTowerChallengesStory
     },
     {
         GAME_STAT_POKEBLOCKS, 1,
-        Athens_PokemonCenter_1F_Text_MadePokeblocksTitle,
-        Athens_PokemonCenter_1F_Text_MadePokeblocksAction,
-        Athens_PokemonCenter_1F_Text_MadePokeblocksStory
+        MauvilleCity_PokemonCenter_1F_Text_MadePokeblocksTitle,
+        MauvilleCity_PokemonCenter_1F_Text_MadePokeblocksAction,
+        MauvilleCity_PokemonCenter_1F_Text_MadePokeblocksStory
     },
     {
         GAME_STAT_ENTERED_CONTEST, 1,
-        Athens_PokemonCenter_1F_Text_EnteredContestsTitle,
-        Athens_PokemonCenter_1F_Text_EnteredContestsAction,
-        Athens_PokemonCenter_1F_Text_EnteredContestsStory
+        MauvilleCity_PokemonCenter_1F_Text_EnteredContestsTitle,
+        MauvilleCity_PokemonCenter_1F_Text_EnteredContestsAction,
+        MauvilleCity_PokemonCenter_1F_Text_EnteredContestsStory
     },
     {
         GAME_STAT_WON_CONTEST, 1,
-        Athens_PokemonCenter_1F_Text_WonContestsTitle,
-        Athens_PokemonCenter_1F_Text_WonContestsAction,
-        Athens_PokemonCenter_1F_Text_WonContestsStory
+        MauvilleCity_PokemonCenter_1F_Text_WonContestsTitle,
+        MauvilleCity_PokemonCenter_1F_Text_WonContestsAction,
+        MauvilleCity_PokemonCenter_1F_Text_WonContestsStory
     },
     {
         GAME_STAT_SHOPPED, 1,
-        Athens_PokemonCenter_1F_Text_TimesShoppedTitle,
-        Athens_PokemonCenter_1F_Text_TimesShoppedAction,
-        Athens_PokemonCenter_1F_Text_TimesShoppedStory
+        MauvilleCity_PokemonCenter_1F_Text_TimesShoppedTitle,
+        MauvilleCity_PokemonCenter_1F_Text_TimesShoppedAction,
+        MauvilleCity_PokemonCenter_1F_Text_TimesShoppedStory
     },
     {
         GAME_STAT_USED_ITEMFINDER, 1,
-        Athens_PokemonCenter_1F_Text_UsedItemFinderTitle,
-        Athens_PokemonCenter_1F_Text_UsedItemFinderAction,
-        Athens_PokemonCenter_1F_Text_UsedItemFinderStory
+        MauvilleCity_PokemonCenter_1F_Text_UsedItemFinderTitle,
+        MauvilleCity_PokemonCenter_1F_Text_UsedItemFinderAction,
+        MauvilleCity_PokemonCenter_1F_Text_UsedItemFinderStory
     },
     {
         GAME_STAT_GOT_RAINED_ON, 1,
-        Athens_PokemonCenter_1F_Text_TimesRainedTitle,
-        Athens_PokemonCenter_1F_Text_TimesRainedAction,
-        Athens_PokemonCenter_1F_Text_TimesRainedStory
+        MauvilleCity_PokemonCenter_1F_Text_TimesRainedTitle,
+        MauvilleCity_PokemonCenter_1F_Text_TimesRainedAction,
+        MauvilleCity_PokemonCenter_1F_Text_TimesRainedStory
     },
     {
         GAME_STAT_CHECKED_POKEDEX, 1,
-        Athens_PokemonCenter_1F_Text_CheckedPokedexTitle,
-        Athens_PokemonCenter_1F_Text_CheckedPokedexAction,
-        Athens_PokemonCenter_1F_Text_CheckedPokedexStory
+        MauvilleCity_PokemonCenter_1F_Text_CheckedPokedexTitle,
+        MauvilleCity_PokemonCenter_1F_Text_CheckedPokedexAction,
+        MauvilleCity_PokemonCenter_1F_Text_CheckedPokedexStory
     },
     {
         GAME_STAT_RECEIVED_RIBBONS, 1,
-        Athens_PokemonCenter_1F_Text_ReceivedRibbonsTitle,
-        Athens_PokemonCenter_1F_Text_ReceivedRibbonsAction,
-        Athens_PokemonCenter_1F_Text_ReceivedRibbonsStory
+        MauvilleCity_PokemonCenter_1F_Text_ReceivedRibbonsTitle,
+        MauvilleCity_PokemonCenter_1F_Text_ReceivedRibbonsAction,
+        MauvilleCity_PokemonCenter_1F_Text_ReceivedRibbonsStory
     },
     {
         GAME_STAT_JUMPED_DOWN_LEDGES, 1,
-        Athens_PokemonCenter_1F_Text_LedgesJumpedTitle,
-        Athens_PokemonCenter_1F_Text_LedgesJumpedAction,
-        Athens_PokemonCenter_1F_Text_LedgesJumpedStory
+        MauvilleCity_PokemonCenter_1F_Text_LedgesJumpedTitle,
+        MauvilleCity_PokemonCenter_1F_Text_LedgesJumpedAction,
+        MauvilleCity_PokemonCenter_1F_Text_LedgesJumpedStory
     },
     {
         GAME_STAT_WATCHED_TV, 1,
-        Athens_PokemonCenter_1F_Text_TVWatchedTitle,
-        Athens_PokemonCenter_1F_Text_TVWatchedAction,
-        Athens_PokemonCenter_1F_Text_TVWatchedStory
+        MauvilleCity_PokemonCenter_1F_Text_TVWatchedTitle,
+        MauvilleCity_PokemonCenter_1F_Text_TVWatchedAction,
+        MauvilleCity_PokemonCenter_1F_Text_TVWatchedStory
     },
     {
         GAME_STAT_CHECKED_CLOCK, 1,
-        Athens_PokemonCenter_1F_Text_CheckedClockTitle,
-        Athens_PokemonCenter_1F_Text_CheckedClockAction,
-        Athens_PokemonCenter_1F_Text_CheckedClockStory
+        MauvilleCity_PokemonCenter_1F_Text_CheckedClockTitle,
+        MauvilleCity_PokemonCenter_1F_Text_CheckedClockAction,
+        MauvilleCity_PokemonCenter_1F_Text_CheckedClockStory
     },
     {
         GAME_STAT_WON_POKEMON_LOTTERY, 1,
-        Athens_PokemonCenter_1F_Text_WonLotteryTitle,
-        Athens_PokemonCenter_1F_Text_WonLotteryAction,
-        Athens_PokemonCenter_1F_Text_WonLotteryStory
+        MauvilleCity_PokemonCenter_1F_Text_WonLotteryTitle,
+        MauvilleCity_PokemonCenter_1F_Text_WonLotteryAction,
+        MauvilleCity_PokemonCenter_1F_Text_WonLotteryStory
     },
     {
         GAME_STAT_USED_DAYCARE, 1,
-        Athens_PokemonCenter_1F_Text_UsedDaycareTitle,
-        Athens_PokemonCenter_1F_Text_UsedDaycareAction,
-        Athens_PokemonCenter_1F_Text_UsedDaycareStory
+        MauvilleCity_PokemonCenter_1F_Text_UsedDaycareTitle,
+        MauvilleCity_PokemonCenter_1F_Text_UsedDaycareAction,
+        MauvilleCity_PokemonCenter_1F_Text_UsedDaycareStory
     },
     {
         GAME_STAT_RODE_CABLE_CAR, 1,
-        Athens_PokemonCenter_1F_Text_RodeCableCarTitle,
-        Athens_PokemonCenter_1F_Text_RodeCableCarAction,
-        Athens_PokemonCenter_1F_Text_RodeCableCarStory
+        MauvilleCity_PokemonCenter_1F_Text_RodeCableCarTitle,
+        MauvilleCity_PokemonCenter_1F_Text_RodeCableCarAction,
+        MauvilleCity_PokemonCenter_1F_Text_RodeCableCarStory
     },
     {
         GAME_STAT_ENTERED_HOT_SPRINGS, 1,
-        Athens_PokemonCenter_1F_Text_HotSpringsTitle,
-        Athens_PokemonCenter_1F_Text_HotSpringsAction,
-        Athens_PokemonCenter_1F_Text_HotSpringsStory
+        MauvilleCity_PokemonCenter_1F_Text_HotSpringsTitle,
+        MauvilleCity_PokemonCenter_1F_Text_HotSpringsAction,
+        MauvilleCity_PokemonCenter_1F_Text_HotSpringsStory
     }
 };
 
@@ -1199,7 +1199,7 @@ static void StorytellerSetup(void)
     s32 i;
     sStorytellerPtr = &gSaveBlock1Ptr->oldMan.storyteller;
 
-    sStorytellerPtr->id = ATHENS_MAN_STORYTELLER;
+    sStorytellerPtr->id = MAUVILLE_MAN_STORYTELLER;
     sStorytellerPtr->alreadyRecorded = FALSE;
     for (i = 0; i < NUM_STORYTELLER_TALES; i++)
     {
@@ -1212,7 +1212,7 @@ static void Storyteller_ResetFlag(void)
 {
     sStorytellerPtr = &gSaveBlock1Ptr->oldMan.storyteller;
 
-    sStorytellerPtr->id = ATHENS_MAN_STORYTELLER;
+    sStorytellerPtr->id = MAUVILLE_MAN_STORYTELLER;
     sStorytellerPtr->alreadyRecorded = FALSE;
 }
 

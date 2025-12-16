@@ -38,7 +38,7 @@
   "gMapGroup_TownsAndRoutes": [
     "PetalburgCity",
     "SlateportCity",
-    "Athens",
+    "MauvilleCity",
     "RustboroCity",
     "FortreeCity",
     "LilycoveCity",
@@ -178,14 +178,14 @@
     "SlateportCity_Mart"
   ],
   "gMapGroup_IndoorMauville": [
-    "Athens_Gym",
-    "Athens_BikeShop",
-    "Athens_House1",
-    "Athens_GameCorner",
-    "Athens_House2",
-    "Athens_PokemonCenter_1F",
-    "Athens_PokemonCenter_2F",
-    "Athens_Mart"
+    "MauvilleCity_Gym",
+    "MauvilleCity_BikeShop",
+    "MauvilleCity_House1",
+    "MauvilleCity_GameCorner",
+    "MauvilleCity_House2",
+    "MauvilleCity_PokemonCenter_1F",
+    "MauvilleCity_PokemonCenter_2F",
+    "MauvilleCity_Mart"
   ],
   "gMapGroup_IndoorRustboro": [
     "RustboroCity_DevonCorp_1F",

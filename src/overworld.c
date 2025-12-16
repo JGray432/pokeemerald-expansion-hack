@@ -1198,8 +1198,8 @@ u16 GetWarpDestinationMusic(void)
     }
     else
     {
-        if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(ATHENS)
-         && gSaveBlock1Ptr->location.mapNum == MAP_NUM(ATHENS))
+        if (gSaveBlock1Ptr->location.mapGroup == MAP_GROUP(MAUVILLE_CITY)
+         && gSaveBlock1Ptr->location.mapNum == MAP_NUM(MAUVILLE_CITY))
             return MUS_ROUTE110;
         else
             return MUS_ROUTE119;

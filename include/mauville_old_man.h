@@ -1,5 +1,5 @@
-#ifndef GUARD_ATHENS_OLD_MAN_H
-#define GUARD_ATHENS_OLD_MAN_H
+#ifndef GUARD_MAUVILLE_OLD_MAN_H
+#define GUARD_MAUVILLE_OLD_MAN_H
 
 extern struct BardSong gBardSong;
 
@@ -11,4 +11,4 @@ void SanitizeReceivedRubyOldMan(union OldMan * oldMan, u32 version, u32 language
 void SanitizeReceivedEmeraldOldMan(union OldMan * oldMan, u32 version, u32 language);
 void ResetMauvilleOldManFlag(void);
 
-#endif // GUARD_ATHENS_OLD_MAN_H
+#endif // GUARD_MAUVILLE_OLD_MAN_H
