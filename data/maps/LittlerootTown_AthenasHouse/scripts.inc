@@ -207,8 +207,8 @@ AthenasHouse_Text_IsntItNiceInHere:
 AthenasHouse_Text_OfferStarters:
 	.string "Now, that bag on the table contains\n"
 	.string "some offerings I recently received.\l"
-	.string "But frankly I receive more gifts\l"
-	.string "than I know what to do with, so why\l"
+	.string "But frankly I receive more gifts\p"
+	.string "than I know what to do with, so why\n"
 	.string "don't you check it out instead?$"
 
 AthenasHouse_Text_ArentYouInterestedInBag:
@@ -230,22 +230,22 @@ AthenasHouse_Text_AthenaFiredUp:
 
 AthenasHouse_Text_AthenaTasteOfBattle:
 	.string "Hey, why don't I give you a taste of \n"
-	.string "what being a trainer is all about? $"
+	.string "what being a trainer is all about? \p$"
 	
 Athenas_House_Text_ATHENADefeated:
 	.string "ATHENA: Oh, I lost…\n"
 	.string "But that was fun!$"
 
 AthenasHouse_Text_AthenaSendOff:
-	.string "Athena: Wow, that was fun!$"
+	.string "Athena: Wow, that was fun!\p"
 
 LittlerootTown_AthenasHouse_Text_GiveKeyItems:
 	.string "Here are some useful\n"
-	.string "items to help start your journey$"
+	.string "items to help start your journey\p"
 
 LittlerootTown_AthenasHouse_Text_AthenaLeaving:
 	.string "ATHENA: Ok, I'll be off now, I have \n"
 	.string "business to attend to in Athens.\p"
 	.string "You should head over there too {PLAYER}!\n"
-	.string "It's a straight line from here, you\l"
-	.string "can't miss it.$"
+	.string "It's a straight line from here, you\p"
+	.string "can't miss it.\p$"
