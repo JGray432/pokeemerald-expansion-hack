@@ -156,10 +156,11 @@ LittlerootTown_EventScript_GoInsideWithMom::
 	waitmovement 0
 	opendoor VAR_0x8004, VAR_0x8005
 	waitdooranim
-	applymovement LOCALID_MOM, LittlerootTown_Movement_MomEnterHouse
-	applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_PlayerEnterHouse
+	 applymovement LOCALID_MOM, LittlerootTown_Movement_MomEnterHouse
+	@ applymovement OBJ_EVENT_ID_PLAYER, LittlerootTown_Movement_PlayerEnterHouse
 	waitmovement 0
 	setflag FLAG_HIDE_LITTLEROOT_TOWN_MOM_OUTSIDE
+	//setvar VAR_LITTLEROOT_INTRO_STATE, 3
 	hideobjectat OBJ_EVENT_ID_PLAYER, 0
 	closedoor VAR_0x8004, VAR_0x8005
 	waitdooranim
@@ -167,7 +168,7 @@ LittlerootTown_EventScript_GoInsideWithMom::
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
 	// new test
 	setvar VAR_LITTLEROOT_TOWN_STATE, 1
-	setvar VAR_LITTLEROOT_INTRO_STATE, 3
+	setvar VAR_LITTLEROOT_INTRO_STATE, 7
 	setvar VAR_LITTLEROOT_HOUSES_STATE_MAY, 2
 	setvar VAR_LITTLEROOT_HOUSES_STATE_BRENDAN, 2
 	setvar VAR_LITTLEROOT_RIVAL_STATE, 3
@@ -211,7 +212,6 @@ LittlerootTown_Movement_PlayerStepOffTruck:
 	delay_16
 	delay_16
 	step_end
-
 
 LittlerootTown_EventScript_BeginDexUpgradeScene::
 	lockall
