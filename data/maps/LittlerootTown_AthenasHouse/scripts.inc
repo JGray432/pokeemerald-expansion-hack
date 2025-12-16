@@ -3,7 +3,6 @@
 LittlerootTown_AthenasHouse_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, LittlerootTown_AthenasHouse_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, LittlerootTown_AthenasHouse_OnFrame
-	map_script MAP_SCRIPT_ON_RESUME, LittlerootTown_AthenasHouse_OnResume
 	.byte 0
 
 LittlerootTown_AthenasHouse_OnTransition:
@@ -20,10 +19,6 @@ LittlerootTown_AthenasHouse_EventScript_MoveMomToDoor::
 LittlerootTown_AthenasHouse_OnFrame:
 	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 2, LittlerootTown_AthenasHouse_EventScript_EnterHouseMovingIn
 	.2byte 0
-
-LittlerootTown_AthenasHouse_OnResume::
-	goto_if_set FLAG_TEMP_ATHENA_INTRO_BATTLE_IN_PROGRESS, AthenasHouse_EventScript_AfterAthenaBattle
-	end
 
 LittlerootTown_AthenasHouse_EventScript_EnterHouseMovingIn::
 	lockall
@@ -128,7 +123,6 @@ AthenasHouse_EventScript_AthenaFiredUp::
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	msgbox AthenasHouse_Text_AthenaTasteOfBattle, MSGBOX_DEFAULT
 	closemessage
-	setflag FLAG_TEMP_ATHENA_INTRO_BATTLE_IN_PROGRESS
 	switch VAR_STARTER_MON
 	case 0, AthenasHouse_EventScript_StartAthenaBattleAbra
 	case 1, AthenasHouse_EventScript_StartAthenaBattleJangmoo
@@ -156,7 +150,6 @@ AthenasHouse_EventScript_StartAthenaBattlePawniard::
 	end
 
 AthenasHouse_EventScript_AfterAthenaBattle::
-	clearflag FLAG_TEMP_ATHENA_INTRO_BATTLE_IN_PROGRESS
 	msgbox AthenasHouse_Text_AthenaSendOff MSGBOX_DEFAULT
 	closemessage
 	goto LittleRootTown_AthenasHouse_EventScript_GiveKeyItems
@@ -177,12 +170,6 @@ LittleRootTown_AthenasHouse_EventScript_GiveKeyItems::
 	playfanfare MUS_OBTAIN_ITEM
 	giveitem ITEM_THE_SACK
 	waitfanfare
-	playfanfare MUS_OBTAIN_ITEM
-	waitfanfare
-	setflag FLAG_SYS_POKEDEX_GET
-	special SetUnlockedPokedexFlags
-	setflag FLAG_RECEIVED_POKEDEX_FROM_BIRCH
-	setvar VAR_CABLE_CLUB_TUTORIAL_STATE, 1
 	goto AthenasHouse_EventScript_AthenaExitHouse
 	end
 

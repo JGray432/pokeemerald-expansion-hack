@@ -5257,7 +5257,6 @@ const struct SpeciesInfo gSpeciesInfoGen7[] =
             gOverworldPalette_JangmoO,
             gShinyOverworldPalette_JangmoO
         )
-        .perfectIVCount = 3,
         .levelUpLearnset = sJangmoOLevelUpLearnset,
         .teachableLearnset = sJangmoOTeachableLearnset,
         .eggMoveLearnset = sJangmoOEggMoveLearnset,
