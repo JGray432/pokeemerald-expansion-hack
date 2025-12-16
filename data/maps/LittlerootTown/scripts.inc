@@ -194,12 +194,14 @@ LittlerootTown_EventScript_Beauty::
 	call_if_eq VAR_FACING, DIR_NORTH, LittlerootTown_EventScript_BeautyFaceAwaySouth
 	call_if_eq VAR_FACING, DIR_WEST, LittlerootTown_EventScript_BeautyFaceAwayEast
 	call_if_eq VAR_FACING, DIR_EAST, LittlerootTown_EventScript_BeautyFaceAwayWest
-	msgbox LittlerootTown_Text_TakeThatBusinessSchool, MSGBOX_DEFAULT
+	waitmovement 0
+	msgbox LittlerootTown_Text_TakeThatBusinessSchool, MSGBOX_NPC
 	call_if_eq VAR_FACING, DIR_SOUTH, LittlerootTown_EventScript_BeautyFaceAwaySouth
 	call_if_eq VAR_FACING, DIR_NORTH, LittlerootTown_EventScript_BeautyFaceAwayNorth
 	call_if_eq VAR_FACING, DIR_WEST, LittlerootTown_EventScript_BeautyFaceAwayWest
 	call_if_eq VAR_FACING, DIR_EAST, LittlerootTown_EventScript_BeautyFaceAwayEast
-	msgbox LittlerootTown_Text_GiveInfRepelEnd, MSGBOX_DEFAULT
+	waitmovement 0
+	msgbox LittlerootTown_Text_GiveInfRepelEnd, MSGBOX_NPC
 	playfanfare MUS_OBTAIN_ITEM
 	giveitem ITEM_INF_REPEL
 	waitfanfare
@@ -210,7 +212,6 @@ LittlerootTown_EventScript_Beauty::
 
 LittlerootTown_EventScript_BeautyFaceAwaySouth::
 	applymovement LOCALID_BEAUTY, LittlerootTown_Movement_BeautyFaceAwaySouth
-	waitmovement 0
 	return
 
 LittlerootTown_Movement_BeautyFaceAwaySouth:
@@ -219,7 +220,6 @@ LittlerootTown_Movement_BeautyFaceAwaySouth:
 
 LittlerootTown_EventScript_BeautyFaceAwayNorth::
 	applymovement LOCALID_BEAUTY, LittlerootTown_Movement_BeautyFaceAwayNorth
-	waitmovement 0
 	return
 	
 LittlerootTown_Movement_BeautyFaceAwayNorth:
@@ -228,7 +228,6 @@ LittlerootTown_Movement_BeautyFaceAwayNorth:
 
 LittlerootTown_EventScript_BeautyFaceAwayWest::
 	applymovement LOCALID_BEAUTY, LittlerootTown_Movement_BeautyFaceAwayWest
-	waitmovement 0
 	return
 	
 LittlerootTown_Movement_BeautyFaceAwayWest:
@@ -237,7 +236,6 @@ LittlerootTown_Movement_BeautyFaceAwayWest:
 
 LittlerootTown_EventScript_BeautyFaceAwayEast::
 	applymovement LOCALID_BEAUTY, LittlerootTown_Movement_BeautyFaceAwayEast
-	waitmovement 0
 	return
 	
 LittlerootTown_Movement_BeautyFaceAwayEast:
@@ -295,7 +293,7 @@ LittlerootTown_Text_OurNewHomeLetsGoInside:
 LittlerootTown_Text_GiveSuperRod:
 	.string "Boy, have I got a deal for you!\n"
 	.string "Quite possibly the greatest deal \l"
-	.string "in the history of the world \p"
+	.string "in history \p"
 	.string "I hold in my hands a one-of-a-kind\n"
 	.string "magic stick, yours for the measly \l"
 	.string "price of ¥500 $"
@@ -314,8 +312,7 @@ LittlerootTown_Text_NotEnoughMoney:
 
 LittlerootTown_Text_GiveInfRepelStart:
 	.string "HA! I knew I wasn't crazy for starting\n"
-	.string "a perfume franchise in the middle \l"
-	.string "of the woods \n"
+	.string "a perfume line in the middle of the woods\p"
 
 LittlerootTown_Text_TakeThatBusinessSchool:
 	.string "Take that, business college!$"

@@ -182,16 +182,6 @@
       "blockdata_filepath": "data/layouts/Route2/map.bin"
     },
     {
-      "id": "LAYOUT_ATHENSOUTSKIRTS",
-      "name": "AthensOutskirts_Layout",
-      "width": 20,
-      "height": 20,
-      "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Mauville",
-      "border_filepath": "data/layouts/AthensOutskirts/border.bin",
-      "blockdata_filepath": "data/layouts/AthensOutskirts/map.bin"
-    },
-    {
       "id": "LAYOUT_ROUTE103",
       "name": "Route103_Layout",
       "width": 80,
@@ -257,7 +247,7 @@
       "width": 40,
       "height": 63,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Mauville",
+      "secondary_tileset": "gTileset_Slateport",
       "border_filepath": "data/layouts/Route109/border.bin",
       "blockdata_filepath": "data/layouts/Route109/map.bin"
     },
@@ -340,6 +330,16 @@
       "secondary_tileset": "gTileset_Mauville",
       "border_filepath": "data/layouts/Route117/border.bin",
       "blockdata_filepath": "data/layouts/Route117/map.bin"
+    },
+    {
+      "id": "LAYOUT_ROUTE118",
+      "name": "Route118_Layout",
+      "width": 80,
+      "height": 20,
+      "primary_tileset": "gTileset_General",
+      "secondary_tileset": "gTileset_Mauville",
+      "border_filepath": "data/layouts/Route118/border.bin",
+      "blockdata_filepath": "data/layouts/Route118/map.bin"
     },
     {
       "id": "LAYOUT_ROUTE119",

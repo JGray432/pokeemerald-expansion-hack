@@ -276,20 +276,24 @@ Route109_EventScript_MrBriney::
 	lock
 	faceplayer
 	goto_if_unset FLAG_DELIVERED_DEVON_GOODS, Route109_EventScript_HaveNotDeliveredDevonGood
-	goto Route109_EventScript_DeliveredDevonGoods 
+	goto Route109_EventScript_DeliveredDevonGoods
 	end
 
 Route109_EventScript_HaveNotDeliveredDevonGood::
-	message Route109_Text_BrineyNoSailYet
-	release
+	message Route109_Text_BrineySailToDewfordQuestion
+	msgbox Route109_Text_BrineySailToDewfordQuestion, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, NO, Route109_EventScript_StayHere
+	goto Route109_EventScript_SailToDewford
 	end
 
 Route109_EventScript_DeliveredDevonGoods::
-	msgbox Route109_Text_BrineyHappyToSail, MSGBOX_NPC
+	message Route109_Text_BrineyWhereAreWeBound
 	waitmessage
-	msgbox Route109_Text_BrineySailToCreteQuestion, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, Route109_EventScript_StayHere
-	goto Route109_EventScript_SailToDewford
+	multichoicedefault 21, 8, MULTI_BRINEY_OFF_DEWFORD, 1, FALSE
+	switch VAR_RESULT
+	case 0, Route109_EventScript_SailToDewford
+	case 1, Route109_EventScript_ChoseNotToSail
+	case MULTI_B_PRESSED, Route109_EventScript_ChoseNotToSail
 	end
 
 Route109_EventScript_SailToDewford::
@@ -478,15 +482,16 @@ DewfordTown_Text_BrineyLandedInSlateportDeliverGoods:
 	.string "I suppose you're going to visit CAPT.\n"
 	.string "STERN and deliver the DEVON GOODS?$"
 
-Route109_Text_BrineyNoSailYet:
-	.string "MR. BRINEY: Hrmph. This boat takes\n"
-	.string "you to Crete. But I ain't makin'\p"
-	.string "the effort of a trip unless I got\n"
-	.string "good reason to, ya hear?$"
+Route109_Text_BrineySailToDewfordQuestion:
+	.string "MR. BRINEY: I thought you're supposed\n"
+	.string "to deliver the DEVON GOODS.\p"
+	.string "Would you like to sail back to\n"
+	.string "DEWFORD, then?$"
 
 Route109_Text_BrineyDewfordItIs:
-	.string "MR. BRINEY: Crete it is, then!\n"
-	.string "Anchors aweigh!$"
+	.string "MR. BRINEY: DEWFORD it is, then!\p"
+	.string "Anchors aweigh!\n"
+	.string "PEEKO, we're setting sail, my darling!$"
 
 Route109_Text_BrineyDeliverDevonGoods:
 	.string "MR. BRINEY: Then you go on and deliver\n"
@@ -498,15 +503,10 @@ DewfordTown_Text_BrineyLandedInSlateport:
 	.string "You just go on and tell me whenever\n"
 	.string "you want to set sail again!$"
 
-Route109_Text_BrineyHappyToSail:
-	.string "MR. BRINEY: What's that?\n"
-	.string "Dionysus needs you to go to Crete?\p"
-	.string "Why that changes everything! He \n"
-	.string "provides me with the best rum this\l"
-	.string "side of the Pacific!$"
-
-Route109_Text_BrineySailToCreteQuestion:
-	.string "You ready to set sail?$"
+Route109_Text_BrineyWhereAreWeBound:
+	.string "MR. BRINEY: Ahoy!\n"
+	.string "For you, I'll go out to sea anytime!\p"
+	.string "Now, my friend, where are we bound?$"
 
 Route109_Text_BrineyTellMeWhenYouNeedToSail:
 	.string "MR. BRINEY: You just tell me whenever\n"

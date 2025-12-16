@@ -2575,120 +2575,120 @@ Route117_Text_AishaPostBattle:
 	.string "I think that if you worry about losing,\n"
 	.string "you're more likely to lose.$"
 
-ATHENSOUTSKIRTS_Text_RoseIntro:
+Route118_Text_RoseIntro:
 	.string "The aroma of flowers has a magical\n"
 	.string "power. It cleanses us body and soul.$"
 
-ATHENSOUTSKIRTS_Text_RoseDefeat:
+Route118_Text_RoseDefeat:
 	.string "Oh, dear me.\n"
 	.string "I seem to have lost.$"
 
-ATHENSOUTSKIRTS_Text_RosePostBattle:
+Route118_Text_RosePostBattle:
 	.string "Flowers, POKéMON…\n"
 	.string "I love whatever smells nice.\p"
 	.string "Stinky things…\n"
 	.string "I'll pass.$"
 
-ATHENSOUTSKIRTS_Text_RoseRegister:
+Route118_Text_RoseRegister:
 	.string "Sniff… That odor--it's a POKéNAV!\n"
 	.string "We must register each other!$"
 
-ATHENSOUTSKIRTS_Text_RoseRematchIntro:
+Route118_Text_RoseRematchIntro:
 	.string "Were you drawn here by the sweet\n"
 	.string "aroma?$"
 
-ATHENSOUTSKIRTS_Text_RoseRematchDefeat:
+Route118_Text_RoseRematchDefeat:
 	.string "The power of aroma…\n"
 	.string "It didn't seem to do much.$"
 
-ATHENSOUTSKIRTS_Text_RosePostRematch:
+Route118_Text_RosePostRematch:
 	.string "If you use a sweet aroma properly,\n"
 	.string "POKéMON will be attracted by it.$"
 
-ATHENSOUTSKIRTS_Text_PerryIntro:
+Route118_Text_PerryIntro:
 	.string "BIRD POKéMON that FLY elegantly in\n"
 	.string "the sky… They're the best!$"
 
-ATHENSOUTSKIRTS_Text_PerryDefeat:
+Route118_Text_PerryDefeat:
 	.string "Urgh…\n"
 	.string "I crashed…$"
 
-ATHENSOUTSKIRTS_Text_PerryPostBattle:
+Route118_Text_PerryPostBattle:
 	.string "You've got great POKéMON.\n"
 	.string "I'll have to train mine better.$"
 
-ATHENSOUTSKIRTS_Text_ChesterIntro:
+Route118_Text_ChesterIntro:
 	.string "Take flight!\n"
 	.string "My BIRD POKéMON!$"
 
-ATHENSOUTSKIRTS_Text_ChesterDefeat:
+Route118_Text_ChesterDefeat:
 	.string "They did take flight…$"
 
-ATHENSOUTSKIRTS_Text_ChesterPostBattle:
+Route118_Text_ChesterPostBattle:
 	.string "If they'd get stronger, they'd be able\n"
 	.string "to fly more freely…$"
 
-ATHENSOUTSKIRTS_Text_BarnyIntro:
+Route118_Text_BarnyIntro:
 	.string "I'm a FISHERMAN, but also a TRAINER.\n"
 	.string "I'm raising the POKéMON I caught.$"
 
-ATHENSOUTSKIRTS_Text_BarnyDefeat:
+Route118_Text_BarnyDefeat:
 	.string "I thought I was doing okay in my\n"
 	.string "training…$"
 
-ATHENSOUTSKIRTS_Text_BarnyPostBattle:
+Route118_Text_BarnyPostBattle:
 	.string "I couldn't win by training POKéMON\n"
 	.string "while I fished…\p"
 	.string "Was I doing things in half measures?$"
 
-ATHENSOUTSKIRTS_Text_WadeIntro:
+Route118_Text_WadeIntro:
 	.string "For FISHERMEN, equipment is the key.\p"
 	.string "But for TRAINERS, the key ingredients\n"
 	.string "are POKéMON and heart, of course!$"
 
-ATHENSOUTSKIRTS_Text_WadeDefeat:
+Route118_Text_WadeDefeat:
 	.string "I was beaten in heart?$"
 
-ATHENSOUTSKIRTS_Text_WadePostBattle:
+Route118_Text_WadePostBattle:
 	.string "Come to think of it, fishing is a battle\n"
 	.string "between a FISHERMAN and a POKéMON.$"
 
-ATHENSOUTSKIRTS_Text_DaltonIntro:
+Route118_Text_DaltonIntro:
 	.string "Let my melody rock your soul!$"
 
-ATHENSOUTSKIRTS_Text_DaltonDefeat:
+Route118_Text_DaltonDefeat:
 	.string "La-lalala…$"
 
-ATHENSOUTSKIRTS_Text_DaltonPostBattle:
+Route118_Text_DaltonPostBattle:
 	.string "An electric guitar doesn't always\n"
 	.string "have to be noisy…\p"
 	.string "It can be strummed to squeeze out\n"
 	.string "this heart-stirring melody…$"
 
-ATHENSOUTSKIRTS_Text_DaltonRegister:
+Route118_Text_DaltonRegister:
 	.string "When I compose better melodies,\n"
 	.string "you have to come listen, okay?$"
 
-ATHENSOUTSKIRTS_Text_DaltonRematchIntro:
+Route118_Text_DaltonRematchIntro:
 	.string "A melody from my POKéMON and me…\n"
 	.string "Let us deliver it to your soul.$"
 
-ATHENSOUTSKIRTS_Text_DaltonRematchDefeat:
+Route118_Text_DaltonRematchDefeat:
 	.string "La-lalala…$"
 
-ATHENSOUTSKIRTS_Text_DaltonPostRematch:
+Route118_Text_DaltonPostRematch:
 	.string "When I play, my emotions should reach\n"
 	.string "you through my electric guitar…$"
 
-ATHENSOUTSKIRTS_Text_DeandreIntro:
+Route118_Text_DeandreIntro:
 	.string "Go, go, go!\n"
 	.string "POKéMON 1, 2, and 3!$"
 
-ATHENSOUTSKIRTS_Text_DeandreDefeat:
+Route118_Text_DeandreDefeat:
 	.string "Come in, POKéMON! Are you okay?\n"
 	.string "POKéMON 1, 2, and 3?!$"
 
-ATHENSOUTSKIRTS_Text_DeandrePostBattle:
+Route118_Text_DeandrePostBattle:
 	.string "Isn't it cool that I have a POKéMON\n"
 	.string "battle team?\p"
 	.string "You can copy me--I don't mind!$"
