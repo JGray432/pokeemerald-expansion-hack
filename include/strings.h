@@ -2424,5 +2424,4 @@ extern const u8 gText_CannotSendMonToBoxHM[];
 // Newly added by me
 extern const u8 gText_InfRepelEnabled[];
 extern const u8 gText_InfRepelDisabled[];
-extern const u8 gText_YourPartyWasHealed[];
 #endif // GUARD_STRINGS_H

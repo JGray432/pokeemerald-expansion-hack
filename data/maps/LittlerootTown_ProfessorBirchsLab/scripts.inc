@@ -150,6 +150,7 @@ LittlerootTown_ProfessorBirchsLab_EventScript_DeclineSeeingRival::
 
 LittleRootTown_ProfessorBirchsLab_EventScript_GiveKeyItems::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_GiveKeyItems MSGBOX_DEFAULT
+	waitmessage
 	playfanfare MUS_OBTAIN_ITEM
 	message LittlerootTown_ProfessorBirchsLab_Text_ReceivedInfCandy
 	giveitem ITEM_INF_CANDY
@@ -157,14 +158,6 @@ LittleRootTown_ProfessorBirchsLab_EventScript_GiveKeyItems::
 	playfanfare MUS_OBTAIN_ITEM
 	message LittlerootTown_ProfessorBirchsLab_Text_ReceivedInfRepel
 	giveitem ITEM_INF_REPEL
-	waitfanfare
-	playfanfare MUS_OBTAIN_ITEM
-	message LittlerootTown_ProfessorBirchsLab_Text_ReceivedNectarReserves
-	giveitem ITEM_NECTAR_RESERVES
-	waitfanfare
-	playfanfare MUS_OBTAIN_ITEM
-	message LittlerootTown_ProfessorBirchsLab_Text_ReceivedCapCandy
-	giveitem ITEM_CAP_CANDY
 	waitfanfare
 	releaseall
 	end
@@ -791,12 +784,6 @@ LittlerootTown_ProfessorBirchsLab_Text_ReceivedInfCandy:
 
 LittlerootTown_ProfessorBirchsLab_Text_ReceivedInfRepel:
 	.string "{PLAYER} received the Inf Repel!$"
-
-LittlerootTown_ProfessorBirchsLab_Text_ReceivedNectarReserves:
-	.string "{PLAYER} received the Nectar Reserves!$"
-
-	LittlerootTown_ProfessorBirchsLab_Text_ReceivedCapCandy:
-	.string "{PLAYER} received the Level Cap Candy!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_CountlessPokemonAwait:
 	.string "PROF. BIRCH: Countless POKéMON\n"

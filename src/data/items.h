@@ -2037,25 +2037,7 @@ const struct Item gItemsInfo[] =
         .importance = TRUE,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_PARTY_MENU,        
-        .fieldUseFunc = ItemUseOutOfBattle_RareCandy,
-        .effect = gItemEffect_RareCandy,
-        .flingPower = 30,
-        .iconPic = gItemIcon_RareCandy,
-        .iconPalette = gItemIconPalette_RareCandy,
-    },
-
-    [ITEM_CAP_CANDY] =
-    {
-        .name = _("Cap Candy"),
-        .price = 0,
-        .holdEffectParam = 2,
-        .description = COMPOUND_STRING(
-            "Raises the level\n"
-            "of a Pokémon to\n"
-            "the level cap."),
-        .importance = TRUE,
-        .pocket = POCKET_KEY_ITEMS,
-        .type = ITEM_USE_PARTY_MENU,        
+        //.partyMenuUsage = ITEM_USE_LEVEL_UP,
         .fieldUseFunc = ItemUseOutOfBattle_RareCandy,
         .effect = gItemEffect_RareCandy,
         .flingPower = 30,
@@ -14135,21 +14117,4 @@ const struct Item gItemsInfo[] =
         .iconPic = gItemIcon_PokeshiDoll,
         .iconPalette = gItemIconPalette_PokeshiDoll,
     },
-
-    // SOME NEW ITEMS ADDED BY ME
-
-    [ITEM_NECTAR_RESERVES] =
-{
-    .name = _("Nectar Reserves"),
-    .price = 0,
-    .description = COMPOUND_STRING(
-        "Fully heals party\n"
-        "outside of battle."),
-    .importance = TRUE,
-    .pocket = POCKET_KEY_ITEMS,
-    .type = ITEM_USE_FIELD,
-    .fieldUseFunc = ItemUseOutOfBattle_NectarReserves,
-    .iconPic = gItemIcon_Honey,
-    .iconPalette = gItemIconPalette_Honey,
-},
 };

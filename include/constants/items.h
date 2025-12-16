@@ -996,13 +996,11 @@
 
 // Newly added items by me
 #define ITEM_INF_REPEL 829
-#define ITEM_NECTAR_RESERVES 830
-#define ITEM_CAP_CANDY 831
 
 // HOPO BERRY
 // LEGEND PLATE
 
-#define ITEMS_COUNT 832
+#define ITEMS_COUNT 830
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

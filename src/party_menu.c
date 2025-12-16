@@ -5630,7 +5630,7 @@ void ItemUseCB_RareCandy(u8 taskId, TaskFunc task)
         sInitialLevel = 0;
         sFinalLevel = 0;
 
-        if (holdEffectParam == 0 || holdEffectParam == 1 || holdEffectParam == 2)
+        if (holdEffectParam == 0)
         {
             targetSpecies = GetEvolutionTargetSpecies(mon, EVO_MODE_NORMAL, ITEM_NONE, NULL);
             if (targetSpecies == SPECIES_NONE)
@@ -5661,13 +5661,13 @@ void ItemUseCB_RareCandy(u8 taskId, TaskFunc task)
         sFinalLevel = GetMonData(mon, MON_DATA_LEVEL, NULL);
         gPartyMenuUseExitCallback = TRUE;
         UpdateMonDisplayInfoAfterRareCandy(gPartyMenu.slotId, mon);
-        if((holdEffectParam != 1 && holdEffectParam != 2))
+        if(holdEffectParam != 1)
             RemoveBagItem(gSpecialVar_ItemId, 1);
         GetMonNickname(mon, gStringVar1);
         if (sFinalLevel > sInitialLevel)
         {
             PlayFanfareByFanfareNum(FANFARE_LEVEL_UP);
-            if (holdEffectParam == 0 || holdEffectParam == 1 || holdEffectParam == 2) // Rare Candy & Inf Candy
+            if (holdEffectParam == 0 || holdEffectParam == 1) // Rare Candy & Inf Candy
             {
                 ConvertIntToDecimalStringN(gStringVar2, sFinalLevel, STR_CONV_MODE_LEFT_ALIGN, 3);
                 StringExpandPlaceholders(gStringVar4, gText_PkmnElevatedToLvVar2);

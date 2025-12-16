@@ -1623,43 +1623,4 @@ void ItemUseOutOfBattle_TownMap(u8 taskId)
     }
 }
 
-// New Uses
-
-void ItemUseOutOfBattle_NectarReserves(u8 taskId)
-{
-    bool8 healed = FALSE;
-    u8 i;
-
-    for (i = 0; i < PARTY_SIZE; i++)
-    {
-        struct Pokemon *mon = &gPlayerParty[i];
-        if (GetMonData(mon, MON_DATA_SPECIES) != SPECIES_NONE
-            && GetMonData(mon, MON_DATA_HP) > 0)
-        {
-            u32 maxHp = GetMonData(mon, MON_DATA_MAX_HP);
-            SetMonData(mon, MON_DATA_HP, &maxHp);
-
-            u8 ppBonuses = GetMonData(mon, MON_DATA_PP_BONUSES);
-            for (int j = 0; j < MAX_MON_MOVES; j++)
-            {
-                u16 move = GetMonData(mon, MON_DATA_MOVE1 + j);
-                if (move != MOVE_NONE)
-                {
-                    u8 pp = CalculatePPWithBonus(move, ppBonuses, j);
-                    SetMonData(mon, MON_DATA_PP1 + j, &pp);
-                }
-            }
-            //u32 status = 0;
-
-            SetMonData(mon, MON_DATA_STATUS, STATUS1_NONE); // Clear status
-            healed = TRUE;
-        }
-    }
-
-    if (healed)
-        DisplayItemMessage(taskId, FONT_NORMAL, gText_YourPartyWasHealed, CloseItemMessage);
-    else
-        DisplayItemMessage(taskId, FONT_NORMAL, gText_WontHaveEffect, CloseItemMessage);
-}
-
 #undef tUsingRegisteredKeyItem
