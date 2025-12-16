@@ -41,7 +41,6 @@
 #include "money.h"
 #include "new_game.h"
 #include "palette.h"
-#include "party_menu.h"
 #include "play_time.h"
 #include "random.h"
 #include "roamer.h"
@@ -1766,13 +1765,6 @@ void CB2_ReturnToFieldContinueScriptPlayMapMusic(void)
     FieldClearVBlankHBlankCallbacks();
     gFieldCallback = FieldCB_ContinueScriptHandleMusic;
     CB2_ReturnToField();
-}
-
-void CB2_ReturnFromChooseMonForStatus(void)
-{
-    gSpecialVar_Result = GetCursorSelectionMonId(); // Save chosen mon
-    gFieldCallback = FieldCB_ContinueScriptHandleMusic;                         // Resume script
-    CB2_ReturnToField();            // Return to overworld
 }
 
 void CB2_ReturnToFieldFadeFromBlack(void)

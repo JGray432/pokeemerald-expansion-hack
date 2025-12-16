@@ -56,7 +56,6 @@ ArchiTown_EventScript_StepOffTruck::
 	setflag FLAG_HIDE_ARCHI_TOWN_BRENDANS_HOUSE_TRUCK
 	setflag FLAG_RECEIVED_RUNNING_SHOES
 	setflag FLAG_SYS_B_DASH
-	setvar VAR_ATHENS_CITY_STATE, 1
 	warpsilent MAP_ARCHI_TOWN_ATHENAS_HOUSE, 8, 8
 	waitstate
 	releaseall
