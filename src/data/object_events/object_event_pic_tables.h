@@ -632,10 +632,6 @@ static const struct SpriteFrameImage sPicTable_Wallace[] = {
     overworld_ascending_frames(gObjectEventPic_Wallace, 2, 4),
 };
 
-static const struct SpriteFrameImage sPicTable_Dionysus[] = {
-    overworld_ascending_frames(gObjectEventPic_Dionysus, 2, 4),
-};
-
 static const struct SpriteFrameImage sPicTable_Steven[] = {
     overworld_ascending_frames(gObjectEventPic_Steven, 2, 4),
 };
@@ -1016,10 +1012,6 @@ static const struct SpriteFrameImage sPicTable_Mom[] = {
     overworld_ascending_frames(gObjectEventPic_Mom, 2, 4),
 };
 
-static const struct SpriteFrameImage sPicTable_Athena[] = {
-    overworld_ascending_frames(gObjectEventPic_Athena, 2, 4),
-};
-
 static const struct SpriteFrameImage sPicTable_Scott[] = {
     overworld_ascending_frames(gObjectEventPic_Scott, 2, 4),
 };
@@ -1132,15 +1124,6 @@ static const struct SpriteFrameImage sPicTable_TMBall[] = {
     overworld_frame(gObjectEventPic_TMBall, 2, 4, 3),
     overworld_frame(gObjectEventPic_TMBall, 2, 4, 4),
     overworld_frame(gObjectEventPic_TMBall, 2, 4, 0),
-};
-
-static const struct SpriteFrameImage sPicTable_MegaStoneBall[] = {
-    overworld_frame(gObjectEventPic_MegaStoneBall, 2, 4, 0),
-    overworld_frame(gObjectEventPic_MegaStoneBall, 2, 4, 1),
-    overworld_frame(gObjectEventPic_MegaStoneBall, 2, 4, 2),
-    overworld_frame(gObjectEventPic_MegaStoneBall, 2, 4, 3),
-    overworld_frame(gObjectEventPic_MegaStoneBall, 2, 4, 4),
-    overworld_frame(gObjectEventPic_MegaStoneBall, 2, 4, 0),
 };
 
 #if OW_FOLLOWERS_POKEBALLS

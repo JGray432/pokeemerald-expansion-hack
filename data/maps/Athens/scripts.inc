@@ -60,10 +60,6 @@ Athens_EventScript_UtilityScientist::
 	release
 	end
 
-Athens_EventScript_GymBlocker::
-	msgbox Athens_Text_GymBlocked, MSGBOX_NPC
-	end
-
 Athens_EventScript_Boy::
 	msgbox Athens_Text_NurseHurtMonBackToHealth, MSGBOX_NPC
 	end
@@ -504,11 +500,6 @@ Athens_EventScript_RegisterWallyCall::
 	clearflag FLAG_ENABLE_FIRST_WALLY_POKENAV_CALL
 	releaseall
 	end
-
-Athens_Text_GymBlocked:
-	.string "Hestia is out of her gym now. \n"
-	.string "I was here first so if you want to\l"
-	.string "fight her you'll have to get in line!$"
 
 Athens_Text_UncleHesTooPeppy:
 	.string "UNCLE: It's because of POKéMON that\n"
