@@ -9,7 +9,6 @@
     "gMapGroup_IndoorVerdanturf",
     "gMapGroup_IndoorPacifidlog",
     "gMapGroup_IndoorDelphi",
-    "gMapGroup_IndoorLimani",
     "gMapGroup_IndoorSlateport",
     "gMapGroup_IndoorAthens",
     "gMapGroup_IndoorRustboro",
@@ -160,9 +159,6 @@
     "Delphi_PokemonCenter_1F",
     "Delphi_PokemonCenter_2F",
     "Delphi_Mart"
-  ],
-  "gMapGroup_IndoorLimani": [
-    "Limani_Gym"
   ],
   "gMapGroup_IndoorSlateport": [
     "SlateportCity_SternsShipyard_1F",

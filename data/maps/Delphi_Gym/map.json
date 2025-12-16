@@ -37,7 +37,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "Delphi_Gym_EventScript_Takao",
+      "script": "Limani_Gym_EventScript_Takao",
       "flag": "0"
     },
     {
@@ -50,7 +50,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "Delphi_Gym_EventScript_Jocelyn",
+      "script": "Limani_Gym_EventScript_Jocelyn",
       "flag": "0"
     },
     {
@@ -63,7 +63,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "Delphi_Gym_EventScript_Laura",
+      "script": "Limani_Gym_EventScript_Laura",
       "flag": "0"
     },
     {
@@ -89,7 +89,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "Delphi_Gym_EventScript_Cristian",
+      "script": "Limani_Gym_EventScript_Cristian",
       "flag": "0"
     },
     {
@@ -102,7 +102,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
-      "script": "Delphi_Gym_EventScript_Lilith",
+      "script": "Limani_Gym_EventScript_Lilith",
       "flag": "0"
     },
     {
@@ -115,7 +115,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "2",
-      "script": "Delphi_Gym_EventScript_Brenden",
+      "script": "Limani_Gym_EventScript_Brenden",
       "flag": "0"
     },
     {
@@ -128,7 +128,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Delphi_Gym_EventScript_Margot",
+      "script": "Limani_Gym_EventScript_Margot",
       "flag": "0"
     },
     {
@@ -141,7 +141,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Delphi_Gym_EventScript_Holly",
+      "script": "Limani_Gym_EventScript_Holly",
       "flag": "0"
     },
     {
@@ -154,7 +154,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Delphi_Gym_EventScript_Brawly",
+      "script": "Limani_Gym_EventScript_Brawly",
       "flag": "0"
     }
   ],

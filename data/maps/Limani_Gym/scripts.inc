@@ -87,7 +87,7 @@ Limani_Gym_EventScript_ReturnFromWallyTutorial::
 	waitmovement 0
 	playse SE_EXIT
 	removeobject LOCALID_WALLY
-	setflag FLAG_HIDE_DELPHI_GYM_BLOCKER
+	setflag FLAG_HIDE_LIMANI_GYM_BLOCKER
 	delay 30
 	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
 	waitmovement 0
@@ -186,8 +186,8 @@ Limani_Gym_EventScript_BeginWallyTutorial::
 	setflag FLAG_HIDE_DELPHI_WALLYS_MOM
 	setvar VAR_Limani_GYM_STATE, 1
 	setvar VAR_DELPHI_STATE, 2
-	clearflag FLAG_HIDE_DELPHI_GYM_BLOCKER
-	clearflag FLAG_HIDE_Delphi_GYM_WALLY
+	clearflag FLAG_HIDE_LIMANI_GYM_BLOCKER
+	clearflag FLAG_HIDE_Limani_GYM_WALLY
 	setflag FLAG_HIDE_ARCHI_TOWN_BIRCHS_LAB_RIVAL
 	special InitBirchState
 	warp MAP_DELPHI, 15, 8
@@ -747,7 +747,7 @@ Limani_Gym_EventScript_SpeedRoomDoor::
 Limani_Gym_EventScript_EnterRoom::
 	closemessage
 	delay 30
-	warpdoor MAP_LIMANI_GYM, VAR_0x8008, VAR_0x8009 
+	warpdoor MAP_LIMANI_GYM, VAR_0x8008, VAR_0x8009
 	waitstate
 	releaseall
 	end

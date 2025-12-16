@@ -59,7 +59,7 @@ Delphi_EventScript_WallyTutorial::
 	clearflag FLAG_DONT_TRANSITION_MUSIC
 	special LoadPlayerParty
 	setvar VAR_Limani_GYM_STATE, 1
-	warp MAP_LIMANI_GYM, 4, 108 
+	warp MAP_LIMANI_GYM, 4, 108
 	waitstate
 	releaseall
 	end

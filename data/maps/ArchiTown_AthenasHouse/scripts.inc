@@ -252,7 +252,7 @@ AthenasHouse_Text_AthenaSendOff:
 ArchiTown_AthenasHouse_Text_GiveKeyItems:
 	.string "Now that you and your partner have \n"
 	.string "gotten acquainted, you can take these \n"
-	.string "useful items to help start your journey:$"
+	.string "useful items to help start your journey$"
 
 ArchiTown_AthenasHouse_Text_AthenaLeaving:
 	.string "ATHENA: Ok, I'll be off now, I have \n"
