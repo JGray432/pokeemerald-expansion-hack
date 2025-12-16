@@ -155,7 +155,7 @@ Converts trainer data (for `convert_trainer_parties.py`) and partner data (for `
 
 #### [src/data/trainers.party](..src/data/trainers.party)
 ```diff
-+=== TRAINER_MINOTAUR_Labyrinth_FINALROOM ===
++=== TRAINER_MINOTAUR_GRANITECAVE_FINALROOM ===
 +Name: SAWYER
 +Class: Hiker
 +Pic: Hiker

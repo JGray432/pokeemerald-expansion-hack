@@ -1282,34 +1282,34 @@
       "blockdata_filepath": "data/layouts/DesertRuins/map.bin"
     },
     {
-      "id": "LAYOUT_LABYRINTH_1F",
-      "name": "Labyrinth_1F_Layout",
+      "id": "LAYOUT_GRANITE_CAVE_1F",
+      "name": "GraniteCave_1F_Layout",
       "width": 42,
       "height": 15,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
-      "border_filepath": "data/layouts/Labyrinth_1F/border.bin",
-      "blockdata_filepath": "data/layouts/Labyrinth_1F/map.bin"
+      "border_filepath": "data/layouts/GraniteCave_1F/border.bin",
+      "blockdata_filepath": "data/layouts/GraniteCave_1F/map.bin"
     },
     {
-      "id": "LAYOUT_LABYRINTH_B1F",
-      "name": "Labyrinth_B1F_Layout",
+      "id": "LAYOUT_GRANITE_CAVE_B1F",
+      "name": "GraniteCave_B1F_Layout",
       "width": 32,
       "height": 26,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
-      "border_filepath": "data/layouts/Labyrinth_B1F/border.bin",
-      "blockdata_filepath": "data/layouts/Labyrinth_B1F/map.bin"
+      "border_filepath": "data/layouts/GraniteCave_B1F/border.bin",
+      "blockdata_filepath": "data/layouts/GraniteCave_B1F/map.bin"
     },
     {
-      "id": "LAYOUT_LABYRINTH_B2F",
-      "name": "Labyrinth_B2F_Layout",
+      "id": "LAYOUT_GRANITE_CAVE_B2F",
+      "name": "GraniteCave_B2F_Layout",
       "width": 32,
       "height": 26,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
-      "border_filepath": "data/layouts/Labyrinth_B2F/border.bin",
-      "blockdata_filepath": "data/layouts/Labyrinth_B2F/map.bin"
+      "border_filepath": "data/layouts/GraniteCave_B2F/border.bin",
+      "blockdata_filepath": "data/layouts/GraniteCave_B2F/map.bin"
     },
     {
       "id": "LAYOUT_PETALBURG_WOODS",
@@ -2842,14 +2842,14 @@
       "blockdata_filepath": "data/layouts/Route104_Prototype/map.bin"
     },
     {
-      "id": "LAYOUT_LABYRINTH_STEVENS_ROOM",
-      "name": "Labyrinth_StevensRoom_Layout",
+      "id": "LAYOUT_GRANITE_CAVE_STEVENS_ROOM",
+      "name": "GraniteCave_StevensRoom_Layout",
       "width": 15,
       "height": 14,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Cave",
-      "border_filepath": "data/layouts/Labyrinth_StevensRoom/border.bin",
-      "blockdata_filepath": "data/layouts/Labyrinth_StevensRoom/map.bin"
+      "border_filepath": "data/layouts/GraniteCave_StevensRoom/border.bin",
+      "blockdata_filepath": "data/layouts/GraniteCave_StevensRoom/map.bin"
     },
     {
       "id": "LAYOUT_ABANDONED_SHIP_HIDDEN_FLOOR_CORRIDORS",

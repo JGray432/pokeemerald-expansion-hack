@@ -1,33 +1,33 @@
-Labyrinth_1F_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, Labyrinth_FirstRoom_PlayerJustEntered
+GraniteCave_1F_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, GraniteCave_FirstRoom_PlayerJustEntered
 	.byte 0
 
-Labyrinth_FirstRoom_PlayerJustEntered::
+GraniteCave_FirstRoom_PlayerJustEntered::
 	clearflag FLAG_TEMP_MINOTAUR_BATTLE_IN_PROGRESS
 	end
 
-Labyrinth_1F_EventScript_Hiker::
+GraniteCave_1F_EventScript_Hiker::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_HM_FLASH, Labyrinth_1F_EventScript_ReceivedFlash
-	msgbox Labyrinth_1F_Text_GetsDarkAheadHereYouGo, MSGBOX_DEFAULT
+	goto_if_set FLAG_RECEIVED_HM_FLASH, GraniteCave_1F_EventScript_ReceivedFlash
+	msgbox GraniteCave_1F_Text_GetsDarkAheadHereYouGo, MSGBOX_DEFAULT
 	giveitem ITEM_HM_FLASH
 	setflag FLAG_RECEIVED_HM_FLASH
-	msgbox Labyrinth_1F_Text_ExplainFlash, MSGBOX_DEFAULT
+	msgbox GraniteCave_1F_Text_ExplainFlash, MSGBOX_DEFAULT
 	release
 	end
 
-Labyrinth_1F_EventScript_ReceivedFlash::
-	msgbox Labyrinth_1F_Text_ExplainFlash, MSGBOX_DEFAULT
+GraniteCave_1F_EventScript_ReceivedFlash::
+	msgbox GraniteCave_1F_Text_ExplainFlash, MSGBOX_DEFAULT
 	release
 	end
 
-Labyrinth_1F_EventScript_David::
+GraniteCave_1F_EventScript_David::
 	trainerbattle_single TRAINER_DAVID, Route3_Text_DavidIntro, Route3_Text_DavidDefeated
 	msgbox Route3_Text_DavidPostBattle, MSGBOX_AUTOCLOSE
 	end
 
-Labyrinth_1F_Text_GetsDarkAheadHereYouGo:
+GraniteCave_1F_Text_GetsDarkAheadHereYouGo:
 	.string "Hey, you.\n"
 	.string "It gets awfully dark ahead.\l"
 	.string "It'll be tough trying to explore.\p"
@@ -39,7 +39,7 @@ Labyrinth_1F_Text_GetsDarkAheadHereYouGo:
 	.string "that we meet is our motto.\p"
 	.string "Here you go, I'll pass this on to you.$"
 
-Labyrinth_1F_Text_ExplainFlash:
+GraniteCave_1F_Text_ExplainFlash:
 	.string "Teach that hidden move FLASH to\n"
 	.string "a POKéMON and use it.\p"
 	.string "It lights up even the inky darkness\n"
