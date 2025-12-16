@@ -2176,22 +2176,22 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_SuperRepel,
     },
 
-     [ITEM_MAX_REPEL] =
-     {
-         .name = _("Max Repel"),
-         .price = (I_PRICE >= GEN_7) ? 900 : 700,
-         .holdEffectParam = 250,
-         .description = COMPOUND_STRING(
-             "Repels weak wild\n"
-             "Pokémon for 250\n"
-             "steps."),
-         .pocket = POCKET_ITEMS,
-         .type = ITEM_USE_BAG_MENU,
-         .fieldUseFunc = ItemUseOutOfBattle_Repel,
-         .flingPower = 30,
-         .iconPic = gItemIcon_Repel,
-         .iconPalette = gItemIconPalette_MaxRepel,
-     },
+    // [ITEM_MAX_REPEL] =
+    // {
+    //     .name = _("Max Repel"),
+    //     .price = (I_PRICE >= GEN_7) ? 900 : 700,
+    //     .holdEffectParam = 250,
+    //     .description = COMPOUND_STRING(
+    //         "Repels weak wild\n"
+    //         "Pokémon for 250\n"
+    //         "steps."),
+    //     .pocket = POCKET_ITEMS,
+    //     .type = ITEM_USE_BAG_MENU,
+    //     .fieldUseFunc = ItemUseOutOfBattle_Repel,
+    //     .flingPower = 30,
+    //     .iconPic = gItemIcon_Repel,
+    //     .iconPalette = gItemIconPalette_MaxRepel,
+    // },
 
     [ITEM_INF_REPEL] =
     {
@@ -2204,6 +2204,7 @@ const struct Item gItemsInfo[] =
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD,
         .fieldUseFunc = ItemUseOutOfBattle_InfRepel,
+        .flingPower = 30,
         .iconPic = gItemIcon_Repel,
         .iconPalette = gItemIconPalette_MaxRepel,
     },

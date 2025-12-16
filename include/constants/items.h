@@ -150,7 +150,7 @@
 // Encounter Modifiers
 #define ITEM_REPEL 114
 #define ITEM_SUPER_REPEL 115
-#define ITEM_MAX_REPEL 116
+#define ITEM_INF_REPEL 116
 #define ITEM_LURE 117
 #define ITEM_SUPER_LURE 118
 #define ITEM_MAX_LURE 119
@@ -994,13 +994,10 @@
 
 #define ITEM_STRANGE_BALL 828
 
-// Newly added items by me
-#define ITEM_INF_REPEL 829
-
 // HOPO BERRY
 // LEGEND PLATE
 
-#define ITEMS_COUNT 830
+#define ITEMS_COUNT 829
 #define ITEM_FIELD_ARROW ITEMS_COUNT
 
 // A special item id associated with "Cancel"/"Exit" etc. in a list of items or decorations

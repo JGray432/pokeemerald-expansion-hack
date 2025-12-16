@@ -71,8 +71,12 @@ static void Task_ShowTMHMContainedMessage(u8);
 static void UseTMHMYesNo(u8);
 static void UseTMHM(u8);
 static void Task_StartUseRepel(u8);
+static void Task_StartUseInfRepel(u8);
+static void Task_StopUseInfRepel(u8);
 static void Task_StartUseLure(u8 taskId);
 static void Task_UseRepel(u8);
+static void Task_UseInfRepel(u8);
+static void Task_StopInfRepel(u8);
 static void Task_UseLure(u8 taskId);
 static void Task_CloseCantUseKeyItemMessage(u8);
 static void SetDistanceOfClosestHiddenItem(u8, s16, s16);
@@ -944,16 +948,10 @@ void ItemUseOutOfBattle_Repel(u8 taskId)
 
 void ItemUseOutOfBattle_InfRepel(u8 taskId)
 {
-    if (FlagGet(FLAG_INFINITE_REPEL_ACTIVE))
-    {
-        FlagClear(FLAG_INFINITE_REPEL_ACTIVE);
-        DisplayItemMessage(taskId, FONT_NORMAL, gText_InfRepelDisabled, CloseItemMessage);
-    }
-    else
-    {
-        FlagSet(FLAG_INFINITE_REPEL_ACTIVE);
-        DisplayItemMessage(taskId, FONT_NORMAL, gText_InfRepelEnabled, CloseItemMessage);
-    }
+    if (!VAR_INF_REPEL_ON)
+        gTasks[taskId].func = Task_StartUseInfRepel;
+    else if (VAR_INF_REPEL_ON)
+        gTasks[taskId].func = Task_StopUseInfRepel;
 }
 
 static void Task_StartUseRepel(u8 taskId)
@@ -965,6 +963,30 @@ static void Task_StartUseRepel(u8 taskId)
         data[8] = 0;
         PlaySE(SE_REPEL);
         gTasks[taskId].func = Task_UseRepel;
+    }
+}
+
+static void Task_StartUseInfRepel(u8 taskId)
+{
+    s16 *data = gTasks[taskId].data;
+
+    if (++data[8] > 7)
+    {
+        data[8] = 0;
+        PlaySE(SE_REPEL);
+        gTasks[taskId].func = Task_UseInfRepel;
+    }
+}
+
+static void Task_StopUseInfRepel(u8 taskId)
+{
+    s16 *data = gTasks[taskId].data;
+
+    if (++data[8] > 7)
+    {
+        data[8] = 0;
+        PlaySE(SE_REPEL);
+        gTasks[taskId].func = Task_StopInfRepel;
     }
 }
 
@@ -984,6 +1006,35 @@ static void Task_UseRepel(u8 taskId)
     }
 }
 
+static void Task_UseInfRepel(u8 taskId)
+{
+    if (!IsSEPlaying())
+    {
+        VarSet(VAR_INF_REPEL_ON, TRUE);
+    #if VAR_LAST_REPEL_LURE_USED != 0
+        VarSet(VAR_LAST_REPEL_LURE_USED, gSpecialVar_ItemId);
+    #endif
+        if (!InBattlePyramid())
+            DisplayItemMessage(taskId, FONT_NORMAL, gStringVar4, CloseItemMessage);
+        else
+            DisplayItemMessageInBattlePyramid(taskId, gStringVar4, Task_CloseBattlePyramidBagMessage);
+    }
+}
+
+static void Task_StopInfRepel(u8 taskId)
+{
+    if (!IsSEPlaying())
+    {
+        VarSet(VAR_INF_REPEL_ON, FALSE);
+    #if VAR_LAST_REPEL_LURE_USED != 0
+        VarSet(VAR_LAST_REPEL_LURE_USED, gSpecialVar_ItemId);
+    #endif
+        if (!InBattlePyramid())
+            DisplayItemMessage(taskId, FONT_NORMAL, gStringVar4, CloseItemMessage);
+        else
+            DisplayItemMessageInBattlePyramid(taskId, gStringVar4, Task_CloseBattlePyramidBagMessage);
+    }
+}
 void HandleUseExpiredRepel(struct ScriptContext *ctx)
 {
 #if VAR_LAST_REPEL_LURE_USED != 0
