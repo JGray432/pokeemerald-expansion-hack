@@ -1,33 +1,33 @@
-Route8_TunnelersRestHouse_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, Route8_TunnelersRestHouse_OnTransition
+Route116_TunnelersRestHouse_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Route116_TunnelersRestHouse_OnTransition
 	.byte 0
 
-Route8_TunnelersRestHouse_OnTransition:
+Route116_TunnelersRestHouse_OnTransition:
 	setflag FLAG_LANDMARK_TUNNELERS_REST_HOUSE
 	end
 
-Route8_TunnelersRestHouse_EventScript_Tunneler1::
-	msgbox Route8_TunnelersRestHouse_Text_WeHadToStopBoring, MSGBOX_NPC
+Route116_TunnelersRestHouse_EventScript_Tunneler1::
+	msgbox Route116_TunnelersRestHouse_Text_WeHadToStopBoring, MSGBOX_NPC
 	end
 
-Route8_TunnelersRestHouse_EventScript_Tunneler2::
-	msgbox Route8_TunnelersRestHouse_Text_ManDiggingHisWayToVerdanturf, MSGBOX_NPC
+Route116_TunnelersRestHouse_EventScript_Tunneler2::
+	msgbox Route116_TunnelersRestHouse_Text_ManDiggingHisWayToVerdanturf, MSGBOX_NPC
 	end
 
-Route8_TunnelersRestHouse_EventScript_Tunneler3::
+Route116_TunnelersRestHouse_EventScript_Tunneler3::
 	lock
 	faceplayer
-	goto_if_set FLAG_RUSTURF_TUNNEL_OPENED, Route8_TunnelersRestHouse_EventScript_TunnelOpened
-	msgbox Route8_TunnelersRestHouse_Text_GetToVerdanturfWithoutTunnel, MSGBOX_DEFAULT
+	goto_if_set FLAG_RUSTURF_TUNNEL_OPENED, Route116_TunnelersRestHouse_EventScript_TunnelOpened
+	msgbox Route116_TunnelersRestHouse_Text_GetToVerdanturfWithoutTunnel, MSGBOX_DEFAULT
 	release
 	end
 
-Route8_TunnelersRestHouse_EventScript_TunnelOpened::
-	msgbox Route8_TunnelersRestHouse_Text_TunnelHasGoneThrough, MSGBOX_DEFAULT
+Route116_TunnelersRestHouse_EventScript_TunnelOpened::
+	msgbox Route116_TunnelersRestHouse_Text_TunnelHasGoneThrough, MSGBOX_DEFAULT
 	release
 	end
 
-Route8_TunnelersRestHouse_Text_WeHadToStopBoring:
+Route116_TunnelersRestHouse_Text_WeHadToStopBoring:
 	.string "That RUSTURF TUNNEL there…\p"
 	.string "At first, we had a huge work crew boring\n"
 	.string "through rock with the latest machinery.\l"
@@ -38,7 +38,7 @@ Route8_TunnelersRestHouse_Text_WeHadToStopBoring:
 	.string "So, we've got nothing to do but loll\n"
 	.string "around here doing nothing.$"
 
-Route8_TunnelersRestHouse_Text_ManDiggingHisWayToVerdanturf:
+Route116_TunnelersRestHouse_Text_ManDiggingHisWayToVerdanturf:
 	.string "There's a man digging his way to\n"
 	.string "VERDANTURF all by his lonesome.\l"
 	.string "He's desperate to get through.\p"
@@ -48,13 +48,13 @@ Route8_TunnelersRestHouse_Text_ManDiggingHisWayToVerdanturf:
 	.string "harming the natural environment.\p"
 	.string "I wonder if he made it through yet.$"
 
-Route8_TunnelersRestHouse_Text_GetToVerdanturfWithoutTunnel:
+Route116_TunnelersRestHouse_Text_GetToVerdanturfWithoutTunnel:
 	.string "To get to VERDANTURF without using\n"
 	.string "this TUNNEL, you'd have to cross the\l"
 	.string "sea to CRETE, sail on to SLATEPORT,\l"
 	.string "then travel through ATHENS.$"
 
-Route8_TunnelersRestHouse_Text_TunnelHasGoneThrough:
+Route116_TunnelersRestHouse_Text_TunnelHasGoneThrough:
 	.string "Did you hear? The TUNNEL to VERDANTURF\n"
 	.string "has gone through!\p"
 	.string "Sometimes, if you hope strongly enough,\n"

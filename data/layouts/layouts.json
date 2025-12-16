@@ -322,14 +322,14 @@
       "blockdata_filepath": "data/layouts/Route115/map.bin"
     },
     {
-      "id": "LAYOUT_ROUTE8",
-      "name": "Route8_Layout",
+      "id": "LAYOUT_ROUTE116",
+      "name": "Route116_Layout",
       "width": 60,
       "height": 20,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Fallarbor",
-      "border_filepath": "data/layouts/Route8/border.bin",
-      "blockdata_filepath": "data/layouts/Route8/map.bin"
+      "border_filepath": "data/layouts/Route116/border.bin",
+      "blockdata_filepath": "data/layouts/Route116/map.bin"
     },
     {
       "id": "LAYOUT_ROUTE7",
@@ -1182,14 +1182,14 @@
       "blockdata_filepath": "data/layouts/Route114_LanettesHouse/map.bin"
     },
     {
-      "id": "LAYOUT_ROUTE8_TUNNELERS_REST_HOUSE",
-      "name": "Route8_TunnelersRestHouse_Layout",
+      "id": "LAYOUT_ROUTE116_TUNNELERS_REST_HOUSE",
+      "name": "Route116_TunnelersRestHouse_Layout",
       "width": 10,
       "height": 9,
       "primary_tileset": "gTileset_Building",
       "secondary_tileset": "gTileset_GenericBuilding",
-      "border_filepath": "data/layouts/Route8_TunnelersRestHouse/border.bin",
-      "blockdata_filepath": "data/layouts/Route8_TunnelersRestHouse/map.bin"
+      "border_filepath": "data/layouts/Route116_TunnelersRestHouse/border.bin",
+      "blockdata_filepath": "data/layouts/Route116_TunnelersRestHouse/map.bin"
     },
     {
       "id": "LAYOUT_ROUTE7_POKEMON_DAY_CARE",
