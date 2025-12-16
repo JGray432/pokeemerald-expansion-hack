@@ -23,7 +23,7 @@ LittlerootTown_ProfessorBirchsLab_MapScripts::
 	@ 1: Never occurs
 	@ 2: Chose starter
 	@ 3: Received starter in lab
-	@ 4: Defeated rival on Dionysus VINEYARD
+	@ 4: Defeated rival on Route 103
 	@ 5: Received pokedex
 
 LittlerootTown_ProfessorBirchsLab_OnTransition:

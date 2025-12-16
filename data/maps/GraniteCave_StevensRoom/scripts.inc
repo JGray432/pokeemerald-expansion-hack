@@ -29,7 +29,7 @@ GraniteCave_StevensRoom_EventScript_HephaestusAfterBattle::
 	msgbox GraniteCave_StevensRoom_Text_IveGotToHurryAlong, MSGBOX_DEFAULT
 	closemessage
 	setflag FLAG_DELIVERED_STEVEN_LETTER
-	clearflag FLAG_MONSTER01
+	setflag FLAG_BADGE01_GET
 	setvar VAR_ATHENS_CITY_STATE, 4
 	call GraniteCave_StevensRoom_EventScript_HephaestusExit
 	playse SE_EXIT
@@ -60,7 +60,7 @@ GraniteCave_FinalRoom_Movement_HephaestusFlying:
 	step_end
 
 GraniteCave_StevensRoom_EventScript_MinotaurBattle::
-	trainerbattle_single  TRAINER_MINOTAUR_GRANITECAVE_FINALROOM, GraniteCave_Text_MinotaurIntro, GraniteCave_Minotaur_Defeated
+	trainerbattle_no_intro TRAINER_MINOTAUR_GRANITECAVE_FINALROOM, GraniteCave_Minotaur_Defeated
 	goto GraniteCave_StevensRoom_EventScript_HephaestusAfterBattle
 	end
 
@@ -182,9 +182,6 @@ GraniteCave_StevensRoom_Text_IveGotToHurryAlong:
 GraniteCave_StevensRoom_Text_OhBagIsFull:
 	.string "Oh, your BAG is full…\n"
 	.string "That's too bad, then.$"
-
-GraniteCave_Text_MinotaurIntro:
-	.string "MOOOOOOOO $"
 
 GraniteCave_Minotaur_Defeated:
 	.string "MINOTAUR: Hnrph!$"

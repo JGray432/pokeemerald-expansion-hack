@@ -69,177 +69,177 @@ ROUTE2_Text_TianaPostBattle:
 	.string "To keep winning my way up, I see that\n"
 	.string "I have to catch more POKéMON.$"
 
-DionysusVineyard_Text_DaisyIntro:
+Route103_Text_DaisyIntro:
 	.string "Did you feel the tug of our\n"
 	.string "soul-soothing fragrance?$"
 
-DionysusVineyard_Text_DaisyDefeated:
+Route103_Text_DaisyDefeated:
 	.string "You weren't led astray by our aroma…$"
 
-DionysusVineyard_Text_DaisyPostBattle:
+Route103_Text_DaisyPostBattle:
 	.string "Aromatherapy is a form of mental\n"
 	.string "healing that works with fragrances.$"
 
-DionysusVineyard_Text_AmyIntro:
+Route103_Text_AmyIntro:
 	.string "AMY: I'm AMY.\n"
 	.string "And this is my little sister LIV.\l"
 	.string "We battle together!$"
 
-DionysusVineyard_Text_AmyDefeated:
+Route103_Text_AmyDefeated:
 	.string "AMY: Uh-oh, we lost.$"
 
-DionysusVineyard_Text_AmyPostBattle:
+Route103_Text_AmyPostBattle:
 	.string "AMY: You have to think about all\n"
 	.string "kinds of things when you're battling\l"
 	.string "against two TRAINERS.$"
 
-DionysusVineyard_Text_AmyNotEnoughPokemon:
+Route103_Text_AmyNotEnoughPokemon:
 	.string "AMY: Uh-oh, you have only one\n"
 	.string "POKéMON with you.\l"
 	.string "You can't battle us like that.$"
 
-DionysusVineyard_Text_LivIntro:
+Route103_Text_LivIntro:
 	.string "LIV: We battle together as one\n"
 	.string "team.$"
 
-DionysusVineyard_Text_LivDefeated:
+Route103_Text_LivDefeated:
 	.string "LIV: Oh, we lost, big sister…$"
 
-DionysusVineyard_Text_LivPostBattle:
+Route103_Text_LivPostBattle:
 	.string "LIV: We work perfectly together,\n"
 	.string "me and my big sister…\p"
 	.string "But we still lost…$"
 
-DionysusVineyard_Text_AmyLivRegister:
+Route103_Text_AmyLivRegister:
 	.string "LIV: Really, we're a lot better…\n"
 	.string "It's true! We'll show you next time!$"
 
-DionysusVineyard_Text_LivNotEnoughPokemon:
+Route103_Text_LivNotEnoughPokemon:
 	.string "LIV: If you want to battle us,\n"
 	.string "you have to have two POKéMON!\l"
 	.string "It's not fair if you don't!$"
 
-DionysusVineyard_Text_AmyRematchIntro:
+Route103_Text_AmyRematchIntro:
 	.string "AMY: I'm AMY.\n"
 	.string "And this is my little sister LIV.\l"
 	.string "We battle together!$"
 
-DionysusVineyard_Text_AmyRematchDefeated:
+Route103_Text_AmyRematchDefeated:
 	.string "AMY: Aww, boo!\n"
 	.string "We couldn't win again…$"
 
-DionysusVineyard_Text_AmyRematchPostBattle:
+Route103_Text_AmyRematchPostBattle:
 	.string "AMY: You have to think about all\n"
 	.string "kinds of things when you're battling\l"
 	.string "against two TRAINERS.$"
 
-DionysusVineyard_Text_AmyRematchNotEnoughPokemon:
+Route103_Text_AmyRematchNotEnoughPokemon:
 	.string "AMY: Uh-oh, you have only one\n"
 	.string "POKéMON with you.\l"
 	.string "You can't battle us like that.$"
 
-DionysusVineyard_Text_LivRematchIntro:
+Route103_Text_LivRematchIntro:
 	.string "LIV: We battle together as one\n"
 	.string "team.$"
 
-DionysusVineyard_Text_LivRematchDefeated:
+Route103_Text_LivRematchDefeated:
 	.string "LIV: Awww, we lost again…\n"
 	.string "Big sister…$"
 
-DionysusVineyard_Text_LivRematchPostBattle:
+Route103_Text_LivRematchPostBattle:
 	.string "LIV: We work perfectly together,\n"
 	.string "me and my big sister…\p"
 	.string "But why did we lose again?$"
 
-DionysusVineyard_Text_LivRematchNotEnoughPokemon:
+Route103_Text_LivRematchNotEnoughPokemon:
 	.string "LIV: If you want to battle us, you\n"
 	.string "have to have two POKéMON!\l"
 	.string "It's not fair if you don't!$"
 
-DionysusVineyard_Text_AndrewIntro:
+Route103_Text_AndrewIntro:
 	.string "Gah! My fishing line's all snarled up!\n"
 	.string "I'm getting frustrated and mean!\l"
 	.string "That's it! Battle me!$"
 
-DionysusVineyard_Text_AndrewDefeated:
+Route103_Text_AndrewDefeated:
 	.string "Gah! Lost it!\n"
 	.string "I'm even more annoyed now!$"
 
-DionysusVineyard_Text_AndrewPostBattle:
+Route103_Text_AndrewPostBattle:
 	.string "Gah, I'm still boiling mad…\n"
 	.string "Grrrrr…$"
 
-DionysusVineyard_Text_MiguelIntro:
+Route103_Text_MiguelIntro:
 	.string "My POKéMON is delightfully adorable!\n"
 	.string "Don't be shy--I'll show you!$"
 
-DionysusVineyard_Text_MiguelDefeated:
+Route103_Text_MiguelDefeated:
 	.string "Oh, my gosh!\n"
 	.string "My darling POKéMON!$"
 
-DionysusVineyard_Text_MiguelPostBattle:
+Route103_Text_MiguelPostBattle:
 	.string "My delightful POKéMON looks darling\n"
 	.string "even when it's fainted!$"
 
-DionysusVineyard_Text_MiguelRegister:
+Route103_Text_MiguelRegister:
 	.string "I'll get you to come out and look in\n"
 	.string "on my delightful POKéMON again!$"
 
-DionysusVineyard_Text_MiguelRematchIntro:
+Route103_Text_MiguelRematchIntro:
 	.string "Hi, you! My delightfully adorable\n"
 	.string "POKéMON has become more darling!$"
 
-DionysusVineyard_Text_MiguelRematchDefeated:
+Route103_Text_MiguelRematchDefeated:
 	.string "Oh!\n"
 	.string "My darling POKéMON!$"
 
-DionysusVineyard_Text_MiguelRematchPostBattle:
+Route103_Text_MiguelRematchPostBattle:
 	.string "The more I spend time with it,\n"
 	.string "the more adorable my POKéMON becomes.$"
 
-DionysusVineyard_Text_PeteIntro:
+Route103_Text_PeteIntro:
 	.string "This sort of distance…\n"
 	.string "You should just swim it!$"
 
-DionysusVineyard_Text_PeteDefeated:
+Route103_Text_PeteDefeated:
 	.string "Oh, that's good going!$"
 
-DionysusVineyard_Text_PetePostBattle:
+Route103_Text_PetePostBattle:
 	.string "Oh, I understand where you're coming\n"
 	.string "from now.\p"
 	.string "If I had a POKéMON that trusty,\n"
 	.string "I'd want to SURF on it, too!$"
 
-DionysusVineyard_Text_IsabelleIntro:
+Route103_Text_IsabelleIntro:
 	.string "Watch where you're going!\n"
 	.string "We're going to crash!$"
 
-DionysusVineyard_Text_IsabelleDefeated:
+Route103_Text_IsabelleDefeated:
 	.string "Groan…$"
 
-DionysusVineyard_Text_IsabellePostBattle:
+Route103_Text_IsabellePostBattle:
 	.string "I'm a poor swimmer so I was practicing…\n"
 	.string "Sorry for almost crashing into you.$"
 
-DionysusVineyard_Text_RhettIntro:
+Route103_Text_RhettIntro:
 	.string "Whoa!\n"
 	.string "How'd you get into a space this small?$"
 
-DionysusVineyard_Text_RhettDefeated:
+Route103_Text_RhettDefeated:
 	.string "Whoa!\n"
 	.string "The kid can rock!$"
 
-DionysusVineyard_Text_RhettPostBattle:
+Route103_Text_RhettPostBattle:
 	.string "Do you like cramped quarters\n"
 	.string "like this?$"
 
-DionysusVineyard_Text_MarcosIntro:
+Route103_Text_MarcosIntro:
 	.string "Did my guitar's wailing draw you in?$"
 
-DionysusVineyard_Text_MarcosDefeated:
+Route103_Text_MarcosDefeated:
 	.string "My one-man show is ruined…$"
 
-DionysusVineyard_Text_MarcosPostBattle:
+Route103_Text_MarcosPostBattle:
 	.string "I was playing my guitar where few\n"
 	.string "people were around, but a lot of fans\l"
 	.string "have gathered.\p"

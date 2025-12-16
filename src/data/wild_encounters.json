@@ -215,8 +215,8 @@
           }
         },
         {
-          "map": "MAP_DIONYSUS_VINEYARD",
-          "base_label": "gDionysusVineyard",
+          "map": "MAP_ROUTE103",
+          "base_label": "gRoute103",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [

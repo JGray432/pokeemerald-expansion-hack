@@ -1,9 +1,9 @@
 {
-  "id": "MAP_DIONYSUS_VINEYARD",
-  "name": "DionysusVineyard",
-  "layout": "LAYOUT_DIONYSUS_VINEYARD",
+  "id": "MAP_ROUTE103",
+  "name": "Route103",
+  "layout": "LAYOUT_ROUTE103",
   "music": "MUS_ROUTE1",
-  "region_map_section": "MAPSEC_DIONYSUS_VINEYARD",
+  "region_map_section": "MAPSEC_ROUTE_103",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
   "map_type": "MAP_TYPE_ROUTE",
@@ -11,7 +11,7 @@
   "allow_escaping": false,
   "allow_running": true,
   "show_map_name": true,
-  "battle_scene": "MAP_BATTLE_SCENE_GYM",
+  "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": 0,
   "object_events": [
     {
@@ -24,7 +24,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "DionysusVineyard_EventScript_Daisy",
+      "script": "Route103_EventScript_Daisy",
       "flag": "0"
     },
     {
@@ -37,7 +37,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "DionysusVineyard_EventScript_Liv",
+      "script": "Route103_EventScript_Liv",
       "flag": "0"
     },
     {
@@ -50,7 +50,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "DionysusVineyard_EventScript_Amy",
+      "script": "Route103_EventScript_Amy",
       "flag": "0"
     },
     {
@@ -63,7 +63,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "DionysusVineyard_EventScript_Andrew",
+      "script": "Route103_EventScript_Andrew",
       "flag": "0"
     },
     {
@@ -76,7 +76,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "DionysusVineyard_EventScript_Miguel",
+      "script": "Route103_EventScript_Miguel",
       "flag": "0"
     },
     {
@@ -89,7 +89,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "DionysusVineyard_EventScript_Rhett",
+      "script": "Route103_EventScript_Rhett",
       "flag": "0"
     },
     {
@@ -102,7 +102,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "DionysusVineyard_EventScript_Marcos",
+      "script": "Route103_EventScript_Marcos",
       "flag": "0"
     }
   ],

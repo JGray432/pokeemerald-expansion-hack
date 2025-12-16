@@ -54,7 +54,7 @@
     {
       "type": "trigger",
       "x": 7,
-      "y": 3,
+      "y": 4,
       "elevation": 0,
       "var": "VAR_ATHENS_CITY_STATE",
       "var_value": "3",
