@@ -139,16 +139,6 @@ LittlerootTown_ProfessorBirchsLab_EventScript_AgreeToSeeRival::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_GetRivalToTeachYou, MSGBOX_DEFAULT
 	clearflag FLAG_HIDE_ROUTE_101_BOY
 	setvar VAR_BIRCH_LAB_STATE, 3
-	goto LittleRootTown_ProfessorBirchsLab_EventScript_GiveKeyItems	
-	end
-
-LittlerootTown_ProfessorBirchsLab_EventScript_DeclineSeeingRival::
-	msgbox LittlerootTown_ProfessorBirchsLab_Text_DontBeThatWay, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, LittlerootTown_ProfessorBirchsLab_EventScript_AgreeToSeeRival
-	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_DeclineSeeingRival
-	end
-
-LittleRootTown_ProfessorBirchsLab_EventScript_GiveKeyItems::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_GiveKeyItems MSGBOX_DEFAULT
 	waitmessage
 	playfanfare MUS_OBTAIN_ITEM
@@ -160,6 +150,12 @@ LittleRootTown_ProfessorBirchsLab_EventScript_GiveKeyItems::
 	giveitem ITEM_INF_REPEL
 	waitfanfare
 	releaseall
+	end
+
+LittlerootTown_ProfessorBirchsLab_EventScript_DeclineSeeingRival::
+	msgbox LittlerootTown_ProfessorBirchsLab_Text_DontBeThatWay, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, LittlerootTown_ProfessorBirchsLab_EventScript_AgreeToSeeRival
+	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_DeclineSeeingRival
 	end
 
 LittlerootTown_ProfessorBirchsLab_EventScript_GivePokedexEvent::
@@ -780,10 +776,10 @@ LittlerootTown_ProfessorBirchsLab_Text_GiveKeyItems:
 	.string "items to help start your journey\l"
 
 LittlerootTown_ProfessorBirchsLab_Text_ReceivedInfCandy:
-	.string "{PLAYER} received the Inf Candy!$"
+	.string "{PLAYER} received the inf candy!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_ReceivedInfRepel:
-	.string "{PLAYER} received the Inf Repel!$"
+	.string "{PLAYER} received the inf repel!$"
 
 LittlerootTown_ProfessorBirchsLab_Text_CountlessPokemonAwait:
 	.string "PROF. BIRCH: Countless POKéMON\n"

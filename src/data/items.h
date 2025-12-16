@@ -2028,21 +2028,20 @@ const struct Item gItemsInfo[] =
     [ITEM_INF_CANDY] =
     {
         .name = _("Inf. Candy"),
+        .pluralName = _("Inf. Candies"),
         .price = 0,
-        .holdEffectParam = 1,
         .description = COMPOUND_STRING(
             "Raises the level\n"
             "of a Pokémon by\n"
             "one."),
-        .importance = TRUE,
         .pocket = POCKET_KEY_ITEMS,
-        .type = ITEM_USE_PARTY_MENU,        
-        //.partyMenuUsage = ITEM_USE_LEVEL_UP,
+        .type = ITEM_USE_FIELD,
         .fieldUseFunc = ItemUseOutOfBattle_RareCandy,
         .effect = gItemEffect_RareCandy,
         .flingPower = 30,
         .iconPic = gItemIcon_RareCandy,
         .iconPalette = gItemIconPalette_RareCandy,
+        .importance = TRUE,
     },
 
 // Medicinal Flutes
