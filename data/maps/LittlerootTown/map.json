@@ -130,7 +130,7 @@
       "x": 5,
       "y": 8,
       "elevation": 0,
-      "dest_map": "MAP_LITTLEROOT_TOWN_ATHENAS_HOUSE",
+      "dest_map": "MAP_LITTLEROOT_TOWN_ATHENAS_HOUSE_1F",
       "dest_warp_id": "0"
     },
     {
@@ -138,7 +138,7 @@
       "y": 16,
       "elevation": 0,
       "dest_map": "MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB",
-      "dest_warp_id": "1"
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
