@@ -133,16 +133,6 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GoSeeRival::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_MightBeGoodIdeaToGoSeeRival, MSGBOX_YESNO
 	goto_if_eq VAR_RESULT, YES, LittlerootTown_ProfessorBirchsLab_EventScript_AgreeToSeeRival
 	goto_if_eq VAR_RESULT, NO, LittlerootTown_ProfessorBirchsLab_EventScript_DeclineSeeingRival
-	message LittlerootTown_ProfessorBirchsLab_Text_
-	waitmessage
-	playfanfare MUS_OBTAIN_ITEM
-	message LittlerootTown_ProfessorBirchsLab_Text_ReceivedInfCandy
-	giveitem ITEM_INF_CANDY
-	waitfanfare
-	playfanfare MUS_OBTAIN_ITEM
-	message LittlerootTown_ProfessorBirchsLab_Text_ReceivedInfRepel
-	giveitem ITEM_INF_REPEL
-	waitfanfare
 	end
 
 LittlerootTown_ProfessorBirchsLab_EventScript_AgreeToSeeRival::
@@ -524,6 +514,14 @@ LittlerootTown_ProfessorBirchsLab_EventScript_GivePokedex::
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_HeardYouBeatRivalTakePokedex, MSGBOX_DEFAULT
 	call LittlerootTown_ProfessorBirchsLab_EventScript_ReceivePokedex
 	msgbox LittlerootTown_ProfessorBirchsLab_Text_ExplainPokedex, MSGBOX_DEFAULT
+	playfanfare MUS_OBTAIN_ITEM
+	message LittlerootTown_ProfessorBirchsLab_Text_ReceivedInfCandy
+	giveitem ITEM_INF_CANDY
+	waitfanfare
+	playfanfare MUS_OBTAIN_ITEM
+	message LittlerootTown_ProfessorBirchsLab_Text_ReceivedInfRepel
+	giveitem ITEM_INF_CANDY
+	waitfanfare
 	closemessage
 	applymovement LOCALID_RIVAL, LittlerootTown_ProfessorBirchsLab_Movement_RivalApproachPlayer
 	waitmovement 0
@@ -770,10 +768,6 @@ LittlerootTown_ProfessorBirchsLab_Text_ExplainPokedex:
 	.string "why, {RIVAL} looks for me while I'm out\l"
 	.string "doing fieldwork, and shows me.\p"
 	.string "Here, take these useful items too!$"
-
-LittlerootTown_ProfessorBirchsLab_Text_GiveKeyItems:
-	.string "PROF. BIRCH: Here are some useful\n"
-	.string "items to help start your journey\l"
 
 LittlerootTown_ProfessorBirchsLab_Text_ReceivedInfCandy:
 	.string "{PLAYER} received the inf candy!$"

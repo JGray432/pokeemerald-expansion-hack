@@ -2041,7 +2041,6 @@ const struct Item gItemsInfo[] =
         .flingPower = 30,
         .iconPic = gItemIcon_RareCandy,
         .iconPalette = gItemIconPalette_RareCandy,
-        .importance = TRUE,
     },
 
 // Medicinal Flutes
@@ -2176,22 +2175,22 @@ const struct Item gItemsInfo[] =
         .iconPalette = gItemIconPalette_SuperRepel,
     },
 
-    // [ITEM_MAX_REPEL] =
-    // {
-    //     .name = _("Max Repel"),
-    //     .price = (I_PRICE >= GEN_7) ? 900 : 700,
-    //     .holdEffectParam = 250,
-    //     .description = COMPOUND_STRING(
-    //         "Repels weak wild\n"
-    //         "Pokémon for 250\n"
-    //         "steps."),
-    //     .pocket = POCKET_ITEMS,
-    //     .type = ITEM_USE_BAG_MENU,
-    //     .fieldUseFunc = ItemUseOutOfBattle_Repel,
-    //     .flingPower = 30,
-    //     .iconPic = gItemIcon_Repel,
-    //     .iconPalette = gItemIconPalette_MaxRepel,
-    // },
+    [ITEM_MAX_REPEL] =
+    {
+        .name = _("Max Repel"),
+        .price = (I_PRICE >= GEN_7) ? 900 : 700,
+        .holdEffectParam = 250,
+        .description = COMPOUND_STRING(
+            "Repels weak wild\n"
+            "Pokémon for 250\n"
+            "steps."),
+        .pocket = POCKET_ITEMS,
+        .type = ITEM_USE_BAG_MENU,
+        .fieldUseFunc = ItemUseOutOfBattle_Repel,
+        .flingPower = 30,
+        .iconPic = gItemIcon_Repel,
+        .iconPalette = gItemIconPalette_MaxRepel,
+    },
 
     [ITEM_INF_REPEL] =
     {
@@ -2200,7 +2199,6 @@ const struct Item gItemsInfo[] =
         .description = COMPOUND_STRING(
             "Repels weak wild\n"
             "Pokémon."),
-        .importance = TRUE,
         .pocket = POCKET_KEY_ITEMS,
         .type = ITEM_USE_FIELD,
         .fieldUseFunc = ItemUseOutOfBattle_InfRepel,
