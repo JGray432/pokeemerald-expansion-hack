@@ -1,8 +1,8 @@
 gText_PkmnTransferredSomeonesPC::
-	.string "{STR_VAR_2} was put in\n"
-	.string "THE SACK.\p"
+	.string "{STR_VAR_2} was transferred to\n"
+	.string "SOMEONE'S PC.\p"
 	.string "It was placed in \n"
-	.string "POCKET “{STR_VAR_1}.”$"
+	.string "BOX “{STR_VAR_1}.”$"
 
 gText_PkmnTransferredLanettesPC::
 	.string "{STR_VAR_2} was transferred to\n"
@@ -11,10 +11,10 @@ gText_PkmnTransferredLanettesPC::
 	.string "BOX “{STR_VAR_1}.”$"
 
 gText_PkmnTransferredSomeonesPCBoxFull::
-	.string "POCKET “{STR_VAR_3}” of\n"
-	.string "THE SACK was full.\p"
-	.string "{STR_VAR_2} was put in\n"
-	.string "POCKET “{STR_VAR_1}.”$"
+	.string "BOX “{STR_VAR_3}” on\n"
+	.string "SOMEONE'S PC was full.\p"
+	.string "{STR_VAR_2} was transferred to\n"
+	.string "BOX “{STR_VAR_1}.”$"
 
 gText_PkmnTransferredLanettesPCBoxFull::
 	.string "BOX “{STR_VAR_3}” on\n"
@@ -24,9 +24,9 @@ gText_PkmnTransferredLanettesPCBoxFull::
 
 gText_PkmnSentToPCAfterCatch::
 	.string "{STR_VAR_2} was sent to\n"
-	.string "THE SACK.\p"
+	.string "{B_PC_CREATOR_NAME} PC.\p"
 	.string "It was placed in \n"
-	.string "POCKET “{STR_VAR_1}”.$"
+	.string "BOX “{STR_VAR_1}”.$"
 
 gText_NoMoreRoomForPokemon::
 	.string "There's no more room for POKéMON!\p"

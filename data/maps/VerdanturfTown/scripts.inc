@@ -47,40 +47,6 @@ VerdanturfTown_EventScript_BoyTunnelOpen::
 	release
 	end
 
-VerdanturfTown_EventScript_Nurse::
-	setvar VAR_0x800B, LOCALID_NURSE
-	call Common_EventScript_PkmnCenterNurse
-	waitmessage
-	waitbuttonpress
-	release
-	end
-
-VerdanturfTown_EventScript_Clerk::
-	lock
-	faceplayer
-	message gText_HowMayIServeYou
-	waitmessage
-	pokemart Athens_Mart
-	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
-	release
-	end
-
-	.align 2
-VerdanturfTown_Mart:
-	.2byte ITEM_POKE_BALL
-	.2byte ITEM_GREAT_BALL
-	.2byte ITEM_POTION
-	.2byte ITEM_SUPER_POTION
-	pokemartlistend
-
-VerdanturfTown_EventScript_UtilityScientist::
-	lock
-	faceplayer
-	call Common_EventScript_UtilitiesScientist
-	waitmessage
-	release
-	end
-
 VerdanturfTown_EventScript_TownSign::
 	msgbox VerdanturfTown_Text_TownSign, MSGBOX_SIGN
 	end

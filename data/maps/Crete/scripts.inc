@@ -116,41 +116,6 @@ Crete_EventScript_FishingNotSoGood::
 	release
 	end
 
-Crete_EventScript_Nurse::
-	setvar VAR_0x800B, LOCALID_NURSE
-	call Common_EventScript_PkmnCenterNurse
-	waitmessage
-	waitbuttonpress
-	release
-	end
-
-Crete_EventScript_Clerk::
-	lock
-	faceplayer
-	message gText_HowMayIServeYou
-	waitmessage
-	pokemart Athens_Mart
-	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
-	release
-	end
-
-	.align 2
-Crete_Mart:
-	.2byte ITEM_POKE_BALL
-	.2byte ITEM_POTION
-	.2byte ITEM_ANTIDOTE
-	.2byte ITEM_PARALYZE_HEAL
-	.2byte ITEM_AWAKENING
-	pokemartlistend
-
-Crete_EventScript_UtilityScientist::
-	lock
-	faceplayer
-	call Common_EventScript_UtilitiesScientist
-	waitmessage
-	release
-	end
-
 Crete_EventScript_SailToPetalburg::
 	call EventScript_BackupMrBrineyLocation
 	setobjectsubpriority LOCALID_BRINEY_CRETE, MAP_CRETE, 0
@@ -696,7 +661,7 @@ Crete_Text_HallSign:
 	.string "“Everyone's information exchange!”$"
 
 Route104_Text_LandedInCreteDeliverLetter:
-	.string "CPT. MORGAN: Ahoy!\n"
+	.string "MR. BRINEY: Ahoy!\n"
 	.string "We've hit land in CRETE.\p"
 	.string "I suppose you're off to deliver that\n"
 	.string "LETTER to, who was it now, STEVEN!$"
@@ -713,7 +678,7 @@ Crete_Text_PetalburgWereSettingSail2:
 	.string "PEEKO, we're setting sail, my darling!$"
 
 Crete_Text_GoDeliverIllBeWaiting:
-	.string "CPT. MORGAN: What, who do you think\n"
+	.string "MR. BRINEY: What, who do you think\n"
 	.string "I am, your personal chauffeur?\p"
 	.string "We ain't leaving till you've got\n"
 	.string "that thread!$"

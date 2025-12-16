@@ -102,8 +102,9 @@ ArchiTown_AthenasHouse_EventScript_Bag::
 	end
 
 SetStarterMetLocationToSpecial::
-	setmodernfatefulencounter 1
-	end
+	specialvar VAR_GIFT_PICHU_SLOT, CalculatePlayerPartyCount
+	setmodernfatefulencounter VAR_GIFT_PICHU_SLOT
+	return
 
 ArchiTown_AthenasHouse_EventScript_AlreadyChosenStarter::
 	msgbox AthenasHouse_Text_AlreadyChosenStarters, MSGBOX_DEFAULT
