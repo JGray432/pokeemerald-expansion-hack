@@ -721,7 +721,7 @@
 #define ITEM_TM01 582
 #define ITEM_TM02 583
 #define ITEM_TM03 584
-#define ITEM_TM_FUTURE_SIGHT 585
+#define ITEM_TM04 585
 #define ITEM_TM05 586
 #define ITEM_TM06 587
 #define ITEM_TM07 588

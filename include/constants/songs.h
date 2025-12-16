@@ -292,7 +292,7 @@
 #define MUS_ROUTE1                359 // MUS_DOORO1           // Also used in Routes 102 and 103.
 #define MUS_ROUTE110                360 // MUS_DOORO_X1         // Also used in Routes 112, 114, 117, 111's non-desert section and 118's west half.
 #define MUS_ROUTE120                361 // MUS_DOORO_X3         // Also used in Routes 121, 124, 125, 126, 127 and 128.
-#define MUS_DELPHI               362 // MUS_MACHI_S2         // Also used in Mr. Briney's House and Pretty Petal Flower Shop.
+#define MUS_PETALBURG               362 // MUS_MACHI_S2         // Also used in Mr. Briney's House and Pretty Petal Flower Shop.
 #define MUS_OLDALE                  363 // MUS_MACHI_S4         // Also used in Lavaridge Town.
 #define MUS_GYM                     364 // MUS_GIM
 #define MUS_SURF                    365 // MUS_NAMINORI
@@ -383,7 +383,7 @@
 #define MUS_ENCOUNTER_ELITE_FOUR    450 // MUS_SITENNOU
 #define MUS_ENCOUNTER_HIKER         451 // MUS_YAMA_EYE
 #define MUS_CONTEST_LOBBY           452 // MUS_CONLOBBY
-#define MUS_ENCOUNTER_INTERVIEWER   453 // MUS_INTER_V          // Also used during Delphi report at the beginning of the game.
+#define MUS_ENCOUNTER_INTERVIEWER   453 // MUS_INTER_V          // Also used during Petalburg City report at the beginning of the game.
 #define MUS_ENCOUNTER_CHAMPION      454 // MUS_DAIGO
 #define MUS_CREDITS                 455 // MUS_THANKFOR
 #define MUS_END                     456 // MUS_END

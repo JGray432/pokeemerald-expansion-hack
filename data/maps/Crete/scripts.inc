@@ -28,10 +28,10 @@ Crete_EventScript_Briney::
 	goto_if_eq VAR_RESULT, NO, Crete_EventScript_CancelSailSelect
 	end
 
-Crete_EventScript_ChooseDelphi::
-	msgbox Crete_Text_DelphiWereSettingSail, MSGBOX_DEFAULT
+Crete_EventScript_ChoosePetalburg::
+	msgbox Crete_Text_PetalburgWereSettingSail, MSGBOX_DEFAULT
 	closemessage
-	goto Crete_EventScript_SailToDelphi
+	goto Crete_EventScript_SailToPetalburg
 	release
 	end
 
@@ -53,10 +53,10 @@ Crete_EventScript_NoReturnPrompt::
 	release
 	end
 
-Crete_EventScript_SailBackToDelphi::
-	msgbox Crete_Text_DelphiWereSettingSail2, MSGBOX_DEFAULT
+Crete_EventScript_SailBackToPetalburg::
+	msgbox Crete_Text_PetalburgWereSettingSail2, MSGBOX_DEFAULT
 	closemessage
-	goto Crete_EventScript_SailToDelphi
+	goto Crete_EventScript_SailToPetalburg
 	end
 
 Crete_EventScript_Woman::
@@ -151,7 +151,7 @@ Crete_EventScript_UtilityScientist::
 	release
 	end
 
-Crete_EventScript_SailToDelphi::
+Crete_EventScript_SailToPetalburg::
 	call EventScript_BackupMrBrineyLocation
 	setobjectsubpriority LOCALID_BRINEY_CRETE, MAP_CRETE, 0
 	setobjectsubpriority OBJ_EVENT_ID_PLAYER, MAP_CRETE, 0
@@ -162,12 +162,12 @@ Crete_EventScript_SailToDelphi::
 	waitmovement 0
 	hideobjectat OBJ_EVENT_ID_PLAYER, MAP_CRETE
 	call Common_EventScript_PlayBrineysBoatMusic
-	applymovement LOCALID_BOAT_CRETE, Crete_Movement_SailToDelphi
-	applymovement OBJ_EVENT_ID_PLAYER, Crete_Movement_SailToDelphi
+	applymovement LOCALID_BOAT_CRETE, Crete_Movement_SailToPetalburg
+	applymovement OBJ_EVENT_ID_PLAYER, Crete_Movement_SailToPetalburg
 	waitmovement 0
 	showobjectat OBJ_EVENT_ID_PLAYER, MAP_ROUTE104
 	call Common_EventScript_StopBrineysBoatMusic
-	applymovement OBJ_EVENT_ID_PLAYER, Crete_Movement_ExitBoatDelphi
+	applymovement OBJ_EVENT_ID_PLAYER, Crete_Movement_ExitBoatPetalburg
 	waitmovement 0
 	showobjectat OBJ_EVENT_ID_PLAYER, MAP_ROUTE104
 	clearflag FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY
@@ -227,7 +227,7 @@ Crete_EventScript_LandedSlateport::
 	msgbox Crete_Text_BrineyLandedInSlateport, MSGBOX_DEFAULT
 	return
 
-Crete_Movement_SailToDelphi:
+Crete_Movement_SailToPetalburg:
 	walk_up
 	walk_up
 	walk_fast_up
@@ -614,7 +614,7 @@ Crete_Movement_PlayerBoardBoat:
 	walk_up
 	step_end
 
-Crete_Movement_ExitBoatDelphi:
+Crete_Movement_ExitBoatPetalburg:
 	walk_up
 	walk_up
 	walk_up
@@ -701,14 +701,14 @@ Route104_Text_LandedInCreteDeliverLetter:
 	.string "I suppose you're off to deliver that\n"
 	.string "LETTER to, who was it now, STEVEN!$"
 
-Crete_Text_SetSailBackToDelphi:
-	.string "CPT. MORGAN: Have you delivered your\n"
+Crete_Text_SetSailBackToPetalburg:
+	.string "MR. BRINEY: Have you delivered your\n"
 	.string "LETTER?\p"
 	.string "Or were you meaning to sail back to\n"
-	.string "DELPHI?$"
+	.string "PETALBURG?$"
 
-Crete_Text_DelphiWereSettingSail2:
-	.string "CPT. MORGAN: DELPHI it is, then!\p"
+Crete_Text_PetalburgWereSettingSail2:
+	.string "MR. BRINEY: PETALBURG it is, then!\p"
 	.string "Anchors aweigh!\n"
 	.string "PEEKO, we're setting sail, my darling!$"
 
@@ -719,30 +719,33 @@ Crete_Text_GoDeliverIllBeWaiting:
 	.string "that thread!$"
 
 Crete_Text_BrineyLandedInCrete:
-	.string "CPT. MORGAN: Ahoy!\n"
+	.string "MR. BRINEY: Ahoy!\n"
 	.string "We've hit land in CRETE!\p"
 	.string "You just go on and tell me whenever\n"
 	.string "you want to set sail again!$"
 
 Crete_Text_WhereAreWeBound:
-	.string "CPT. MORGAN: Ahoy!\n"
+	.string "MR. BRINEY: Ahoy!\n"
 	.string "For you, I'll go out to sea anytime!\p"
 	.string "Now, my friend, where are we bound?$"
 
-Crete_Text_DelphiWereSettingSail:
-	.string "CPT. MORGAN: DELPHI, is it?\p"
+Crete_Text_PetalburgWereSettingSail:
+	.string "MR. BRINEY: PETALBURG, is it?\p"
 	.string "Anchors aweigh!\n"
 	.string "PEEKO, we're setting sail, my darling!$"
 
 Crete_Text_SlateportWereSettingSail:
-	.string "CPT. MORGAN: Anchors aweigh!$"
+	.string "MR. BRINEY: SLATEPORT, is it?\p"
+	.string "Anchors aweigh!\n"
+	.string "PEEKO, we're setting sail, my darling!$"
 
 Crete_SailBackToAthens_Briney:
 	.string "CPT. MORGAN: You about ready \n"
 	.string "to head back to ATHENS?$"
 
+
 Crete_Text_JustTellMeWhenYouNeedToSetSail:
-	.string "CPT. MORGAN: You just tell me whenever\n"
+	.string "MR. BRINEY: You just tell me whenever\n"
 	.string "you need to set sail again!$"
 
 Crete_Text_GettingItchToFish:

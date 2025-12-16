@@ -163,14 +163,14 @@
       "x": 5,
       "y": 27,
       "elevation": 0,
-      "dest_map": "MAP_DELPHI",
+      "dest_map": "MAP_PETALBURG_CITY",
       "dest_warp_id": "2"
     },
     {
       "x": 6,
       "y": 27,
       "elevation": 0,
-      "dest_map": "MAP_DELPHI",
+      "dest_map": "MAP_PETALBURG_CITY",
       "dest_warp_id": "2"
     }
   ],

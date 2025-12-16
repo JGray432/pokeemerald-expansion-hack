@@ -1,9 +1,9 @@
 {
-  "id": "MAP_DELPHI",
-  "name": "Delphi",
-  "layout": "LAYOUT_DELPHI",
-  "music": "MUS_DELPHI",
-  "region_map_section": "MAPSEC_DELPHI",
+  "id": "MAP_PETALBURG_CITY",
+  "name": "PetalburgCity",
+  "layout": "LAYOUT_PETALBURG_CITY",
+  "music": "MUS_PETALBURG",
+  "region_map_section": "MAPSEC_PETALBURG_CITY",
   "requires_flash": false,
   "weather": "WEATHER_SUNNY",
   "map_type": "MAP_TYPE_CITY",
@@ -35,8 +35,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Delphi_EventScript_Nurse",
-      "flag": "FLAG_HIDE_DELPHI_WALLYS_MOM"
+      "script": "PetalburgCity_EventScript_Nurse",
+      "flag": "FLAG_HIDE_PETALBURG_CITY_WALLYS_MOM"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
@@ -49,7 +49,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_HIDE_DELPHI_SCOTT"
+      "flag": "FLAG_HIDE_PETALBURG_CITY_SCOTT"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_SCIENTIST_2",
@@ -61,7 +61,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Delphi_EventScript_UtilityScientist",
+      "script": "PetalburgCity_EventScript_UtilityScientist",
       "flag": "0"
     },
     {
@@ -74,8 +74,8 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Delphi_EventScript_Gentleman",
-      "flag": "FLAG_HIDE_DELPHI_SCOTT"
+      "script": "PetalburgCity_EventScript_Gentleman",
+      "flag": "FLAG_HIDE_PETALBURG_CITY_SCOTT"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_AQUA_MEMBER_M",
@@ -88,7 +88,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_HIDE_DELPHI_SCOTT"
+      "flag": "FLAG_HIDE_PETALBURG_CITY_SCOTT"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_MEGA_STONE",
@@ -99,9 +99,9 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "ITEM_MEDICHAMITE",
+      "trainer_sight_or_berry_tree_id": "ITEM_MAX_REVIVE",
       "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_ITEM_DELPHI_MAX_REVIVE"
+      "flag": "FLAG_ITEM_PETALBURG_CITY_MAX_REVIVE"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_ITEM_BALL",
@@ -114,7 +114,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "ITEM_ETHER",
       "script": "Common_EventScript_FindItem",
-      "flag": "FLAG_ITEM_DELPHI_ETHER"
+      "flag": "FLAG_ITEM_PETALBURG_CITY_ETHER"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_MART_EMPLOYEE",
@@ -126,7 +126,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Delphi_EventScript_Clerk",
+      "script": "PetalburgCity_EventScript_Clerk",
       "flag": "0"
     },
     {
@@ -140,7 +140,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_HIDE_DELPHI_SCOTT"
+      "flag": "FLAG_HIDE_PETALBURG_CITY_SCOTT"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_PUSHABLE_BOULDER",
@@ -179,11 +179,11 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "NULL",
-      "flag": "FLAG_HIDE_DELPHI_SCOTT"
+      "flag": "FLAG_HIDE_PETALBURG_CITY_SCOTT"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_HEX_MANIAC",
-      "x": 15,
+      "x": 14,
       "y": 9,
       "elevation": 0,
       "movement_type": "MOVEMENT_TYPE_NONE",
@@ -191,8 +191,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Delphi_EventScript_GymBlocker",
-      "flag": "FLAG_HIDE_DELPHI_WALLY"
+      "script": "PetalburgCity_EventScript_GymBlocker",
+      "flag": "FLAG_HIDE_PETALBURG_CITY_WALLY"
     }
   ],
   "warp_events": [
@@ -200,7 +200,7 @@
       "x": 10,
       "y": 19,
       "elevation": 0,
-      "dest_map": "MAP_DELPHI_HOUSE1",
+      "dest_map": "MAP_PETALBURG_CITY_HOUSE1",
       "dest_warp_id": "0"
     },
     {
@@ -221,7 +221,7 @@
       "x": 20,
       "y": 24,
       "elevation": 0,
-      "dest_map": "MAP_DELPHI_HOUSE2",
+      "dest_map": "MAP_PETALBURG_CITY_HOUSE2",
       "dest_warp_id": "0"
     }
   ],
@@ -231,36 +231,36 @@
       "x": 29,
       "y": 16,
       "elevation": 3,
-      "var": "VAR_DELPHI_STATE",
+      "var": "VAR_PETALBURG_CITY_STATE",
       "var_value": "0",
-      "script": "Delphi_EventScript_ArgonautsGoToTower"
+      "script": "PetalburgCity_EventScript_ArgonautsGoToTower"
     },
     {
       "type": "trigger",
       "x": 29,
       "y": 17,
       "elevation": 3,
-      "var": "VAR_DELPHI_STATE",
+      "var": "VAR_PETALBURG_CITY_STATE",
       "var_value": "0",
-      "script": "Delphi_EventScript_ArgonautsGoToTower"
+      "script": "PetalburgCity_EventScript_ArgonautsGoToTower"
     },
     {
       "type": "trigger",
       "x": 29,
       "y": 18,
       "elevation": 3,
-      "var": "VAR_DELPHI_STATE",
+      "var": "VAR_PETALBURG_CITY_STATE",
       "var_value": "0",
-      "script": "Delphi_EventScript_ArgonautsGoToTower"
+      "script": "PetalburgCity_EventScript_ArgonautsGoToTower"
     },
     {
       "type": "trigger",
       "x": 29,
       "y": 19,
       "elevation": 3,
-      "var": "VAR_DELPHI_STATE",
+      "var": "VAR_PETALBURG_CITY_STATE",
       "var_value": "0",
-      "script": "Delphi_EventScript_ArgonautsGoToTower"
+      "script": "PetalburgCity_EventScript_ArgonautsGoToTower"
     }
   ],
   "bg_events": [
@@ -270,7 +270,7 @@
       "y": 10,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Delphi_EventScript_GymSign"
+      "script": "PetalburgCity_EventScript_GymSign"
     },
     {
       "type": "hidden_item",
@@ -278,7 +278,7 @@
       "y": 15,
       "elevation": 3,
       "item": "ITEM_RARE_CANDY",
-      "flag": "FLAG_HIDDEN_ITEM_DELPHI_RARE_CANDY"
+      "flag": "FLAG_HIDDEN_ITEM_PETALBURG_CITY_RARE_CANDY"
     }
   ]
 }

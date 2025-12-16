@@ -61,7 +61,6 @@ Athens_Outskirts_EventScript_DionysusPerformance::
  setflag FLAG_DELIVERED_THREAD
  setvar VAR_ATHENS_CITY_STATE, 5
  fadescreenspeed FADE_TO_BLACK, 24
- removeobject LOCALID_DIONYSUS
  fadescreenspeed FADE_FROM_BLACK, 24
  releaseall
  end

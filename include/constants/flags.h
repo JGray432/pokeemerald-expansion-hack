@@ -319,7 +319,7 @@
 #define FLAG_MET_RIVAL_IN_HOUSE_AFTER_LILYCOVE 0x125
 #define FLAG_EXCHANGED_SCANNER               0x126
 #define FLAG_KECLEON_FLED_FORTREE            0x127
-#define FLAG_Delphi_MART_EXPANDED_ITEMS   0x128
+#define FLAG_PETALBURG_MART_EXPANDED_ITEMS   0x128
 #define FLAG_RECEIVED_MIRACLE_SEED           0x129
 #define FLAG_RECEIVED_BELDUM                 0x12A
 #define FLAG_RECEIVED_FANCLUB_TM_THIS_WEEK   0x12B
@@ -638,7 +638,7 @@
 #define FLAG_HIDDEN_ITEM_ROUTE_128_HEART_SCALE_1             (FLAG_HIDDEN_ITEMS_START + 0x5C)
 #define FLAG_HIDDEN_ITEM_ROUTE_128_HEART_SCALE_2             (FLAG_HIDDEN_ITEMS_START + 0x5D)
 #define FLAG_HIDDEN_ITEM_ROUTE_128_HEART_SCALE_3             (FLAG_HIDDEN_ITEMS_START + 0x5E)
-#define FLAG_HIDDEN_ITEM_DELPHI_RARE_CANDY           (FLAG_HIDDEN_ITEMS_START + 0x5F)
+#define FLAG_HIDDEN_ITEM_PETALBURG_CITY_RARE_CANDY           (FLAG_HIDDEN_ITEMS_START + 0x5F)
 #define FLAG_HIDDEN_ITEM_ROUTE_8_BLACK_GLASSES             (FLAG_HIDDEN_ITEMS_START + 0x60)
 #define FLAG_HIDDEN_ITEM_ROUTE_115_HEART_SCALE               (FLAG_HIDDEN_ITEMS_START + 0x61)
 #define FLAG_HIDDEN_ITEM_ROUTE_113_NUGGET                    (FLAG_HIDDEN_ITEMS_START + 0x62)
@@ -772,9 +772,9 @@
 #define FLAG_HIDE_DIONYSUS_VINEYARD_RIVAL                                   0x2D3
 #define FLAG_HIDE_ENTOMO_WOODS_DEVON_EMPLOYEE                    0x2D4
 #define FLAG_HIDE_ENTOMO_WOODS_AQUA_GRUNT                        0x2D5
-#define FLAG_HIDE_DELPHI_WALLY                              0x2D6
+#define FLAG_HIDE_PETALBURG_CITY_WALLY                              0x2D6
 #define FLAG_HIDE_MOSSDEEP_CITY_STEVENS_HOUSE_INVISIBLE_NINJA_BOY   0x2D7
-#define FLAG_HIDE_DELPHI_WALLYS_MOM                         0x2D8
+#define FLAG_HIDE_PETALBURG_CITY_WALLYS_MOM                         0x2D8
 
 #define FLAG_HIDE_ARCHI_TOWN_ATHENAS_HOUSE_ATHENA              0x2D9
 
@@ -820,7 +820,7 @@
 #define FLAG_HIDE_ROUTE_111_VICTORIA_WINSTRATE                      0x301
 #define FLAG_HIDE_ROUTE_111_VIVI_WINSTRATE                          0x302
 #define FLAG_HIDE_ROUTE_111_VICKY_WINSTRATE                         0x303
-#define FLAG_HIDE_Delphi_GYM_NORMAN                              0x304
+#define FLAG_HIDE_PETALBURG_GYM_NORMAN                              0x304
 #define FLAG_HIDE_SKY_PILLAR_TOP_RAYQUAZA                           0x305
 #define FLAG_HIDE_LILYCOVE_CONTEST_HALL_CONTEST_ATTENDANT_1         0x306
 #define FLAG_HIDE_LILYCOVE_MUSEUM_CURATOR                           0x307
@@ -829,7 +829,7 @@
 #define FLAG_HIDE_LILYCOVE_MUSEUM_PATRON_3                          0x30A
 #define FLAG_HIDE_LILYCOVE_MUSEUM_PATRON_4                          0x30B
 #define FLAG_HIDE_LILYCOVE_MUSEUM_TOURISTS                          0x30C
-#define FLAG_HIDE_Delphi_GYM_GREETER                             0x30D
+#define FLAG_HIDE_PETALBURG_GYM_GREETER                             0x30D
 #define FLAG_HIDE_MARINE_CAVE_KYOGRE                                0x30E
 #define FLAG_HIDE_TERRA_CAVE_GROUDON                                0x30F
 #define FLAG_HIDE_ARCHI_TOWN_BRENDANS_HOUSE_RIVAL_MOM          0x310
@@ -872,13 +872,13 @@
 #define FLAG_HIDE_AQUA_HIDEOUT_1F_GRUNT_1_BLOCKING_ENTRANCE         0x335
 #define FLAG_HIDE_AQUA_HIDEOUT_1F_GRUNT_2_BLOCKING_ENTRANCE         0x336
 #define FLAG_HIDE_MOSSDEEP_CITY_TEAM_MAGMA                          0x337
-#define FLAG_HIDE_Delphi_GYM_WALLYS_DAD                          0x338
+#define FLAG_HIDE_PETALBURG_GYM_WALLYS_DAD                          0x338
 #define FLAG_HIDE_LEGEND_MON_CAVE_OF_ORIGIN                         0x339 // Unused, leftover from R/S
 #define FLAG_HIDE_SOOTOPOLIS_CITY_ARCHIE                            0x33A
 #define FLAG_HIDE_SOOTOPOLIS_CITY_MAXIE                             0x33B
 #define FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_ARCHIE                     0x33C
 #define FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_MAXIE                      0x33D
-#define FLAG_HIDE_DELPHI_WALLYS_DAD                         0x33E
+#define FLAG_HIDE_PETALBURG_CITY_WALLYS_DAD                         0x33E
 #define FLAG_HIDE_SEAFLOOR_CAVERN_ROOM_9_MAGMA_GRUNTS               0x33F
 #define FLAG_HIDE_LILYCOVE_CONTEST_HALL_BLEND_MASTER                0x340
 #define FLAG_HIDE_LABYRINTH_STEVEN                               0x341
@@ -914,7 +914,7 @@
 #define FLAG_HIDE_MOSSDEEP_CITY_SPACE_CENTER_2F_STEVEN              0x35F
 #define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_ALT_1           0x360
 #define FLAG_HIDE_BATTLE_TOWER_MULTI_BATTLE_PARTNER_ALT_2           0x361
-#define FLAG_HIDE_Delphi_GYM_WALLY                               0x362
+#define FLAG_HIDE_PETALBURG_GYM_WALLY                               0x362
 #define FLAG_UNKNOWN_0x363                                          0x363 // Set, however has no purpose.
 #define FLAG_HIDE_ARCHI_TOWN_FAT_MAN                           0x364
 #define FLAG_HIDE_SLATEPORT_CITY_STERNS_SHIPYARD_MR_BRINEY          0x365
@@ -1043,7 +1043,7 @@
 #define FLAG_HIDE_WEATHER_INSTITUTE_2F_AQUA_GRUNT_M                 0x3E0
 #define FLAG_HIDE_LILYCOVE_POKEMON_CENTER_CONTEST_LADY_MON          0x3E1
 #define FLAG_HIDE_MT_CHIMNEY_LAVA_COOKIE_LADY                       0x3E2
-#define FLAG_HIDE_DELPHI_SCOTT                              0x3E3
+#define FLAG_HIDE_PETALBURG_CITY_SCOTT                              0x3E3
 #define FLAG_HIDE_SOOTOPOLIS_CITY_RAYQUAZA                          0x3E4
 #define FLAG_HIDE_SOOTOPOLIS_CITY_KYOGRE                            0x3E5
 #define FLAG_HIDE_SOOTOPOLIS_CITY_GROUDON                           0x3E6
@@ -1089,8 +1089,8 @@
 #define FLAG_ITEM_ROUTE_132_RARE_CANDY                              0x40C
 #define FLAG_ITEM_ROUTE_133_BIG_PEARL                               0x40D
 #define FLAG_ITEM_ROUTE_133_STAR_PIECE                              0x40E
-#define FLAG_ITEM_DELPHI_MAX_REVIVE                         0x40F
-#define FLAG_ITEM_DELPHI_ETHER                              0x410
+#define FLAG_ITEM_PETALBURG_CITY_MAX_REVIVE                         0x40F
+#define FLAG_ITEM_PETALBURG_CITY_ETHER                              0x410
 #define FLAG_ITEM_RUSTBORO_CITY_X_DEFEND                            0x411
 #define FLAG_ITEM_LILYCOVE_CITY_MAX_REPEL                           0x412
 #define FLAG_ITEM_MOSSDEEP_CITY_NET_BALL                            0x413
@@ -1320,7 +1320,7 @@
 #define FLAG_DEFEATED_CRETE_GYM                                   0x4F1
 #define FLAG_DEFEATED_ATHENS_GYM                                  0x4F2
 #define FLAG_DEFEATED_LAVARIDGE_GYM                                 0x4F3
-#define FLAG_DEFEATED_Delphi_GYM                                 0x4F4
+#define FLAG_DEFEATED_PETALBURG_GYM                                 0x4F4
 #define FLAG_DEFEATED_FORTREE_GYM                                   0x4F5
 #define FLAG_DEFEATED_MOSSDEEP_GYM                                  0x4F6
 #define FLAG_DEFEATED_SOOTOPOLIS_GYM                                0x4F7
@@ -1374,7 +1374,7 @@
 #define FLAG_VISITED_FALLARBOR_TOWN                 (SYSTEM_FLAGS + 0x13)
 #define FLAG_VISITED_VERDANTURF_TOWN                (SYSTEM_FLAGS + 0x14)
 #define FLAG_VISITED_PACIFIDLOG_TOWN                (SYSTEM_FLAGS + 0x15)
-#define FLAG_VISITED_DELPHI                 (SYSTEM_FLAGS + 0x16)
+#define FLAG_VISITED_PETALBURG_CITY                 (SYSTEM_FLAGS + 0x16)
 #define FLAG_VISITED_SLATEPORT_CITY                 (SYSTEM_FLAGS + 0x17)
 #define FLAG_VISITED_ATHENS                  (SYSTEM_FLAGS + 0x18)
 #define FLAG_VISITED_RUSTBORO_CITY                  (SYSTEM_FLAGS + 0x19)

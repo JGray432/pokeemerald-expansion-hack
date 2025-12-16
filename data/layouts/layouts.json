@@ -2,14 +2,14 @@
   "layouts_table_label": "gMapLayouts",
   "layouts": [
     {
-      "id": "LAYOUT_DELPHI",
-      "name": "Delphi_Layout",
+      "id": "LAYOUT_PETALBURG_CITY",
+      "name": "PetalburgCity_Layout",
       "width": 30,
       "height": 30,
       "primary_tileset": "gTileset_General",
       "secondary_tileset": "gTileset_Fallarbor",
-      "border_filepath": "data/layouts/Delphi/border.bin",
-      "blockdata_filepath": "data/layouts/Delphi/map.bin"
+      "border_filepath": "data/layouts/PetalburgCity/border.bin",
+      "blockdata_filepath": "data/layouts/PetalburgCity/map.bin"
     },
     {
       "id": "LAYOUT_SLATEPORT_CITY",
@@ -107,7 +107,7 @@
       "width": 20,
       "height": 20,
       "primary_tileset": "gTileset_General",
-      "secondary_tileset": "gTileset_Delphi",
+      "secondary_tileset": "gTileset_Petalburg",
       "border_filepath": "data/layouts/OldaleTown/border.bin",
       "blockdata_filepath": "data/layouts/OldaleTown/map.bin"
     },
@@ -752,14 +752,14 @@
       "blockdata_filepath": "data/layouts/PacifidlogTown_House2/map.bin"
     },
     {
-      "id": "LAYOUT_DELPHI_GYM",
-      "name": "Delphi_Gym_Layout",
+      "id": "LAYOUT_PETALBURG_CITY_GYM",
+      "name": "PetalburgCity_Gym_Layout",
       "width": 9,
       "height": 112,
       "primary_tileset": "gTileset_Building",
-      "secondary_tileset": "gTileset_DelphiGym",
-      "border_filepath": "data/layouts/Delphi_Gym/border.bin",
-      "blockdata_filepath": "data/layouts/Delphi_Gym/map.bin"
+      "secondary_tileset": "gTileset_PetalburgGym",
+      "border_filepath": "data/layouts/PetalburgCity_Gym/border.bin",
+      "blockdata_filepath": "data/layouts/PetalburgCity_Gym/map.bin"
     },
     {
       "id": "LAYOUT_HOUSE_WITH_BED",

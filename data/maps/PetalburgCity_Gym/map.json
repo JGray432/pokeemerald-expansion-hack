@@ -1,9 +1,9 @@
 {
-  "id": "MAP_DELPHI_GYM",
-  "name": "Delphi_Gym",
-  "layout": "LAYOUT_DELPHI_GYM",
+  "id": "MAP_PETALBURG_CITY_GYM",
+  "name": "PetalburgCity_Gym",
+  "layout": "LAYOUT_PETALBURG_CITY_GYM",
   "music": "MUS_GYM",
-  "region_map_section": "MAPSEC_DELPHI",
+  "region_map_section": "MAPSEC_PETALBURG_CITY",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
   "map_type": "MAP_TYPE_INDOOR",
@@ -24,8 +24,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Delphi_Gym_EventScript_Norman",
-      "flag": "FLAG_HIDE_Delphi_GYM_NORMAN"
+      "script": "PetalburgCity_Gym_EventScript_Norman",
+      "flag": "FLAG_HIDE_PETALBURG_GYM_NORMAN"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WOMAN_5",
@@ -37,7 +37,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Delphi_Gym_EventScript_Mary",
+      "script": "PetalburgCity_Gym_EventScript_Mary",
       "flag": "0"
     },
     {
@@ -50,7 +50,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Delphi_Gym_EventScript_Randall",
+      "script": "PetalburgCity_Gym_EventScript_Randall",
       "flag": "0"
     },
     {
@@ -63,7 +63,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Delphi_Gym_EventScript_Parker",
+      "script": "PetalburgCity_Gym_EventScript_Parker",
       "flag": "0"
     },
     {
@@ -76,7 +76,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Delphi_Gym_EventScript_Alexia",
+      "script": "PetalburgCity_Gym_EventScript_Alexia",
       "flag": "0"
     },
     {
@@ -89,7 +89,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Delphi_Gym_EventScript_George",
+      "script": "PetalburgCity_Gym_EventScript_George",
       "flag": "0"
     },
     {
@@ -102,7 +102,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Delphi_Gym_EventScript_Jody",
+      "script": "PetalburgCity_Gym_EventScript_Jody",
       "flag": "0"
     },
     {
@@ -115,7 +115,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Delphi_Gym_EventScript_Berke",
+      "script": "PetalburgCity_Gym_EventScript_Berke",
       "flag": "0"
     },
     {
@@ -128,8 +128,8 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
-      "script": "Delphi_Gym_EventScript_GymGuide",
-      "flag": "FLAG_HIDE_Delphi_GYM_GREETER"
+      "script": "PetalburgCity_Gym_EventScript_GymGuide",
+      "flag": "FLAG_HIDE_PETALBURG_GYM_GREETER"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_WALLY",
@@ -142,7 +142,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_HIDE_Delphi_GYM_WALLY"
+      "flag": "FLAG_HIDE_PETALBURG_GYM_WALLY"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_POKEFAN_M",
@@ -155,7 +155,7 @@
       "trainer_type": "TRAINER_TYPE_NONE",
       "trainer_sight_or_berry_tree_id": "0",
       "script": "0x0",
-      "flag": "FLAG_HIDE_Delphi_GYM_WALLYS_DAD"
+      "flag": "FLAG_HIDE_PETALBURG_GYM_WALLYS_DAD"
     }
   ],
   "warp_events": [
@@ -163,266 +163,266 @@
       "x": 4,
       "y": 111,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI",
+      "dest_map": "MAP_PETALBURG_CITY",
       "dest_warp_id": "2"
     },
     {
       "x": 5,
       "y": 111,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI",
+      "dest_map": "MAP_PETALBURG_CITY",
       "dest_warp_id": "2"
     },
     {
       "x": 1,
       "y": 105,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI_GYM",
+      "dest_map": "MAP_PETALBURG_CITY_GYM",
       "dest_warp_id": "3"
     },
     {
       "x": 7,
       "y": 85,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI_GYM",
+      "dest_map": "MAP_PETALBURG_CITY_GYM",
       "dest_warp_id": "2"
     },
     {
       "x": 6,
       "y": 85,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI_GYM",
+      "dest_map": "MAP_PETALBURG_CITY_GYM",
       "dest_warp_id": "2"
     },
     {
       "x": 7,
       "y": 105,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI_GYM",
+      "dest_map": "MAP_PETALBURG_CITY_GYM",
       "dest_warp_id": "6"
     },
     {
       "x": 1,
       "y": 98,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI_GYM",
+      "dest_map": "MAP_PETALBURG_CITY_GYM",
       "dest_warp_id": "5"
     },
     {
       "x": 2,
       "y": 98,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI_GYM",
+      "dest_map": "MAP_PETALBURG_CITY_GYM",
       "dest_warp_id": "5"
     },
     {
       "x": 1,
       "y": 79,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI_GYM",
+      "dest_map": "MAP_PETALBURG_CITY_GYM",
       "dest_warp_id": "10"
     },
     {
       "x": 7,
       "y": 79,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI_GYM",
+      "dest_map": "MAP_PETALBURG_CITY_GYM",
       "dest_warp_id": "12"
     },
     {
       "x": 7,
       "y": 46,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI_GYM",
+      "dest_map": "MAP_PETALBURG_CITY_GYM",
       "dest_warp_id": "8"
     },
     {
       "x": 6,
       "y": 46,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI_GYM",
+      "dest_map": "MAP_PETALBURG_CITY_GYM",
       "dest_warp_id": "8"
     },
     {
       "x": 1,
       "y": 59,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI_GYM",
+      "dest_map": "MAP_PETALBURG_CITY_GYM",
       "dest_warp_id": "9"
     },
     {
       "x": 2,
       "y": 59,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI_GYM",
+      "dest_map": "MAP_PETALBURG_CITY_GYM",
       "dest_warp_id": "9"
     },
     {
       "x": 1,
       "y": 92,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI_GYM",
+      "dest_map": "MAP_PETALBURG_CITY_GYM",
       "dest_warp_id": "16"
     },
     {
       "x": 7,
       "y": 92,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI_GYM",
+      "dest_map": "MAP_PETALBURG_CITY_GYM",
       "dest_warp_id": "18"
     },
     {
       "x": 7,
       "y": 59,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI_GYM",
+      "dest_map": "MAP_PETALBURG_CITY_GYM",
       "dest_warp_id": "14"
     },
     {
       "x": 6,
       "y": 59,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI_GYM",
+      "dest_map": "MAP_PETALBURG_CITY_GYM",
       "dest_warp_id": "14"
     },
     {
       "x": 1,
       "y": 72,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI_GYM",
+      "dest_map": "MAP_PETALBURG_CITY_GYM",
       "dest_warp_id": "15"
     },
     {
       "x": 2,
       "y": 72,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI_GYM",
+      "dest_map": "MAP_PETALBURG_CITY_GYM",
       "dest_warp_id": "15"
     },
     {
       "x": 7,
       "y": 40,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI_GYM",
+      "dest_map": "MAP_PETALBURG_CITY_GYM",
       "dest_warp_id": "24"
     },
     {
       "x": 1,
       "y": 53,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI_GYM",
+      "dest_map": "MAP_PETALBURG_CITY_GYM",
       "dest_warp_id": "26"
     },
     {
       "x": 7,
       "y": 53,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI_GYM",
+      "dest_map": "MAP_PETALBURG_CITY_GYM",
       "dest_warp_id": "28"
     },
     {
       "x": 1,
       "y": 66,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI_GYM",
+      "dest_map": "MAP_PETALBURG_CITY_GYM",
       "dest_warp_id": "30"
     },
     {
       "x": 1,
       "y": 20,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI_GYM",
+      "dest_map": "MAP_PETALBURG_CITY_GYM",
       "dest_warp_id": "20"
     },
     {
       "x": 2,
       "y": 20,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI_GYM",
+      "dest_map": "MAP_PETALBURG_CITY_GYM",
       "dest_warp_id": "20"
     },
     {
       "x": 7,
       "y": 20,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI_GYM",
+      "dest_map": "MAP_PETALBURG_CITY_GYM",
       "dest_warp_id": "21"
     },
     {
       "x": 6,
       "y": 20,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI_GYM",
+      "dest_map": "MAP_PETALBURG_CITY_GYM",
       "dest_warp_id": "21"
     },
     {
       "x": 1,
       "y": 33,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI_GYM",
+      "dest_map": "MAP_PETALBURG_CITY_GYM",
       "dest_warp_id": "22"
     },
     {
       "x": 2,
       "y": 33,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI_GYM",
+      "dest_map": "MAP_PETALBURG_CITY_GYM",
       "dest_warp_id": "22"
     },
     {
       "x": 7,
       "y": 33,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI_GYM",
+      "dest_map": "MAP_PETALBURG_CITY_GYM",
       "dest_warp_id": "23"
     },
     {
       "x": 6,
       "y": 33,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI_GYM",
+      "dest_map": "MAP_PETALBURG_CITY_GYM",
       "dest_warp_id": "23"
     },
     {
       "x": 7,
       "y": 14,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI_GYM",
+      "dest_map": "MAP_PETALBURG_CITY_GYM",
       "dest_warp_id": "34"
     },
     {
       "x": 1,
       "y": 27,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI_GYM",
+      "dest_map": "MAP_PETALBURG_CITY_GYM",
       "dest_warp_id": "36"
     },
     {
       "x": 1,
       "y": 7,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI_GYM",
+      "dest_map": "MAP_PETALBURG_CITY_GYM",
       "dest_warp_id": "32"
     },
     {
       "x": 2,
       "y": 7,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI_GYM",
+      "dest_map": "MAP_PETALBURG_CITY_GYM",
       "dest_warp_id": "32"
     },
     {
       "x": 7,
       "y": 7,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI_GYM",
+      "dest_map": "MAP_PETALBURG_CITY_GYM",
       "dest_warp_id": "33"
     },
     {
       "x": 6,
       "y": 7,
       "elevation": 3,
-      "dest_map": "MAP_DELPHI_GYM",
+      "dest_map": "MAP_PETALBURG_CITY_GYM",
       "dest_warp_id": "33"
     }
   ],
@@ -434,7 +434,7 @@
       "y": 105,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Delphi_Gym_EventScript_SpeedRoomDoor"
+      "script": "PetalburgCity_Gym_EventScript_SpeedRoomDoor"
     },
     {
       "type": "sign",
@@ -442,7 +442,7 @@
       "y": 105,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Delphi_Gym_EventScript_AccuracyRoomDoor"
+      "script": "PetalburgCity_Gym_EventScript_AccuracyRoomDoor"
     },
     {
       "type": "sign",
@@ -450,7 +450,7 @@
       "y": 79,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Delphi_Gym_EventScript_ConfusionRoomDoor"
+      "script": "PetalburgCity_Gym_EventScript_ConfusionRoomDoor"
     },
     {
       "type": "sign",
@@ -458,7 +458,7 @@
       "y": 79,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Delphi_Gym_EventScript_LeftDefenseRoomDoor"
+      "script": "PetalburgCity_Gym_EventScript_LeftDefenseRoomDoor"
     },
     {
       "type": "sign",
@@ -466,7 +466,7 @@
       "y": 92,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Delphi_Gym_EventScript_RightDefenseRoomDoor"
+      "script": "PetalburgCity_Gym_EventScript_RightDefenseRoomDoor"
     },
     {
       "type": "sign",
@@ -474,7 +474,7 @@
       "y": 92,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Delphi_Gym_EventScript_RecoveryRoomDoor"
+      "script": "PetalburgCity_Gym_EventScript_RecoveryRoomDoor"
     },
     {
       "type": "sign",
@@ -482,7 +482,7 @@
       "y": 40,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Delphi_Gym_EventScript_LeftStrengthRoomDoor"
+      "script": "PetalburgCity_Gym_EventScript_LeftStrengthRoomDoor"
     },
     {
       "type": "sign",
@@ -490,7 +490,7 @@
       "y": 53,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Delphi_Gym_EventScript_RightStrengthRoomDoor"
+      "script": "PetalburgCity_Gym_EventScript_RightStrengthRoomDoor"
     },
     {
       "type": "sign",
@@ -498,7 +498,7 @@
       "y": 53,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Delphi_Gym_EventScript_LeftOHKORoomDoor"
+      "script": "PetalburgCity_Gym_EventScript_LeftOHKORoomDoor"
     },
     {
       "type": "sign",
@@ -506,7 +506,7 @@
       "y": 66,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Delphi_Gym_EventScript_RightOHKORoomDoor"
+      "script": "PetalburgCity_Gym_EventScript_RightOHKORoomDoor"
     },
     {
       "type": "sign",
@@ -514,7 +514,7 @@
       "y": 14,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Delphi_Gym_EventScript_LeftGymLeadersRoomDoor"
+      "script": "PetalburgCity_Gym_EventScript_LeftGymLeadersRoomDoor"
     },
     {
       "type": "sign",
@@ -522,7 +522,7 @@
       "y": 27,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Delphi_Gym_EventScript_RightGymLeadersRoomDoor"
+      "script": "PetalburgCity_Gym_EventScript_RightGymLeadersRoomDoor"
     },
     {
       "type": "sign",
@@ -530,7 +530,7 @@
       "y": 110,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "Delphi_Gym_EventScript_LeftGymStatue"
+      "script": "PetalburgCity_Gym_EventScript_LeftGymStatue"
     },
     {
       "type": "sign",
@@ -538,7 +538,7 @@
       "y": 110,
       "elevation": 3,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_NORTH",
-      "script": "Delphi_Gym_EventScript_RightGymStatue"
+      "script": "PetalburgCity_Gym_EventScript_RightGymStatue"
     }
   ]
 }

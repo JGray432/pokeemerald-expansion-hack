@@ -1274,7 +1274,7 @@
         },
         {
           "map": "MAP_ENTOMO_WOODS",
-          "base_label": "gDelphiWoods",
+          "base_label": "gPetalburgWoods",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -6442,8 +6442,8 @@
           }
         },
         {
-          "map": "MAP_DELPHI",
-          "base_label": "gDelphi",
+          "map": "MAP_PETALBURG_CITY",
+          "base_label": "gPetalburgCity",
           "water_mons": {
             "encounter_rate": 1,
             "mons": [

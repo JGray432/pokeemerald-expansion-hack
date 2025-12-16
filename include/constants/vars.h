@@ -104,7 +104,7 @@
 #define VAR_CURRENT_SECRET_BASE                          0x4054 // was probably allocated for VAR_FALLARBOR_TOWN_STATE at one point
 #define VAR_VERDANTURF_TOWN_STATE                        0x4055 // Unused Var
 #define VAR_PACIFIDLOG_TOWN_STATE                        0x4056 // Unused Var
-#define VAR_DELPHI_STATE                         0x4057
+#define VAR_PETALBURG_CITY_STATE                         0x4057
 #define VAR_SLATEPORT_CITY_STATE                         0x4058
 #define VAR_ATHENS_CITY_STATE                          0x4059 
 #define VAR_RUSTBORO_CITY_STATE                          0x405A
@@ -150,7 +150,7 @@
 #define VAR_ARCHI_HOUSES_STATE_MAY                  0x4082
 #define VAR_UNUSED_0x4083                                0x4083 // Unused Var
 #define VAR_BIRCH_LAB_STATE                              0x4084
-#define VAR_Delphi_GYM_STATE                          0x4085 // 0-1: Wally tutorial, 2-6: 0-4 badges, 7: Defeated Norman, 8: Rematch Norman
+#define VAR_PETALBURG_GYM_STATE                          0x4085 // 0-1: Wally tutorial, 2-6: 0-4 badges, 7: Defeated Norman, 8: Rematch Norman
 #define VAR_CONTEST_HALL_STATE                           0x4086
 #define VAR_CABLE_CLUB_STATE                             0x4087
 #define VAR_CONTEST_TYPE                                 0x4088
@@ -218,7 +218,7 @@
 #define VAR_STEVENS_HOUSE_STATE                          0x40C6
 #define VAR_OLDALE_RIVAL_STATE                           0x40C7
 #define VAR_JAGGED_PASS_STATE                            0x40C8
-#define VAR_SCOTT_Delphi_ENCOUNTER                    0x40C9
+#define VAR_SCOTT_PETALBURG_ENCOUNTER                    0x40C9
 #define VAR_SKY_PILLAR_STATE                             0x40CA
 #define VAR_MIRAGE_TOWER_STATE                           0x40CB
 #define VAR_FOSSIL_MANIAC_STATE                          0x40CC

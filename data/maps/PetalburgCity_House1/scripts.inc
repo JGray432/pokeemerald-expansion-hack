@@ -1,20 +1,20 @@
-Delphi_House1_MapScripts::
+PetalburgCity_House1_MapScripts::
 	.byte 0
 
-Delphi_House1_EventScript_Man::
-	msgbox Delphi_House1_Text_TravelingIsWonderful, MSGBOX_NPC
+PetalburgCity_House1_EventScript_Man::
+	msgbox PetalburgCity_House1_Text_TravelingIsWonderful, MSGBOX_NPC
 	end
 
-Delphi_House1_EventScript_Woman::
-	msgbox Delphi_House1_Text_GoOnAdventure, MSGBOX_NPC
+PetalburgCity_House1_EventScript_Woman::
+	msgbox PetalburgCity_House1_Text_GoOnAdventure, MSGBOX_NPC
 	end
 
-Delphi_House1_Text_TravelingIsWonderful:
+PetalburgCity_House1_Text_TravelingIsWonderful:
 	.string "Traveling is wonderful!\p"
 	.string "When I was young, I roamed the seas\n"
 	.string "and the mountains!$"
 
-Delphi_House1_Text_GoOnAdventure:
+PetalburgCity_House1_Text_GoOnAdventure:
 	.string "Sigh…\p"
 	.string "I wish I could go on an adventure\n"
 	.string "with some POKéMON…\p"

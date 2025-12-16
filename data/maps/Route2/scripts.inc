@@ -15,8 +15,8 @@ ROUTE2_EventScript_RouteSignOldale::
 	msgbox ROUTE2_Text_RouteSignOldale, MSGBOX_SIGN
 	end
 
-ROUTE2_EventScript_RouteSignDelphi::
-	msgbox ROUTE2_Text_RouteSignDelphi, MSGBOX_SIGN
+ROUTE2_EventScript_RouteSignPetalburg::
+	msgbox ROUTE2_Text_RouteSignPetalburg, MSGBOX_SIGN
 	end
 
 ROUTE2_EventScript_Boy::
@@ -117,6 +117,6 @@ ROUTE2_Text_RouteSignOldale:
 	.string "ROUTE 102\n"
 	.string "{RIGHT_ARROW} OLDALE TOWN$"
 
-ROUTE2_Text_RouteSignDelphi:
+ROUTE2_Text_RouteSignPetalburg:
 	.string "ROUTE 102\n"
-	.string "{LEFT_ARROW} DELPHI$"
+	.string "{LEFT_ARROW} PETALBURG CITY$"

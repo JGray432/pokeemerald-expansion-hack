@@ -24,7 +24,7 @@
       "direction": "down"
     },
     {
-      "map": "MAP_DELPHI",
+      "map": "MAP_PETALBURG_CITY",
       "offset": 50,
       "direction": "right"
     },
@@ -432,7 +432,7 @@
       "y": 66,
       "elevation": 0,
       "player_facing_dir": "BG_EVENT_PLAYER_FACING_ANY",
-      "script": "Route104_EventScript_RouteSignDelphi"
+      "script": "Route104_EventScript_RouteSignPetalburg"
     },
     {
       "type": "sign",
