@@ -965,47 +965,47 @@
               {
                 "min_level": 6,
                 "max_level": 6,
-                "species": "SPECIES_MAREEP"
+                "species": "SPECIES_POOCHYENA"
               },
               {
                 "min_level": 6,
                 "max_level": 6,
-                "species": "SPECIES_SHINX"
+                "species": "SPECIES_WHISMUR"
               },
               {
                 "min_level": 6,
                 "max_level": 6,
-                "species": "SPECIES_YAMPER"
+                "species": "SPECIES_NINCADA"
               },
               {
                 "min_level": 7,
                 "max_level": 7,
-                "species": "SPECIES_TADBULB"
+                "species": "SPECIES_ABRA"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_TYNAMO"
+                "species": "SPECIES_NONE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_HELIOPTILE"
+                "species": "SPECIES_NONE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_PAWMI"
+                "species": "SPECIES_NONE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_PICHU"
+                "species": "SPECIES_NONE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_PICHU"
+                "species": "SPECIES_NONE"
               }
             ]
           }
@@ -1273,7 +1273,7 @@
           }
         },
         {
-          "map": "MAP_ENTOMO_WOODS",
+          "map": "MAP_PETALBURG_WOODS",
           "base_label": "gPetalburgWoods",
           "land_mons": {
             "encounter_rate": 20,
@@ -1385,47 +1385,47 @@
               {
                 "min_level": 6,
                 "max_level": 6,
-                "species": "SPECIES_SWINUB"
+                "species": "SPECIES_WHISMUR"
               },
               {
                 "min_level": 7,
                 "max_level": 7,
-                "species": "SPECIES_SNORUNT"
+                "species": "SPECIES_WHISMUR"
               },
               {
                 "min_level": 6,
                 "max_level": 6,
-                "species": "SPECIES_VANILLITE"
+                "species": "SPECIES_WHISMUR"
               },
               {
                 "min_level": 6,
                 "max_level": 6,
-                "species": "SPECIES_SNOVER"
+                "species": "SPECIES_WHISMUR"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_AMAURA"
+                "species": "SPECIES_NONE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_SMOOCHUM"
+                "species": "SPECIES_NONE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_CUBCHOO"
+                "species": "SPECIES_NONE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_SANDSHREW_ALOLA"
+                "species": "SPECIES_NONE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_SANDSHREW_ALOLA"
+                "species": "SPECIES_NONE"
               }
             ]
           }

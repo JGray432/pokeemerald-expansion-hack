@@ -353,7 +353,7 @@ gStdScripts_End::
 	.include "data/maps/Labyrinth_B1F/scripts.inc"
 	.include "data/maps/Labyrinth_B2F/scripts.inc"
 	.include "data/maps/Labyrinth_StevensRoom/scripts.inc"
-	.include "data/maps/EntomoWoods/scripts.inc"
+	.include "data/maps/PetalburgWoods/scripts.inc"
 	.include "data/maps/MtChimney/scripts.inc"
 	.include "data/maps/JaggedPass/scripts.inc"
 	.include "data/maps/FieryPath/scripts.inc"

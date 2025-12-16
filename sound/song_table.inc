@@ -367,7 +367,7 @@ gSongTable::
 	song mus_oldale, 0, 0
 	song mus_gym, 0, 0
 	song mus_surf, 0, 0
-	song mus_entomo_woods, 0, 0
+	song mus_petalburg_woods, 0, 0
 	song mus_level_up, 2, 2
 	song mus_heal, 2, 2
 	song mus_obtain_badge, 2, 2

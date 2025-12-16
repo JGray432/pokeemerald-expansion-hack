@@ -29,7 +29,7 @@
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
-      "trainer_sight_or_berry_tree_id": "6",
+      "trainer_sight_or_berry_tree_id": "5",
       "script": "ROUTE2_EventScript_Rick",
       "flag": "0"
     },
@@ -169,14 +169,14 @@
       "x": 9,
       "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_ENTOMO_WOODS",
+      "dest_map": "MAP_PETALBURG_WOODS",
       "dest_warp_id": "0"
     },
     {
       "x": 10,
       "y": 1,
       "elevation": 0,
-      "dest_map": "MAP_ENTOMO_WOODS",
+      "dest_map": "MAP_PETALBURG_WOODS",
       "dest_warp_id": "1"
     }
   ],

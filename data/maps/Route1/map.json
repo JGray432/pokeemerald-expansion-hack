@@ -96,14 +96,14 @@
       "x": 47,
       "y": 4,
       "elevation": 0,
-      "dest_map": "MAP_ENTOMO_WOODS",
+      "dest_map": "MAP_PETALBURG_WOODS",
       "dest_warp_id": "2"
     },
     {
       "x": 48,
       "y": 4,
       "elevation": 0,
-      "dest_map": "MAP_ENTOMO_WOODS",
+      "dest_map": "MAP_PETALBURG_WOODS",
       "dest_warp_id": "3"
     }
   ],

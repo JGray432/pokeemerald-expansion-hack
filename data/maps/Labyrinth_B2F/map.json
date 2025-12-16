@@ -2,7 +2,7 @@
   "id": "MAP_LABYRINTH_B2F",
   "name": "Labyrinth_B2F",
   "layout": "LAYOUT_LABYRINTH_B2F",
-  "music": "MUS_ENTOMO_WOODS",
+  "music": "MUS_PETALBURG_WOODS",
   "region_map_section": "MAPSEC_LABYRINTH",
   "requires_flash": true,
   "weather": "WEATHER_NONE",

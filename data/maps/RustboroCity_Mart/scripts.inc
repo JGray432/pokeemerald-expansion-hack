@@ -68,7 +68,7 @@ RustboroCity_Mart_Text_BuyingHealsInCaseOfShroomish:
 	.string "I'm buying some PARLYZ HEALS and\n"
 	.string "ANTIDOTES.\p"
 	.string "Just in case I run into SHROOMISH\n"
-	.string "in ENTOMO WOODS.$"
+	.string "in PETALBURG WOODS.$"
 
 RustboroCity_Mart_Text_ShouldBuySuperPotionsInstead:
 	.string "My POKéMON evolved.\n"
