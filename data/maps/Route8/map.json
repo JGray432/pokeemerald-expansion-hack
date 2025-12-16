@@ -28,20 +28,20 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 22,
-      "y": 3,
+      "y": 2,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_8_RAWST",
+      "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_8_PINAP_1",
       "script": "BerryTreeScript",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 19,
-      "y": 3,
+      "y": 2,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
       "movement_range_x": 0,
@@ -54,26 +54,26 @@
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 20,
-      "y": 3,
+      "y": 2,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_8_PECHA",
+      "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_8_CHESTO_2",
       "script": "BerryTreeScript",
       "flag": "0"
     },
     {
       "graphics_id": "OBJ_EVENT_GFX_BERRY_TREE",
       "x": 21,
-      "y": 3,
+      "y": 2,
       "elevation": 3,
       "movement_type": "MOVEMENT_TYPE_BERRY_TREE_GROWTH",
       "movement_range_x": 0,
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NONE",
-      "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_8_CHERI",
+      "trainer_sight_or_berry_tree_id": "BERRY_TREE_ROUTE_8_PINAP_2",
       "script": "BerryTreeScript",
       "flag": "0"
     },
@@ -149,6 +149,20 @@
       "y": 8,
       "elevation": 0,
       "dest_map": "MAP_RUSTURF_TUNNEL",
+      "dest_warp_id": "0"
+    },
+    {
+      "x": 65,
+      "y": 10,
+      "elevation": 0,
+      "dest_map": "MAP_RUSTURF_TUNNEL",
+      "dest_warp_id": "2"
+    },
+    {
+      "x": 59,
+      "y": 13,
+      "elevation": 0,
+      "dest_map": "MAP_TERRA_CAVE_ENTRANCE",
       "dest_warp_id": "0"
     },
     {

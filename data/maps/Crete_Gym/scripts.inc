@@ -133,7 +133,7 @@ Crete_Gym_EventScript_StopCountingTrainers::
 	return
 
 Crete_Gym_EventScript_Brawly::
-	trainerbattle_double TRAINER_APOLLO_AND_ARTEMIS, Crete_Gym_Text_BrawlyIntro, Crete_Gym_Text_BrawlyDefeat, MossdeepCity_Gym_Text_TateAndLizaNeedTwoMons, Crete_Gym_EventScript_BrawlyDefeated, NO_MUSIC
+	trainerbattle_single TRAINER_BRAWLY_1, Crete_Gym_Text_BrawlyIntro, Crete_Gym_Text_BrawlyDefeat, Crete_Gym_EventScript_BrawlyDefeated, NO_MUSIC
 	specialvar VAR_RESULT, ShouldTryRematchBattle
 	goto_if_eq VAR_RESULT, TRUE, Crete_Gym_EventScript_BrawlyRematch
 	goto_if_unset FLAG_RECEIVED_TM_BULK_UP, Crete_Gym_EventScript_GiveBulkUp2
@@ -245,16 +245,6 @@ Crete_Gym_EventScript_Lilith::
 Crete_Gym_EventScript_LilithBrightenRoom::
 	call Crete_Gym_EventScript_BrightenRoom
 	release
-	end
-
-Crete_Gym_EventScript_Margot::
-	trainerbattle_single TRAINER_MARGOT, Crete_Gym_Text_LilithIntro, Crete_Gym_Text_LilithDefeat
-	msgbox Crete_Gym_Text_LilithPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Crete_Gym_EventScript_Holly::
-	trainerbattle_single TRAINER_HOLLY, Crete_Gym_Text_LilithIntro, Crete_Gym_Text_LilithDefeat
-	msgbox Crete_Gym_Text_LilithPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 Crete_Gym_EventScript_GymGuide::
