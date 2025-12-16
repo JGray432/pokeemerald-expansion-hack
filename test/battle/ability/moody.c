@@ -4,14 +4,14 @@
 SINGLE_BATTLE_TEST("Moody randomly raises the user's Attack, Defense, Sp. Atk, Sp. Def, or Speed by two stages")
 {
     u32 config, statsNum;
-    
+
     PARAMETRIZE { config = GEN_8; statsNum = NUM_STATS; }
     PARAMETRIZE { config = GEN_7; statsNum = NUM_BATTLE_STATS; }
 
     // HP is not included
     PASSES_RANDOMLY(1, statsNum - 1, RNG_MOODY_INCREASE);
     GIVEN {
-        WITH_CONFIG(GEN_CONFIG_MOODY_STATS, config);
+        WITH_CONFIG(CONFIG_MOODY_ACC_EVASION, config);
         PLAYER(SPECIES_OCTILLERY) { Ability(ABILITY_MOODY); }
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
@@ -29,14 +29,14 @@ SINGLE_BATTLE_TEST("Moody randomly raises the user's Attack, Defense, Sp. Atk, S
 SINGLE_BATTLE_TEST("Moody randomly lowers the user's Attack, Defense, Sp. Atk, Sp. Def, or Speed by one stage")
 {
     u32 config, statsNum;
-    
+
     PARAMETRIZE { config = GEN_8; statsNum = NUM_STATS; }
     PARAMETRIZE { config = GEN_7; statsNum = NUM_BATTLE_STATS; }
 
     // One stat becomes unavailable due to it already increasing
     PASSES_RANDOMLY(1, statsNum - 2, RNG_MOODY_DECREASE);
     GIVEN {
-        WITH_CONFIG(GEN_CONFIG_MOODY_STATS, config);
+        WITH_CONFIG(CONFIG_MOODY_ACC_EVASION, config);
         PLAYER(SPECIES_OCTILLERY) { Ability(ABILITY_MOODY); }
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
@@ -54,13 +54,13 @@ SINGLE_BATTLE_TEST("Moody randomly lowers the user's Attack, Defense, Sp. Atk, S
 SINGLE_BATTLE_TEST("Moody randomly raises the holder's Attack, Defense, Sp. Atk, Sp. Def, or Speed by two stages and lowers a different stat by one stage")
 {
     u32 config, statsNum;
-    
+
     PARAMETRIZE { config = GEN_8; statsNum = NUM_STATS; }
     PARAMETRIZE { config = GEN_7; statsNum = NUM_BATTLE_STATS; }
 
     PASSES_RANDOMLY(statsNum - 1, statsNum - 1, RNG_MOODY_DECREASE);
     GIVEN {
-        WITH_CONFIG(GEN_CONFIG_MOODY_STATS, config);
+        WITH_CONFIG(CONFIG_MOODY_ACC_EVASION, config);
         PLAYER(SPECIES_OCTILLERY) { Ability(ABILITY_MOODY); }
         OPPONENT(SPECIES_WOBBUFFET);
     } WHEN {
