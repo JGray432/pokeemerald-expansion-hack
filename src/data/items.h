@@ -11245,17 +11245,16 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_MAGNET_BOMB,
     },
 
-    [ITEM_TM_ICY_WIND] =
+    [ITEM_TM54] =
     {
         .name = _("TM54"),
         .price = 3000,
-        .description = COMPOUND_STRING(
-            "Brr"),
+        .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_ICY_WIND, // Todo
+        .secondaryId = MOVE_NONE, // Todo
     },
 
     [ITEM_TM55] =

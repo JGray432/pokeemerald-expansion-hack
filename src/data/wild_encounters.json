@@ -1019,47 +1019,47 @@
               {
                 "min_level": 13,
                 "max_level": 13,
-                "species": "SPECIES_WOOPER_PALDEA"
+                "species": "SPECIES_POOCHYENA"
               },
               {
                 "min_level": 13,
                 "max_level": 13,
-                "species": "SPECIES_TOXEL"
+                "species": "SPECIES_ODDISH"
               },
               {
                 "min_level": 14,
                 "max_level": 14,
-                "species": "SPECIES_NIDORAN_F"
+                "species": "SPECIES_POOCHYENA"
               },
               {
                 "min_level": 14,
                 "max_level": 14,
-                "species": "SPECIES_NIDORAN_M"
+                "species": "SPECIES_ODDISH"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_BUDEW"
+                "species": "SPECIES_NONE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_SHROODLE"
+                "species": "SPECIES_NONE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_VAROOM"
+                "species": "SPECIES_NONE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_BULBASAUR"
+                "species": "SPECIES_NONE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_GASTLY"
+                "species": "SPECIES_NONE"
               }
             ]
           },
@@ -3365,7 +3365,7 @@
               {
                 "min_level": 8,
                 "max_level": 8,
-                "species": "SPECIES_SPINDA"
+                "species": "SPECIES_EEVEE"
               },
               {
                 "min_level": 7,
@@ -8387,8 +8387,8 @@
           }
         },
         {
-          "map": "MAP_ARCHI_TOWN",
-          "base_label": "gArchiTown0",
+          "map": "MAP_LITTLEROOT_TOWN",
+          "base_label": "gLittlerootTown0",
           "water_mons": {
             "encounter_rate": 4,
             "mons": [

@@ -2,10 +2,10 @@
 
 static const struct HealLocation sHealLocationsPokemonCenter[HEAL_LOCATION_COUNT - 1] =
 {
-    [HEAL_LOCATION_ARCHI_TOWN_ATHENAS_HOUSE - 1] =
+    [HEAL_LOCATION_LITTLEROOT_TOWN_ATHENAS_HOUSE - 1] =
     {
-        .group = MAP_GROUP(ARCHI_TOWN_ATHENAS_HOUSE),
-        .map = MAP_NUM(ARCHI_TOWN_ATHENAS_HOUSE),
+        .group = MAP_GROUP(LITTLEROOT_TOWN_ATHENAS_HOUSE),
+        .map = MAP_NUM(LITTLEROOT_TOWN_ATHENAS_HOUSE),
         .x = 2,
         .y = 7,
     },
@@ -129,7 +129,7 @@ static const struct HealLocation sHealLocationsPokemonCenter[HEAL_LOCATION_COUNT
 // In this case the localId is 1.
 static const u8 sHealNpcLocalId[HEAL_LOCATION_COUNT - 1] =
 {
-    [HEAL_LOCATION_ARCHI_TOWN_ATHENAS_HOUSE - 1] = 1,
+    [HEAL_LOCATION_LITTLEROOT_TOWN_ATHENAS_HOUSE - 1] = 1,
     [HEAL_LOCATION_PETALBURG_CITY - 1] = 1,
     [HEAL_LOCATION_SLATEPORT_CITY - 1] = 1,
     [HEAL_LOCATION_ATHENS - 1] = 1,

@@ -141,7 +141,7 @@ DionysusVineyard_EventScript_RivalExitFacingSouth::
 DionysusVineyard_EventScript_RivalEnd::
 	removeobject LOCALID_RIVAL
 	setvar VAR_BIRCH_LAB_STATE, 4
-	clearflag FLAG_HIDE_ARCHI_TOWN_BIRCHS_LAB_RIVAL
+	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_RIVAL
 	setflag FLAG_DEFEATED_RIVAL_DIONYSUS_VINEYARD
 	setvar VAR_OLDALE_RIVAL_STATE, 1
 	clearflag FLAG_HIDE_OLDALE_TOWN_RIVAL
