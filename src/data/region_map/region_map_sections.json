@@ -257,8 +257,8 @@
       "height": 1
     },
     {
-      "map_section": "MAPSEC_ROUTE_7",
-      "name": "ROUTE 7",
+      "map_section": "MAPSEC_ROUTE_117",
+      "name": "ROUTE 117",
       "x": 5,
       "y": 6,
       "width": 3,
@@ -803,6 +803,14 @@
     {
       "map_section": "MAPSEC_ROUTE_10_POKECENTER",
       "name": "ROUTE 10",
+      "x": 0,
+      "y": 0,
+      "width": 1,
+      "height": 1
+    },
+    {
+      "map_section": "MAPSEC_ROUTE_7",
+      "name": "ROUTE 7",
       "x": 0,
       "y": 0,
       "width": 1,

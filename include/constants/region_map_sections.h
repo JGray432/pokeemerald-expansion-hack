@@ -33,7 +33,7 @@
 #define MAPSEC_ROUTE_114                    0x1D
 #define MAPSEC_ROUTE_115                    0x1E
 #define MAPSEC_ROUTE_116                    0x1F
-#define MAPSEC_ROUTE_7                    0x20
+#define MAPSEC_ROUTE_117                    0x20
 #define MAPSEC_ATHENS_OUTSKIRTS                    0x21
 #define MAPSEC_ROUTE_119                    0x22
 #define MAPSEC_ROUTE_120                    0x23
@@ -102,6 +102,7 @@
 #define MAPSEC_SAFFRON_CITY                 0x62
 #define MAPSEC_ROUTE_4_POKECENTER           0x63
 #define MAPSEC_ROUTE_10_POKECENTER          0x64
+#define MAPSEC_ROUTE_7                      0x6B
 #define MAPSEC_ROUTE_8                      0x6C
 #define MAPSEC_ROUTE_9                      0x6D
 #define MAPSEC_ROUTE_10                     0x6E
