@@ -143,69 +143,6 @@ ArchiTown_Movement_PlayerStepOffTruck:
 	delay_16
 	step_end
 
-ArchiTown_EventScript_CandyMan::
-	lock
-	faceplayer
-	goto_if_set FLAG_RECEIVED_CAP_CANDY, ArchiTown_EventScript_NoMoreCandy
-	goto_if_set FLAG_RECEIVED_INF_CANDY, ArchiTown_EventScript_CandyManCapCandy
-	showmoneybox 0, 0
-	msgbox ArchiTown_Text_GiveInfCandy, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, ArchiTown_EventScript_DeclineCandy
-	checkmoney 500
-	goto_if_eq VAR_RESULT, FALSE, ArchiTown_EventScript_NotEnoughMoneyForCandy
-	call_if_eq VAR_RESULT, TRUE, ArchiTown_EventScript_RemoveInfCandyMoney
-	playfanfare MUS_OBTAIN_ITEM
-	giveitem ITEM_INF_CANDY
-	waitfanfare
-	hidemoneybox
-	setflag FLAG_RECEIVED_INF_CANDY
-	release
-	end
-
-ArchiTown_EventScript_NoMoreCandy::
-	msgbox ArchiTown_Text_NoMoreCandy, MSGBOX_NPC
-	closemessage
-	end
-
-ArchiTown_EventScript_CandyManCapCandy::
-	showmoneybox 0, 0
-	msgbox ArchiTown_Text_GiveCapCandy, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, NO, ArchiTown_EventScript_DeclineCandy
-	checkmoney 1000
-	goto_if_eq VAR_RESULT, FALSE, ArchiTown_EventScript_NotEnoughMoneyForCandy
-	call_if_eq VAR_RESULT, TRUE, ArchiTown_EventScript_RemoveCapCandyMoney
-	playfanfare MUS_OBTAIN_ITEM
-	giveitem ITEM_CAP_CANDY
-	waitfanfare
-	hidemoneybox
-	setflag FLAG_RECEIVED_CAP_CANDY
-	release
-	end
-
-ArchiTown_EventScript_NotEnoughMoneyForCandy::
-	msgbox ArchiTown_Text_NotEnoughMoneyForCandy, MSGBOX_NPC
-	closemessage
-	hidemoneybox
-	release
-	end
-
-ArchiTown_EventScript_RemoveCapCandyMoney::
-	removemoney 1000
-	updatemoneybox
-	return
-
-ArchiTown_EventScript_RemoveInfCandyMoney::
-	removemoney 500
-	updatemoneybox
-	return
-
-ArchiTown_EventScript_DeclineCandy::
-	msgbox ArchiTown_Text_DeclineCandy, MSGBOX_NPC
-	closemessage
-	hidemoneybox
-	release
-	end
-
 ArchiTown_EventScript_FisherMan::
 	lock
 	faceplayer
@@ -344,37 +281,6 @@ ArchiTown_EventScript_BirchsHouseSignMale::
 ArchiTown_EventScript_PlayersHouseSignFemale::
 	msgbox ArchiTown_Text_PlayersHouse, MSGBOX_DEFAULT
 	return
-
-ArchiTown_Text_NotEnoughMoneyForCandy:
-	.string "Ahh sorry dude you're short.\n"
-	.string "My bills ain't gonna pay themselves$"
-
-ArchiTown_Text_DeclineCandy:
-	.string "Damn I thought you were cool man.$"
-
-ArchiTown_Text_GiveInfCandy:
-	.string "Psst! You there! Do you value your\n"
-	.string "time? If you do I got some secret\l"
-	.string "goods you may be interested in. \p"
-	.string "For just ¥500, I can give you\n"
-	.string "supplements that will help  \l"
-	.string "your pokemon grow fast. \p"
-	.string "I should warn you this method is \n"
-	.string "frowned upon by some people.. \p"
-	.string "But those guys are dorks! You in?$"
-
-ArchiTown_Text_GiveCapCandy:
-	.string "Hey, look whose back! You after\n"
-	.string "some more of my finest wares?\p"
-	.string "I got some wild new experimental \n"
-	.string "roids shipped in from Sparta.\p"
-	.string "Put it this way the Olympic \n"
-	.string "committee ain't gonna be happy if \l"
-	.string "they find these wrappers in your bag!\p"
-	.string "Gonna cost you more though - ¥1000? $"
-
-ArchiTown_Text_NoMoreCandy:
-	.string "Shit sorry bro I'm all out.$"
 
 ArchiTown_Text_OurNewHomeLetsGoInside:
 	.string "ATHENA: Hi!$"

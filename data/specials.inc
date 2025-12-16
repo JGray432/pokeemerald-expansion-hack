@@ -563,6 +563,3 @@ gSpecials::
 	def_special UseBlankMessageToCancelPokemonPic
 	def_special EnterCode
 	def_special GetCodeFeedback
-	def_special ApplyStatusConditionToPartyMon
-	def_special MaximizeIVOfChosenMon
-	def_special ChooseMonForStatus
