@@ -51,6 +51,10 @@ LittlerootTown_BrendansHouse_1F_EventScript_MoveMomToDoor::
 @ The below SS Ticket script uses Mays house state by accident(?), but theyre both set identically after the intro
 LittlerootTown_BrendansHouse_1F_OnFrame:
 	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 3, LittlerootTown_BrendansHouse_1F_EventScript_EnterHouseMovingIn
+	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 5, LittlerootTown_BrendansHouse_1F_EventScript_GoUpstairsToSetClock
+	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 6, LittlerootTown_BrendansHouse_1F_EventScript_PetalburgGymReport
+	map_script_2 VAR_LITTLEROOT_HOUSES_STATE_MAY, 1, LittlerootTown_BrendansHouse_1F_EventScript_YoureNewNeighbor
+	map_script_2 VAR_LITTLEROOT_HOUSES_STATE_MAY, 3, PlayersHouse_1F_EventScript_GetSSTicketAndSeeLatiTV
 	.2byte 0
 
 LittlerootTown_AthenasHouse_1F_EventScript_Bag::
@@ -60,38 +64,19 @@ LittlerootTown_AthenasHouse_1F_EventScript_Bag::
 	setflag FLAG_RESCUED_BIRCH
 	fadescreen FADE_TO_BLACK
 	special ChooseStarter
+	waitstate
 	setflag FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH
 	setflag FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG
 	setvar VAR_BIRCH_LAB_STATE, 2
 	setvar VAR_ROUTE101_STATE, 3
-	setvar VAR_LITTLEROOT_INTRO_STATE, 5
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
 	checkplayergender
 	call_if_eq VAR_RESULT, MALE, Route101_EventScript_HideMayInBedroom
 	call_if_eq VAR_RESULT, FEMALE, Route101_EventScript_HideBrendanInBedroom
+	warp MAP_LITTLEROOT_TOWN_PROFESSOR_BIRCHS_LAB, 6, 5
+	waitstate
 	release
-	end
-
-LittleRootTown_AthenasHouse_1F_EventScript_GiveKeyItems::
-	msgbox LittlerootTown_AthenasHouse_Text_GiveKeyItems MSGBOX_DEFAULT
-	playfanfare MUS_OBTAIN_ITEM
-	msgbox LittlerootTown_AthenasHouse_Text_ReceivedInfCandy MSGBOX_DEFAULT
-	giveitem ITEM_INF_CANDY
-	waitfanfare
-	playfanfare MUS_OBTAIN_ITEM
-	msgbox LittlerootTown_AthenasHouse_Text_ReceivedInfRepel MSGBOX_DEFAULT
-	giveitem ITEM_INF_REPEL
-	waitfanfare
-	playfanfare MUS_OBTAIN_ITEM
-	msgbox LittlerootTown_AthenasHouse_Text_ReceivedNectarReserves MSGBOX_DEFAULT
-	giveitem ITEM_NECTAR_RESERVES
-	waitfanfare
-	playfanfare MUS_OBTAIN_ITEM
-	msgbox LittlerootTown_AthenasHouse_Text_ReceivedCapCandy MSGBOX_DEFAULT
-	giveitem ITEM_CAP_CANDY
-	waitfanfare
-	releaseall
 	end
 
 LittlerootTown_BrendansHouse_1F_EventScript_GoUpstairsToSetClock::
@@ -157,16 +142,6 @@ LittlerootTown_BrendansHouse_1F_EventScript_GoSeeRoom::
 	applymovement VAR_0x8004, Common_Movement_WalkInPlaceFasterLeft
 	waitmovement 0
 	goto PlayersHouse_1F_EventScript_MomGoSeeRoom
-	end
-
-LittlerootTown_AthenasHouse_1F_EventScript_AthenaFiredUp::
-	lockall
-	setvar VAR_0x8004, LOCALID_MOM
-	setvar VAR_0x8005, MALE
-	applymovement VAR_0x8004, Common_Movement_WalkInPlaceFasterLeft
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterRight
-	waitmovement 0
-	goto PlayersHouse_1F_EventScript_AthenaFiredUp
 	end
 
 LittlerootTown_BrendansHouse_1F_EventScript_MeetRival0::
@@ -338,8 +313,8 @@ PlayersHouse_1F_Text_IsntItNiceInHere:
 	.string "Isn't it nice in here, too?$"
 
 PlayersHouse_1F_Text_MoversPokemonGoSetClock:
-	.string "Now, that bag on the table contains\n"
-	.string "an offering I recently received.\l"
+	.string "The mover's POKéMON do all the work\n"
+	.string "of moving us in and cleaning up after.\l"
 	.string "This is so convenient!\p"
 	.string "{PLAYER}, your room is upstairs.\n"
 	.string "Go check it out, dear!\p"
@@ -352,42 +327,9 @@ PlayersHouse_1F_Text_ArentYouInterestedInRoom:
 	.string "Aren't you interested in seeing your\n"
 	.string "very own room?$"
 
-PlayersHouse_1F_Text_AthenaFiredUp:
-	.string "Athena: Great choice {PLAYER}!\n"
-	.string "Seeing you two together has lit\l"
-	.string "a fire in me, I think I'll start\l"
-	.string "my own new adventure too!\p"
-	.string "I'll take this little guy.\n"
-	.string "Hey, why don't I give you a taste of \l$"
-	.string "what being a trainer is all about? \l$"
-
-Athenas_House_Text_ATHENADefeated:
-	.string "ATHENA: Oh, I lost…\n"
-	.string "But that was fun!$"
-
-PlayersHouse_1F_Text_AthenaSendOff:
-	.string "Athena: Wow, that was fun!\n"
-
 PlayersHouse_1F_Text_GoSetTheClock:
 	.string "MOM: {PLAYER}.\p"
 	.string "Go set the clock in your room, honey.$"
-
-LittlerootTown_AthenasHouse_Text_GiveKeyItems:
-	.string "MOM: Here are some useful\n"
-	.string "items to help start your journey\l"
-
-LittlerootTown_AthenasHouse_Text_ReceivedInfCandy:
-	.string "{PLAYER} received the Inf Candy!$"
-
-LittlerootTown_AthenasHouse_Text_ReceivedInfRepel:
-	.string "{PLAYER} received the Inf Repel!$"
-
-LittlerootTown_AthenasHouse_Text_ReceivedNectarReserves:
-	.string "{PLAYER} received the Nectar Reserves!$"
-
-LittlerootTown_AthenasHouse_Text_ReceivedCapCandy:
-	.string "{PLAYER} received the Level Cap Candy!$"
-
 
 PlayersHouse_1F_Text_OhComeQuickly:
 	.string "MOM: Oh! {PLAYER}, {PLAYER}!\n"

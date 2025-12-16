@@ -45,36 +45,6 @@ PlayersHouse_1F_EventScript_MomGoSeeRoom::
 	releaseall
 	end
 
-PlayersHouse_1F_EventScript_AthenaFiredUp::
-	msgbox PlayersHouse_1F_Text_AthenaFiredUp, MSGBOX_DEFAULT
-	closemessage
-	switch VAR_STARTER_MON
-	case 0, AthenasHouse_EventScript_StartAthenaBattleAbra
-	case 1, AthenasHouse_EventScript_StartAthenaBattleJangmoo
-	case 2, AthenasHouse_EventScript_StartAthenaBattlePawniard
-	setvar VAR_LITTLEROOT_INTRO_STATE, 7
-	releaseall
-	end
-
-AthenasHouse_EventScript_StartAthenaBattleAbra::
-	trainerbattle_no_intro TRAINER_ATHENA_ATHENAS_HOUSE_ABRA, Athenas_House_Text_ATHENADefeated
-	goto AthenasHouse_EventScript_AfterAthenaBattle
-	end
-
-AthenasHouse_EventScript_StartAthenaBattleJangmoo::
-	trainerbattle_no_intro TRAINER_ATHENA_ATHENAS_HOUSE_JANGMOO, Athenas_House_Text_ATHENADefeated
-	goto AthenasHouse_EventScript_AfterAthenaBattle
-	end
-
-AthenasHouse_EventScript_StartAthenaBattlePawniard::
-	trainerbattle_no_intro TRAINER_ATHENA_ATHENAS_HOUSE_PAWNIARD Athenas_House_Text_ATHENADefeated
-	goto AthenasHouse_EventScript_AfterAthenaBattle
-	end
-
-AthenasHouse_EventScript_AfterAthenaBattle::
-	msgbox PlayersHouse_1F_Text_AthenaSendOff
-	end
-
 LittlerootTown_BrendansHouse_2F_EventScript_WallClock::
 	lockall
 	setvar VAR_0x8004, MALE
