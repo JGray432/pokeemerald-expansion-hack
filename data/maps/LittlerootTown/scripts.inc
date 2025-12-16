@@ -190,16 +190,18 @@ LittlerootTown_EventScript_RemoveMoney::
 LittlerootTown_EventScript_Beauty::
 	goto_if_set FLAG_RECEIVED_INF_REPEL, LittlerootTown_EventScript_BeautyAlreadyGaveRepel
 	msgbox LittlerootTown_Text_GiveInfRepelStart, MSGBOX_NPC
-	call_if_eq VAR_FACING, DIR_SOUTH, LittlerootTown_EventScript_BeautyFaceAwayNorth
-	call_if_eq VAR_FACING, DIR_NORTH, LittlerootTown_EventScript_BeautyFaceAwaySouth
-	call_if_eq VAR_FACING, DIR_WEST, LittlerootTown_EventScript_BeautyFaceAwayEast
-	call_if_eq VAR_FACING, DIR_EAST, LittlerootTown_EventScript_BeautyFaceAwayWest
-	waitmovement 0
-	msgbox LittlerootTown_Text_TakeThatBusinessSchool, MSGBOX_NPC
+	closemessage
 	call_if_eq VAR_FACING, DIR_SOUTH, LittlerootTown_EventScript_BeautyFaceAwaySouth
 	call_if_eq VAR_FACING, DIR_NORTH, LittlerootTown_EventScript_BeautyFaceAwayNorth
 	call_if_eq VAR_FACING, DIR_WEST, LittlerootTown_EventScript_BeautyFaceAwayWest
 	call_if_eq VAR_FACING, DIR_EAST, LittlerootTown_EventScript_BeautyFaceAwayEast
+	waitmovement 0
+	msgbox LittlerootTown_Text_TakeThatBusinessSchool, MSGBOX_NPC
+	closemessage
+	call_if_eq VAR_FACING, DIR_SOUTH, LittlerootTown_EventScript_BeautyFaceAwayNorth
+	call_if_eq VAR_FACING, DIR_NORTH, LittlerootTown_EventScript_BeautyFaceAwaySouth
+	call_if_eq VAR_FACING, DIR_WEST, LittlerootTown_EventScript_BeautyFaceAwayEast
+	call_if_eq VAR_FACING, DIR_EAST, LittlerootTown_EventScript_BeautyFaceAwayWest
 	waitmovement 0
 	msgbox LittlerootTown_Text_GiveInfRepelEnd, MSGBOX_NPC
 	playfanfare MUS_OBTAIN_ITEM
@@ -207,7 +209,6 @@ LittlerootTown_EventScript_Beauty::
 	waitfanfare
 	setflag FLAG_RECEIVED_INF_REPEL
 	closemessage
-	release
 	end
 
 LittlerootTown_EventScript_BeautyFaceAwaySouth::
@@ -216,7 +217,6 @@ LittlerootTown_EventScript_BeautyFaceAwaySouth::
 
 LittlerootTown_Movement_BeautyFaceAwaySouth:
 	walk_in_place_up
-	step_end
 
 LittlerootTown_EventScript_BeautyFaceAwayNorth::
 	applymovement LOCALID_BEAUTY, LittlerootTown_Movement_BeautyFaceAwayNorth
@@ -224,7 +224,6 @@ LittlerootTown_EventScript_BeautyFaceAwayNorth::
 	
 LittlerootTown_Movement_BeautyFaceAwayNorth:
 	walk_in_place_down
-	step_end
 
 LittlerootTown_EventScript_BeautyFaceAwayWest::
 	applymovement LOCALID_BEAUTY, LittlerootTown_Movement_BeautyFaceAwayWest
@@ -232,7 +231,6 @@ LittlerootTown_EventScript_BeautyFaceAwayWest::
 	
 LittlerootTown_Movement_BeautyFaceAwayWest:
 	walk_in_place_right
-	step_end
 
 LittlerootTown_EventScript_BeautyFaceAwayEast::
 	applymovement LOCALID_BEAUTY, LittlerootTown_Movement_BeautyFaceAwayEast
@@ -240,7 +238,6 @@ LittlerootTown_EventScript_BeautyFaceAwayEast::
 	
 LittlerootTown_Movement_BeautyFaceAwayEast:
 	walk_in_place_left
-	step_end
 
 LittlerootTown_EventScript_BeautyAlreadyGaveRepel::
 	msgbox LittlerootTown_Text_AlreadyGaveInfRepel, MSGBOX_NPC
@@ -292,11 +289,11 @@ LittlerootTown_Text_OurNewHomeLetsGoInside:
 
 LittlerootTown_Text_GiveSuperRod:
 	.string "Boy, have I got a deal for you!\n"
-	.string "Quite possibly the greatest deal \l"
+	.string "Quite possibly the greatest deal \n"
 	.string "in history \p"
 	.string "I hold in my hands a one-of-a-kind\n"
-	.string "magic stick, yours for the measly \l"
-	.string "price of ¥500 $"
+	.string "magic stick, yours for the measly \n"
+	.string "price of 500$ $"
 
 LittlerootTown_Text_Sucker:
 	.string "Hehe sucker, it's just a stick!$"

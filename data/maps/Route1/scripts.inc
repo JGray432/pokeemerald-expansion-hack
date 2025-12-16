@@ -1,7 +1,14 @@
+.set LOCALID_BIRCH, 2
+.set LOCALID_ZIGZAGOON, 4
 
 Route1_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, Route1_OnTransition
 	map_script MAP_SCRIPT_ON_FRAME_TABLE, Route1_OnFrame
 	.byte 0
+
+Route1_OnTransition:
+	call ProfBirch_EventScript_UpdateLocation
+	end
 
 Route1_OnFrame:
 	map_script_2 VAR_ROUTE1_STATE, 0, Route1_EventScript_HideMapNamePopup
@@ -9,6 +16,7 @@ Route1_OnFrame:
 
 Route1_EventScript_HideMapNamePopup::
 	setflag FLAG_HIDE_MAP_NAME_POPUP
+	setvar VAR_ROUTE1_STATE, 1
 	end
 
 Route1_EventScript_Youngster::
@@ -17,15 +25,6 @@ Route1_EventScript_Youngster::
 	release
 	end
 
-Route1_EventScript_Lass::
-	trainerbattle_single TRAINER_IVAN, Route104_Text_IvanIntro, Route104_Text_IvanDefeat
-	msgbox Route104_Text_IvanPostBattle, MSGBOX_AUTOCLOSE
-	end
-
-Route1_EventScript_Boss::
-	trainerbattle_single TRAINER_BILLY, Route104_Text_BillyIntro, Route104_Text_BillyDefeat
-	msgbox Route104_Text_BillyPostBattle, MSGBOX_AUTOCLOSE
-	end
 
 Route1_EventScript_RouteSign::
 	msgbox Route1_Text_RouteSign, MSGBOX_SIGN
