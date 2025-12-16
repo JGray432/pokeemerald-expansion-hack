@@ -1352,7 +1352,7 @@ u16 GetSlotMachineId(void)
         SLOT_MACHINE_LUCKIEST
     };
 
-    u32 rnd = gSaveBlock1Ptr->creteTrends[0].trendiness + gSaveBlock1Ptr->creteTrends[0].rand + sSlotMachineRandomSeeds[gSpecialVar_0x8004];
+    u32 rnd = gSaveBlock1Ptr->dewfordTrends[0].trendiness + gSaveBlock1Ptr->dewfordTrends[0].rand + sSlotMachineRandomSeeds[gSpecialVar_0x8004];
     if (IsPokeNewsActive(POKENEWS_GAME_CORNER))
         return sSlotMachineServiceDayIds[rnd % SLOT_MACHINE_COUNT];
 
@@ -2044,7 +2044,7 @@ bool8 UsedPokemonCenterWarp(void)
     static const u16 sPokemonCenters[] =
     {
         MAP_OLDALE_TOWN_POKEMON_CENTER_1F,
-        MAP_CRETE_POKEMON_CENTER_1F,
+        MAP_DEWFORD_TOWN_POKEMON_CENTER_1F,
         MAP_LAVARIDGE_TOWN_POKEMON_CENTER_1F,
         MAP_FALLARBOR_TOWN_POKEMON_CENTER_1F,
         MAP_VERDANTURF_TOWN_POKEMON_CENTER_1F,
@@ -3816,10 +3816,10 @@ void GetBattlePyramidHint(void)
     gSpecialVar_Result -= (gSpecialVar_Result / TOTAL_PYRAMID_ROUNDS) * TOTAL_PYRAMID_ROUNDS;
 }
 
-// Used to avoid a potential softlock if the player respawns on Crete with no way off
-void ResetHealLocationFromCrete(void)
+// Used to avoid a potential softlock if the player respawns on Dewford with no way off
+void ResetHealLocationFromDewford(void)
 {
-    if (gSaveBlock1Ptr->lastHealLocation.mapGroup == MAP_GROUP(CRETE) && gSaveBlock1Ptr->lastHealLocation.mapNum == MAP_NUM(CRETE))
+    if (gSaveBlock1Ptr->lastHealLocation.mapGroup == MAP_GROUP(DEWFORD_TOWN) && gSaveBlock1Ptr->lastHealLocation.mapNum == MAP_NUM(DEWFORD_TOWN))
         SetLastHealLocationWarp(HEAL_LOCATION_PETALBURG_CITY);
 }
 
@@ -3828,7 +3828,7 @@ bool8 InPokemonCenter(void)
     static const u16 sPokemonCenters[] =
     {
         MAP_OLDALE_TOWN_POKEMON_CENTER_1F,
-        MAP_CRETE_POKEMON_CENTER_1F,
+        MAP_DEWFORD_TOWN_POKEMON_CENTER_1F,
         MAP_LAVARIDGE_TOWN_POKEMON_CENTER_1F,
         MAP_FALLARBOR_TOWN_POKEMON_CENTER_1F,
         MAP_VERDANTURF_TOWN_POKEMON_CENTER_1F,

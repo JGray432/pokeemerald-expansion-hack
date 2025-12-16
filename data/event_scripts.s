@@ -118,7 +118,7 @@ gStdScripts_End::
 	.include "data/maps/EverGrandeCity/scripts.inc"
 	.include "data/maps/LittlerootTown/scripts.inc"
 	.include "data/maps/OldaleTown/scripts.inc"
-	.include "data/maps/Crete/scripts.inc"
+	.include "data/maps/DewfordTown/scripts.inc"
 	.include "data/maps/LavaridgeTown/scripts.inc"
 	.include "data/maps/FallarborTown/scripts.inc"
 	.include "data/maps/VerdanturfTown/scripts.inc"
@@ -171,12 +171,12 @@ gStdScripts_End::
 	.include "data/maps/OldaleTown_PokemonCenter_1F/scripts.inc"
 	.include "data/maps/OldaleTown_PokemonCenter_2F/scripts.inc"
 	.include "data/maps/OldaleTown_Mart/scripts.inc"
-	.include "data/maps/Crete_House1/scripts.inc"
-	.include "data/maps/Crete_PokemonCenter_1F/scripts.inc"
-	.include "data/maps/Crete_PokemonCenter_2F/scripts.inc"
-	.include "data/maps/Crete_Gym/scripts.inc"
-	.include "data/maps/Crete_Hall/scripts.inc"
-	.include "data/maps/Crete_House2/scripts.inc"
+	.include "data/maps/DewfordTown_House1/scripts.inc"
+	.include "data/maps/DewfordTown_PokemonCenter_1F/scripts.inc"
+	.include "data/maps/DewfordTown_PokemonCenter_2F/scripts.inc"
+	.include "data/maps/DewfordTown_Gym/scripts.inc"
+	.include "data/maps/DewfordTown_Hall/scripts.inc"
+	.include "data/maps/DewfordTown_House2/scripts.inc"
 	.include "data/maps/LavaridgeTown_HerbShop/scripts.inc"
 	.include "data/maps/LavaridgeTown_Gym_1F/scripts.inc"
 	.include "data/maps/LavaridgeTown_Gym_B1F/scripts.inc"
@@ -620,13 +620,13 @@ EventScript_AfterWhiteOutMomHeal::
 
 EventScript_ResetMrBriney::
 	goto_if_eq VAR_BRINEY_LOCATION, 1, EventScript_MoveMrBrineyToHouse
-	goto_if_eq VAR_BRINEY_LOCATION, 2, EventScript_MoveMrBrineyToCrete
+	goto_if_eq VAR_BRINEY_LOCATION, 2, EventScript_MoveMrBrineyToDewford
 	goto_if_eq VAR_BRINEY_LOCATION, 3, EventScript_MoveMrBrineyToRoute3
 	end
 
 EventScript_MoveMrBrineyToHouse::
-	setflag FLAG_HIDE_MR_BRINEY_CRETE
-	setflag FLAG_HIDE_MR_BRINEY_BOAT_CRETE
+	setflag FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN
+	setflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
 	setflag FLAG_HIDE_ROUTE_3_MR_BRINEY
 	setflag FLAG_HIDE_ROUTE_3_MR_BRINEY_BOAT
 	clearflag FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT
@@ -634,15 +634,15 @@ EventScript_MoveMrBrineyToHouse::
 	clearflag FLAG_HIDE_BRINEYS_HOUSE_PEEKO
 	end
 
-EventScript_MoveMrBrineyToCrete::
+EventScript_MoveMrBrineyToDewford::
 	setflag FLAG_HIDE_ROUTE_3_MR_BRINEY
 	setflag FLAG_HIDE_ROUTE_3_MR_BRINEY_BOAT
 	setflag FLAG_HIDE_ROUTE_104_MR_BRINEY
 	setflag FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT
 	setflag FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY
 	setflag FLAG_HIDE_BRINEYS_HOUSE_PEEKO
-	clearflag FLAG_HIDE_MR_BRINEY_CRETE
-	clearflag FLAG_HIDE_MR_BRINEY_BOAT_CRETE
+	clearflag FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN
+	clearflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
 	end
 
 EventScript_MoveMrBrineyToRoute3::
@@ -650,8 +650,8 @@ EventScript_MoveMrBrineyToRoute3::
 	setflag FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT
 	setflag FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY
 	setflag FLAG_HIDE_BRINEYS_HOUSE_PEEKO
-	setflag FLAG_HIDE_MR_BRINEY_CRETE
-	setflag FLAG_HIDE_MR_BRINEY_BOAT_CRETE
+	setflag FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN
+	setflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
 	clearflag FLAG_HIDE_ROUTE_3_MR_BRINEY
 	clearflag FLAG_HIDE_ROUTE_3_MR_BRINEY_BOAT
 	end
@@ -668,7 +668,7 @@ Common_EventScript_UpdateBrineyLocation::
 	goto_if_unset FLAG_RECEIVED_POKENAV, Common_EventScript_NopReturn
 	goto_if_set FLAG_DEFEATED_PETALBURG_GYM, Common_EventScript_NopReturn
 	goto_if_unset FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT, EventScript_SetBrineyLocation_House
-	goto_if_unset FLAG_HIDE_MR_BRINEY_CRETE, EventScript_SetBrineyLocation_Crete
+	goto_if_unset FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN, EventScript_SetBrineyLocation_Dewford
 	goto_if_unset FLAG_HIDE_ROUTE_3_MR_BRINEY, EventScript_SetBrineyLocation_Route3
 	return
 
@@ -676,7 +676,7 @@ EventScript_SetBrineyLocation_House::
 	setvar VAR_BRINEY_LOCATION, 1
 	return
 
-EventScript_SetBrineyLocation_Crete::
+EventScript_SetBrineyLocation_Dewford::
 	setvar VAR_BRINEY_LOCATION, 2
 	return
 
@@ -804,8 +804,8 @@ Movement_FerryDepart:
 	step_end
 
 EventScript_HideMrBriney::
-	setflag FLAG_HIDE_MR_BRINEY_CRETE
-	setflag FLAG_HIDE_MR_BRINEY_BOAT_CRETE
+	setflag FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN
+	setflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
 	setflag FLAG_HIDE_ROUTE_3_MR_BRINEY
 	setflag FLAG_HIDE_ROUTE_3_MR_BRINEY_BOAT
 	setflag FLAG_HIDE_ROUTE_104_MR_BRINEY

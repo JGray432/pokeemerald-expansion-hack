@@ -357,7 +357,7 @@
 #define MUS_VICTORY_AQUA_MAGMA      424 // MUS_KACHI4
 #define MUS_CABLE_CAR               425 // MUS_ROPEWAY
 #define MUS_GAME_CORNER             426 // MUS_CASINO
-#define MUS_CRETE                 427 // MUS_HIGHTOWN         // Also used in Route 109's Seashore house.
+#define MUS_DEWFORD                 427 // MUS_HIGHTOWN         // Also used in Route 109's Seashore house.
 #define MUS_SAFARI_ZONE             428 // MUS_SAFARI
 #define MUS_VICTORY_ROAD            429 // MUS_C_ROAD           // Also used in Pokémon League's E4/Champion rooms and halls.
 #define MUS_AQUA_MAGMA_HIDEOUT      430 // MUS_AJITO

@@ -4,7 +4,7 @@
 #include "bg.h"
 #include "data.h"
 #include "decompress.h"
-#include "crete_trend.h"
+#include "dewford_trend.h"
 #include "dynamic_placeholder_text_util.h"
 #include "easy_chat.h"
 #include "event_data.h"
@@ -1498,8 +1498,8 @@ void ShowEasyChatScreen(void)
         break;
     case EASY_CHAT_TYPE_TRENDY_PHRASE:
         words = (u16 *)gStringVar3;
-        words[0] = gSaveBlock1Ptr->creteTrends[0].words[0];
-        words[1] = gSaveBlock1Ptr->creteTrends[0].words[1];
+        words[0] = gSaveBlock1Ptr->dewfordTrends[0].words[0];
+        words[1] = gSaveBlock1Ptr->dewfordTrends[0].words[1];
         break;
     case EASY_CHAT_TYPE_GABBY_AND_TY:
         words = gSaveBlock1Ptr->gabbyAndTyData.quote;
@@ -5418,7 +5418,7 @@ void ShowEasyChatProfile(void)
     ShowFieldAutoScrollMessage(gStringVar4);
 }
 
-// The phrase that a man in Crete Hall suggests has a "deep link" to the current trendy phrase
+// The phrase that a man in Dewford Hall suggests has a "deep link" to the current trendy phrase
 void BufferDeepLinkPhrase(void)
 {
     int groupId = Random() & 1 ? EC_GROUP_HOBBIES : EC_GROUP_LIFESTYLE;
@@ -5429,7 +5429,7 @@ void BufferDeepLinkPhrase(void)
 /*
     ### Trendy Sayings
 
-    Not to be confused with Crete Town's "trendy phrase".
+    Not to be confused with Dewford Town's "trendy phrase".
 
     This is a group of easy chat words (EC_GROUP_TRENDY_SAYING) that are normally inaccessible.
     They can be unlocked either through Mystery Event (where they're referred to as "rare" words)

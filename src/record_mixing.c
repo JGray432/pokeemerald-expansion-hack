@@ -33,7 +33,7 @@
 #include "daycare.h"
 #include "international_string_util.h"
 #include "constants/battle_frontier.h"
-#include "crete_trend.h"
+#include "dewford_trend.h"
 
 // Number of bytes of the record transferred at a time
 #define BUFFER_CHUNK_SIZE 200
@@ -55,7 +55,7 @@ struct PlayerRecordRS
     TVShow tvShows[TV_SHOWS_COUNT];
     PokeNews pokeNews[POKE_NEWS_COUNT];
     OldMan oldMan;
-    struct CreteTrend creteTrends[SAVED_TRENDS_COUNT];
+    struct DewfordTrend dewfordTrends[SAVED_TRENDS_COUNT];
     struct RecordMixingDaycareMail daycareMail;
     struct RSBattleTowerRecord battleTowerRecord;
     u16 giftItem;
@@ -68,7 +68,7 @@ struct PlayerRecordEmerald
     /* 0x0C80 */ TVShow tvShows[TV_SHOWS_COUNT];
     /* 0x1004 */ PokeNews pokeNews[POKE_NEWS_COUNT];
     /* 0x1044 */ OldMan oldMan;
-    /* 0x1084 */ struct CreteTrend creteTrends[SAVED_TRENDS_COUNT];
+    /* 0x1084 */ struct DewfordTrend dewfordTrends[SAVED_TRENDS_COUNT];
     /* 0x10AC */ struct RecordMixingDaycareMail daycareMail;
     /* 0x1124 */ struct EmeraldBattleTowerRecord battleTowerRecord;
     /* 0x1210 */ u16 giftItem;
@@ -89,7 +89,7 @@ static struct SecretBase *sSecretBasesSave;
 static TVShow *sTvShowsSave;
 static PokeNews *sPokeNewsSave;
 static OldMan *sOldManSave;
-static struct CreteTrend *sCreteTrendsSave;
+static struct DewfordTrend *sDewfordTrendsSave;
 static struct RecordMixingDaycareMail *sRecordMixMailSave;
 static void *sBattleTowerSave;
 static LilycoveLady *sLilycoveLadySave;
@@ -177,7 +177,7 @@ static void SetSrcLookupPointers(void)
     sTvShowsSave = gSaveBlock1Ptr->tvShows;
     sPokeNewsSave = gSaveBlock1Ptr->pokeNews;
     sOldManSave = &gSaveBlock1Ptr->oldMan;
-    sCreteTrendsSave = gSaveBlock1Ptr->creteTrends;
+    sDewfordTrendsSave = gSaveBlock1Ptr->dewfordTrends;
     sRecordMixMailSave = &sRecordMixMail;
     sBattleTowerSave = &gSaveBlock2Ptr->frontier.towerPlayer;
     sLilycoveLadySave = &gSaveBlock1Ptr->lilycoveLady;
@@ -192,7 +192,7 @@ static void PrepareUnknownExchangePacket(struct PlayerRecordRS *dest)
     SanitizeTVShowLocationsForRuby(dest->tvShows);
     memcpy(dest->pokeNews, sPokeNewsSave, sizeof(dest->pokeNews));
     memcpy(&dest->oldMan, sOldManSave, sizeof(dest->oldMan));
-    memcpy(dest->creteTrends, sCreteTrendsSave, sizeof(dest->creteTrends));
+    memcpy(dest->dewfordTrends, sDewfordTrendsSave, sizeof(dest->dewfordTrends));
     GetRecordMixingDaycareMail(&dest->daycareMail);
     EmeraldBattleTowerRecordToRuby(sBattleTowerSave, &dest->battleTowerRecord);
 
@@ -209,7 +209,7 @@ static void PrepareExchangePacketForRubySapphire(struct PlayerRecordRS *dest)
     memcpy(dest->pokeNews, sPokeNewsSave, sizeof(dest->pokeNews));
     memcpy(&dest->oldMan, sOldManSave, sizeof(dest->oldMan));
     SanitizeMauvilleOldManForRuby(&dest->oldMan);
-    memcpy(dest->creteTrends, sCreteTrendsSave, sizeof(dest->creteTrends));
+    memcpy(dest->dewfordTrends, sDewfordTrendsSave, sizeof(dest->dewfordTrends));
     GetRecordMixingDaycareMail(&dest->daycareMail);
     SanitizeDaycareMailForRuby(&dest->daycareMail);
     EmeraldBattleTowerRecordToRuby(sBattleTowerSave, &dest->battleTowerRecord);
@@ -239,7 +239,7 @@ static void PrepareExchangePacket(void)
         memcpy(sSentRecord->emerald.pokeNews, sPokeNewsSave, sizeof(sSentRecord->emerald.pokeNews));
         memcpy(&sSentRecord->emerald.oldMan, sOldManSave, sizeof(sSentRecord->emerald.oldMan));
         memcpy(&sSentRecord->emerald.lilycoveLady, sLilycoveLadySave, sizeof(sSentRecord->emerald.lilycoveLady));
-        memcpy(sSentRecord->emerald.creteTrends, sCreteTrendsSave, sizeof(sSentRecord->emerald.creteTrends));
+        memcpy(sSentRecord->emerald.dewfordTrends, sDewfordTrendsSave, sizeof(sSentRecord->emerald.dewfordTrends));
         GetRecordMixingDaycareMail(&sSentRecord->emerald.daycareMail);
         memcpy(&sSentRecord->emerald.battleTowerRecord, sBattleTowerSave, sizeof(sSentRecord->emerald.battleTowerRecord));
         SanitizeEmeraldBattleTowerRecord(&sSentRecord->emerald.battleTowerRecord);
@@ -264,7 +264,7 @@ static void ReceiveExchangePacket(u32 multiplayerId)
         ReceiveTvShowsData(sReceivedRecords->ruby.tvShows, sizeof(sReceivedRecords->ruby), multiplayerId);
         ReceivePokeNewsData(sReceivedRecords->ruby.pokeNews, sizeof(sReceivedRecords->ruby), multiplayerId);
         ReceiveOldManData(&sReceivedRecords->ruby.oldMan, sizeof(sReceivedRecords->ruby), multiplayerId);
-        ReceiveCreteTrendData(sReceivedRecords->ruby.creteTrends, sizeof(sReceivedRecords->ruby), multiplayerId);
+        ReceiveDewfordTrendData(sReceivedRecords->ruby.dewfordTrends, sizeof(sReceivedRecords->ruby), multiplayerId);
         ReceiveGiftItem(&sReceivedRecords->ruby.giftItem, multiplayerId);
     }
     else
@@ -275,7 +275,7 @@ static void ReceiveExchangePacket(u32 multiplayerId)
         ReceiveTvShowsData(sReceivedRecords->emerald.tvShows, sizeof(sReceivedRecords->emerald), multiplayerId);
         ReceivePokeNewsData(sReceivedRecords->emerald.pokeNews, sizeof(sReceivedRecords->emerald), multiplayerId);
         ReceiveOldManData(&sReceivedRecords->emerald.oldMan, sizeof(sReceivedRecords->emerald), multiplayerId);
-        ReceiveCreteTrendData(sReceivedRecords->emerald.creteTrends, sizeof(sReceivedRecords->emerald), multiplayerId);
+        ReceiveDewfordTrendData(sReceivedRecords->emerald.dewfordTrends, sizeof(sReceivedRecords->emerald), multiplayerId);
         ReceiveDaycareMailData(&sReceivedRecords->emerald.daycareMail, sizeof(sReceivedRecords->emerald), multiplayerId, sReceivedRecords->emerald.tvShows);
         ReceiveBattleTowerData(&sReceivedRecords->emerald.battleTowerRecord, sizeof(sReceivedRecords->emerald), multiplayerId);
         ReceiveGiftItem(&sReceivedRecords->emerald.giftItem, multiplayerId);

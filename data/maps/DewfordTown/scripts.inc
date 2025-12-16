@@ -1,8 +1,8 @@
-@ Sailing to and from Crete uses local IDs from different maps
-@ e.g. Route 104's sail to Crete script references local IDs from Crete's map
+@ Sailing to and from Dewford uses local IDs from different maps
+@ e.g. Route 104's sail to Dewford script references local IDs from Dewford's map
 @ All of these local IDs are labeled here
-.equ LOCALID_BRINEY_CRETE, 2
-.equ LOCALID_BOAT_CRETE, 4
+.equ LOCALID_BRINEY_DEWFORD, 2
+.equ LOCALID_BOAT_DEWFORD, 4
 
 .equ LOCALID_BOAT_R109, 1
 .equ LOCALID_BRINEY_R109, 2
@@ -10,161 +10,161 @@
 .equ LOCALID_BOAT_R104, 7
 .equ LOCALID_BRINEY_R104, 8
 
-Crete_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, Crete_OnTransition
+DewfordTown_MapScripts::
+	map_script MAP_SCRIPT_ON_TRANSITION, DewfordTown_OnTransition
 	.byte 0
 
-Crete_OnTransition:
-	setflag FLAG_VISITED_CRETE
+DewfordTown_OnTransition:
+	setflag FLAG_VISITED_DEWFORD_TOWN
 	end
 
-Crete_EventScript_Briney::
+DewfordTown_EventScript_Briney::
 	lock
 	faceplayer
-	goto_if_unset FLAG_DELIVERED_STEVEN_LETTER, Crete_EventScript_NoReturnPrompt
-	msgbox Crete_Text_WhereAreWeBound, MSGBOX_NPC
-	msgbox Crete_SailBackToAthens_Briney, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, Crete_EventScript_ChooseSlateport
-	goto_if_eq VAR_RESULT, NO, Crete_EventScript_CancelSailSelect
+	goto_if_unset FLAG_DELIVERED_STEVEN_LETTER, DewfordTown_EventScript_NoReturnPrompt
+	msgbox DewfordTown_Text_WhereAreWeBound, MSGBOX_NPC
+	msgbox DewfordTown_SailBackToAthens_Briney, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, DewfordTown_EventScript_ChooseSlateport
+	goto_if_eq VAR_RESULT, NO, DewfordTown_EventScript_CancelSailSelect
 	end
 
-Crete_EventScript_ChoosePetalburg::
-	msgbox Crete_Text_PetalburgWereSettingSail, MSGBOX_DEFAULT
+DewfordTown_EventScript_ChoosePetalburg::
+	msgbox DewfordTown_Text_PetalburgWereSettingSail, MSGBOX_DEFAULT
 	closemessage
-	goto Crete_EventScript_SailToPetalburg
+	goto DewfordTown_EventScript_SailToPetalburg
 	release
 	end
 
-Crete_EventScript_ChooseSlateport::
-	msgbox Crete_Text_SlateportWereSettingSail, MSGBOX_DEFAULT
+DewfordTown_EventScript_ChooseSlateport::
+	msgbox DewfordTown_Text_SlateportWereSettingSail, MSGBOX_DEFAULT
 	closemessage
-	goto Crete_EventScript_SailToSlateport
+	goto DewfordTown_EventScript_SailToSlateport
 	release
 	end
 
-Crete_EventScript_CancelSailSelect::
-	msgbox Crete_Text_JustTellMeWhenYouNeedToSetSail, MSGBOX_DEFAULT
+DewfordTown_EventScript_CancelSailSelect::
+	msgbox DewfordTown_Text_JustTellMeWhenYouNeedToSetSail, MSGBOX_DEFAULT
 	closemessage
 	release
 	end
 
-Crete_EventScript_NoReturnPrompt::
-	msgbox Crete_Text_GoDeliverIllBeWaiting, MSGBOX_DEFAULT
+DewfordTown_EventScript_NoReturnPrompt::
+	msgbox DewfordTown_Text_GoDeliverIllBeWaiting, MSGBOX_DEFAULT
 	release
 	end
 
-Crete_EventScript_SailBackToPetalburg::
-	msgbox Crete_Text_PetalburgWereSettingSail2, MSGBOX_DEFAULT
+DewfordTown_EventScript_SailBackToPetalburg::
+	msgbox DewfordTown_Text_PetalburgWereSettingSail2, MSGBOX_DEFAULT
 	closemessage
-	goto Crete_EventScript_SailToPetalburg
+	goto DewfordTown_EventScript_SailToPetalburg
 	end
 
-Crete_EventScript_Woman::
-	msgbox Crete_Text_TinyIslandCommunity, MSGBOX_NPC
+DewfordTown_EventScript_Woman::
+	msgbox DewfordTown_Text_TinyIslandCommunity, MSGBOX_NPC
 	end
 
-Crete_EventScript_TownSign::
-	msgbox Crete_Text_TownSign, MSGBOX_SIGN
+DewfordTown_EventScript_TownSign::
+	msgbox DewfordTown_Text_TownSign, MSGBOX_SIGN
 	end
 
-Crete_EventScript_GymSign::
-	msgbox Crete_Text_GymSign, MSGBOX_SIGN
+DewfordTown_EventScript_GymSign::
+	msgbox DewfordTown_Text_GymSign, MSGBOX_SIGN
 	end
 
-Crete_EventScript_HallSign::
-	msgbox Crete_Text_HallSign, MSGBOX_SIGN
+DewfordTown_EventScript_HallSign::
+	msgbox DewfordTown_Text_HallSign, MSGBOX_SIGN
 	end
 
-Crete_EventScript_OldRodFisherman::
+DewfordTown_EventScript_OldRodFisherman::
 	lock
 	faceplayer
-	goto_if_set FLAG_RECEIVED_OLD_ROD, Crete_EventScript_HowsFishing
-	msgbox Crete_Text_GettingItchToFish, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, Crete_EventScript_GiveOldRod
-	goto_if_eq VAR_RESULT, NO, Crete_EventScript_NotGettingItchToFish
+	goto_if_set FLAG_RECEIVED_OLD_ROD, DewfordTown_EventScript_HowsFishing
+	msgbox DewfordTown_Text_GettingItchToFish, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, DewfordTown_EventScript_GiveOldRod
+	goto_if_eq VAR_RESULT, NO, DewfordTown_EventScript_NotGettingItchToFish
 	end
 
-Crete_EventScript_GiveOldRod::
-	msgbox Crete_Text_GiveYouOneOfMyRods, MSGBOX_DEFAULT
+DewfordTown_EventScript_GiveOldRod::
+	msgbox DewfordTown_Text_GiveYouOneOfMyRods, MSGBOX_DEFAULT
 	giveitem ITEM_OLD_ROD
 	goto_if_eq VAR_RESULT, FALSE, Common_EventScript_ShowBagIsFull
 	setflag FLAG_RECEIVED_OLD_ROD
-	msgbox Crete_Text_ThrowInFishingAdvice, MSGBOX_DEFAULT
+	msgbox DewfordTown_Text_ThrowInFishingAdvice, MSGBOX_DEFAULT
 	release
 	end
 
-Crete_EventScript_NotGettingItchToFish::
-	msgbox Crete_Text_ThatsTooBadThen, MSGBOX_DEFAULT
+DewfordTown_EventScript_NotGettingItchToFish::
+	msgbox DewfordTown_Text_ThatsTooBadThen, MSGBOX_DEFAULT
 	release
 	end
 
-Crete_EventScript_HowsFishing::
-	message Crete_Text_HowsYourFishing
+DewfordTown_EventScript_HowsFishing::
+	message DewfordTown_Text_HowsYourFishing
 	waitmessage
 	multichoice 20, 8, MULTI_HOWS_FISHING, TRUE
-	goto_if_eq VAR_RESULT, 0, Crete_EventScript_FishingExcellent
-	goto_if_eq VAR_RESULT, 1, Crete_EventScript_FishingNotSoGood
+	goto_if_eq VAR_RESULT, 0, DewfordTown_EventScript_FishingExcellent
+	goto_if_eq VAR_RESULT, 1, DewfordTown_EventScript_FishingNotSoGood
 	end
 
-Crete_EventScript_FishingExcellent::
-	msgbox Crete_Text_GreatHaulInSomeBigOnes, MSGBOX_DEFAULT
+DewfordTown_EventScript_FishingExcellent::
+	msgbox DewfordTown_Text_GreatHaulInSomeBigOnes, MSGBOX_DEFAULT
 	release
 	end
 
-Crete_EventScript_FishingNotSoGood::
-	msgbox Crete_Text_FishingAdvice, MSGBOX_DEFAULT
+DewfordTown_EventScript_FishingNotSoGood::
+	msgbox DewfordTown_Text_FishingAdvice, MSGBOX_DEFAULT
 	release
 	end
 
-Crete_EventScript_SailToPetalburg::
+DewfordTown_EventScript_SailToPetalburg::
 	call EventScript_BackupMrBrineyLocation
-	setobjectsubpriority LOCALID_BRINEY_CRETE, MAP_CRETE, 0
-	setobjectsubpriority OBJ_EVENT_ID_PLAYER, MAP_CRETE, 0
-	applymovement LOCALID_BRINEY_CRETE, Crete_Movement_BrineyBoardBoat
+	setobjectsubpriority LOCALID_BRINEY_DEWFORD, MAP_DEWFORD_TOWN, 0
+	setobjectsubpriority OBJ_EVENT_ID_PLAYER, MAP_DEWFORD_TOWN, 0
+	applymovement LOCALID_BRINEY_DEWFORD, DewfordTown_Movement_BrineyBoardBoat
 	waitmovement 0
-	removeobject LOCALID_BRINEY_CRETE
-	applymovement OBJ_EVENT_ID_PLAYER, Crete_Movement_PlayerBoardBoat
+	removeobject LOCALID_BRINEY_DEWFORD
+	applymovement OBJ_EVENT_ID_PLAYER, DewfordTown_Movement_PlayerBoardBoat
 	waitmovement 0
-	hideobjectat OBJ_EVENT_ID_PLAYER, MAP_CRETE
+	hideobjectat OBJ_EVENT_ID_PLAYER, MAP_DEWFORD_TOWN
 	call Common_EventScript_PlayBrineysBoatMusic
-	applymovement LOCALID_BOAT_CRETE, Crete_Movement_SailToPetalburg
-	applymovement OBJ_EVENT_ID_PLAYER, Crete_Movement_SailToPetalburg
+	applymovement LOCALID_BOAT_DEWFORD, DewfordTown_Movement_SailToPetalburg
+	applymovement OBJ_EVENT_ID_PLAYER, DewfordTown_Movement_SailToPetalburg
 	waitmovement 0
 	showobjectat OBJ_EVENT_ID_PLAYER, MAP_ROUTE104
 	call Common_EventScript_StopBrineysBoatMusic
-	applymovement OBJ_EVENT_ID_PLAYER, Crete_Movement_ExitBoatPetalburg
+	applymovement OBJ_EVENT_ID_PLAYER, DewfordTown_Movement_ExitBoatPetalburg
 	waitmovement 0
 	showobjectat OBJ_EVENT_ID_PLAYER, MAP_ROUTE104
 	clearflag FLAG_HIDE_BRINEYS_HOUSE_MR_BRINEY
 	clearflag FLAG_HIDE_BRINEYS_HOUSE_PEEKO
 	clearflag FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT
-	setflag FLAG_HIDE_MR_BRINEY_BOAT_CRETE
-	hideobjectat LOCALID_BOAT_CRETE, MAP_CRETE
+	setflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
+	hideobjectat LOCALID_BOAT_DEWFORD, MAP_DEWFORD_TOWN
 	setvar VAR_BOARD_BRINEY_BOAT_STATE, 2
-	resetobjectsubpriority OBJ_EVENT_ID_PLAYER, MAP_CRETE
+	resetobjectsubpriority OBJ_EVENT_ID_PLAYER, MAP_DEWFORD_TOWN
 	warp MAP_ROUTE104_MR_BRINEYS_HOUSE, 5, 4
 	copyvar VAR_BRINEY_LOCATION, VAR_0x8008
 	waitstate
 	release
 	end
 
-Crete_EventScript_SailToSlateport::
+DewfordTown_EventScript_SailToSlateport::
 	call EventScript_BackupMrBrineyLocation
-	setobjectsubpriority LOCALID_BRINEY_CRETE, MAP_CRETE, 0
-	setobjectsubpriority OBJ_EVENT_ID_PLAYER, MAP_CRETE, 1
-	applymovement LOCALID_BRINEY_CRETE, Crete_Movement_BrineyBoardBoat
+	setobjectsubpriority LOCALID_BRINEY_DEWFORD, MAP_DEWFORD_TOWN, 0
+	setobjectsubpriority OBJ_EVENT_ID_PLAYER, MAP_DEWFORD_TOWN, 1
+	applymovement LOCALID_BRINEY_DEWFORD, DewfordTown_Movement_BrineyBoardBoat
 	waitmovement 0
-	removeobject LOCALID_BRINEY_CRETE
-	applymovement OBJ_EVENT_ID_PLAYER, Crete_Movement_PlayerBoardBoat
+	removeobject LOCALID_BRINEY_DEWFORD
+	applymovement OBJ_EVENT_ID_PLAYER, DewfordTown_Movement_PlayerBoardBoat
 	waitmovement 0
-	hideobjectat OBJ_EVENT_ID_PLAYER, MAP_CRETE
+	hideobjectat OBJ_EVENT_ID_PLAYER, MAP_DEWFORD_TOWN
 	call Common_EventScript_PlayBrineysBoatMusic
-	applymovement LOCALID_BOAT_CRETE, Crete_Movement_SailToSlateport
-	applymovement OBJ_EVENT_ID_PLAYER, Crete_Movement_SailToSlateport
+	applymovement LOCALID_BOAT_DEWFORD, DewfordTown_Movement_SailToSlateport
+	applymovement OBJ_EVENT_ID_PLAYER, DewfordTown_Movement_SailToSlateport
 	waitmovement 0
 	call Common_EventScript_StopBrineysBoatMusic
 	showobjectat OBJ_EVENT_ID_PLAYER, MAP_ROUTE3
-	applymovement OBJ_EVENT_ID_PLAYER, Crete_Movement_ExitBoatSlateport
+	applymovement OBJ_EVENT_ID_PLAYER, DewfordTown_Movement_ExitBoatSlateport
 	waitmovement 0
 	setobjectxyperm LOCALID_BRINEY_R109, 16, 9
 	addobject LOCALID_BRINEY_R109
@@ -172,27 +172,27 @@ Crete_EventScript_SailToSlateport::
 	clearflag FLAG_HIDE_ROUTE_3_MR_BRINEY
 	addobject LOCALID_BOAT_R109
 	clearflag FLAG_HIDE_ROUTE_3_MR_BRINEY_BOAT
-	setflag FLAG_HIDE_MR_BRINEY_BOAT_CRETE
-	hideobjectat LOCALID_BOAT_CRETE, MAP_CRETE
-	call_if_unset FLAG_DELIVERED_DEVON_GOODS, Crete_EventScript_LandedSlateportDeliverGoods
-	call_if_set FLAG_DELIVERED_DEVON_GOODS, Crete_EventScript_LandedSlateport
+	setflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
+	hideobjectat LOCALID_BOAT_DEWFORD, MAP_DEWFORD_TOWN
+	call_if_unset FLAG_DELIVERED_DEVON_GOODS, DewfordTown_EventScript_LandedSlateportDeliverGoods
+	call_if_set FLAG_DELIVERED_DEVON_GOODS, DewfordTown_EventScript_LandedSlateport
 	closemessage
 	copyvar VAR_BRINEY_LOCATION, VAR_0x8008
-	resetobjectsubpriority OBJ_EVENT_ID_PLAYER, MAP_CRETE
+	resetobjectsubpriority OBJ_EVENT_ID_PLAYER, MAP_DEWFORD_TOWN
 	resetobjectsubpriority LOCALID_BRINEY_R109, MAP_ROUTE3
 	copyobjectxytoperm LOCALID_BRINEY_R109
 	release
 	end
 
-Crete_EventScript_LandedSlateportDeliverGoods::
-	msgbox Crete_Text_BrineyLandedInSlateportDeliverGoods, MSGBOX_DEFAULT
+DewfordTown_EventScript_LandedSlateportDeliverGoods::
+	msgbox DewfordTown_Text_BrineyLandedInSlateportDeliverGoods, MSGBOX_DEFAULT
 	return
 
-Crete_EventScript_LandedSlateport::
-	msgbox Crete_Text_BrineyLandedInSlateport, MSGBOX_DEFAULT
+DewfordTown_EventScript_LandedSlateport::
+	msgbox DewfordTown_Text_BrineyLandedInSlateport, MSGBOX_DEFAULT
 	return
 
-Crete_Movement_SailToPetalburg:
+DewfordTown_Movement_SailToPetalburg:
 	walk_up
 	walk_up
 	walk_fast_up
@@ -389,7 +389,7 @@ Crete_Movement_SailToPetalburg:
 	walk_up
 	step_end
 
-Crete_Movement_SailToSlateport:
+DewfordTown_Movement_SailToSlateport:
 	walk_in_place_right
 	walk_fast_right
 	walk_fast_right
@@ -574,155 +574,155 @@ Crete_Movement_SailToSlateport:
 	walk_fast_up
 	step_end
 
-Crete_Movement_PlayerBoardBoat:
+DewfordTown_Movement_PlayerBoardBoat:
 	walk_right
 	walk_up
 	step_end
 
-Crete_Movement_ExitBoatPetalburg:
+DewfordTown_Movement_ExitBoatPetalburg:
 	walk_up
 	walk_up
 	walk_up
 	step_end
 
-Crete_Movement_ExitBoatSlateport:
+DewfordTown_Movement_ExitBoatSlateport:
 	walk_up
 	walk_up
 	walk_up
 	walk_in_place_faster_down
 	step_end
 
-Crete_Movement_BrineyBoardBoat:
+DewfordTown_Movement_BrineyBoardBoat:
 	walk_up
 	step_end
 
-Crete_Movement_BrineyExitBoat:
+DewfordTown_Movement_BrineyExitBoat:
 	walk_up
 	walk_up
 	step_end
 
-Crete_EventScript_TrendyPhraseBoy::
+DewfordTown_EventScript_TrendyPhraseBoy::
 	lock
 	faceplayer
 	call Common_EventScript_BufferTrendyPhrase
-	msgbox Crete_Text_XIsTheBiggestHappeningThingRight, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, Crete_EventScript_ConfirmTrendyPhrase
-	goto_if_eq VAR_RESULT, NO, Crete_EventScript_RejectTrendyPhrase
+	msgbox DewfordTown_Text_XIsTheBiggestHappeningThingRight, MSGBOX_YESNO
+	goto_if_eq VAR_RESULT, YES, DewfordTown_EventScript_ConfirmTrendyPhrase
+	goto_if_eq VAR_RESULT, NO, DewfordTown_EventScript_RejectTrendyPhrase
 	end
 
-Crete_EventScript_ConfirmTrendyPhrase::
-	msgbox Crete_Text_YeahDefinitionOfInRightNow, MSGBOX_DEFAULT
+DewfordTown_EventScript_ConfirmTrendyPhrase::
+	msgbox DewfordTown_Text_YeahDefinitionOfInRightNow, MSGBOX_DEFAULT
 	release
 	end
 
-Crete_EventScript_RejectTrendyPhrase::
-	msgbox Crete_Text_TellMeWhatsNewAndIn, MSGBOX_DEFAULT
+DewfordTown_EventScript_RejectTrendyPhrase::
+	msgbox DewfordTown_Text_TellMeWhatsNewAndIn, MSGBOX_DEFAULT
 	setvar VAR_0x8004, EASY_CHAT_TYPE_TRENDY_PHRASE
 	call Common_ShowEasyChatScreen
 	lock
 	faceplayer
-	goto_if_eq VAR_RESULT, TRUE, Crete_EventScript_GiveNewTrendyPhrase
-	goto_if_eq VAR_RESULT, FALSE, Crete_EventScript_CancelNewTrendyPhrase
+	goto_if_eq VAR_RESULT, TRUE, DewfordTown_EventScript_GiveNewTrendyPhrase
+	goto_if_eq VAR_RESULT, FALSE, DewfordTown_EventScript_CancelNewTrendyPhrase
 	end
 
-Crete_EventScript_GiveNewTrendyPhrase::
+DewfordTown_EventScript_GiveNewTrendyPhrase::
 	incrementgamestat GAME_STAT_STARTED_TRENDS
-	goto_if_eq VAR_0x8004, FALSE, Crete_EventScript_PhraseNotTrendyEnough
-	msgbox Crete_Text_OfCourseIKnowAboutThat, MSGBOX_DEFAULT
+	goto_if_eq VAR_0x8004, FALSE, DewfordTown_EventScript_PhraseNotTrendyEnough
+	msgbox DewfordTown_Text_OfCourseIKnowAboutThat, MSGBOX_DEFAULT
 	release
 	end
 
-Crete_EventScript_CancelNewTrendyPhrase::
-	msgbox Crete_Text_HearOfAnyTrendsComeShareWithMe, MSGBOX_DEFAULT
+DewfordTown_EventScript_CancelNewTrendyPhrase::
+	msgbox DewfordTown_Text_HearOfAnyTrendsComeShareWithMe, MSGBOX_DEFAULT
 	release
 	end
 
-Crete_EventScript_PhraseNotTrendyEnough::
-	msgbox Crete_Text_XHuhIThinkYIsCool, MSGBOX_DEFAULT
+DewfordTown_EventScript_PhraseNotTrendyEnough::
+	msgbox DewfordTown_Text_XHuhIThinkYIsCool, MSGBOX_DEFAULT
 	release
 	end
 
-Crete_Text_TinyIslandCommunity:
-	.string "CRETE is a tiny island community.\n"
+DewfordTown_Text_TinyIslandCommunity:
+	.string "DEWFORD is a tiny island community.\n"
 	.string "If something gets trendy here,\l"
 	.string "everyone picks up on it right away.$"
 
-Crete_Text_TownSign:
-	.string "CRETE\n"
+DewfordTown_Text_TownSign:
+	.string "DEWFORD TOWN\n"
 	.string "“A tiny island in the blue sea.”$"
 
-Crete_Text_GymSign:
-	.string "CRETE POKéMON GYM\n"
+DewfordTown_Text_GymSign:
+	.string "DEWFORD TOWN POKéMON GYM\n"
 	.string "LEADER: BRAWLY\l"
 	.string "“A big wave in fighting!”$"
 
-Crete_Text_HallSign:
-	.string "CRETE HALL\n"
+DewfordTown_Text_HallSign:
+	.string "DEWFORD HALL\n"
 	.string "“Everyone's information exchange!”$"
 
-Route104_Text_LandedInCreteDeliverLetter:
+Route104_Text_LandedInDewfordDeliverLetter:
 	.string "MR. BRINEY: Ahoy!\n"
-	.string "We've hit land in CRETE.\p"
+	.string "We've hit land in DEWFORD.\p"
 	.string "I suppose you're off to deliver that\n"
 	.string "LETTER to, who was it now, STEVEN!$"
 
-Crete_Text_SetSailBackToPetalburg:
+DewfordTown_Text_SetSailBackToPetalburg:
 	.string "MR. BRINEY: Have you delivered your\n"
 	.string "LETTER?\p"
 	.string "Or were you meaning to sail back to\n"
 	.string "PETALBURG?$"
 
-Crete_Text_PetalburgWereSettingSail2:
+DewfordTown_Text_PetalburgWereSettingSail2:
 	.string "MR. BRINEY: PETALBURG it is, then!\p"
 	.string "Anchors aweigh!\n"
 	.string "PEEKO, we're setting sail, my darling!$"
 
-Crete_Text_GoDeliverIllBeWaiting:
+DewfordTown_Text_GoDeliverIllBeWaiting:
 	.string "MR. BRINEY: What, who do you think\n"
 	.string "I am, your personal chauffeur?\p"
 	.string "We ain't leaving till you've got\n"
 	.string "that thread!$"
 
-Crete_Text_BrineyLandedInCrete:
+DewfordTown_Text_BrineyLandedInDewford:
 	.string "MR. BRINEY: Ahoy!\n"
-	.string "We've hit land in CRETE!\p"
+	.string "We've hit land in DEWFORD!\p"
 	.string "You just go on and tell me whenever\n"
 	.string "you want to set sail again!$"
 
-Crete_Text_WhereAreWeBound:
+DewfordTown_Text_WhereAreWeBound:
 	.string "MR. BRINEY: Ahoy!\n"
 	.string "For you, I'll go out to sea anytime!\p"
 	.string "Now, my friend, where are we bound?$"
 
-Crete_Text_PetalburgWereSettingSail:
+DewfordTown_Text_PetalburgWereSettingSail:
 	.string "MR. BRINEY: PETALBURG, is it?\p"
 	.string "Anchors aweigh!\n"
 	.string "PEEKO, we're setting sail, my darling!$"
 
-Crete_Text_SlateportWereSettingSail:
+DewfordTown_Text_SlateportWereSettingSail:
 	.string "MR. BRINEY: SLATEPORT, is it?\p"
 	.string "Anchors aweigh!\n"
 	.string "PEEKO, we're setting sail, my darling!$"
 
-Crete_SailBackToAthens_Briney:
+DewfordTown_SailBackToAthens_Briney:
 	.string "CPT. MORGAN: You about ready \n"
 	.string "to head back to ATHENS?$"
 
 
-Crete_Text_JustTellMeWhenYouNeedToSetSail:
+DewfordTown_Text_JustTellMeWhenYouNeedToSetSail:
 	.string "MR. BRINEY: You just tell me whenever\n"
 	.string "you need to set sail again!$"
 
-Crete_Text_GettingItchToFish:
+DewfordTown_Text_GettingItchToFish:
 	.string "This is a renowned fishing spot.\n"
 	.string "Are you getting the itch to fish?$"
 
-Crete_Text_GiveYouOneOfMyRods:
+DewfordTown_Text_GiveYouOneOfMyRods:
 	.string "I hear you, and I like what\n"
 	.string "you're saying!\p"
 	.string "I'll give you one of my fishing RODS.$"
 
-Crete_Text_ThrowInFishingAdvice:
+DewfordTown_Text_ThrowInFishingAdvice:
 	.string "And, as an added bonus, I'll even throw\n"
 	.string "in a little fishing advice!\p"
 	.string "First, you want to face the water,\n"
@@ -734,19 +734,19 @@ Crete_Text_ThrowInFishingAdvice:
 	.string "you need to time the pulls on your ROD\l"
 	.string "to haul them in.$"
 
-Crete_Text_ThatsTooBadThen:
+DewfordTown_Text_ThatsTooBadThen:
 	.string "Oh, is that so?\n"
 	.string "That's too bad, then.$"
 
-Crete_Text_HowsYourFishing:
+DewfordTown_Text_HowsYourFishing:
 	.string "Yo!\n"
 	.string "How's your fishing?$"
 
-Crete_Text_GreatHaulInSomeBigOnes:
+DewfordTown_Text_GreatHaulInSomeBigOnes:
 	.string "Is that right! That's great!\n"
 	.string "Haul in some big ones!$"
 
-Crete_Text_FishingAdvice:
+DewfordTown_Text_FishingAdvice:
 	.string "Oh, hey, don't get down on yourself!\n"
 	.string "I'll give you a little fishing advice.\p"
 	.string "First, you want to face the water,\n"
@@ -758,7 +758,7 @@ Crete_Text_FishingAdvice:
 	.string "you need to time the pulls on your ROD\l"
 	.string "to haul them in.$"
 
-Crete_Text_XIsTheBiggestHappeningThingRight:
+DewfordTown_Text_XIsTheBiggestHappeningThingRight:
 	.string "I like what's hip, happening, and trendy.\n"
 	.string "I'm always checking it out.\p"
 	.string "Listen, have you heard about this new\n"
@@ -772,13 +772,13 @@ Crete_Text_XIsTheBiggestHappeningThingRight:
 	.string "“{STR_VAR_1}”\l"
 	.string "is the biggest happening thing, right?$"
 
-Crete_Text_TellMeWhatsNewAndIn:
+DewfordTown_Text_TellMeWhatsNewAndIn:
 	.string "Hunh?\n"
 	.string "It's not the hip and happening thing?\p"
 	.string "Well, hey, you have to tell me,\n"
 	.string "what's new and what's “in”?$"
 
-Crete_Text_OfCourseIKnowAboutThat:
+DewfordTown_Text_OfCourseIKnowAboutThat:
 	.string "Hunh?\n"
 	.string "“{STR_VAR_2}”?\p"
 	.string "… …\p"
@@ -796,18 +796,18 @@ Crete_Text_OfCourseIKnowAboutThat:
 	.string "Now, “{STR_VAR_2}” is\n"
 	.string "what's vital and in tune with the times!$"
 
-Crete_Text_XHuhIThinkYIsCool:
+DewfordTown_Text_XHuhIThinkYIsCool:
 	.string "Hmm…\n"
 	.string "“{STR_VAR_2},” huh?\p"
 	.string "But personally, I think\n"
 	.string "“{STR_VAR_1}”\l"
 	.string "is what's real in cool.$"
 
-Crete_Text_HearOfAnyTrendsComeShareWithMe:
+DewfordTown_Text_HearOfAnyTrendsComeShareWithMe:
 	.string "Well, if you hear of any happening new\n"
 	.string "trends, come share them with me, okay?$"
 
-Crete_Text_YeahDefinitionOfInRightNow:
+DewfordTown_Text_YeahDefinitionOfInRightNow:
 	.string "Yeah, absolutely right!\p"
 	.string "“{STR_VAR_1}” is the\n"
 	.string "definition of “in” right now.$"

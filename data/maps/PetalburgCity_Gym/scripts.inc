@@ -300,7 +300,7 @@ PetalburgCity_Gym_EventScript_NormanNoBadges::
 	end
 
 PetalburgCity_Gym_EventScript_NormanOneBadge::
-	msgbox PetalburgCity_Gym_Text_NormanGoToCrete, MSGBOX_DEFAULT
+	msgbox PetalburgCity_Gym_Text_NormanGoToDewford, MSGBOX_DEFAULT
 	release
 	end
 
@@ -381,13 +381,13 @@ PetalburgCity_Gym_EventScript_NormanBattle::
 	setflag FLAG_DEFEATED_PETALBURG_GYM
 	setvar VAR_PETALBURG_GYM_STATE, 7
 	setflag FLAG_BADGE05_GET
-	special ResetHealLocationFromCrete
+	special ResetHealLocationFromDewford
 	call EventScript_HideMrBriney
 	setflag FLAG_HIDE_ATHENS_GYM_WATTSON
 	clearflag FLAG_HIDE_ATHENS_WATTSON
 	setvar VAR_0x8008, 5
 	call Common_EventScript_SetGymTrainers
-	clearflag FLAG_HIDE_CRETE_HALL_SLUDGE_BOMB_MAN
+	clearflag FLAG_HIDE_DEWFORD_HALL_SLUDGE_BOMB_MAN
 	call PetalburgCity_Gym_EventScript_UnlockAllDoors
 	special DrawWholeMapView
 	call PetalburgCity_Gym_EventScript_GiveFacade
@@ -1241,12 +1241,12 @@ PetalburgCity_Gym_Text_NormanGoToRustboro:
 	.string "I'll battle you, {PLAYER}, when you\n"
 	.string "can show me four GYM BADGES, okay?$"
 
-PetalburgCity_Gym_Text_NormanGoToCrete:
+PetalburgCity_Gym_Text_NormanGoToDewford:
 	.string "DAD: I see… So, you've beaten\n"
 	.string "the GYM LEADER in RUSTBORO CITY.\p"
 	.string "But there are many more TRAINERS\n"
 	.string "who are stronger than you, {PLAYER}.\p"
-	.string "Across the sea in CRETE is a\n"
+	.string "Across the sea in DEWFORD TOWN is a\n"
 	.string "GYM LEADER named BRAWLY.\p"
 	.string "You should go challenge him.$"
 

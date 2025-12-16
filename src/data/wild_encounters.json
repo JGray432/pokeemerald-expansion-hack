@@ -3360,47 +3360,47 @@
               {
                 "min_level": 7,
                 "max_level": 7,
-                "species": "SPECIES_MUNCHLAX"
+                "species": "SPECIES_ZUBAT"
               },
               {
                 "min_level": 8,
                 "max_level": 8,
-                "species": "SPECIES_EEVEE"
+                "species": "SPECIES_MAKUHITA"
               },
               {
                 "min_level": 7,
                 "max_level": 7,
-                "species": "SPECIES_LICKITUNG"
+                "species": "SPECIES_MAKUHITA"
               },
               {
                 "min_level": 8,
                 "max_level": 8,
-                "species": "SPECIES_LICKITUNG"
+                "species": "SPECIES_ZUBAT"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_TEDDIURSA"
+                "species": "SPECIES_NONE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_SLAKOTH"
+                "species": "SPECIES_NONE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_PORYGON"
+                "species": "SPECIES_NONE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_TANDEMAUS"
+                "species": "SPECIES_NONE"
               },
               {
                 "min_level": 5,
                 "max_level": 5,
-                "species": "SPECIES_TANDEMAUS"
+                "species": "SPECIES_NONE"
               }
             ]
           }
@@ -6122,8 +6122,8 @@
           }
         },
         {
-          "map": "MAP_CRETE",
-          "base_label": "gCrete",
+          "map": "MAP_DEWFORD_TOWN",
+          "base_label": "gDewfordTown",
           "land_mons": {
             "encounter_rate": 10,
             "mons": [

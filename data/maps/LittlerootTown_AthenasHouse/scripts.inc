@@ -15,12 +15,14 @@ LittlerootTown_AthenasHouse_EventScript_MoveMomToDoor::
 	setobjectmovementtype LOCALID_ATHENA, MOVEMENT_TYPE_FACE_UP
 	return
 
+@ Many of the below scripts have no gender check because they assume youre in the correct house
+@ The below SS Ticket script uses Mays house state by accident(?), but theyre both set identically after the intro
 LittlerootTown_AthenasHouse_OnFrame:
 	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 2, LittlerootTown_AthenasHouse_EventScript_EnterHouseMovingIn
-	map_script_2 VAR_LITTLEROOT_INTRO_STATE, 4, AthenasHouse_EventScript_ClearFlagAfterAthenaBattle
 	.2byte 0
 
 LittlerootTown_AthenasHouse_OnResume::
+	goto_if_set FLAG_TEMP_ATHENA_INTRO_BATTLE_IN_PROGRESS, AthenasHouse_EventScript_AfterAthenaBattle
 	end
 
 LittlerootTown_AthenasHouse_EventScript_EnterHouseMovingIn::
@@ -83,14 +85,12 @@ LittlerootTown_AthenasHouse_EventScript_Bag::
 	lock
 	setvar VAR_0x8004, LOCALID_ATHENA
 	applymovement VAR_0x8004, Common_Movement_FacePlayer
-	COMPARE VAR_LITTLEROOT_INTRO_STATE, 5
+	COMPARE VAR_LITTLEROOT_INTRO_STATE, 4
 	call_if_eq LittlerootTown_AthenasHouse_EventScript_AlreadyChosenStarter
 	setflag FLAG_SYS_POKEMON_GET
 	setflag FLAG_RESCUED_BIRCH
 	fadescreen FADE_TO_BLACK
 	special ChooseStarter
-	call SetStarterMetLocationToSpecial
-	
 	setflag FLAG_HIDE_ROUTE_1_BIRCH_ZIGZAGOON_BATTLE
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH
 	setflag FLAG_HIDE_ROUTE_1_BIRCH_STARTERS_BAG
@@ -100,12 +100,6 @@ LittlerootTown_AthenasHouse_EventScript_Bag::
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
 	goto AthenasHouse_EventScript_AthenaFiredUp
 	end
-
-SetStarterMetLocationToSpecial::
-	specialvar VAR_GIFT_PICHU_SLOT, CalculatePlayerPartyCount
-	setmodernfatefulencounter VAR_GIFT_PICHU_SLOT
-	setmonmetlocation VAR_GIFT_PICHU_SLOT, METLOC_FATEFUL_ENCOUNTER
-	return
 
 LittlerootTown_AthenasHouse_EventScript_AlreadyChosenStarter::
 	msgbox AthenasHouse_Text_AlreadyChosenStarters, MSGBOX_DEFAULT
@@ -148,26 +142,21 @@ Athenas_House_Movement_MoveAthenaToPlayer::
 
 AthenasHouse_EventScript_StartAthenaBattleAbra::
 	trainerbattle_no_intro TRAINER_ATHENA_ATHENAS_HOUSE_ABRA, Athenas_House_Text_ATHENADefeated
-	goto AthenasHouse_EventScript_ClearFlagAfterAthenaBattle
+	goto AthenasHouse_EventScript_AfterAthenaBattle
 	end
 
 AthenasHouse_EventScript_StartAthenaBattleJangmoo::
 	trainerbattle_no_intro TRAINER_ATHENA_ATHENAS_HOUSE_JANGMOO, Athenas_House_Text_ATHENADefeated
-	goto AthenasHouse_EventScript_ClearFlagAfterAthenaBattle
+	goto AthenasHouse_EventScript_AfterAthenaBattle
 	end
 
 AthenasHouse_EventScript_StartAthenaBattlePawniard::
 	trainerbattle_no_intro TRAINER_ATHENA_ATHENAS_HOUSE_PAWNIARD Athenas_House_Text_ATHENADefeated
-	goto AthenasHouse_EventScript_ClearFlagAfterAthenaBattle
+	goto AthenasHouse_EventScript_AfterAthenaBattle
 	end
 
-AthenasHouse_EventScript_ClearFlagAfterAthenaBattle::
-	clearflag FLAG_TEMP_ATHENA_INTRO_BATTLE_IN_PROGRESS
-	setvar VAR_LITTLEROOT_INTRO_STATE, 5
-	call AthenasHouse_EventScript_AfterAthenaBattle
-
 AthenasHouse_EventScript_AfterAthenaBattle::
-	applymovement OBJ_EVENT_ID_PLAYER, Common_Movement_WalkInPlaceFasterUp
+	clearflag FLAG_TEMP_ATHENA_INTRO_BATTLE_IN_PROGRESS
 	msgbox AthenasHouse_Text_AthenaSendOff MSGBOX_DEFAULT
 	closemessage
 	goto LittleRootTown_AthenasHouse_EventScript_GiveKeyItems
@@ -176,9 +165,6 @@ AthenasHouse_EventScript_AfterAthenaBattle::
 LittleRootTown_AthenasHouse_EventScript_GiveKeyItems::
 	msgbox LittlerootTown_AthenasHouse_Text_GiveKeyItems MSGBOX_DEFAULT
 	closemessage
-	playfanfare MUS_OBTAIN_ITEM
-	giveitem ITEM_POKE_BALL, 10
-	waitfanfare
 	playfanfare MUS_OBTAIN_ITEM
 	giveitem ITEM_INF_CANDY
 	waitfanfare

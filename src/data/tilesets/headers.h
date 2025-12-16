@@ -31,15 +31,15 @@ const struct Tileset gTileset_Rustboro =
     .callback = InitTilesetAnim_Rustboro,
 };
 
-const struct Tileset gTileset_Crete =
+const struct Tileset gTileset_Dewford =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_Crete,
-    .palettes = gTilesetPalettes_Crete,
-    .metatiles = gMetatiles_Crete,
-    .metatileAttributes = gMetatileAttributes_Crete,
-    .callback = InitTilesetAnim_Crete,
+    .tiles = gTilesetTiles_Dewford,
+    .palettes = gTilesetPalettes_Dewford,
+    .metatiles = gMetatiles_Dewford,
+    .metatileAttributes = gMetatileAttributes_Dewford,
+    .callback = InitTilesetAnim_Dewford,
 };
 
 const struct Tileset gTileset_Slateport =
@@ -548,14 +548,14 @@ const struct Tileset gTileset_RustboroGym =
     .callback = NULL,
 };
 
-const struct Tileset gTileset_CreteGym =
+const struct Tileset gTileset_DewfordGym =
 {
     .isCompressed = TRUE,
     .isSecondary = TRUE,
-    .tiles = gTilesetTiles_CreteGym,
-    .palettes = gTilesetPalettes_CreteGym,
-    .metatiles = gMetatiles_CreteGym,
-    .metatileAttributes = gMetatileAttributes_CreteGym,
+    .tiles = gTilesetTiles_DewfordGym,
+    .palettes = gTilesetPalettes_DewfordGym,
+    .metatiles = gMetatiles_DewfordGym,
+    .metatileAttributes = gMetatileAttributes_DewfordGym,
     .callback = NULL,
 };
 

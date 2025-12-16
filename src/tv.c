@@ -172,7 +172,7 @@ static void DoTVShowPokemonTodayFailedCapture(void);
 static void DoTVShowPokemonAngler(void);
 static void DoTVShowTheWorldOfMasters(void);
 static void DoTVShowTodaysRivalTrainer(void);
-static void DoTVShowCreteTrendWatcherNetwork(void);
+static void DoTVShowDewfordTrendWatcherNetwork(void);
 static void DoTVShowHoennTreasureInvestigators(void);
 static void DoTVShowFindThatGamer(void);
 static void DoTVShowBreakingNewsTV(void);
@@ -508,7 +508,7 @@ static const u8 *const sTVTodaysRivalTrainerTextGroup[] = {
     gTVTodaysRivalTrainerText10
 };
 
-static const u8 *const sTVCreteTrendWatcherNetworkTextGroup[] = {
+static const u8 *const sTVDewfordTrendWatcherNetworkTextGroup[] = {
     [TRENDWATCHER_STATE_INTRO]           = TrendWatcher_Text_Intro,
     [TRENDWATCHER_STATE_TAUGHT_MALE]     = TrendWatcher_Text_MaleTaughtMePhrase,
     [TRENDWATCHER_STATE_TAUGHT_FEMALE]   = TrendWatcher_Text_FemaleTaughtMePhrase,
@@ -4204,7 +4204,7 @@ void DoTVShow(void)
             DoTVShowTodaysRivalTrainer();
             break;
         case TVSHOW_TREND_WATCHER:
-            DoTVShowCreteTrendWatcherNetwork();
+            DoTVShowDewfordTrendWatcherNetwork();
             break;
         case TVSHOW_TREASURE_INVESTIGATORS:
             DoTVShowHoennTreasureInvestigators();
@@ -5608,7 +5608,7 @@ static void DoTVShowTodaysRivalTrainer(void)
     ShowFieldMessage(sTVTodaysRivalTrainerTextGroup[state]);
 }
 
-static void DoTVShowCreteTrendWatcherNetwork(void)
+static void DoTVShowDewfordTrendWatcherNetwork(void)
 {
     TVShow *show;
     u8 state;
@@ -5653,7 +5653,7 @@ static void DoTVShowCreteTrendWatcherNetwork(void)
         CopyEasyChatWord(gStringVar2, show->trendWatcher.words[1]);
         TVShowDone();
     }
-    ShowFieldMessage(sTVCreteTrendWatcherNetworkTextGroup[state]);
+    ShowFieldMessage(sTVDewfordTrendWatcherNetworkTextGroup[state]);
 }
 
 static void DoTVShowHoennTreasureInvestigators(void)

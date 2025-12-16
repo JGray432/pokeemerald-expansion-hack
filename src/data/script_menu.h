@@ -1,5 +1,5 @@
 // multichoice lists
-static const struct MenuAction MultichoiceList_BrineyOnCrete[] =
+static const struct MenuAction MultichoiceList_BrineyOnDewford[] =
 {
     {COMPOUND_STRING("PETALBURG")},
     {COMPOUND_STRING("SLATEPORT")},
@@ -70,9 +70,9 @@ static const struct MenuAction MultichoiceList_StatusInfo[] =
     {gText_Exit},
 };
 
-static const struct MenuAction MultichoiceList_BrineyOffCrete[] =
+static const struct MenuAction MultichoiceList_BrineyOffDewford[] =
 {
-    {COMPOUND_STRING("CRETE")},
+    {COMPOUND_STRING("DEWFORD")},
     {gText_Exit},
 };
 
@@ -791,7 +791,7 @@ struct MultichoiceListStruct
 
 static const struct MultichoiceListStruct sMultichoiceLists[] =
 {
-    [MULTI_BRINEY_ON_CRETE]          = MULTICHOICE(MultichoiceList_BrineyOnCrete),
+    [MULTI_BRINEY_ON_DEWFORD]          = MULTICHOICE(MultichoiceList_BrineyOnDewford),
     [MULTI_PC]                         = MULTICHOICE(MultichoiceList_Exit),
     [MULTI_ENTERINFO]                  = MULTICHOICE(MultichoiceList_EnterInfo),
     [MULTI_CONTEST_INFO]               = MULTICHOICE(MultichoiceList_ContestInfo),
@@ -805,7 +805,7 @@ static const struct MultichoiceListStruct sMultichoiceLists[] =
     [MULTI_FRONTIER_PASS_INFO]         = MULTICHOICE(MultichoiceList_FrontierPassInfo),
     [MULTI_BIKE]                       = MULTICHOICE(MultichoiceList_Bike),
     [MULTI_STATUS_INFO]                = MULTICHOICE(MultichoiceList_StatusInfo),
-    [MULTI_BRINEY_OFF_CRETE]         = MULTICHOICE(MultichoiceList_BrineyOffCrete),
+    [MULTI_BRINEY_OFF_DEWFORD]         = MULTICHOICE(MultichoiceList_BrineyOffDewford),
     [MULTI_UNUSED_15]                  = MULTICHOICE(MultichoiceList_Exit),
     [MULTI_VIEWED_PAINTINGS]           = MULTICHOICE(MultichoiceList_ViewedPaintings),
     [MULTI_YESNOINFO]                  = MULTICHOICE(MultichoiceList_YesNoInfo),

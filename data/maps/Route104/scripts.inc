@@ -1,5 +1,5 @@
-@ NOTE: Route 104's sail to Crete script references local IDs from Crete's map.
-@  These are labeled in Crete/scripts.inc
+@ NOTE: Route 104's sail to Dewford script references local IDs from Dewford's map.
+@  These are labeled in DewfordTown/scripts.inc
 .set LOCALID_RIVAL, 34
 
 Route104_MapScripts::
@@ -8,12 +8,12 @@ Route104_MapScripts::
 	.byte 0
 
 Route104_OnFrame:
-	map_script_2 VAR_BOARD_BRINEY_BOAT_STATE, 1, Route104_EventScript_StartSailToCrete
+	map_script_2 VAR_BOARD_BRINEY_BOAT_STATE, 1, Route104_EventScript_StartSailToDewford
 	.2byte 0
 
-Route104_EventScript_StartSailToCrete::
+Route104_EventScript_StartSailToDewford::
 	lockall
-	goto Route104_EventScript_SailToCrete
+	goto Route104_EventScript_SailToDewford
 	end
 
 Route104_OnTransition:
@@ -346,7 +346,7 @@ Route104_EventScript_Girl2::
 	msgbox Route104_Text_ImNotATrainer, MSGBOX_NPC
 	end
 
-Route104_EventScript_SailToCrete::
+Route104_EventScript_SailToDewford::
 	setobjectsubpriority LOCALID_BRINEY_R104, MAP_ROUTE104, 0
 	setobjectsubpriority OBJ_EVENT_ID_PLAYER, MAP_ROUTE104, 0
 	applymovement LOCALID_BRINEY_R104, Route104_Movement_BrineyBoardBoat
@@ -356,19 +356,19 @@ Route104_EventScript_SailToCrete::
 	waitmovement 0
 	hideobjectat OBJ_EVENT_ID_PLAYER, MAP_ROUTE104
 	call Common_EventScript_PlayBrineysBoatMusic
-	goto_if_set FLAG_ENABLE_NORMAN_MATCH_CALL, Route104_EventScript_SailToCreteNoCall
-	goto_if_unset FLAG_ENABLE_NORMAN_MATCH_CALL, Route104_EventScript_SailToCreteDadCalls
+	goto_if_set FLAG_ENABLE_NORMAN_MATCH_CALL, Route104_EventScript_SailToDewfordNoCall
+	goto_if_unset FLAG_ENABLE_NORMAN_MATCH_CALL, Route104_EventScript_SailToDewfordDadCalls
 	end
 
-Route104_EventScript_SailToCreteNoCall::
-	applymovement LOCALID_BOAT_R104, Route104_Movement_SailToCrete
-	applymovement OBJ_EVENT_ID_PLAYER, Route104_Movement_SailToCrete
+Route104_EventScript_SailToDewfordNoCall::
+	applymovement LOCALID_BOAT_R104, Route104_Movement_SailToDewford
+	applymovement OBJ_EVENT_ID_PLAYER, Route104_Movement_SailToDewford
 	waitmovement 0
-	goto Route104_EventScript_ArriveInCrete
+	goto Route104_EventScript_ArriveInDewford
 
-Route104_EventScript_SailToCreteDadCalls::
-	applymovement LOCALID_BOAT_R104, Route104_Movement_SailToCreteBeforeDadCalls
-	applymovement OBJ_EVENT_ID_PLAYER, Route104_Movement_SailToCreteBeforeDadCalls
+Route104_EventScript_SailToDewfordDadCalls::
+	applymovement LOCALID_BOAT_R104, Route104_Movement_SailToDewfordBeforeDadCalls
+	applymovement OBJ_EVENT_ID_PLAYER, Route104_Movement_SailToDewfordBeforeDadCalls
 	waitmovement 0
 	pokenavcall Route104_Text_DadPokenavCall
 	waitmessage
@@ -379,51 +379,51 @@ Route104_EventScript_SailToCreteDadCalls::
 	closemessage
 	delay 30
 	setflag FLAG_ENABLE_NORMAN_MATCH_CALL
-	applymovement OBJ_EVENT_ID_PLAYER, Route104_Movement_SailToCreteAfterDadCalls
-	applymovement LOCALID_BOAT_R104, Route104_Movement_SailToCreteAfterDadCalls, MAP_ROUTE104
+	applymovement OBJ_EVENT_ID_PLAYER, Route104_Movement_SailToDewfordAfterDadCalls
+	applymovement LOCALID_BOAT_R104, Route104_Movement_SailToDewfordAfterDadCalls, MAP_ROUTE104
 	waitmovement LOCALID_BOAT_R104, MAP_ROUTE104
 	waitmovement 0
-	goto Route104_EventScript_ArriveInCrete
+	goto Route104_EventScript_ArriveInDewford
 
-Route104_EventScript_ArriveInCrete::
+Route104_EventScript_ArriveInDewford::
 	delay 50
 	applymovement OBJ_EVENT_ID_PLAYER, Route104_Movement_PlayerExitBoat
 	waitmovement 0
 	call Common_EventScript_StopBrineysBoatMusic
-	showobjectat OBJ_EVENT_ID_PLAYER, MAP_CRETE
+	showobjectat OBJ_EVENT_ID_PLAYER, MAP_DEWFORD_TOWN
 	applymovement OBJ_EVENT_ID_PLAYER, Route104_Movement_PlayerMoveForBriney
 	waitmovement 0
-	setobjectxyperm LOCALID_BRINEY_CRETE, 12, 8
-	addobject LOCALID_BRINEY_CRETE
-	setobjectsubpriority LOCALID_BRINEY_CRETE, MAP_CRETE, 0
-	clearflag FLAG_HIDE_MR_BRINEY_CRETE
-	applymovement LOCALID_BRINEY_CRETE, Route104_Movement_BrineyExitBoat
+	setobjectxyperm LOCALID_BRINEY_DEWFORD, 12, 8
+	addobject LOCALID_BRINEY_DEWFORD
+	setobjectsubpriority LOCALID_BRINEY_DEWFORD, MAP_DEWFORD_TOWN, 0
+	clearflag FLAG_HIDE_MR_BRINEY_DEWFORD_TOWN
+	applymovement LOCALID_BRINEY_DEWFORD, Route104_Movement_BrineyExitBoat
 	waitmovement 0
-	addobject LOCALID_BOAT_CRETE
-	clearflag FLAG_HIDE_MR_BRINEY_BOAT_CRETE
+	addobject LOCALID_BOAT_DEWFORD
+	clearflag FLAG_HIDE_MR_BRINEY_BOAT_DEWFORD_TOWN
 	call Common_EventScript_StopBrineysBoatMusic
 	setflag FLAG_HIDE_ROUTE_104_MR_BRINEY_BOAT
 	hideobjectat LOCALID_BOAT_R104, MAP_ROUTE104
 	copyvar VAR_BRINEY_LOCATION, VAR_0x8008
 	resetobjectsubpriority OBJ_EVENT_ID_PLAYER, MAP_ROUTE104
-	resetobjectsubpriority LOCALID_BRINEY_CRETE, MAP_CRETE
-	copyobjectxytoperm LOCALID_BRINEY_CRETE
+	resetobjectsubpriority LOCALID_BRINEY_DEWFORD, MAP_DEWFORD_TOWN
+	copyobjectxytoperm LOCALID_BRINEY_DEWFORD
 	setvar VAR_BOARD_BRINEY_BOAT_STATE, 0
 	goto_if_unset FLAG_DELIVERED_STEVEN_LETTER, Route104_EventScript_DeliverLetterReminder
-	goto_if_set FLAG_DELIVERED_STEVEN_LETTER, Route104_EventScript_LandedInCrete
+	goto_if_set FLAG_DELIVERED_STEVEN_LETTER, Route104_EventScript_LandedInDewford
 	end
 
 Route104_EventScript_DeliverLetterReminder::
-	msgbox Route104_Text_LandedInCreteDeliverLetter, MSGBOX_DEFAULT
+	msgbox Route104_Text_LandedInDewfordDeliverLetter, MSGBOX_DEFAULT
 	releaseall
 	end
 
-Route104_EventScript_LandedInCrete::
-	msgbox Crete_Text_BrineyLandedInCrete, MSGBOX_DEFAULT
+Route104_EventScript_LandedInDewford::
+	msgbox DewfordTown_Text_BrineyLandedInDewford, MSGBOX_DEFAULT
 	releaseall
 	end
 
-Route104_Movement_SailToCreteBeforeDadCalls:
+Route104_Movement_SailToDewfordBeforeDadCalls:
 	walk_down
 	walk_down
 	walk_down
@@ -523,7 +523,7 @@ Route104_Movement_SailToCreteBeforeDadCalls:
 	walk_faster_down
 	step_end
 
-Route104_Movement_SailToCreteAfterDadCalls:
+Route104_Movement_SailToDewfordAfterDadCalls:
 	walk_faster_down
 	walk_faster_down
 	walk_faster_down
@@ -623,7 +623,7 @@ Route104_Movement_SailToCreteAfterDadCalls:
 	walk_down
 	step_end
 
-Route104_Movement_SailToCrete:
+Route104_Movement_SailToDewford:
 	walk_down
 	walk_down
 	walk_down
