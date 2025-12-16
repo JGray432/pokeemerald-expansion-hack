@@ -97,11 +97,11 @@ LittlerootTown_AthenasHouse_EventScript_Bag::
 	setflag FLAG_RESCUED_BIRCH
 	fadescreen FADE_TO_BLACK
 	special ChooseStarter
-	setflag FLAG_HIDE_ROUTE_1_BIRCH_ZIGZAGOON_BATTLE
+	setflag FLAG_HIDE_ROUTE_101_BIRCH_ZIGZAGOON_BATTLE
 	clearflag FLAG_HIDE_LITTLEROOT_TOWN_BIRCHS_LAB_BIRCH
-	setflag FLAG_HIDE_ROUTE_1_BIRCH_STARTERS_BAG
+	setflag FLAG_HIDE_ROUTE_101_BIRCH_STARTERS_BAG
 	setvar VAR_BIRCH_LAB_STATE, 2
-	setvar VAR_ROUTE1_STATE, 3
+	setvar VAR_ROUTE101_STATE, 3
 	setvar VAR_LITTLEROOT_INTRO_STATE, 5
 	clearflag FLAG_HIDE_MAP_NAME_POPUP
 	goto AthenasHouse_EventScript_AthenaFiredUp
@@ -174,8 +174,6 @@ LittleRootTown_AthenasHouse_EventScript_GiveKeyItems::
 	playfanfare MUS_OBTAIN_ITEM
 	giveitem ITEM_CAP_CANDY
 	waitfanfare
-	giveitem ITEM_SUPER_ROD
-	setflag FLAG_RECEIVED_SUPER_ROD
 	goto AthenasHouse_EventScript_AthenaExitHouse
 	end
 
@@ -229,7 +227,7 @@ AthenasHouse_Text_AthenaFiredUp:
 	
 
 AthenasHouse_Text_AthenaTasteOfBattle:
-	.string "Hey, why don't I give you a taste of \n"
+	.string "Hey, why don't I give you a taste of \n$"
 	.string "what being a trainer is all about? \p$"
 	
 Athenas_House_Text_ATHENADefeated:
@@ -237,11 +235,11 @@ Athenas_House_Text_ATHENADefeated:
 	.string "But that was fun!$"
 
 AthenasHouse_Text_AthenaSendOff:
-	.string "Athena: Wow, that was fun!\p"
+	.string "Athena: Wow, that was fun!\p$"
 
 LittlerootTown_AthenasHouse_Text_GiveKeyItems:
 	.string "Here are some useful\n"
-	.string "items to help start your journey\p"
+	.string "items to help start your journey\p$"
 
 LittlerootTown_AthenasHouse_Text_AthenaLeaving:
 	.string "ATHENA: Ok, I'll be off now, I have \n"

@@ -81,7 +81,7 @@
 // Hoenn Starter:
 // #define OW_MON_ALLOWED_SPECIES (0)
 // #define OW_MON_ALLOWED_MET_LVL (5)
-// #define OW_MON_ALLOWED_MET_LOC (MAPSEC_ROUTE_1)
+// #define OW_MON_ALLOWED_MET_LOC (MAPSEC_ROUTE_101)
 // Species set in VAR_XXXX:
 // #define OW_MON_ALLOWED_SPECIES (VAR_XXXX)
 // #define OW_MON_ALLOWED_MET_LVL (0)
