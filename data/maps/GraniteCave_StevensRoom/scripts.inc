@@ -1,16 +1,10 @@
 .set LOCALID_STEVEN, 1
 .set LOCALID_MINOTAUR, 2
 GraniteCave_StevensRoom_MapScripts::
-	map_script MAP_SCRIPT_ON_FRAME_TABLE, GraniteCave_FinalRoom_CheckPlayerJustEntered
 	.byte 0
 
-GraniteCave_FinalRoom_CheckPlayerJustEntered:
-	map_script_2 VAR_ATHENS_CITY_STATE, 3, GraniteCave_FinalRoom_OnTransition
-	.2byte 0
-
-GraniteCave_FinalRoom_OnTransition::
-	call_if_unset FLAG_TEMP_MINOTAUR_BATTLE_IN_PROGRESS, GraniteCave_StevensRoom_EventScript_Steven
-	call_if_set FLAG_TEMP_MINOTAUR_BATTLE_IN_PROGRESS, GraniteCave_StevensRoom_EventScript_HephaestusAfterBattle
+GraniteCave_FinalRoom_EventScript_MinotaurTrigger::
+	goto_if_unset FLAG_DELIVERED_STEVEN_LETTER, GraniteCave_StevensRoom_EventScript_Steven
 	end
 
 GraniteCave_StevensRoom_EventScript_Steven::
@@ -21,14 +15,12 @@ GraniteCave_StevensRoom_EventScript_Steven::
 	waitmovement 0
 	msgbox GraniteCave_FinalRoom_Text_HephaestusIntro, MSGBOX_DEFAULT
 	closemessage
-	call GraniteCave_FinalRoom_MinotaurAppear
-	return
+	goto GraniteCave_FinalRoom_MinotaurAppear
+	delay 30
+	goto GraniteCave_StevensRoom_EventScript_MinotaurBattle
+	end
 
 GraniteCave_StevensRoom_EventScript_HephaestusAfterBattle::
-	setvar VAR_ATHENS_CITY_STATE, 4
-	clearflag FLAG_TEMP_MINOTAUR_BATTLE_IN_PROGRESS
-	applymovement LOCALID_MINOTAUR, Common_Movement_ExclamationMark
-	waitmovement 0
 	applymovement LOCALID_MINOTAUR, GraniteCave_FinalRoom_Movement_MinotaurFlee
 	waitmovement 0
 	removeobject LOCALID_MINOTAUR
@@ -36,21 +28,17 @@ GraniteCave_StevensRoom_EventScript_HephaestusAfterBattle::
 	waitmovement 0
 	msgbox GraniteCave_StevensRoom_Text_IveGotToHurryAlong, MSGBOX_DEFAULT
 	closemessage
-	playfanfare MUS_OBTAIN_ITEM
-	waitfanfare
-	msgbox GraniteCave_StevensRoom_Text_SeeYa, MSGBOX_DEFAULT
-	closemessage
 	setflag FLAG_DELIVERED_STEVEN_LETTER
-	setflag FLAG_MONSTER01
+	clearflag FLAG_MONSTER01
+	setvar VAR_ATHENS_CITY_STATE, 4
 	call GraniteCave_StevensRoom_EventScript_HephaestusExit
 	playse SE_EXIT
 	removeobject LOCALID_STEVEN
-	setflag FLAG_HIDE_GRANITE_CAVE_STEVEN
 	release
 	end
 
 GraniteCave_FinalRoom_Movement_HephaestusMoveUp::
-	walk_in_place_up
+	walk_up
 	step_end
 
 GraniteCave_FinalRoom_MinotaurAppear::
@@ -58,11 +46,7 @@ GraniteCave_FinalRoom_MinotaurAppear::
 	waitmovement 0
 	applymovement LOCALID_STEVEN, GraniteCave_FinalRoom_Movement_HephaestusFlying
 	waitmovement 0
-	applymovement OBJ_EVENT_ID_PLAYER, GraniteCave_FinalRoom_Movement_ApproachMinotaur
-	waitmovement 0
-	setflag FLAG_TEMP_MINOTAUR_BATTLE_IN_PROGRESS
-	goto GraniteCave_StevensRoom_EventScript_MinotaurBattle
-	end
+	return
 
 GraniteCave_FinalRoom_Movement_MinotaurAppear:
 	walk_fast_up
@@ -73,20 +57,10 @@ GraniteCave_FinalRoom_Movement_MinotaurAppear:
 
 GraniteCave_FinalRoom_Movement_HephaestusFlying:
 	walk_fast_left
-	walk_fast_left
-	walk_fast_left
-	step_end
-
-GraniteCave_FinalRoom_Movement_ApproachMinotaur::
-	walk_down
-	delay_16
-	face_down
 	step_end
 
 GraniteCave_StevensRoom_EventScript_MinotaurBattle::
 	trainerbattle_single  TRAINER_MINOTAUR_GRANITECAVE_FINALROOM, GraniteCave_Text_MinotaurIntro, GraniteCave_Minotaur_Defeated
-	setvar VAR_ATHENS_CITY_STATE, 4
-	clearflag FLAG_TEMP_MINOTAUR_BATTLE_IN_PROGRESS
 	goto GraniteCave_StevensRoom_EventScript_HephaestusAfterBattle
 	end
 
@@ -104,8 +78,6 @@ GraniteCave_FinalRoom_Movement_MinotaurFlee::
 
 
 GraniteCave_FinalRoom_Movement_HephaestusMoveRight::
-	walk_right
-	walk_right
 	walk_right
 	face_up
 	step_end
@@ -174,34 +146,38 @@ GraniteCave_StevensRoom_Movement_StevenExitSouth:
 	step_end
 
 GraniteCave_FinalRoom_Text_HephaestusIntro:
-	.string "Hm who are you?\p"
-	.string "Ah nice to meet you {PLAYER}!\n"
-	.string "I must say I'm impressed that you\l"
-	.string "managed to traverse this labyrinth.\p"
-	.string "I had to borrow some of Dio's thread \n"
-	.string "and leave a trail so I could \l"
-	.string "trace my steps, pretty clever eh?\p"
-	.string "Anyway that reminds me, I'm here \n"
- 	.string "because I heard reports that the\l"
- 	.string "minotaur who lives in this labyrinth\l"
- 	.string "has been going a little crazy.\p"
-	.string "So keep your eyes peeled for any signs$"
+	.string "My name is STEVEN.\p"
+	.string "I'm interested in rare stones,\n"
+	.string "so I travel here and there.\p"
+	.string "Oh?\n"
+	.string "A LETTER for me?$"
 
+GraniteCave_StevensRoom_Text_ThankYouTakeThis:
+	.string "STEVEN: Okay, thank you.\p"
+	.string "You went through all this trouble to\n"
+	.string "deliver that. I need to thank you.\p"
+	.string "Let me see…\n"
+	.string "I'll give you this TM.\p"
+	.string "It contains my favorite move,\n"
+	.string "STEEL WING.$"
+
+GraniteCave_StevensRoom_Text_CouldBecomeChampionLetsRegister:
+	.string "STEVEN: Your POKéMON appear quite\n"
+	.string "capable.\p"
+	.string "If you keep training, you could even\n"
+	.string "become the CHAMPION of the POKéMON\l"
+	.string "LEAGUE one day. That's what I think.\p"
+	.string "I know, since we've gotten to know each\n"
+	.string "other, let's register one another in\l"
+	.string "our POKéNAVS.\p"
+	.string "… … … … … …$"
+
+GraniteCave_StevensRoom_Text_RegisteredSteven:
+	.string "Registered STEVEN\n"
+	.string "in the POKéNAV.$"
 
 GraniteCave_StevensRoom_Text_IveGotToHurryAlong:
-	.string "Owww.. \p"
-	.string "Thanks for covering my back there,\n"
-	.string "you were really impressive! \p"
-	.string "Still, I wonder what got minnie so\n"
-	.string "worked up. I've got a bad feeling about\l"
-	.string "this...\p"
-	.string "I'll keep an eye out for any more \n"
-	.string "disturbances, but we're done here so \l"
-	.string "you can take this back to Dio.$"
-
-GraniteCave_StevensRoom_Text_SeeYa:
-	.string "See ya round, {PLAYER}!\n"
-	.string "And thanks again for your help!$"
+	.string "Now, I've got to hurry along.$"
 
 GraniteCave_StevensRoom_Text_OhBagIsFull:
 	.string "Oh, your BAG is full…\n"

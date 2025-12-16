@@ -1,10 +1,5 @@
 GraniteCave_1F_MapScripts::
-	map_script MAP_SCRIPT_ON_TRANSITION, GraniteCave_FirstRoom_PlayerJustEntered
 	.byte 0
-
-GraniteCave_FirstRoom_PlayerJustEntered::
-	clearflag FLAG_TEMP_MINOTAUR_BATTLE_IN_PROGRESS
-	end
 
 GraniteCave_1F_EventScript_Hiker::
 	lock
@@ -20,11 +15,6 @@ GraniteCave_1F_EventScript_Hiker::
 GraniteCave_1F_EventScript_ReceivedFlash::
 	msgbox GraniteCave_1F_Text_ExplainFlash, MSGBOX_DEFAULT
 	release
-	end
-
-GraniteCave_1F_EventScript_David::
-	trainerbattle_single TRAINER_DAVID, Route3_Text_DavidIntro, Route3_Text_DavidDefeated
-	msgbox Route3_Text_DavidPostBattle, MSGBOX_AUTOCLOSE
 	end
 
 GraniteCave_1F_Text_GetsDarkAheadHereYouGo:

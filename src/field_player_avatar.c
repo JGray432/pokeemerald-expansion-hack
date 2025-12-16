@@ -1981,6 +1981,12 @@ static bool32 Fishing_ChangeMinigame(struct Task *task)
 // We have a bite. Now, wait for the player to press A, or the timer to expire.
 static bool32 Fishing_WaitForA(struct Task *task)
 {
+    const s16 reelTimeouts[3] = {
+        [OLD_ROD]   = 36,
+        [GOOD_ROD]  = 33,
+        [SUPER_ROD] = 30
+    };
+
     AlignFishingAnimationFrames();
     task->tFrameCounter++;
 
@@ -2000,6 +2006,13 @@ static bool32 Fishing_APressNoMinigame(struct Task *task)
 // Determine if we're going to play the dot game again
 static bool32 Fishing_CheckMoreDots(struct Task *task)
 {
+    const s16 moreDotsChance[][2] =
+    {
+        [OLD_ROD]   = {0, 0},
+        [GOOD_ROD]  = {40, 10},
+        [SUPER_ROD] = {100, 100}
+    };
+
     AlignFishingAnimationFrames();
     task->tStep = FISHING_MON_ON_HOOK;
 

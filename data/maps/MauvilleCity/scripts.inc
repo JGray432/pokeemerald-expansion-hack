@@ -1,8 +1,6 @@
 .set LOCALID_WALLY, 6
 .set LOCALID_WALLYS_UNCLE, 7
 .set LOCALID_SCOTT, 11
-.set LOCALID_NURSE, 4
-.set LOCALID_MART_CLERK, 5
 
 MauvilleCity_MapScripts::
 	map_script MAP_SCRIPT_ON_TRANSITION, MauvilleCity_OnTransition
@@ -23,33 +21,6 @@ MauvilleCity_EventScript_MoveWattsonBackToGym::
 	setflag FLAG_HIDE_MAUVILLE_CITY_WATTSON
 	setflag FLAG_WATTSON_REMATCH_AVAILABLE
 	return
-
-MauvilleCit_EventScript_Nurse::
-	setvar VAR_0x800B, LOCALID_NURSE
-	call Common_EventScript_PkmnCenterNurse
-	waitmessage
-	waitbuttonpress
-	release
-	end
-
-MauvilleCity_EventScript_Clerk::
-	lock
-	faceplayer
-	message gText_HowMayIServeYou
-	waitmessage
-	pokemart MauvilleCity_Mart
-	msgbox gText_PleaseComeAgain, MSGBOX_DEFAULT
-	release
-	end
-
-	.align 2
-MauvilleCity_Mart:
-	.2byte ITEM_POKE_BALL
-	.2byte ITEM_POTION
-	.2byte ITEM_ANTIDOTE
-	.2byte ITEM_PARALYZE_HEAL
-	.2byte ITEM_AWAKENING
-	pokemartlistend
 
 MauvilleCity_EventScript_Boy::
 	msgbox MauvilleCity_Text_NurseHurtMonBackToHealth, MSGBOX_NPC

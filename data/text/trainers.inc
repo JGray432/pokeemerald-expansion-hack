@@ -1,10 +1,11 @@
 ROUTE2_Text_CalvinIntro:
-	.string "Howdy! We own this here farmland\n"
-	.string "so if you wanna trespass you gon' \l"
-	.string "have to go thru me!$"
+	.string "If you have POKéMON with you, then\n"
+	.string "you're an official POKéMON TRAINER!\l"
+	.string "You can't say no to my challenge!$"
 
 ROUTE2_Text_CalvinDefeated:
-	.string "Arrgh, I lost…$"
+	.string "Arrgh, I lost…\n"
+	.string "I should have trained mine more…$"
 
 ROUTE2_Text_CalvinPostBattle:
 	.string "Listen, you. If you're strong,\n"
@@ -280,26 +281,31 @@ Route104_Text_MiaNotEnoughMons:
 	.string "We're too strong for you!$"
 
 Route104_Text_IvanIntro:
-	.string "Are you a cat or a dog person?$"
+	.string "Why keep it a secret?\n"
+	.string "I'm the WATER POKéMON expert!\p"
+	.string "Huh?\n"
+	.string "You don't know me?$"
 
 Route104_Text_IvanDefeat:
-	.string "Me, I'm a cat person.$"
+	.string "I thought I wasn't too bad, if I may\n"
+	.string "say so, but I guess not… Bleah…$"
 
 Route104_Text_IvanPostBattle:
-	.string "Meow.$"
+	.string "I got too into fishing.\n"
+	.string "I forgot I had to raise my POKéMON…$"
 
 Route104_Text_BillyIntro:
-	.string "Eyes off my berries!!\p"
-	.string "I toiled day and night to grow\n"
-	.string "these here bushes and I'll be \l"
-	.string "damned if you thief 'em $" 
+	.string "Leaving footprints in the sand is\n"
+	.string "so fun!$"
 
 Route104_Text_BillyDefeat:
-	.string "Ah shoot!$"
+	.string "Waah! I got sand in my runners!\n"
+	.string "They're all gritty!$"
 
 Route104_Text_BillyPostBattle:
-	.string "I guess these farm critters ain't \n"
-	.string "the strongest fighters.$"
+	.string "I want to leave my footprints in\n"
+	.string "the sand everywhere, but they\l"
+	.string "disappear quickly…$"
 
 Route104_Text_HaleyIntro:
 	.string "Should I…\n"

@@ -22,10 +22,14 @@ DewfordTown_EventScript_Briney::
 	lock
 	faceplayer
 	goto_if_unset FLAG_DELIVERED_STEVEN_LETTER, DewfordTown_EventScript_NoReturnPrompt
-	msgbox DewfordTown_Text_WhereAreWeBound, MSGBOX_NPC
-	msgbox DewfordTown_SailBackToAthens_Briney, MSGBOX_YESNO
-	goto_if_eq VAR_RESULT, YES, DewfordTown_EventScript_ChooseSlateport
-	goto_if_eq VAR_RESULT, NO, DewfordTown_EventScript_CancelSailSelect
+	message DewfordTown_Text_WhereAreWeBound
+	waitmessage
+	multichoicedefault 21, 6, MULTI_BRINEY_ON_DEWFORD, 2, FALSE
+	switch VAR_RESULT
+	case 0, DewfordTown_EventScript_ChoosePetalburg
+	case 1, DewfordTown_EventScript_ChooseSlateport
+	case 2, DewfordTown_EventScript_CancelSailSelect
+	case MULTI_B_PRESSED, DewfordTown_EventScript_CancelSailSelect
 	end
 
 DewfordTown_EventScript_ChoosePetalburg::
@@ -166,9 +170,11 @@ DewfordTown_EventScript_SailToSlateport::
 	showobjectat OBJ_EVENT_ID_PLAYER, MAP_ROUTE3
 	applymovement OBJ_EVENT_ID_PLAYER, DewfordTown_Movement_ExitBoatSlateport
 	waitmovement 0
-	setobjectxyperm LOCALID_BRINEY_R109, 16, 9
+	setobjectxyperm LOCALID_BRINEY_R109, 21, 26
 	addobject LOCALID_BRINEY_R109
 	setobjectsubpriority LOCALID_BRINEY_R109, MAP_ROUTE3, 0
+	applymovement LOCALID_BRINEY_R109, DewfordTown_Movement_BrineyExitBoat
+	waitmovement 0
 	clearflag FLAG_HIDE_ROUTE_3_MR_BRINEY
 	addobject LOCALID_BOAT_R109
 	clearflag FLAG_HIDE_ROUTE_3_MR_BRINEY_BOAT
@@ -390,153 +396,155 @@ DewfordTown_Movement_SailToPetalburg:
 	step_end
 
 DewfordTown_Movement_SailToSlateport:
-	walk_in_place_right
-	walk_fast_right
-	walk_fast_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_faster_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
-	walk_fast_right
 	walk_right
-	walk_right
-	walk_up
-	walk_up
+	walk_fast_right
+	walk_fast_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_faster_right
+	walk_fast_right
+	walk_fast_right
 	walk_fast_up
 	walk_fast_up
 	walk_faster_up
@@ -549,27 +557,14 @@ DewfordTown_Movement_SailToSlateport:
 	walk_faster_up
 	walk_faster_up
 	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
-	walk_faster_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
+	walk_fast_up
 	walk_fast_up
 	walk_fast_up
 	step_end
@@ -703,11 +698,6 @@ DewfordTown_Text_SlateportWereSettingSail:
 	.string "MR. BRINEY: SLATEPORT, is it?\p"
 	.string "Anchors aweigh!\n"
 	.string "PEEKO, we're setting sail, my darling!$"
-
-DewfordTown_SailBackToAthens_Briney:
-	.string "CPT. MORGAN: You about ready \n"
-	.string "to head back to ATHENS?$"
-
 
 DewfordTown_Text_JustTellMeWhenYouNeedToSetSail:
 	.string "MR. BRINEY: You just tell me whenever\n"

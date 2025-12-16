@@ -11204,45 +11204,40 @@ const struct Item gItemsInfo[] =
         .secondaryId = MOVE_OVERHEAT,
     },
 
-    [ITEM_TM_MAGICAL_LEAF] =
+    [ITEM_TM51] =
     {
         .name = _("TM51"),
         .price = 3000,
-        .description = COMPOUND_STRING(
-            "Leaves that don't miss\n"
-            "and are magic or something."),
+        .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_MAGICAL_LEAF,
+        .secondaryId = MOVE_NONE, // Todo
     },
 
-    [ITEM_TM_SHADOW_PUNCH] =
+    [ITEM_TM52] =
     {
         .name = _("TM52"),
         .price = 3000,
-        .description = COMPOUND_STRING(
-            "Ooh spooky shit"),
+        .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_SHADOW_PUNCH,
+        .secondaryId = MOVE_NONE, // Todo
     },
 
-    [ITEM_TM_MAGNET_BOMB] =
+    [ITEM_TM53] =
     {
         .name = _("TM53"),
         .price = 3000,
-        .description = COMPOUND_STRING(
-            "Magnets neve miss for some \n"
-            "bullshit sciencey reason"),
+        .description = sQuestionMarksDesc, // Todo
         .importance = I_REUSABLE_TMS,
         .pocket = POCKET_TM_HM,
         .type = ITEM_USE_PARTY_MENU,
         .fieldUseFunc = ItemUseOutOfBattle_TMHM,
-        .secondaryId = MOVE_MAGNET_BOMB,
+        .secondaryId = MOVE_NONE, // Todo
     },
 
     [ITEM_TM54] =

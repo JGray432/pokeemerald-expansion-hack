@@ -41,13 +41,8 @@ Route3_Movement_AthenaBattle::
 	walk_down
 	walk_down
 	step_end
-Route3_Movement_PlayerFaceAthena::
-	walk_in_place_up
-	step_end
 
 Route3_EventScript_AthenaBattle::
-	applymovement OBJ_EVENT_ID_PLAYER, Route3_Movement_PlayerFaceAthena
-	waitmovement 0
 	msgbox Route3_Text_AthenaBattleIntro, MSGBOX_DEFAULT
 	closemessage
 	switch VAR_STARTER_MON
@@ -78,8 +73,7 @@ Route3_EventScript_AfterAthenaBattle:
 	waitmovement 0
 	removeobject LOCALID_ATHENA
 	setvar VAR_ATHENS_CITY_STATE, 3
-	setflag FLAG_RIVAL01
-	clearflag FLAG_TEMP_MINOTAUR_BATTLE_IN_PROGRESS
+	clearflag FLAG_RIVAL01
 	releaseall
 	end
 
@@ -468,7 +462,10 @@ Route3_EventScript_TrainerTipsSign::
 	msgbox Route3_Text_TrainerTipsSign, MSGBOX_SIGN
 	end
 
-
+Route3_EventScript_David::
+	trainerbattle_single TRAINER_DAVID, Route3_Text_DavidIntro, Route3_Text_DavidDefeated
+	msgbox Route3_Text_DavidPostBattle, MSGBOX_AUTOCLOSE
+	end
 
 Route3_EventScript_Alice::
 	trainerbattle_single TRAINER_ALICE, Route3_Text_AliceIntro, Route3_Text_AliceDefeated
@@ -574,13 +571,13 @@ DewfordTown_Text_BrineyLandedInSlateportDeliverGoods:
 	.string "STERN and deliver the DEVON GOODS?$"
 
 Route3_Text_BrineyNoSailYet:
-	.string "CPT. MORGAN: Hrmph. This boat takes\n"
+	.string "MR. BRINEY: Hrmph. This boat takes\n"
 	.string "you to Crete. But I ain't makin'\p"
 	.string "the effort of a trip unless I got\n"
 	.string "good reason to, ya hear?$"
 
 Route3_Text_BrineyDewfordItIs:
-	.string "CPT. MORGAN: Crete it is, then!\n"
+	.string "MR. BRINEY: Crete it is, then!\n"
 	.string "Anchors aweigh!$"
 
 Route3_Text_AthenaBattleIntro:
@@ -608,7 +605,7 @@ DewfordTown_Text_BrineyLandedInSlateport:
 	.string "you want to set sail again!$"
 
 Route3_Text_BrineyHappyToSail:
-	.string "CPT. MORGAN: What's that?\n"
+	.string "MR. BRINEY: What's that?\n"
 	.string "Dionysus needs you to go to Crete?\p"
 	.string "Why that changes everything! He \n"
 	.string "provides me with the best rum this\l"
@@ -618,7 +615,7 @@ Route3_Text_BrineySailToCreteQuestion:
 	.string "You ready to set sail?$"
 
 Route3_Text_BrineyTellMeWhenYouNeedToSail:
-	.string "CPT. MORGAN: You just tell me whenever\n"
+	.string "MR. BRINEY: You just tell me whenever\n"
 	.string "you need to set sail again!$"
 
 Route3_Text_ChillAtMyPapasSpot:

@@ -18,7 +18,7 @@ Route1_EventScript_Youngster::
 	end
 
 Route1_EventScript_Lass::
-	trainerbattle_single TRAINER_LAUREN, Route104_Text_IvanIntro, Route104_Text_IvanDefeat
+	trainerbattle_single TRAINER_IVAN, Route104_Text_IvanIntro, Route104_Text_IvanDefeat
 	msgbox Route104_Text_IvanPostBattle, MSGBOX_AUTOCLOSE
 	end
 
@@ -30,6 +30,7 @@ Route1_EventScript_Boss::
 Route1_EventScript_RouteSign::
 	msgbox Route1_Text_RouteSign, MSGBOX_SIGN
 	end
+
 
 Route1_Text_RouteSign:
 	.string "ROUTE 1\n"

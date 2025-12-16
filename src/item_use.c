@@ -1655,20 +1655,10 @@ void ItemUseOutOfBattle_NectarReserves(u8 taskId)
         }
     }
 
-    if (gTasks[taskId].data[3] == 0)
-    {
-        if (healed)
-            DisplayItemMessage(taskId, FONT_NORMAL, gText_YourPartyWasHealed, CloseItemMessage);
-        else
-            DisplayItemMessage(taskId, FONT_NORMAL, gText_WontHaveEffect, CloseItemMessage);
-    }
+    if (healed)
+        DisplayItemMessage(taskId, FONT_NORMAL, gText_YourPartyWasHealed, CloseItemMessage);
     else
-    {
-        if (healed)
-            DisplayItemMessageOnField(taskId, gText_YourPartyWasHealed, Task_CloseCantUseKeyItemMessage);
-        else
-            DisplayItemMessageOnField(taskId, gText_WontHaveEffect, Task_CloseCantUseKeyItemMessage);
-    }
-    }
+        DisplayItemMessage(taskId, FONT_NORMAL, gText_WontHaveEffect, CloseItemMessage);
+}
 
 #undef tUsingRegisteredKeyItem

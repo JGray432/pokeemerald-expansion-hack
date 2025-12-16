@@ -3,6 +3,7 @@ Route2_MapScripts::
 	.byte 0
 
 Route2_OnTransition::
+	setvar VAR_ATHENS_CITY_STATE, 1
 	clearflag FLAG_HIDE_ROUTE_3_MR_BRINEY
 	clearflag FLAG_HIDE_ROUTE_3_MR_BRINEY_BOAT
 	end

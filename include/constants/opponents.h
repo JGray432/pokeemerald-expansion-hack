@@ -5,7 +5,7 @@
 
 #define TRAINER_NONE                          0
 #define TRAINER_MINOTAUR_GRANITECAVE_FINALROOM                      1
-#define TRAINER_AMANI          2
+#define TRAINER_GRUNT_AQUA_HIDEOUT_1          2
 #define TRAINER_GRUNT_AQUA_HIDEOUT_2          3
 #define TRAINER_GRUNT_AQUA_HIDEOUT_3          4
 #define TRAINER_GRUNT_AQUA_HIDEOUT_4          5
@@ -13,7 +13,7 @@
 #define TRAINER_GRUNT_SEAFLOOR_CAVERN_2       7
 #define TRAINER_GRUNT_SEAFLOOR_CAVERN_3       8
 #define TRAINER_GABRIELLE_1                   9
-#define TRAINER_HARRY        10
+#define TRAINER_GRUNT_PETALBURG_WOODS        10
 #define TRAINER_MARCEL                       11
 #define TRAINER_ALBERTO                      12
 #define TRAINER_ED                           13
@@ -340,7 +340,7 @@
 #define TRAINER_TIMMY                       334
 #define TRAINER_WALLACE                     335
 #define TRAINER_ANDREW                      336
-#define TRAINER_LAUREN                        337
+#define TRAINER_IVAN                        337
 #define TRAINER_CLAUDE                      338
 #define TRAINER_ELLIOT_1                    339
 #define TRAINER_NED                         340

@@ -14276,8 +14276,9 @@ static const struct LevelUpMove sGolurkLevelUpLearnset[] = {
 static const struct LevelUpMove sPawniardLevelUpLearnset[] = {
     LEVEL_UP_MOVE( 1, MOVE_SCRATCH),
     LEVEL_UP_MOVE( 1, MOVE_LEER),
+    LEVEL_UP_MOVE( 5, MOVE_FURY_CUTTER),
     LEVEL_UP_MOVE(10, MOVE_METAL_CLAW),
-    LEVEL_UP_MOVE(14, MOVE_FAINT_ATTACK),
+    LEVEL_UP_MOVE(15, MOVE_TORMENT),
     LEVEL_UP_MOVE(20, MOVE_SCARY_FACE),
     LEVEL_UP_MOVE(25, MOVE_ASSURANCE),
     LEVEL_UP_MOVE(30, MOVE_METAL_SOUND),
