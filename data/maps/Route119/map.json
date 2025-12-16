@@ -14,14 +14,14 @@
   "battle_scene": "MAP_BATTLE_SCENE_NORMAL",
   "connections": [
     {
+      "map": "MAP_ATHENSOUTSKIRTS",
+      "offset": -26,
+      "direction": "down"
+    },
+    {
       "map": "MAP_FORTREE_CITY",
       "offset": 0,
       "direction": "right"
-    },
-    {
-      "map": "MAP_ATHENS_OUTSKIRTS",
-      "offset": -26,
-      "direction": "down"
     }
   ],
   "object_events": [

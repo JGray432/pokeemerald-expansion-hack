@@ -28,12 +28,12 @@ AbnormalWeather_EventScript_PlaceTilesRoute116South::
 	setmetatile 79, 6, METATILE_General_CaveEntrance_Bottom, FALSE
 	return
 
-AbnormalWeather_EventScript_PlaceTilesATHENS_OUTSKIRTSEast::
+AbnormalWeather_EventScript_PlaceTilesATHENSOUTSKIRTSEast::
 	setmetatile 42, 5, METATILE_General_CaveEntrance_Top, TRUE
 	setmetatile 42, 6, METATILE_General_CaveEntrance_Bottom, FALSE
 	return
 
-AbnormalWeather_EventScript_PlaceTilesATHENS_OUTSKIRTSWest::
+AbnormalWeather_EventScript_PlaceTilesATHENSOUTSKIRTSWest::
 	setmetatile 9, 5, METATILE_General_CaveEntrance_Top, TRUE
 	setmetatile 9, 6, METATILE_General_CaveEntrance_Bottom, FALSE
 	return
@@ -208,8 +208,8 @@ AbnormalWeather_EventScript_CleanupMapTiles::
 	case ABNORMAL_WEATHER_ROUTE_115_EAST, AbnormalWeather_EventScript_CleanupRoute115East
 	case ABNORMAL_WEATHER_ROUTE_116_NORTH, AbnormalWeather_EventScript_CleanupRoute116North
 	case ABNORMAL_WEATHER_ROUTE_116_SOUTH, AbnormalWeather_EventScript_CleanupRoute116South
-	case ABNORMAL_WEATHER_ATHENS_OUTSKIRTS_EAST, AbnormalWeather_EventScript_CleanupATHENS_OUTSKIRTSEast
-	case ABNORMAL_WEATHER_ATHENS_OUTSKIRTS_WEST, AbnormalWeather_EventScript_CleanupATHENS_OUTSKIRTSWest
+	case ABNORMAL_WEATHER_ATHENS_OUTSKIRTS_EAST, AbnormalWeather_EventScript_CleanupATHENSOUTSKIRTSEast
+	case ABNORMAL_WEATHER_ATHENS_OUTSKIRTS_WEST, AbnormalWeather_EventScript_CleanupATHENSOUTSKIRTSWest
 	case ABNORMAL_WEATHER_ROUTE_105_NORTH, AbnormalWeather_EventScript_CleanupRoute105North
 	case ABNORMAL_WEATHER_ROUTE_105_SOUTH, AbnormalWeather_EventScript_CleanupRoute105South
 	case ABNORMAL_WEATHER_ROUTE_125_WEST, AbnormalWeather_EventScript_CleanupRoute125West
@@ -250,12 +250,12 @@ AbnormalWeather_EventScript_CleanupRoute116South::
 	setmetatile 79, 6, METATILE_General_RockWall_RockBase, TRUE
 	return
 
-AbnormalWeather_EventScript_CleanupATHENS_OUTSKIRTSEast::
+AbnormalWeather_EventScript_CleanupATHENSOUTSKIRTSEast::
 	setmetatile 42, 5, METATILE_General_RockWall_RockBase, TRUE
 	setmetatile 42, 6, METATILE_General_RockWall_GrassBase, TRUE
 	return
 
-AbnormalWeather_EventScript_CleanupATHENS_OUTSKIRTSWest::
+AbnormalWeather_EventScript_CleanupATHENSOUTSKIRTSWest::
 	setmetatile 9, 5, METATILE_General_RockWall_RockBase, TRUE
 	setmetatile 9, 6, METATILE_General_RockWall_GrassBase, TRUE
 	return

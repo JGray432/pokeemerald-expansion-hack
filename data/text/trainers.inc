@@ -799,206 +799,206 @@ Route108_Text_CarolinaPostBattle:
 	.string "Since I'm at sea like this, I wouldn't\n"
 	.string "mind putting on a pink, frilly swimsuit…$"
 
-Route3_Text_DavidIntro:
+Route109_Text_DavidIntro:
 	.string "Hiyah! Look at my chiseled abs!\n"
 	.string "This is what you call “cut”!$"
 
-Route3_Text_DavidDefeated:
+Route109_Text_DavidDefeated:
 	.string "Aiyah!\n"
 	.string "Flubbed out!$"
 
-Route3_Text_DavidPostBattle:
+Route109_Text_DavidPostBattle:
 	.string "Hiyah!\p"
 	.string "My sculpted abs have nothing to do\n"
 	.string "with POKéMON battles!$"
 
-Route3_Text_AliceIntro:
+Route109_Text_AliceIntro:
 	.string "Are you properly protected against\n"
 	.string "the sun?$"
 
-Route3_Text_AliceDefeated:
+Route109_Text_AliceDefeated:
 	.string "Ouch, ouch, ouch!$"
 
-Route3_Text_AlicePostBattle:
+Route109_Text_AlicePostBattle:
 	.string "Cheeks are the most prone to burning!$"
 
-Route3_Text_HueyIntro:
+Route109_Text_HueyIntro:
 	.string "I've laid anchor in ports around\n"
 	.string "the world, but SLATEPORT's the best.$"
 
-Route3_Text_HueyDefeated:
+Route109_Text_HueyDefeated:
 	.string "You're the best!$"
 
-Route3_Text_HueyPostBattle:
+Route109_Text_HueyPostBattle:
 	.string "In the best port was the best\n"
 	.string "TRAINER…$"
 
-Route3_Text_EdmondIntro:
+Route109_Text_EdmondIntro:
 	.string "Urrrrppp…\n"
 	.string "Battle? With me?$"
 
-Route3_Text_EdmondDefeated:
+Route109_Text_EdmondDefeated:
 	.string "Urp… Ooooooohhhhhh…\n"
 	.string "Urrrrpppp…$"
 
-Route3_Text_EdmondPostBattle:
+Route109_Text_EdmondPostBattle:
 	.string "I'm usually stronger than this!\n"
 	.string "I'm just seasick as a dog!\p"
 	.string "I'm a SAILOR, but…$"
 
-Route3_Text_RickyIntro:
+Route109_Text_RickyIntro:
 	.string "I'm thirsty… I could go for a SODA POP\n"
 	.string "at the SEASHORE HOUSE…$"
 
-Route3_Text_RickyDefeated:
+Route109_Text_RickyDefeated:
 	.string "Groan…$"
 
-Route3_Text_RickyPostBattle:
+Route109_Text_RickyPostBattle:
 	.string "I'm getting famished… My inner tube\n"
 	.string "looks like a giant doughnut…$"
 
-Route3_Text_RickyRegister:
+Route109_Text_RickyRegister:
 	.string "Will you have another match with me\n"
 	.string "when I'm not all thirsty?$"
 
-Route3_Text_RickyRematchIntro:
+Route109_Text_RickyRematchIntro:
 	.string "I'm hungry, but I've got enough pep in\n"
 	.string "me for a battle!$"
 
-Route3_Text_RickyRematchDefeated:
+Route109_Text_RickyRematchDefeated:
 	.string "I lost…\n"
 	.string "It's because I'm hungry…$"
 
-Route3_Text_RickyRematchPostBattle:
+Route109_Text_RickyRematchPostBattle:
 	.string "When you eat on a beach, everything\n"
 	.string "seems to taste a little better.$"
 
-Route3_Text_LolaIntro:
+Route109_Text_LolaIntro:
 	.string "Doesn't a beach umbrella look like\n"
 	.string "a giant flower?$"
 
-Route3_Text_LolaDefeated:
+Route109_Text_LolaDefeated:
 	.string "Mommy!$"
 
-Route3_Text_LolaPostBattle:
+Route109_Text_LolaPostBattle:
 	.string "If you look at the beach from the sky,\n"
 	.string "it looks like a big flower garden!$"
 
-Route3_Text_LolaRegister:
+Route109_Text_LolaRegister:
 	.string "Me?\n"
 	.string "I'm here every day!$"
 
-Route3_Text_LolaRematchIntro:
+Route109_Text_LolaRematchIntro:
 	.string "I'm not losing to you again!\n"
 	.string "That's why I have my inner tube!$"
 
-Route3_Text_LolaRematchDefeated:
+Route109_Text_LolaRematchDefeated:
 	.string "Mommy!$"
 
-Route3_Text_LolaRematchPostBattle:
+Route109_Text_LolaRematchPostBattle:
 	.string "If I have an inner tube, me and my\n"
 	.string "POKéMON's cuteness goes way up!$"
 
-Route3_Text_AustinaIntro:
+Route109_Text_AustinaIntro:
 	.string "I can't swim without my inner tube,\n"
 	.string "but I won't lose at POKéMON!$"
 
-Route3_Text_AustinaDefeated:
+Route109_Text_AustinaDefeated:
 	.string "Did I lose because I have an inner\n"
 	.string "tube?$"
 
-Route3_Text_AustinaPostBattle:
+Route109_Text_AustinaPostBattle:
 	.string "My inner tube is a fashion item.\n"
 	.string "I can't be seen without it.$"
 
-Route3_Text_GwenIntro:
+Route109_Text_GwenIntro:
 	.string "Hi, big TRAINER.\n"
 	.string "Will you battle with me?$"
 
-Route3_Text_GwenDefeated:
+Route109_Text_GwenDefeated:
 	.string "Oh, you're strong.$"
 
-Route3_Text_GwenPostBattle:
+Route109_Text_GwenPostBattle:
 	.string "How did you get to be so strong?$"
 
-Route3_Text_CarterIntro:
+Route109_Text_CarterIntro:
 	.string "Wahahah! This dude's going to catch\n"
 	.string "himself a big one!$"
 
-Route3_Text_CarterDefeated:
+Route109_Text_CarterDefeated:
 	.string "This dude just lost one…$"
 
-Route3_Text_CarterPostBattle:
+Route109_Text_CarterPostBattle:
 	.string "This dude thinks you're a big one.\n"
 	.string "No, you're a big-one-to-be!$"
 
-Route3_Text_PaulIntro:
+Route109_Text_PaulIntro:
 	.string "PAUL: Well, this is a mood-breaker.\p"
 	.string "I wish you wouldn't disturb our\n"
 	.string "precious time together.$"
 
-Route3_Text_PaulDefeated:
+Route109_Text_PaulDefeated:
 	.string "PAUL: Well, I give up.$"
 
-Route3_Text_PaulPostBattle:
+Route109_Text_PaulPostBattle:
 	.string "PAUL: Well, don't tell anyone that\n"
 	.string "we're here.\l"
 	.string "This is just our private world of two!$"
 
-Route3_Text_PaulNotEnoughPokemon:
+Route109_Text_PaulNotEnoughPokemon:
 	.string "PAUL: We're totally, deeply in love.\n"
 	.string "That's why we make our POKéMON battle\l"
 	.string "together.$"
 
-Route3_Text_MelIntro:
+Route109_Text_MelIntro:
 	.string "MEL: We're, like, totally in love.\n"
 	.string "Our romance is heating up all of HOENN!$"
 
-Route3_Text_MelDefeated:
+Route109_Text_MelDefeated:
 	.string "MEL: We lost, and it's my fault!\n"
 	.string "PAUL will hate me!$"
 
-Route3_Text_MelPostBattle:
+Route109_Text_MelPostBattle:
 	.string "MEL: Um, PAUL, are you angry with me?\n"
 	.string "Please don't be angry.$"
 
-Route3_Text_MelNotEnoughPokemon:
+Route109_Text_MelNotEnoughPokemon:
 	.string "MEL: We're, like, deeply and truly in love.\n"
 	.string "That's why we make our POKéMON\l"
 	.string "battle together.$"
 
-Route3_Text_ChandlerIntro:
+Route109_Text_ChandlerIntro:
 	.string "Tadaah! See?\n"
 	.string "My inner tube's round!$"
 
-Route3_Text_ChandlerDefeated:
+Route109_Text_ChandlerDefeated:
 	.string "Oh, oh!\n"
 	.string "Too bad!$"
 
-Route3_Text_ChandlerPostBattle:
+Route109_Text_ChandlerPostBattle:
 	.string "After I showed you my round inner\n"
 	.string "tube, too…$"
 
-Route3_Text_HaileyIntro:
+Route109_Text_HaileyIntro:
 	.string "I can't swim, so I'm pretending\n"
 	.string "to swim.$"
 
-Route3_Text_HaileyDefeated:
+Route109_Text_HaileyDefeated:
 	.string "I thought so!\n"
 	.string "I didn't think we could win.$"
 
-Route3_Text_HaileyPostBattle:
+Route109_Text_HaileyPostBattle:
 	.string "When I learn how to swim, I think\n"
 	.string "my POKéMON will become tougher.$"
 
-Route3_Text_ElijahIntro:
+Route109_Text_ElijahIntro:
 	.string "For a guy as macho as me, this kind\n"
 	.string "of POKéMON is the perfect match!$"
 
-Route3_Text_ElijahDefeated:
+Route109_Text_ElijahDefeated:
 	.string "I'm cool even in defeat, hey?$"
 
-Route3_Text_ElijahPostBattle:
+Route109_Text_ElijahPostBattle:
 	.string "For a guy as macho as me, a port\n"
 	.string "is the perfect setting!\p"
 	.string "I guess I'll head for SLATEPORT.$"
@@ -2575,120 +2575,120 @@ Route117_Text_AishaPostBattle:
 	.string "I think that if you worry about losing,\n"
 	.string "you're more likely to lose.$"
 
-Athens_Outskirts_Text_RoseIntro:
+ATHENSOUTSKIRTS_Text_RoseIntro:
 	.string "The aroma of flowers has a magical\n"
 	.string "power. It cleanses us body and soul.$"
 
-Athens_Outskirts_Text_RoseDefeat:
+ATHENSOUTSKIRTS_Text_RoseDefeat:
 	.string "Oh, dear me.\n"
 	.string "I seem to have lost.$"
 
-Athens_Outskirts_Text_RosePostBattle:
+ATHENSOUTSKIRTS_Text_RosePostBattle:
 	.string "Flowers, POKéMON…\n"
 	.string "I love whatever smells nice.\p"
 	.string "Stinky things…\n"
 	.string "I'll pass.$"
 
-Athens_Outskirts_Text_RoseRegister:
+ATHENSOUTSKIRTS_Text_RoseRegister:
 	.string "Sniff… That odor--it's a POKéNAV!\n"
 	.string "We must register each other!$"
 
-Athens_Outskirts_Text_RoseRematchIntro:
+ATHENSOUTSKIRTS_Text_RoseRematchIntro:
 	.string "Were you drawn here by the sweet\n"
 	.string "aroma?$"
 
-Athens_Outskirts_Text_RoseRematchDefeat:
+ATHENSOUTSKIRTS_Text_RoseRematchDefeat:
 	.string "The power of aroma…\n"
 	.string "It didn't seem to do much.$"
 
-Athens_Outskirts_Text_RosePostRematch:
+ATHENSOUTSKIRTS_Text_RosePostRematch:
 	.string "If you use a sweet aroma properly,\n"
 	.string "POKéMON will be attracted by it.$"
 
-Athens_Outskirts_Text_PerryIntro:
+ATHENSOUTSKIRTS_Text_PerryIntro:
 	.string "BIRD POKéMON that FLY elegantly in\n"
 	.string "the sky… They're the best!$"
 
-Athens_Outskirts_Text_PerryDefeat:
+ATHENSOUTSKIRTS_Text_PerryDefeat:
 	.string "Urgh…\n"
 	.string "I crashed…$"
 
-Athens_Outskirts_Text_PerryPostBattle:
+ATHENSOUTSKIRTS_Text_PerryPostBattle:
 	.string "You've got great POKéMON.\n"
 	.string "I'll have to train mine better.$"
 
-Athens_Outskirts_Text_ChesterIntro:
+ATHENSOUTSKIRTS_Text_ChesterIntro:
 	.string "Take flight!\n"
 	.string "My BIRD POKéMON!$"
 
-Athens_Outskirts_Text_ChesterDefeat:
+ATHENSOUTSKIRTS_Text_ChesterDefeat:
 	.string "They did take flight…$"
 
-Athens_Outskirts_Text_ChesterPostBattle:
+ATHENSOUTSKIRTS_Text_ChesterPostBattle:
 	.string "If they'd get stronger, they'd be able\n"
 	.string "to fly more freely…$"
 
-Athens_Outskirts_Text_BarnyIntro:
+ATHENSOUTSKIRTS_Text_BarnyIntro:
 	.string "I'm a FISHERMAN, but also a TRAINER.\n"
 	.string "I'm raising the POKéMON I caught.$"
 
-Athens_Outskirts_Text_BarnyDefeat:
+ATHENSOUTSKIRTS_Text_BarnyDefeat:
 	.string "I thought I was doing okay in my\n"
 	.string "training…$"
 
-Athens_Outskirts_Text_BarnyPostBattle:
+ATHENSOUTSKIRTS_Text_BarnyPostBattle:
 	.string "I couldn't win by training POKéMON\n"
 	.string "while I fished…\p"
 	.string "Was I doing things in half measures?$"
 
-Athens_Outskirts_Text_WadeIntro:
+ATHENSOUTSKIRTS_Text_WadeIntro:
 	.string "For FISHERMEN, equipment is the key.\p"
 	.string "But for TRAINERS, the key ingredients\n"
 	.string "are POKéMON and heart, of course!$"
 
-Athens_Outskirts_Text_WadeDefeat:
+ATHENSOUTSKIRTS_Text_WadeDefeat:
 	.string "I was beaten in heart?$"
 
-Athens_Outskirts_Text_WadePostBattle:
+ATHENSOUTSKIRTS_Text_WadePostBattle:
 	.string "Come to think of it, fishing is a battle\n"
 	.string "between a FISHERMAN and a POKéMON.$"
 
-Athens_Outskirts_Text_DaltonIntro:
+ATHENSOUTSKIRTS_Text_DaltonIntro:
 	.string "Let my melody rock your soul!$"
 
-Athens_Outskirts_Text_DaltonDefeat:
+ATHENSOUTSKIRTS_Text_DaltonDefeat:
 	.string "La-lalala…$"
 
-Athens_Outskirts_Text_DaltonPostBattle:
+ATHENSOUTSKIRTS_Text_DaltonPostBattle:
 	.string "An electric guitar doesn't always\n"
 	.string "have to be noisy…\p"
 	.string "It can be strummed to squeeze out\n"
 	.string "this heart-stirring melody…$"
 
-Athens_Outskirts_Text_DaltonRegister:
+ATHENSOUTSKIRTS_Text_DaltonRegister:
 	.string "When I compose better melodies,\n"
 	.string "you have to come listen, okay?$"
 
-Athens_Outskirts_Text_DaltonRematchIntro:
+ATHENSOUTSKIRTS_Text_DaltonRematchIntro:
 	.string "A melody from my POKéMON and me…\n"
 	.string "Let us deliver it to your soul.$"
 
-Athens_Outskirts_Text_DaltonRematchDefeat:
+ATHENSOUTSKIRTS_Text_DaltonRematchDefeat:
 	.string "La-lalala…$"
 
-Athens_Outskirts_Text_DaltonPostRematch:
+ATHENSOUTSKIRTS_Text_DaltonPostRematch:
 	.string "When I play, my emotions should reach\n"
 	.string "you through my electric guitar…$"
 
-Athens_Outskirts_Text_DeandreIntro:
+ATHENSOUTSKIRTS_Text_DeandreIntro:
 	.string "Go, go, go!\n"
 	.string "POKéMON 1, 2, and 3!$"
 
-Athens_Outskirts_Text_DeandreDefeat:
+ATHENSOUTSKIRTS_Text_DeandreDefeat:
 	.string "Come in, POKéMON! Are you okay?\n"
 	.string "POKéMON 1, 2, and 3?!$"
 
-Athens_Outskirts_Text_DeandrePostBattle:
+ATHENSOUTSKIRTS_Text_DeandrePostBattle:
 	.string "Isn't it cool that I have a POKéMON\n"
 	.string "battle team?\p"
 	.string "You can copy me--I don't mind!$"

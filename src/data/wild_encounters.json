@@ -1115,8 +1115,8 @@
           }
         },
         {
-          "map": "MAP_ATHENS_OUTSKIRTS",
-          "base_label": "gATHENS_OUTSKIRTS",
+          "map": "MAP_ATHENSOUTSKIRTS",
+          "base_label": "gATHENSOUTSKIRTS",
           "land_mons": {
             "encounter_rate": 20,
             "mons": [
@@ -2242,8 +2242,8 @@
           }
         },
         {
-          "map": "MAP_ROUTE3",
-          "base_label": "gRoute3",
+          "map": "MAP_ROUTE109",
+          "base_label": "gRoute109",
           "water_mons": {
             "encounter_rate": 4,
             "mons": [

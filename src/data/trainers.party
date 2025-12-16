@@ -132,7 +132,7 @@ Seedot
 Level: 7
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_MINOTAUR_GRANITECAVE_FINALROOM ===
+=== TRAINER_SAWYER_1 ===
 Name: SAWYER
 Class: Hiker
 Pic: Hiker
@@ -141,8 +141,8 @@ Music: Hiker
 Double Battle: No
 AI: Basic Trainer
 
-Tauros
-Level: 14
+Geodude
+Level: 21
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
 === TRAINER_GRUNT_AQUA_HIDEOUT_1 ===
@@ -9679,7 +9679,7 @@ Jangmo_o
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_ATHENA_ROUTE_3_PAWNIARD ===
+=== TRAINER_MAY_ROUTE_110_MUDKIP ===
 Name: MAY
 Class: Rival
 Pic: May
@@ -9688,7 +9688,15 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Jangmo_o
+Wingull
+Level: 18
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+Slugma
+Level: 18
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+Grovyle
 Level: 20
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
@@ -9726,7 +9734,7 @@ Pawniard
 Level: 5
 IVs: 0 HP / 0 Atk / 0 Def / 0 SpA / 0 SpD / 0 Spe
 
-=== TRAINER_ATHENA_ROUTE_3_ABRA ===
+=== TRAINER_MAY_ROUTE_110_TREECKO ===
 Name: MAY
 Class: Rival
 Pic: May
@@ -9735,8 +9743,16 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Pawniard
-Level: 10
+Wingull
+Level: 18
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+Lombre
+Level: 18
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+Combusken
+Level: 20
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_MAY_ROUTE_119_TREECKO ===
@@ -9815,7 +9831,7 @@ Level: 10
 IVs: 0 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
 
 
-=== TRAINER_ATHENA_ROUTE_3_JANGMOO ===
+=== TRAINER_MAY_ROUTE_110_TORCHIC ===
 Name: MAY
 Class: Rival
 Pic: May
@@ -9824,8 +9840,16 @@ Music: Female
 Double Battle: No
 AI: Basic Trainer
 
-Abra
-Level: 10
+Lombre
+Level: 18
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+Slugma
+Level: 18
+IVs: 6 HP / 6 Atk / 6 Def / 6 SpA / 6 SpD / 6 Spe
+
+Marshtomp
+Level: 20
 IVs: 12 HP / 12 Atk / 12 Def / 12 SpA / 12 SpD / 12 Spe
 
 === TRAINER_MAY_ROUTE_119_TORCHIC ===

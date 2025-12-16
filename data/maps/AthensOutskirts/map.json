@@ -1,8 +1,8 @@
 {
-  "id": "MAP_ATHENS_OUTSKIRTS",
-  "name": "Athens_Outskirts",
-  "layout": "LAYOUT_ATHENS_OUTSKIRTS",
-  "music": "MUS_RUSTBORO",
+  "id": "MAP_ATHENSOUTSKIRTS",
+  "name": "ATHENSOUTSKIRTS",
+  "layout": "LAYOUT_ATHENSOUTSKIRTS",
+  "music": "MUS_ATHENSOUTSKIRTS",
   "region_map_section": "MAPSEC_ATHENS_OUTSKIRTS",
   "requires_flash": false,
   "weather": "WEATHER_NONE",
@@ -21,11 +21,6 @@
     {
       "map": "MAP_MAUVILLE_CITY",
       "offset": 0,
-      "direction": "left"
-    },
-    {
-      "map": "MAP_MAUVILLE_CITY",
-      "offset": -1,
       "direction": "left"
     }
   ],
@@ -53,7 +48,7 @@
       "movement_range_y": 0,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "3",
-      "script": "Athens_Outskirts_EventScript_Rose",
+      "script": "ATHENSOUTSKIRTS_EventScript_Rose",
       "flag": "0"
     },
     {
@@ -66,7 +61,7 @@
       "movement_range_y": 1,
       "trainer_type": "TRAINER_TYPE_NORMAL",
       "trainer_sight_or_berry_tree_id": "1",
-      "script": "Athens_Outskirts_EventScript_Dionysus",
+      "script": "ATHENSOUTSKIRTS_EventScript_Dionysus",
       "flag": "0"
     },
     {
@@ -88,15 +83,15 @@
       "x": 19,
       "y": 10,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE103",
+      "dest_map": "MAP_DYNAMIC",
       "dest_warp_id": "0"
     },
     {
       "x": 19,
       "y": 11,
       "elevation": 0,
-      "dest_map": "MAP_ROUTE103",
-      "dest_warp_id": "1"
+      "dest_map": "MAP_DYNAMIC",
+      "dest_warp_id": "0"
     }
   ],
   "coord_events": [
@@ -107,7 +102,7 @@
       "elevation": 0,
       "var": "VAR_ATHENS_CITY_STATE",
       "var_value": "1",
-      "script": "Athens_Outskirts_EventScript_DionysusTrigger"
+      "script": "ATHENSOUTSKIRTS_EventScript_DionysusTrigger"
     }
   ],
   "bg_events": [

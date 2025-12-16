@@ -19,19 +19,29 @@
       "direction": "up"
     },
     {
+      "map": "MAP_ROUTE109",
+      "offset": 0,
+      "direction": "down"
+    },
+    {
       "map": "MAP_ROUTE117",
       "offset": 0,
       "direction": "left"
     },
     {
-      "map": "MAP_ROUTE3",
+      "map": "MAP_ATHENSOUTSKIRTS",
       "offset": 0,
-      "direction": "down"
+      "direction": "right"
     },
     {
-      "map": "MAP_ATHENS_OUTSKIRTS",
-      "offset": 1,
-      "direction": "right"
+      "map": "MAP_ROUTE2",
+      "offset": 7,
+      "direction": "up"
+    },
+    {
+      "map": "MAP_ROUTE109",
+      "offset": 0,
+      "direction": "down"
     }
   ],
   "object_events": [
